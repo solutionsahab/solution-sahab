@@ -2,9 +2,9 @@ import React from "react";
 
 export function FunctionalAdvantages() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20">
+    <section className="w-full bg-white py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="max-w-2xl mb-12 sm:mb-16">
+        <div className="max-w-2xl mb-6 sm:mb-8">
           <span className="kicker text-primary">Why they work</span>
           <h2 className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-3">
             Four practical advantages

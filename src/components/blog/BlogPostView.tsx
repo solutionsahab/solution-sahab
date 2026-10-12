@@ -100,7 +100,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
       </PageHero>
 
       {post.images && post.images.length > 0 && (
-        <section className="w-full bg-white py-12 sm:py-16">
+        <section className="w-full bg-white py-6 sm:py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
             <div
               className={`grid gap-4 ${
@@ -129,7 +129,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
       )}
 
       {post.sections.length > 0 && (
-        <section className="w-full bg-white py-12 sm:py-16" aria-label="Article body">
+        <section className="w-full bg-white py-6 sm:py-10" aria-label="Article body">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
             <div className="max-w-3xl mx-auto lg:mx-0 flex flex-col gap-10">
               {post.sections.map((articleSection) => (
@@ -178,7 +178,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
 
       {relatedProduct && (
         <section
-          className="w-full bg-paper py-12 sm:py-16 scroll-mt-28"
+          className="w-full bg-paper py-8 sm:py-12 scroll-mt-28"
           aria-labelledby="related-product-heading"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -207,7 +207,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
       )}
 
       <section
-        className="w-full bg-white py-12 sm:py-16 scroll-mt-28"
+        className="w-full bg-white py-8 sm:py-12 scroll-mt-28"
         aria-labelledby="blog-cta-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -304,7 +304,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
 
       {relatedPosts.length > 0 && (
         <section
-          className="w-full bg-paper py-12 sm:py-16"
+          className="w-full bg-paper py-8 sm:py-12"
           aria-labelledby="related-posts-heading"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">

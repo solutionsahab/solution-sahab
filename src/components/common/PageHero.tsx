@@ -48,7 +48,7 @@ export function PageHero({
   }
   return (
     <section className="w-full relative overflow-hidden border-b border-ink/10 bg-paper">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-7 pb-10 sm:pt-10 sm:pb-14 lg:pt-14 lg:pb-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 pb-8 sm:pt-8 sm:pb-10 lg:pt-10 lg:pb-12">
         <Breadcrumbs items={breadcrumbs} />
 
         <div

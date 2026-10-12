@@ -45,9 +45,9 @@ export function TurnkeyInstallationProcess() {
   ];
 
   return (
-    <section className="w-full bg-white py-14 sm:py-20 scroll-mt-28">
+    <section className="w-full bg-white py-8 sm:py-12 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="max-w-2xl mb-10 sm:mb-12">
+        <div className="max-w-2xl mb-6 sm:mb-8">
           <span className="kicker text-ink">How fitting day goes</span>
           <h2 className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-3">
             Measured, cut, tensioned, signed off

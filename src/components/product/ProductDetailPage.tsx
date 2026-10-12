@@ -25,7 +25,7 @@ export function ProductDetailPage({ product }: ProductDetailPageProps) {
         />
         <ProductContentBlocks blocks={product.blocks} />
         <section
-          className="w-full bg-paper py-12 sm:py-16"
+          className="w-full bg-paper py-8 sm:py-12"
           aria-label="What affects the price"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">

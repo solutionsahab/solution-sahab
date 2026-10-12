@@ -7,9 +7,9 @@ export function ProductFaqSection() {
   const { items, isOpen, toggleItem } = useProductFaq("coastal-durability");
 
   return (
-    <section className="w-full bg-white py-14 sm:py-20 scroll-mt-28">
+    <section className="w-full bg-white py-8 sm:py-12 scroll-mt-28">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="mb-10 max-w-2xl">
+        <div className="mb-6 sm:mb-8 max-w-2xl">
           <span className="kicker text-ink">Good to know</span>
           <h2 className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-3">
             Questions we hear on visits

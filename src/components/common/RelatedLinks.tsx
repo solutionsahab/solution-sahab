@@ -31,7 +31,7 @@ export function RelatedLinks({
 
   return (
     <section
-      className={`w-full py-14 sm:py-20 scroll-mt-28 ${TONE_CLASS[tone]}`}
+      className={`w-full py-8 sm:py-12 scroll-mt-28 ${TONE_CLASS[tone]}`}
       aria-label={title}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">

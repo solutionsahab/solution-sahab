@@ -46,7 +46,7 @@ export function Header() {
 
       {/* Main Navigation Header */}
       <header className="h-16 sm:h-20 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-container">
-        <div className="max-w-7xl mx-auto h-full px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-2 sm:gap-4">
+        <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-3 sm:gap-4">
           {/* Logo & Brand Name */}
           <Link
             className="flex items-center group focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-0.5 shrink-0"
@@ -286,28 +286,25 @@ export function Header() {
           </nav>
 
           {/* Desktop & Mobile Actions */}
-          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-            
-
-            {/* Compact Mobile Booking Button / Full Desktop Button */}
+          <div className="flex items-center gap-3 shrink-0">
+            {/* Desktop Booking Button */}
             <Link
-              className="inline-flex items-center justify-center bg-secondary hover:bg-blue-800 text-on-secondary text-xs sm:font-label-md sm:text-label-md px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-lg shadow-sm transition-all duration-200 whitespace-nowrap font-bold"
+              className="hidden xl:inline-flex items-center justify-center bg-secondary hover:bg-blue-800 text-on-secondary font-label-md text-label-md px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap font-bold"
               href="/#quick-booking"
             >
-              <span className="hidden sm:inline">Book Free Site Visit</span>
-              <span className="sm:hidden">Book Visit</span>
+              Book Free Site Visit
             </Link>
 
             {/* Mobile Hamburger Menu Toggle */}
             <button
               type="button"
-              className="xl:hidden p-1.5 sm:p-2 rounded-lg text-on-surface hover:bg-surface-container focus:outline-none focus:ring-2 focus:ring-primary shrink-0"
+              className="xl:hidden w-10 h-10 flex items-center justify-center rounded-xl text-on-surface hover:bg-surface-container active:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-primary transition-colors shrink-0"
               onClick={toggleMobileMenu}
               aria-expanded={isMobileMenuOpen}
               aria-label="Toggle Navigation Menu"
             >
               <span
-                className="material-symbols-outlined text-[24px] sm:text-[28px]"
+                className="material-symbols-outlined text-[26px]"
                 aria-hidden="true"
               >
                 {isMobileMenuOpen ? "close" : "menu"}
@@ -323,6 +320,20 @@ export function Header() {
             id="mobile-menu"
           >
             <div className="flex flex-col gap-3">
+              {/* Primary Mobile CTA Button */}
+              <div className="pb-3 border-b border-slate-100">
+                <Link
+                  href="/#quick-booking"
+                  onClick={closeMobileMenu}
+                  className="flex items-center justify-center gap-2 w-full bg-secondary hover:bg-blue-800 text-on-secondary py-3 px-4 rounded-xl font-bold text-sm shadow-sm transition-colors text-center"
+                >
+                  <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
+                    calendar_month
+                  </span>
+                  Book Free Site Visit
+                </Link>
+              </div>
+
               <div className="pb-3 border-b border-slate-100">
                 <div className="font-label-md text-label-md font-bold text-on-surface mb-2">
                   Our Products

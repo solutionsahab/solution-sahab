@@ -26,7 +26,7 @@ function SectionShell({
     <section
       id={id}
       aria-label={label || id}
-      className={`w-full scroll-mt-28 py-14 sm:py-20 ${sectionTone(index)}`}
+      className={`w-full scroll-mt-28 py-8 sm:py-12 ${sectionTone(index)}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">{children}</div>
     </section>

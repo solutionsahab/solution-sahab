@@ -8,7 +8,7 @@ export function ProductHero() {
   const heroImageUrl = ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS;
 
   return (
-    <section className="w-full bg-white pt-6 sm:pt-8 pb-12 sm:pb-16">
+    <section className="w-full bg-white pt-4 sm:pt-6 pb-8 sm:pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Content Column (7 cols) */}

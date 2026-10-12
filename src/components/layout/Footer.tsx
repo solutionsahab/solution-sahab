@@ -35,7 +35,7 @@ export function Footer() {
             </span>
             <a
               href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-              className="font-display-serif text-4xl sm:text-5xl text-ink hover:text-primary transition-colors leading-tight"
+              className="font-display-serif text-2xl sm:text-5xl text-ink hover:text-primary transition-colors leading-tight"
             >
               {CONTACT_INFO.PHONE_PRIMARY}
             </a>

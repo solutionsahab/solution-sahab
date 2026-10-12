@@ -42,17 +42,69 @@ export function ComparisonSection() {
           </h2>
         </div>
 
-        <div className="card-flat overflow-hidden">
-          <table className="w-full text-left border-collapse">
+        {/* Mobile View: Comparison Cards (< 640px) */}
+        <div className="sm:hidden space-y-3.5">
+          {ROWS.map((row) => (
+            <div
+              key={row.label}
+              className="card-flat p-4 bg-white shadow-xs border border-slate-200/90 rounded-xl"
+            >
+              <div className="font-label-md text-label-md font-bold text-ink mb-3 pb-2 border-b border-slate-100 flex items-center justify-between">
+                <span>{row.label}</span>
+              </div>
+              <div className="space-y-2">
+                {/* Iron bars */}
+                <div className="p-3 rounded-lg bg-slate-50 border border-slate-100 flex items-start gap-2.5">
+                  <span
+                    className="material-symbols-outlined text-slate-400 text-[18px] shrink-0 mt-0.5"
+                    aria-hidden="true"
+                  >
+                    close
+                  </span>
+                  <div className="text-sm">
+                    <span className="font-semibold text-slate-500 block text-xs uppercase tracking-wider mb-0.5">
+                      Iron Bars
+                    </span>
+                    <span className="text-slate-600 leading-snug">
+                      {row.iron}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Our cable grills */}
+                <div className="p-3 rounded-lg bg-primary/5 border border-primary/20 flex items-start gap-2.5">
+                  <span
+                    className="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5"
+                    aria-hidden="true"
+                  >
+                    check_circle
+                  </span>
+                  <div className="text-sm">
+                    <span className="font-bold text-primary block text-xs uppercase tracking-wider mb-0.5">
+                      Our Cable Grills
+                    </span>
+                    <span className="text-ink font-medium leading-snug">
+                      {row.ours}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop View: Comparison Table (>= 640px) */}
+        <div className="hidden sm:block card-flat overflow-hidden overflow-x-auto">
+          <table className="w-full text-left border-collapse min-w-[560px]">
             <thead>
-              <tr className="border-b border-slate-200">
+              <tr className="border-b border-slate-200 bg-slate-50/60">
                 <th className="font-label-md text-label-md font-bold text-ink p-4 sm:p-5 w-[22%]">
                   <span className="sr-only">Aspect</span>
                 </th>
-                <th className="font-label-md text-label-md font-bold text-ink-soft p-4 sm:p-5">
+                <th className="font-label-md text-label-md font-bold text-ink-soft p-4 sm:p-5 w-[39%]">
                   Iron bars
                 </th>
-                <th className="font-label-md text-label-md font-bold text-primary p-4 sm:p-5">
+                <th className="font-label-md text-label-md font-bold text-primary p-4 sm:p-5 w-[39%] bg-primary/[0.04]">
                   Our cable grills
                 </th>
               </tr>
@@ -61,16 +113,32 @@ export function ComparisonSection() {
               {ROWS.map((row) => (
                 <tr
                   key={row.label}
-                  className="border-b border-slate-100 last:border-0"
+                  className="border-b border-slate-100 last:border-0 hover:bg-slate-50/40 transition-colors"
                 >
                   <th className="font-label-md text-label-md font-bold text-ink p-4 sm:p-5 align-top">
                     {row.label}
                   </th>
                   <td className="font-body-md text-body-md text-ink-soft p-4 sm:p-5 align-top">
-                    {row.iron}
+                    <div className="flex items-start gap-2">
+                      <span
+                        className="material-symbols-outlined text-slate-400 text-[18px] shrink-0 mt-0.5"
+                        aria-hidden="true"
+                      >
+                        close
+                      </span>
+                      <span>{row.iron}</span>
+                    </div>
                   </td>
-                  <td className="font-body-md text-body-md text-ink p-4 sm:p-5 align-top">
-                    {row.ours}
+                  <td className="font-body-md text-body-md text-ink p-4 sm:p-5 align-top bg-primary/[0.04]">
+                    <div className="flex items-start gap-2">
+                      <span
+                        className="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5"
+                        aria-hidden="true"
+                      >
+                        check_circle
+                      </span>
+                      <span className="font-medium">{row.ours}</span>
+                    </div>
                   </td>
                 </tr>
               ))}

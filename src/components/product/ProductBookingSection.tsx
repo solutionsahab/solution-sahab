@@ -17,7 +17,7 @@ export function ProductBookingSection() {
 
   return (
     <section
-      className="w-full bg-paper py-16 sm:py-20 scroll-mt-28"
+      className="w-full bg-paper py-8 sm:py-12 scroll-mt-28"
       id="booking-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">

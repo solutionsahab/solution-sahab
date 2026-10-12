@@ -44,7 +44,7 @@ export function ProjectGallerySection() {
             <span className="kicker text-primary">Recent work</span>
             <h2
               id="gallery-heading"
-              className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-0"
+              className="font-display-serif text-2xl sm:text-4xl text-ink mt-3 mb-0"
             >
               From our last few jobs
             </h2>

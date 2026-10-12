@@ -23,7 +23,7 @@ function BlockShell({
 }) {
   return (
     <section
-      className={`w-full scroll-mt-28 py-14 sm:py-20 ${sectionTone(index)}`}
+      className={`w-full scroll-mt-28 py-8 sm:py-12 ${sectionTone(index)}`}
       aria-label={block.title || block.id}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">{children}</div>
@@ -34,7 +34,7 @@ function BlockShell({
 function BlockHeading({ title }: { title?: string }) {
   if (!title) return null;
   return (
-    <h2 className="font-display-serif text-3xl sm:text-4xl text-ink leading-tight mb-6">
+    <h2 className="font-display-serif text-3xl sm:text-4xl text-ink leading-tight mb-4 sm:mb-5">
       {title}
     </h2>
   );

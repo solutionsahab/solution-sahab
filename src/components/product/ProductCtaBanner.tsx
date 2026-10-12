@@ -3,7 +3,7 @@ import { CONTACT_INFO } from "@/const";
 
 export function ProductCtaBanner() {
   return (
-    <section className="w-full bg-white py-12 sm:py-16">
+    <section className="w-full bg-white  py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="rounded-2xl border border-ink/15 bg-paper p-6 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="max-w-2xl">

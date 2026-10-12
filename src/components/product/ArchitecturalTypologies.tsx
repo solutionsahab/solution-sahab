@@ -55,9 +55,9 @@ export function ArchitecturalTypologies() {
   ];
 
   return (
-    <section className="w-full bg-white py-14 sm:py-20 scroll-mt-28">
+    <section className="w-full bg-white py-8 sm:py-12 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-6">
           <div>
             <span className="kicker text-ink">Where it fits</span>
             <h2 className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-0">

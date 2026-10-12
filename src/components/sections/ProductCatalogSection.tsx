@@ -64,7 +64,7 @@ function ProductCard({
           </div>
         )}
 
-        <div className="p-6">
+        <div className="p-5 sm:p-6">
           <h3 className="font-headline-sm text-headline-sm text-ink font-bold">
             {href ? (
               <Link href={href} className="hover:text-primary transition-colors">
@@ -90,18 +90,18 @@ function ProductCard({
         </div>
       </div>
 
-      <div className="p-6 pt-0 flex items-center justify-between">
+      <div className="p-5 sm:p-6 pt-0 flex flex-col min-[420px]:flex-row items-stretch min-[420px]:items-center justify-between gap-3">
         <Link
-          className="bg-secondary hover:bg-blue-800 text-on-secondary font-label-md text-label-md px-4 py-2.5 rounded-lg transition-colors font-bold"
+          className="bg-secondary hover:bg-blue-800 text-on-secondary font-label-md text-label-md px-4 py-2.5 rounded-lg transition-colors font-bold text-center inline-flex items-center justify-center shadow-xs"
           href="#quick-booking"
         >
           Request Quote
         </Link>
         <a
-          className="text-secondary hover:text-blue-900 font-caption-caps text-caption-caps uppercase tracking-wider flex items-center gap-1 font-bold"
+          className="text-secondary hover:text-blue-900 font-caption-caps text-caption-caps uppercase tracking-wider flex items-center justify-center min-[420px]:justify-end gap-1.5 font-bold py-1 min-[420px]:py-0 transition-colors shrink-0"
           href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
         >
-          Speak to Tech
+          <span>Speak to Tech</span>
           <span className="material-symbols-outlined text-[16px]" aria-hidden="true">
             chevron_right
           </span>
