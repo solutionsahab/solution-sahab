@@ -131,15 +131,29 @@ export function useBookingForm(defaultLeadSource: string = "Homepage Consultatio
           }),
         });
 
-        if (!res.ok) {
-          console.warn("[CRM Lead Notice] Non-200 response:", res.status);
+        const json = await res.json().catch(() => null);
+
+        if (!res.ok || !json?.success) {
+          console.error("[CRM Lead Error] Failed to submit:", res.status, json);
+          setState((prev) => ({
+            ...prev,
+            status: "error",
+            errorMessage:
+              json?.error ||
+              "Unable to submit your booking right now. Please try again or call us directly.",
+          }));
+          return;
         }
 
         setState((prev) => submitSuccessState(prev));
       } catch (err) {
-        console.warn("[CRM Lead Network Warning]", err);
-        // Fallback gracefully so homeowner sees immediate confirmation
-        setState((prev) => submitSuccessState(prev));
+        console.error("[CRM Lead Network Error]", err);
+        setState((prev) => ({
+          ...prev,
+          status: "error",
+          errorMessage:
+            "A network error occurred. Please check your connection and try again.",
+        }));
       }
     },
     [state, defaultLeadSource]

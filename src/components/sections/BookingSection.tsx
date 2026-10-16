@@ -23,6 +23,7 @@ export function BookingSection({
     formData,
     status,
     errors,
+    errorMessage,
     updateField,
     handleSubmit,
     resetForm,
@@ -186,6 +187,22 @@ export function BookingSection({
                       : "Schedule Visit"}
                   </Button>
 
+                  {status === "error" && (
+                    <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded max-w-md">
+                      {errorMessage || (
+                        <>
+                          Something went wrong. Please call us directly on{" "}
+                          <a
+                            href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
+                            className="underline font-semibold"
+                          >
+                            {CONTACT_INFO.PHONE_PRIMARY}
+                          </a>
+                          .
+                        </>
+                      )}
+                    </div>
+                  )}
                 </div>
               </form>
             )}

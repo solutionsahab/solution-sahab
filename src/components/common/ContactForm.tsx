@@ -44,7 +44,7 @@ export function ContactForm() {
 
     setStatus("submitting");
     try {
-      await fetch("/api/leads", {
+      const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -55,11 +55,21 @@ export function ContactForm() {
           leadSource: "Website - Contact Us",
         }),
       });
+
+      const json = await res.json().catch(() => null);
+
+      if (!res.ok || !json?.success) {
+        console.error("[Contact Lead Error] Submission failed:", res.status, json);
+        setStatus("error");
+        return;
+      }
+
       setStatus("success");
       setName("");
       setPhone("");
       setAddress("");
-    } catch {
+    } catch (err) {
+      console.error("[Contact Lead Network Error]", err);
       setStatus("error");
     }
   };

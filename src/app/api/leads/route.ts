@@ -79,6 +79,28 @@ export async function POST(req: NextRequest) {
         JSON.stringify(responseData, null, 2)
       );
 
+      if (!crmResponse.ok) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: `CRM rejected the lead submission (HTTP ${crmResponse.status})`,
+            data: responseData,
+          },
+          { status: crmResponse.status || 502 }
+        );
+      }
+
+      if (responseData && (responseData.error || responseData.status === "error" || responseData.failure)) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: responseData.error || responseData.message || "CRM lead rejection",
+            data: responseData,
+          },
+          { status: 400 }
+        );
+      }
+
       return NextResponse.json({
         success: true,
         data: responseData,

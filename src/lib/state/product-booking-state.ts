@@ -88,16 +88,19 @@ export function useProductBooking() {
             }),
           });
 
-          if (!res.ok) {
-            console.warn("[CRM Lead Notice] Non-200 response:", res.status);
+          const json = await res.json().catch(() => null);
+
+          if (!res.ok || !json?.success) {
+            console.error("[CRM Lead Error] Failed to submit:", res.status, json);
+            setStatus("error");
+            return;
           }
 
           setStatus("success");
           setFormData(initialProductBookingData);
         } catch (err) {
-          console.warn("[CRM Lead Network Warning]", err);
-          setStatus("success");
-          setFormData(initialProductBookingData);
+          console.error("[CRM Lead Network Warning]", err);
+          setStatus("error");
         }
       });
     },
