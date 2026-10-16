@@ -28,7 +28,7 @@ export function ProductBookingSection() {
               Book a visit
             </span>
             <h2 className="font-display-serif text-3xl sm:text-4xl text-ink leading-tight m-0">
-              Schedule a free balcony measurement
+              Schedule a balcony measurement
             </h2>
             <p className="font-body-lg text-body-md sm:text-body-lg text-ink-soft leading-relaxed">
               An installer visits on time, brings actual cable and track
@@ -43,7 +43,7 @@ export function ProductBookingSection() {
                   </span>
                 </div>
                 <span className="font-label-md text-label-md font-semibold text-ink">
-                  No obligation, free site survey
+                  No obligation,  site survey
                 </span>
               </div>
               <div className="flex items-center gap-3.5">
@@ -122,11 +122,10 @@ export function ProductBookingSection() {
                       Homeowner / Architect Name *
                     </label>
                     <input
-                      className={`w-full h-11 px-3.5 rounded-lg bg-paper text-ink font-body-md text-body-md border focus:outline-none focus:ring-2 focus:ring-secondary ${
-                        errors.homeownerName
+                      className={`w-full h-11 px-3.5 rounded-lg bg-paper text-ink font-body-md text-body-md border focus:outline-none focus:ring-2 focus:ring-secondary ${errors.homeownerName
                           ? "border-red-500"
                           : "border-ink/10"
-                      }`}
+                        }`}
                       id="product-homeowner-name"
                       placeholder="Your name"
                       required
@@ -147,11 +146,10 @@ export function ProductBookingSection() {
                       Contact Number *
                     </label>
                     <input
-                      className={`w-full h-11 px-3.5 rounded-lg bg-paper text-ink font-body-md text-body-md border focus:outline-none focus:ring-2 focus:ring-secondary ${
-                        errors.contactNumber
+                      className={`w-full h-11 px-3.5 rounded-lg bg-paper text-ink font-body-md text-body-md border focus:outline-none focus:ring-2 focus:ring-secondary ${errors.contactNumber
                           ? "border-red-500"
                           : "border-ink/10"
-                      }`}
+                        }`}
                       id="product-contact-number"
                       placeholder="10-digit mobile number"
                       required
@@ -173,9 +171,8 @@ export function ProductBookingSection() {
                     Email Address (Optional)
                   </label>
                   <input
-                    className={`w-full h-11 px-3.5 rounded-lg bg-paper text-ink font-body-md text-body-md border focus:outline-none focus:ring-2 focus:ring-secondary ${
-                      errors.email ? "border-red-500" : "border-ink/10"
-                    }`}
+                    className={`w-full h-11 px-3.5 rounded-lg bg-paper text-ink font-body-md text-body-md border focus:outline-none focus:ring-2 focus:ring-secondary ${errors.email ? "border-red-500" : "border-ink/10"
+                      }`}
                     id="product-email"
                     placeholder="you@example.com"
                     type="email"
@@ -197,7 +194,7 @@ export function ProductBookingSection() {
                   </span>
                   {status === "submitting"
                     ? "Submitting Your Request..."
-                    : "Confirm Free Site Inspection"}
+                    : "Confirm  Site Inspection"}
                 </button>
 
                 <p className="font-caption-caps text-[10px] sm:text-caption-caps text-ink-soft text-center uppercase tracking-wide">

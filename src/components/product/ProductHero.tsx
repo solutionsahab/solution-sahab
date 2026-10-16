@@ -37,7 +37,7 @@ export function ProductHero() {
                 className="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3.5 rounded-xl font-label-md text-label-md font-bold shadow-md hover:bg-primary-container transition-colors text-center"
                 href="#booking-section"
               >
-                Book a free site visit
+                Book a  site visit
               </Link>
               <a
                 className="font-label-md text-label-md font-semibold text-ink hover:text-primary transition-colors text-center sm:text-left"

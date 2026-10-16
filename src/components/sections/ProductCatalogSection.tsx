@@ -1,230 +1,164 @@
+// File: src/components/sections/ProductCatalogSection.tsx
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ASSETS, CONTACT_INFO } from "@/const";
+import { ASSETS } from "@/const";
 
-interface ProductCardProps {
+interface ProductItem {
+  index: string;
   title: string;
-  description: string;
-  badge1: string;
-  badge2?: string;
-  badge2Color?: "primary" | "secondary";
-  href?: string;
-  imageUrl?: string;
-  iconName?: string;
-  iconSubtitle?: string;
-  specs: string[];
+  category: string;
+  summary: string;
+  href: string;
+  imageUrl: string;
 }
 
-function ProductCard({
-  title,
-  description,
-  badge1,
-  href,
-  imageUrl,
-  iconName,
-  iconSubtitle,
-  specs,
-}: ProductCardProps) {
-  return (
-    <div className="card-flat overflow-hidden flex flex-col justify-between">
-      <div>
-        {imageUrl ? (
-          <div className="relative h-60 overflow-hidden bg-paper-deep">
-            <Image
-              alt={title}
-              className="w-full h-full object-cover"
-              src={imageUrl}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              loading="lazy"
-            />
-            <span className="absolute top-4 left-4 bg-ink/85 text-white font-caption-caps text-caption-caps px-2.5 py-1 rounded uppercase tracking-wider z-10">
-              {badge1}
-            </span>
-          </div>
-        ) : (
-          <div className="relative h-60 overflow-hidden bg-blue-50/60 flex items-center justify-center p-6">
-            <div className="w-full h-full rounded-xl bg-white border border-blue-100 flex flex-col items-center justify-center text-center p-4">
-              <span className="material-symbols-outlined text-secondary text-[48px] mb-2" aria-hidden="true">
-                {iconName}
-              </span>
-              <span className="font-headline-sm text-headline-sm font-bold text-ink">
-                {title}
-              </span>
-              {iconSubtitle && (
-                <span className="font-caption-caps text-caption-caps text-secondary uppercase mt-1">
-                  {iconSubtitle}
-                </span>
-              )}
-            </div>
-            <span className="absolute top-4 left-4 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-caption-caps text-caption-caps px-2.5 py-1 rounded uppercase tracking-wider">
-              {badge1}
-            </span>
-          </div>
-        )}
-
-        <div className="p-5 sm:p-6">
-          <h3 className="font-headline-sm text-headline-sm text-ink font-bold">
-            {href ? (
-              <Link href={href} className="hover:text-primary transition-colors">
-                {title}
-              </Link>
-            ) : (
-              title
-            )}
-          </h3>
-          <p className="font-body-md text-body-md text-ink-soft mt-2 mb-4">
-            {description}
-          </p>
-          <div className="space-y-2 mb-6 font-label-md text-label-md text-ink-soft">
-            {specs.map((spec, idx) => (
-              <div key={idx} className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary text-[18px] shrink-0" aria-hidden="true">
-                  done
-                </span>
-                <span>{spec}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="p-5 sm:p-6 pt-0 flex flex-col min-[420px]:flex-row items-stretch min-[420px]:items-center justify-between gap-3">
-        <Link
-          className="bg-secondary hover:bg-blue-800 text-on-secondary font-label-md text-label-md px-4 py-2.5 rounded-lg transition-colors font-bold text-center inline-flex items-center justify-center shadow-xs"
-          href="#quick-booking"
-        >
-          Request Quote
-        </Link>
-        <a
-          className="text-secondary hover:text-blue-900 font-caption-caps text-caption-caps uppercase tracking-wider flex items-center justify-center min-[420px]:justify-end gap-1.5 font-bold py-1 min-[420px]:py-0 transition-colors shrink-0"
-          href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-        >
-          <span>Speak to Tech</span>
-          <span className="material-symbols-outlined text-[16px]" aria-hidden="true">
-            chevron_right
-          </span>
-        </a>
-      </div>
-    </div>
-  );
-}
+const PRODUCTS: ProductItem[] = [
+  {
+    index: "01",
+    title: "Invisible Safety Grills",
+    category: "Balconies & Windows",
+    summary:
+      "316 stainless steel cables with nylon coating for child and pet fall safety without blocking the view.",
+    href: "/invisible-grills",
+    imageUrl: ASSETS.PRODUCTS.INVISIBLE_GRILLS,
+  },
+  {
+    index: "02",
+    title: "Pleated Mosquito Mesh",
+    category: "Balcony Doors",
+    summary:
+      "Retractable accordion insect screen on a flat 3mm bottom track with Powder-Coated Aluminium frame.",
+    href: "/pleated-mesh",
+    imageUrl: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
+  },
+  {
+    index: "03",
+    title: "Aluminum Security Mesh",
+    category: "Main Doors & Ground Floors",
+    summary:
+      "Heavy-gauge alloy security mesh door with multi-point locks that replaces traditional iron grills.",
+    href: "/aluminum-mesh-partition",
+    imageUrl: ASSETS.PRODUCTS.ALUMINUM_SECURITY_MESH,
+  },
+  {
+    index: "04",
+    title: "Honeycomb Partitions",
+    category: "Living & Dining Dividers",
+    summary:
+      "Folding room divider with internal air cells that insulate AC cooling and reduce room echo.",
+    href: "/honeycomb-partition",
+    imageUrl: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
+  },
+  {
+    index: "05",
+    title: "Motorized Weather Screens",
+    category: "Open Terraces & Balconies",
+    summary:
+      "Remote-controlled zip-track outdoor blinds that block rain, dust storms, and harsh sunlight.",
+    href: "/automatic-weather-screen",
+    imageUrl: ASSETS.PRODUCTS.WEATHER_SCREENS,
+  },
+  {
+    index: "06",
+    title: "Skylights & Ceiling Hangers",
+    category: "Stairwells & Utility Balconies",
+    summary:
+      "Laminated safety glass skylights and ceiling-mounted pulley cloth hangers to  up balcony floor space.",
+    href: "/skylight",
+    imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
+  },
+];
 
 export function ProductCatalogSection() {
-  const products: ProductCardProps[] = [
-    {
-      title: "Invisible Grills",
-      href: "/invisible-grills",
-      description:
-        "Sleek high-tensile 316 stainless steel cable system designed for balconies, French windows, and open terraces without blocking the view.",
-      badge1: "Top High-Rise Pick",
-      badge2: "AISI 316 Wire",
-      badge2Color: "primary",
-      imageUrl: ASSETS.PRODUCTS.INVISIBLE_GRILLS,
-      specs: [
-        "400kg lateral breaking capacity per wire",
-        "Transparent nylon protective sheath",
-        "No caged-in feeling on the balcony",
-      ],
-    },
-    {
-      title: "Pleated Mosquito Mesh",
-      href: "/pleated-mesh",
-      description:
-        "Retractable accordion mesh systems for sliding balcony doors, French casements, and wide spans. Keeps insects out with natural airflow.",
-      badge1: "Smooth Gliding",
-      badge2: "German Zig-Zag",
-      badge2Color: "secondary",
-      imageUrl: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
-      specs: [
-        "Low-profile flush track (no tripping)",
-        "UV-resistant waterproof polyester mesh",
-        "Custom powder-coated frame matching UPVC/Alu",
-      ],
-    },
-    {
-      title: "Aluminum Security Mesh",
-      href: "/aluminum-mesh-partition",
-      description:
-        "Heavy-gauge aluminum security mesh integrated into sturdy structural frames. Prevents unauthorized entry and withstands blade-cut attacks.",
-      badge1: "Heavy-Duty Security",
-      imageUrl: ASSETS.PRODUCTS.ALUMINUM_SECURITY_MESH,
-      specs: [
-        "Heavy-gauge 304/6063-T6 aluminum alloy",
-        "Multi-point architectural locking systems",
-        "Ideal for ground floor villas & offices",
-      ],
-    },
-    {
-      title: "Acoustic Honeycomb Partitions",
-      href: "/honeycomb-partition",
-      description:
-        "Insulated folding partitions that isolate noise, modulate temperature, and instantly create modular zones in modern residences and office suites.",
-      badge1: "Acoustic Shield",
-      iconName: "view_column",
-      iconSubtitle: "Thermal & Acoustic Barrier",
-      specs: [
-        "Dual-cell thermal air pocket structure",
-        "Sound damping & light-filtering fabrics",
-        "Smooth motorized or manual sliding glide",
-      ],
-    },
-    {
-      title: "Motorized Weather Screens",
-      href: "/automatic-weather-screen",
-      description:
-        "High-wind rated motorized zip-track drop screens to protect open balconies and outdoor dining spaces from Delhi dust storms, heavy monsoons, and scorching sun.",
-      badge1: "Automated Smart Drop",
-      iconName: "weather_mix",
-      iconSubtitle: "Wind & Rain Enclosure",
-      specs: [
-        "95% Rain, UV, and Dust particle blockage",
-        "Remote control & home automation link",
-        "Tested up to 70 km/h wind shear",
-      ],
-    },
-    {
-      title: "Skylights & Ceiling Hangers",
-      description:
-        "Precision architectural glass skylights for luxury stairwells paired with space-saving aluminum pulley ceiling cloth drying systems for utility balconies.",
-      badge1: "Ergonomic Utility",
-      iconName: "roofing",
-      iconSubtitle: "Utility & Natural Lighting",
-      specs: [
-        "Heavy-load rust-free stainless steel pulley rods",
-        "Full floor clearance underneath",
-        "Laminated safety glass skylight casings",
-      ],
-    },
-  ];
-
   return (
     <section
-      className="w-full py-14 sm:py-20 bg-paper scroll-mt-28"
+      className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
       id="products-showcase"
       aria-labelledby="products-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        {/* Clean Editorial Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-10">
           <div>
-            <span className="kicker text-primary">What we make and fit</span>
+            <p className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-2">
+              Product
+            </p>
             <h2
               id="products-heading"
-              className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-0"
+              className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-950 tracking-tight m-0"
             >
-              Six products, one crew
+              Our Products
             </h2>
           </div>
-          <p className="font-body-md text-body-md text-ink-soft max-w-md m-0">
-            Fabricated from structural-grade aluminium and marine-grade wire,
-            fitted by our own technicians.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, idx) => (
-            <ProductCard key={idx} {...product} />
+        {/* Flush Hairline Grid — No Floating Rounded Cards or Shadows */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          {PRODUCTS.map((product) => (
+            <article
+              key={product.title}
+              className="group border-r border border-neutral-300 bg-gray-50 hover:bg-gray-50 transition-colors flex flex-col justify-between"
+            >
+              <div>
+                {/* Top Index & Material Bar */}
+                <div className="p-2 flex items-center justify-between border-b border-neutral-300 text-xs">
+                  <span className=" font-bold ">
+                    {product.category}
+                  </span>
+                </div>
+
+                {/* Sharp Edge-to-Edge Product Image */}
+                <Link
+                  href={product.href}
+                  className="block relative h-60 sm:h-64 w-full overflow-hidden bg-neutral-200 border-b border-neutral-300"
+                >
+                  <Image
+                    alt={product.title}
+                    src={product.imageUrl}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                </Link>
+
+                {/* Minimal Product Details */}
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-xl font-semibold text-neutral-950 tracking-tight m-0">
+                    <Link href={product.href} className="hover:underline underline-offset-4">
+                      {product.title}
+                    </Link>
+                  </h3>
+
+                  <p className="text-sm text-neutral-600 leading-relaxed mt-2 mb-5">
+                    {product.summary}
+                  </p>
+
+
+                </div>
+              </div>
+
+              {/* Clean Bottom Action Row */}
+              <div className="px-4 sm:px-5 py-3 border-t border-neutral-300 flex items-center justify-between text-xs font-semibold">
+                <Link
+                  href={product.href}
+                  className="text-neutral-950 hover:opacity-70 inline-flex items-center gap-1 uppercase tracking-wider font-mono"
+                >
+                  <span>Read Full Detail</span>
+                  <span className="material-symbols-outlined text-[15px]" aria-hidden="true">
+                    arrow_forward
+                  </span>
+                </Link>
+
+                <Link
+                  href="#quick-booking"
+                  className="text-neutral-600 hover:text-neutral-950 underline underline-offset-4"
+                >
+                  Book Visit
+                </Link>
+              </div>
+            </article>
           ))}
         </div>
       </div>

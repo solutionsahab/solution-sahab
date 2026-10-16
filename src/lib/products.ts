@@ -2,36 +2,36 @@
 
 export type ProductBlock =
   | {
-      kind: "prose";
-      id: string;
-      title?: string;
-      paragraphs: string[];
-      videoId?: string;
-      videoTitle?: string;
-    }
+    kind: "prose";
+    id: string;
+    title?: string;
+    paragraphs: string[];
+    videoId?: string;
+    videoTitle?: string;
+  }
   | {
-      kind: "features";
-      id: string;
-      title?: string;
-      summary?: string;
-      features: string[];
-      note?: string;
-      applications?: string[];
-      videoId?: string;
-      videoTitle?: string;
-    }
+    kind: "features";
+    id: string;
+    title?: string;
+    summary?: string;
+    features: string[];
+    note?: string;
+    applications?: string[];
+    videoId?: string;
+    videoTitle?: string;
+  }
   | {
-      kind: "columns";
-      id: string;
-      title?: string;
-      columns: { label: string; items: string[] }[];
-    }
+    kind: "columns";
+    id: string;
+    title?: string;
+    columns: { label: string; items: string[] }[];
+  }
   | {
-      kind: "videos";
-      id: string;
-      title?: string;
-      items: { id: string; title: string }[];
-    };
+    kind: "videos";
+    id: string;
+    title?: string;
+    items: { id: string; title: string }[];
+  };
 
 export interface ProductDetail {
   slug: string;
@@ -57,13 +57,13 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
       title:
         "Pleated Mosquito Mesh for Windows & Doors in Delhi | Solution Sahab",
       description:
-        "Pleated mosquito mesh Prime Series with PVC coated mesh and Jindal T6 6063 aluminium frames. Retractable roller mesh and barrier-free mesh for windows, balconies, and doors across Delhi NCR.",
+        "Pleated mosquito mesh Prime Series with PVC coated mesh and Jindal T6 6063 aluminium frames. Retractable roller mesh and barrier- mesh for windows, balconies, and doors across Delhi NCR.",
       keywords: [
         "Pleated Mosquito Mesh Delhi",
         "Pleated Mesh Price Delhi NCR",
         "Retractable Mesh Screen Gurgaon",
         "Roller Mesh Window Screen Noida",
-        "Barrier Free Mesh Delhi",
+        "Barrier  Mesh Delhi",
         "Pleated Mesh for Balconies",
         "Jindal T6 Mesh Frame",
       ],
@@ -115,8 +115,8 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
       },
       {
         kind: "features",
-        id: "barrier-free-mesh",
-        title: "Barrier-Free Mesh",
+        id: "barrier--mesh",
+        title: "Barrier- Mesh",
         summary:
           "Specially designed for seamless access without compromising insect protection, built for homes with children, elderly residents, or individuals with mobility challenges.",
         features: [
@@ -129,7 +129,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
           "Ideal for residential, office, and healthcare facilities",
         ],
         videoId: "RvezGOC5HvQ",
-        videoTitle: "Barrier-Free Mesh",
+        videoTitle: "Barrier- Mesh",
       },
       {
         kind: "videos",
@@ -180,7 +180,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         features: [
           "Elegant Design that complements any decor",
           "Energy Efficiency by providing insulation and reducing energy bills",
-          "Easy Operation for hassle-free use",
+          "Easy Operation for hassle- use",
           "Durable Construction with premium materials to withstand daily use",
         ],
         applications: [
@@ -336,7 +336,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
             label: "Commercial & Industrial Spaces",
             items: [
               "Office Entrances & Partitions – Provide an elegant yet secure barrier",
-              "Restaurants & Cafes – Maintain a stylish, pest-free environment for customers",
+              "Restaurants & Cafes – Maintain a stylish, pest- environment for customers",
               "Warehouses & Factories – Prevent unauthorized access while allowing ventilation",
               "Retail Stores & Shopping Malls – Protect storefronts without compromising on visibility",
             ],
@@ -525,7 +525,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
           "Automatic Weather Screens are designed with modern architecture in mind. They feature:",
         features: [
           "Hidden or neatly enclosed roller systems",
-          "Taut, wrinkle-free screen appearance",
+          "Taut, wrinkle- screen appearance",
           "No loose ropes, hooks, or exposed fittings",
         ],
         note: "The result is a sleek, premium look that enhances the overall design of the building.",
@@ -618,7 +618,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     meta: {
       title: "Skylight Installation & Repairs in Delhi – Solutions Ahab | Solution Sahab",
       description:
-        "Custom skylight installation and repairs in Delhi. Bring natural light with durable, weather‑resistant roof skylights. Contact us for a free consultation.",
+        "Custom skylight installation and repairs in Delhi. Bring natural light with durable, weather‑resistant roof skylights. Contact us for a  consultation.",
       keywords: [
         "Skylight Installation Delhi",
         "Roof Skylight Repair Delhi NCR",
@@ -628,7 +628,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     },
     hero: {
       intro:
-        "Custom skylight installation and repairs in Delhi. Bring natural light with durable, weather-resistant roof skylights. Contact us for a free consultation.",
+        "Custom skylight installation and repairs in Delhi. Bring natural light with durable, weather-resistant roof skylights. Contact us for a  consultation.",
     },
     blocks: [],
   },
@@ -650,7 +650,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     },
     hero: {
       intro:
-        "Say goodbye to cluttered drying racks and limited floor space. Our Ceiling Cloth Hanger is a modern and space-saving solution designed to make drying clothes indoors easier than ever. Whether you are dealing with rainy days, small living spaces, or the inconvenience of traditional drying methods, this innovative hanger provides a hassle-free way to keep your clothes fresh and dry. It enhances air circulation, speeds up drying time, and ensures your garments remain in excellent condition without excessive wrinkling or damp odors.",
+        "Say goodbye to cluttered drying racks and limited floor space. Our Ceiling Cloth Hanger is a modern and space-saving solution designed to make drying clothes indoors easier than ever. Whether you are dealing with rainy days, small living spaces, or the inconvenience of traditional drying methods, this innovative hanger provides a hassle- way to keep your clothes fresh and dry. It enhances air circulation, speeds up drying time, and ensures your garments remain in excellent condition without excessive wrinkling or damp odors.",
       imageUrl:
         "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A3QrolLwe7UBnQrp/w1-YZ9xgKQ0ybHoMx9k.png",
       imageAlt:
@@ -662,7 +662,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         id: "effortless-drying",
         title: "Effortless Drying, Maximum Convenience",
         paragraphs: [
-          "Our ceiling hangers free your floor from drying racks and give small balconies their space back. By lifting garments toward the ceiling, the system improves air circulation and shortens drying time while keeping clothes free of damp odors.",
+          "Our ceiling hangers  your floor from drying racks and give small balconies their space back. By lifting garments toward the ceiling, the system improves air circulation and shortens drying time while keeping clothes  of damp odors.",
         ],
       },
       {
@@ -670,7 +670,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         id: "why-smart-hanger",
         title: "Why Choose Our Smart Cloth Hanger?",
         features: [
-          "Space-Saving Design – Installed on the ceiling, it frees up floor space and keeps your home organized",
+          "Space-Saving Design – Installed on the ceiling, it s up floor space and keeps your home organized",
           "Adjustable & Easy to Use – Smooth pulley mechanism allows easy lowering and lifting of the hanger",
           "Sturdy & Durable – Made from high-quality stainless steel and aluminum, ensuring long-lasting performance",
           "Weather-Proof Drying – Ideal for apartments, balconies, and homes with limited outdoor space",

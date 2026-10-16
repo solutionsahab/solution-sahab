@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Solution Sahab | Invisible Grills & Architectural Fenestration",
     description:
-      "Modern high-rise balcony invisible safety grills and pleated mosquito screens in Delhi NCR. 400kg load capacity, 100% rust-proof, free site inspection.",
+      "Modern high-rise balcony invisible safety grills and pleated mosquito screens in Delhi NCR. 400kg load capacity, 100% rust-proof, site inspection.",
     url: "https://solutionsahab.com",
     siteName: "Solution Sahab",
     locale: "en_IN",

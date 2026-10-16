@@ -95,7 +95,7 @@ export function StructuredData() {
       },
       {
         "@type": "Question",
-        name: "Which Delhi NCR areas do you service with free on-site consultations?",
+        name: "Which Delhi NCR areas do you service with on-site consultations?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "We operate fully equipped direct vans covering all of South Delhi (Vasant Kunj, Saket, Greater Kailash), West Delhi (Dwarka, Punjabi Bagh, Janakpuri), North/Central Delhi, as well as Gurgaon (all DLF phases, Golf Course Road, Sohna Road), Noida & Greater Noida (Expressway, Sector 150, Noida Extension), Ghaziabad (Indirapuram), and Faridabad.",

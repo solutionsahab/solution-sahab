@@ -20,9 +20,8 @@ export function ProductDetailHero({
     <section className="w-full bg-white scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 sm:pt-10 pb-4 sm:pb-6">
         <div
-          className={`grid grid-cols-1 ${
-            imageUrl ? "lg:grid-cols-2" : "max-w-4xl"
-          } gap-10 lg:gap-14 items-center`}
+          className={`grid grid-cols-1 ${imageUrl ? "lg:grid-cols-2" : "max-w-4xl"
+            } gap-10 lg:gap-14 items-center`}
         >
           <div className="flex flex-col gap-5">
             <span className="kicker text-primary">
@@ -39,7 +38,7 @@ export function ProductDetailHero({
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3.5 rounded-xl transition-colors font-bold shadow-sm text-center"
                 href="/#quick-booking"
               >
-                Book a free site visit
+                Book a  site visit
               </Link>
               <a
                 className="font-label-md text-label-md font-semibold text-ink hover:text-primary transition-colors text-center sm:text-left"

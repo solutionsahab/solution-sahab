@@ -9,7 +9,7 @@ import { CONTACT_DATA } from "@/lib/info-pages";
 import { PRODUCT_LINKS } from "@/lib/site-links";
 
 const DESCRIPTION =
-  "Contact Solution Sahab for invisible grills, pleated mesh and honeycomb mesh. Call +91 9971-143-143 or send your details for a free site visit across Delhi NCR.";
+  "Contact Solution Sahab for invisible grills, pleated mesh and honeycomb mesh. Call +91 9971-143-143 or send your details for a  site visit across Delhi NCR.";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/contact-us",
@@ -19,7 +19,7 @@ export const metadata: Metadata = buildPageMetadata({
     "Contact Solution Sahab",
     "Invisible grill dealer Delhi NCR phone number",
     "Pleated mesh installation contact",
-    "Free site visit Delhi NCR",
+    "site visit Delhi NCR",
   ],
 });
 
@@ -128,7 +128,7 @@ export default function ContactUsPage() {
                 </h2>
                 <p className="font-body-md text-body-md text-ink-soft mt-2 mb-6">
                   Share your requirement and our team will call you back to
-                  arrange a free measurement.
+                  arrange a measurement.
                 </p>
                 <ContactForm />
               </div>

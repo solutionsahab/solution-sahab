@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title:
     "Invisible Grills for Balconies Delhi NCR | 316 Marine Grade SS Wire | Solution Sahab",
   description:
-    "Architectural grade invisible grills for high-rise balconies, French windows, and atriums. 316 marine stainless steel cables, 400kgf+ tensile capacity, 10-year anti-rust warranty. Free laser site measurement across Delhi, Gurugram, Noida.",
+    "Architectural grade invisible grills for high-rise balconies, French windows, and atriums. 316 marine stainless steel cables, 400kgf+ tensile capacity, 10-year anti-rust warranty. laser site measurement across Delhi, Gurugram, Noida.",
   keywords: [
     "Invisible Grills Delhi NCR",
     "Balcony Safety Grills Gurgaon",

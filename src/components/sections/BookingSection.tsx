@@ -1,8 +1,10 @@
+// File: src/components/sections/BookingSection.tsx
 "use client";
 
 import React from "react";
 import { useBookingForm } from "@/lib/state/booking-state";
 import { CONTACT_INFO } from "@/const";
+import { Button } from "@/components/ui/Button";
 
 export function BookingSection() {
   const {
@@ -16,161 +18,206 @@ export function BookingSection() {
 
   return (
     <section
-      className="w-full py-14 sm:py-20 bg-paper scroll-mt-28"
+      className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
       id="quick-booking"
       aria-labelledby="booking-heading"
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-14 shadow-xl border border-ink/10">
-          <div className="flex flex-col items-center text-center mb-10">
-            <div className="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider font-bold mb-3 text-primary">
-              <span className="kicker text-primary">Free site visit</span>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 border border-neutral-300 bg-white">
+          {/* Left 5 Columns: Direct Info & Instant Channels */}
+          <div className="lg:col-span-5 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-neutral-300 flex flex-col justify-between">
+            <div>
+              <h2
+                id="booking-heading"
+                className="text-3xl sm:text-4xl font-semibold text-neutral-950 tracking-tight m-0"
+              >
+                Book a Measurement &amp; Sample Visit
+              </h2>
+              <p className="text-sm sm:text-base text-neutral-600 mt-3 mb-8 leading-relaxed">
+                Our engineer brings AISI 316 cable samples, pleated mesh swatches, and track profiles to your home across Delhi NCR, measures your opening, and gives an exact quote on the spot.
+              </p>
+
+              {/* Simple Spec List Instead of Checkmark Icons */}
+              <div className="space-y-3 border-t border-neutral-300 pt-6 text-xs font-mono uppercase tracking-wider text-neutral-800">
+                <div className="flex items-center justify-between">
+                  <span className="text-neutral-500">Cost</span>
+                  <span>Free Doorstep Visit</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-neutral-500">Kit</span>
+                  <span>Physical Wire &amp; Mesh Samples</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-neutral-500">Coverage</span>
+                  <span>Delhi · Gurugram · Noida · NCR</span>
+                </div>
+              </div>
             </div>
-            <h2
-              id="booking-heading"
-              className="font-display-serif text-3xl sm:text-4xl text-ink mt-1"
-            >
-              Get someone over to measure
-            </h2>
-            <p className="font-body-lg text-body-lg text-ink-soft max-w-xl mt-3 mb-0">
-              No obligation. We bring samples, take measurements, and quote on
-              the spot.
-            </p>
+
+            {/* Direct Phone / WhatsApp Block */}
+            <div className="mt-10 pt-6 border-t border-neutral-300">
+              <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 m-0 mb-3">
+                Prefer Instant WhatsApp or Call?
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={CONTACT_INFO.WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg- hover:bg-[#20bd5a] text-white text-xs font-mono uppercase tracking-wider font-semibold px-4 py-3 transition-colors"
+                >
+                  <span>WhatsApp Balcony Photo</span>
+                </a>
+                <a
+                  href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
+                  className="inline-flex items-center justify-center gap-2 border border-neutral-950 bg-transparent hover:bg-neutral-950 text-neutral-950 hover:text-white text-xs font-mono uppercase tracking-wider font-semibold px-4 py-3 transition-colors"
+                >
+                  <span>{CONTACT_INFO.PHONE_PRIMARY}</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-          {status === "success" ? (
-            <div className="text-center py-10" id="booking-success" role="alert">
-              <div className="w-16 h-16 rounded-full bg-emerald-50 text-primary mx-auto flex items-center justify-center mb-4 border border-emerald-200">
-                <span className="material-symbols-outlined text-[36px]" aria-hidden="true">
-                  check_circle
-                </span>
+          {/* Right 7 Columns: Clean Architectural Form */}
+          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-center">
+            {status === "success" ? (
+              <div
+                className="py-8"
+                id="booking-success"
+                role="alert"
+              >
+                <p className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-2">
+                  Request Confirmed
+                </p>
+                <h3 className="text-2xl sm:text-3xl font-semibold text-neutral-950 m-0">
+                  Thank you, {formData.fullName || "Customer"}.
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-600 mt-3 mb-8 max-w-md leading-relaxed">
+                  Our Delhi NCR coordinator will call you within 60 minutes to confirm your measurement time slot.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4">
+                  <Button
+                    href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
+                    icon="call"
+                  >
+                    Call {CONTACT_INFO.PHONE_PRIMARY}
+                  </Button>
+                  <button
+                    type="button"
+                    onClick={resetForm}
+                    className="text-xs font-mono uppercase tracking-wider text-neutral-600 hover:text-neutral-950 underline underline-offset-4 px-3 py-2"
+                  >
+                    Book Another Visit
+                  </button>
+                </div>
               </div>
-              <h3 className="font-headline-md text-headline-md text-ink font-bold">
-                Site Visit Request Received!
-              </h3>
-              <p className="font-body-lg text-body-lg text-ink-soft max-w-md mx-auto mt-2">
-                Thank you, {formData.fullName || "Customer"}! Our Delhi NCR coordinator will reach out to you within 60 minutes to confirm your preferred date and time slot.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <a
-                  className="inline-flex items-center gap-2 bg-primary hover:bg-emerald-700 text-on-primary font-label-md text-label-md px-6 py-3.5 rounded-xl font-bold transition-all shadow-md"
-                  href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-                >
-                  <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
-                    call
-                  </span>
-                  Speak Immediately: {CONTACT_INFO.PHONE_PRIMARY}
-                </a>
-                <button
-                  type="button"
-                  onClick={resetForm}
-                  className="font-label-md text-label-md text-ink-soft hover:text-primary underline px-4 py-2"
-                >
-                  Book Another Visit
-                </button>
-              </div>
-            </div>
-          ) : (
-            <form
-              className="space-y-6"
-              id="booking-form"
-              onSubmit={handleSubmit}
-              noValidate
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            ) : (
+              <form
+                className="space-y-6"
+                id="booking-form"
+                onSubmit={handleSubmit}
+                noValidate
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      htmlFor="full-name"
+                      className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
+                    >
+                      Full Name <span className="text-red-600">*</span>
+                    </label>
+                    <input
+                      id="full-name"
+                      type="text"
+                      required
+                      placeholder="e.g. Rajesh Kumar"
+                      value={formData.fullName}
+                      onChange={(e) => updateField("fullName", e.target.value)}
+                      className={`w-full h-12 px-4 bg-[#F7F6F2] border ${
+                        errors.fullName
+                          ? "border-red-500 bg-red-50/20"
+                          : "border-neutral-300 focus:border-neutral-950"
+                      } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
+                    />
+                    {errors.fullName && (
+                      <p className="text-red-600 text-xs mt-1.5 m-0">
+                        {errors.fullName}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="phone-number"
+                      className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
+                    >
+                      Phone / WhatsApp <span className="text-red-600">*</span>
+                    </label>
+                    <input
+                      id="phone-number"
+                      type="tel"
+                      inputMode="tel"
+                      required
+                      placeholder="+91 98765 43210"
+                      value={formData.phone}
+                      onChange={(e) => updateField("phone", e.target.value)}
+                      className={`w-full h-12 px-4 bg-[#F7F6F2] border ${
+                        errors.phone
+                          ? "border-red-500 bg-red-50/20"
+                          : "border-neutral-300 focus:border-neutral-950"
+                      } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
+                    />
+                    {errors.phone && (
+                      <p className="text-red-600 text-xs mt-1.5 m-0">
+                        {errors.phone}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
                 <div>
                   <label
-                    htmlFor="full-name"
-                    className="block font-label-md text-label-md text-ink font-semibold mb-2"
+                    htmlFor="email-address"
+                    className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
                   >
-                    Your Full Name <span className="text-red-500">*</span>
+                    Society / Location in NCR (Optional)
                   </label>
                   <input
-                    id="full-name"
-                    className={`w-full h-12 px-4 rounded-xl bg-paper border ${
-                      errors.fullName ? "border-red-400 bg-red-50/30" : "border-ink/10"
-                    } text-ink font-body-md text-body-md focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all`}
-                    placeholder="Your name"
-                    required
+                    id="email-address"
                     type="text"
-                    value={formData.fullName}
-                    onChange={(e) => updateField("fullName", e.target.value)}
+                    placeholder="e.g. DLF Phase 5, Gurugram or Sector 150, Noida"
+                    value={formData.email}
+                    onChange={(e) => updateField("email", e.target.value)}
+                    className={`w-full h-12 px-4 bg-[#F7F6F2] border ${
+                      errors.email
+                        ? "border-red-500 bg-red-50/20"
+                        : "border-neutral-300 focus:border-neutral-950"
+                    } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
                   />
-                  {errors.fullName && (
-                    <p className="text-red-600 text-xs mt-1.5 font-medium">{errors.fullName}</p>
+                  {errors.email && (
+                    <p className="text-red-600 text-xs mt-1.5 m-0">
+                      {errors.email}
+                    </p>
                   )}
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="phone-number"
-                    className="block font-label-md text-label-md text-ink font-semibold mb-2"
+                <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    icon="arrow_forward"
+                    disabled={status === "submitting"}
                   >
-                    Phone / WhatsApp Number <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="phone-number"
-                    className={`w-full h-12 px-4 rounded-xl bg-paper border ${
-                      errors.phone ? "border-red-400 bg-red-50/30" : "border-ink/10"
-                    } text-ink font-body-md text-body-md focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all`}
-                    placeholder="+91 9971-143-143"
-                    required
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => updateField("phone", e.target.value)}
-                  />
-                  {errors.phone && (
-                    <p className="text-red-600 text-xs mt-1.5 font-medium">{errors.phone}</p>
-                  )}
-                </div>
-              </div>
+                    {status === "submitting"
+                      ? "Submitting..."
+                      : "Schedule Visit"}
+                  </Button>
 
-              <div>
-                <label
-                  htmlFor="email-address"
-                  className="block font-label-md text-label-md text-ink font-semibold mb-2"
-                >
-                  Email Address (Optional)
-                </label>
-                <input
-                  id="email-address"
-                  className={`w-full h-12 px-4 rounded-xl bg-paper border ${
-                    errors.email ? "border-red-400 bg-red-50/30" : "border-ink/10"
-                  } text-ink font-body-md text-body-md focus:bg-white focus:outline-none focus:ring-2 focus:ring-secondary transition-all`}
-                  placeholder="you@gmail.com"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => updateField("email", e.target.value)}
-                />
-                {errors.email && (
-                  <p className="text-red-600 text-xs mt-1.5 font-medium">{errors.email}</p>
-                )}
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                <button
-                  className="w-full sm:w-auto inline-flex items-center justify-center bg-secondary hover:bg-blue-800 text-on-secondary font-label-md text-label-md font-bold px-8 py-4 rounded-xl shadow-lg transition-colors duration-200 disabled:opacity-70"
-                  type="submit"
-                  disabled={status === "submitting"}
-                >
-                  {status === "submitting" ? (
-                    <span className="flex items-center gap-2">
-                      <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                      Submitting...
-                    </span>
-                  ) : (
-                    "Confirm Free Site Inspection"
-                  )}
-                </button>
-                <div className="flex items-center gap-2 text-slate-500 font-label-md text-label-md">
-                  <span className="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">
-                    lock
-                  </span>
-                  <span>100% Privacy • No Spam Guarantee</span>
                 </div>
-              </div>
-            </form>
-          )}
+              </form>
+            )}
+          </div>
         </div>
       </div>
     </section>

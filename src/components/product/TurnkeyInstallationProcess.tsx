@@ -8,7 +8,7 @@ export function TurnkeyInstallationProcess() {
       title: "Laser Survey & Inspection",
       description:
         "Engineers visit within 24-48 hours with digital Leica laser distance meters to measure beam levels, load substrates, and structural camber.",
-      badge: "Day 1: Free inspection",
+      badge: "Day 1:  inspection",
       circleBg: "bg-primary text-on-primary",
       iconColor: "text-primary",
     },

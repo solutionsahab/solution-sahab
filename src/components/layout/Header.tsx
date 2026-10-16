@@ -24,7 +24,7 @@ export function Header() {
       {/* Top Notification Bar */}
       <div className="bg-inverse-surface text-inverse-on-surface py-1 sm:py-1.5 px-3 sm:px-4 text-center border-b border-inverse-surface/10 shadow-[0_1px_4px_rgba(0,0,0,0.05)]">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 font-caption-caps text-[10px] sm:text-caption-caps tracking-wider uppercase">
-          <span>Free site visit across Delhi NCR</span>
+          <span>Site visit across Delhi NCR</span>
           <span className="opacity-40" aria-hidden="true">
             •
           </span>
@@ -289,10 +289,10 @@ export function Header() {
           <div className="flex items-center gap-3 shrink-0">
             {/* Desktop Booking Button */}
             <Link
-              className="hidden xl:inline-flex items-center justify-center bg-secondary hover:bg-blue-800 text-on-secondary font-label-md text-label-md px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap font-bold"
+              className="hidden xl:inline-flex items-center justify-center bg-primary hover:bg-primary-container text-white font-sans text-sm px-5 py-2.5 rounded-xl shadow-md shadow-emerald-950/15 hover:shadow-lg transition-all duration-200 whitespace-nowrap font-bold"
               href="/#quick-booking"
             >
-              Book Free Site Visit
+              Book Site Visit
             </Link>
 
             {/* Mobile Hamburger Menu Toggle */}
@@ -325,12 +325,12 @@ export function Header() {
                 <Link
                   href="/#quick-booking"
                   onClick={closeMobileMenu}
-                  className="flex items-center justify-center gap-2 w-full bg-secondary hover:bg-blue-800 text-on-secondary py-3 px-4 rounded-xl font-bold text-sm shadow-sm transition-colors text-center"
+                  className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary-container text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-colors text-center"
                 >
                   <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
                     calendar_month
                   </span>
-                  Book Free Site Visit
+                  Book Site Visit
                 </Link>
               </div>
 

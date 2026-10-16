@@ -9,48 +9,52 @@ export function Footer() {
   const logoUrl = ASSETS.LOGO_LOCAL;
 
   return (
-    <footer className="w-full bg-paper border-t border-ink/10 pt-12 sm:pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        {/* Top: brand + phone */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-10 border-b border-ink/10">
-          <div className="lg:col-span-7 flex flex-col gap-4">
-            <Link href="/" className="inline-block" aria-label="Solution Sahab Home">
+    <footer className="w-full ">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        {/* Top Row: Brand & Direct Phone / WhatsApp */}
+        <div className="py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start lg:items-end border-b border-neutral-300">
+          <div className="lg:col-span-7">
+            <Link
+              href="/"
+              className="inline-block mb-4"
+              aria-label="Solution Sahab Home"
+            >
               <Image
-                alt="Solution Sahab - Architectural Safety & Fenestration"
-                className="h-10 sm:h-12 w-auto object-contain"
+                alt="Solution Sahab"
+                className="h-10 sm:h-11 w-auto object-contain"
                 src={logoUrl}
-                width={256}
-                height={45}
+                width={240}
+                height={44}
                 loading="lazy"
               />
             </Link>
-            <p className="font-body-md text-body-md text-ink-soft max-w-md m-0">
-              Balcony grills, insect screens and partitions — measured and
-              fitted by our own crew across {FACTS.serviceAreasLabel}.
+            <p className="text-sm text-neutral-600 max-w-md m-0 leading-relaxed">
+              Manufacturer and installer of AISI 316 invisible balcony grills,
+              pleated mosquito mesh, honeycomb partitions, and weather screens
+              across Delhi NCR.
             </p>
           </div>
-          <div className="lg:col-span-5 flex flex-col gap-1 lg:text-right lg:items-end">
-            <span className="font-label-sm text-label-sm font-bold uppercase tracking-wider text-ink-soft">
-              Talk to an installer
-            </span>
+
+          <div className="lg:col-span-5 flex flex-col lg:items-end lg:text-right">
             <a
               href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-              className="font-display-serif text-2xl sm:text-5xl text-ink hover:text-primary transition-colors leading-tight"
+              className="text-2xl sm:text-4xl font-semibold text-neutral-950 hover:opacity-70 transition-opacity tracking-tight"
             >
               {CONTACT_INFO.PHONE_PRIMARY}
             </a>
-            <div className="flex flex-wrap gap-x-5 gap-y-1 lg:justify-end font-label-md text-label-md font-semibold">
+            <div className="mt-2 flex flex-wrap items-center lg:justify-end gap-4 text-xs font-mono uppercase tracking-wider">
               <a
-                className="text-primary hover:underline"
                 href={CONTACT_INFO.WHATSAPP_URL}
-                rel="noopener noreferrer"
                 target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-950 font-semibold underline underline-offset-4 hover:opacity-70"
               >
-                WhatsApp us
+                WhatsApp Quote →
               </a>
+              <span className="text-neutral-400">|</span>
               <a
-                className="text-primary hover:underline"
                 href={`mailto:${CONTACT_INFO.EMAIL}`}
+                className="text-neutral-600 hover:text-neutral-950 transition-colors lowercase font-sans text-xs"
               >
                 {CONTACT_INFO.EMAIL}
               </a>
@@ -58,108 +62,137 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Middle: link columns */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 py-10 border-b border-ink/10">
-          <div>
-            <h3 className="font-label-md text-label-md font-bold uppercase tracking-wider text-ink mb-4">
-              Products
+        {/* Middle Row: 4-Column Hairline Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 divide-y sm:divide-y-0 sm:divide-x divide-neutral-300 border-b border-neutral-300">
+          {/* Column 1: Systems */}
+          <div className="lg:col-span-4 py-8 sm:pr-8">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-4">
+              Our Products
             </h3>
-            <ul className="flex flex-col gap-2.5 font-body-md text-body-md text-ink-soft list-none m-0 p-0">
+            <ul className="space-y-2.5 text-sm text-neutral-800 list-none m-0 p-0">
               <li>
-                <Link className="hover:text-primary transition-colors" href="/invisible-grills">
-                  Invisible Grills for Balconies
+                <Link className="hover:underline underline-offset-4" href="/invisible-grills">
+                  Invisible Safety Grills
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/pleated-mesh">
+                <Link className="hover:underline underline-offset-4" href="/pleated-mesh">
                   Pleated Mosquito Mesh
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/honeycomb-partition">
-                  Honeycomb Folding Partitions
-                </Link>
-              </li>
-              <li>
-                <Link className="hover:text-primary transition-colors" href="/aluminum-mesh-partition">
+                <Link className="hover:underline underline-offset-4" href="/aluminum-mesh-partition">
                   Aluminum Security Mesh
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/automatic-weather-screen">
-                  Automatic Weather Screens
+                <Link className="hover:underline underline-offset-4" href="/honeycomb-partition">
+                  Honeycomb Partitions
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/skylight">
+                <Link className="hover:underline underline-offset-4" href="/automatic-weather-screen">
+                  Motorized Weather Screens
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:underline underline-offset-4" href="/skylight">
                   Glass Skylights
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/ceiling-cloth-hanger">
+                <Link className="hover:underline underline-offset-4" href="/ceiling-cloth-hanger">
                   Ceiling Cloth Hangers
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-label-md text-label-md font-bold uppercase tracking-wider text-ink mb-4">
-              Company
+          {/* Column 2: Navigation */}
+          <div className="lg:col-span-3 py-8 sm:px-8">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-4">
+              Know About US
             </h3>
-            <ul className="flex flex-col gap-2.5 font-body-md text-body-md text-ink-soft list-none m-0 p-0">
+            <ul className="space-y-2.5 text-sm text-neutral-800 list-none m-0 p-0">
               <li>
-                <Link className="hover:text-primary transition-colors" href="/who-we-are">
-                  Who We Are
+                <Link className="hover:underline underline-offset-4" href="/who-we-are">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/gallery">
-                  Gallery
+                <Link className="hover:underline underline-offset-4" href="/gallery">
+                  Project Gallery
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/our-team">
-                  Our Team
+                <Link className="hover:underline underline-offset-4" href="/our-team">
+                  Installation Team
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/blog-list">
-                  Blog
+                <Link className="hover:underline underline-offset-4" href="/#customer-videos">
+                  Customer Videos
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-primary transition-colors" href="/contact-us">
+                <Link className="hover:underline underline-offset-4" href="/blog-list">
+                  Guides &amp; Blog
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:underline underline-offset-4" href="/contact-us">
                   Contact Us
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="col-span-2 md:col-span-1">
-            <h3 className="font-label-md text-label-md font-bold uppercase tracking-wider text-ink mb-4">
-              Find us
+          {/* Column 3: Offices */}
+          <div className="lg:col-span-5 py-8 sm:pl-8">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-4">
+              Locations - Delhi NCR
             </h3>
-            <address className="not-italic font-body-md text-body-md text-ink-soft space-y-2">
-              <div>{CONTACT_INFO.HEAD_OFFICE}</div>
-              <div className="pt-2 font-semibold text-ink">Branch office</div>
-              <div>{CONTACT_INFO.BRANCH_OFFICE}</div>
-            </address>
+            <div className="space-y-4 text-sm text-neutral-700">
+              <div>
+                <span className="font-semibold text-neutral-950 block mb-0.5">
+                  Head Office &amp; Fabrication
+                </span>
+                <p className="m-0 leading-relaxed text-neutral-600">
+                  {CONTACT_INFO.HEAD_OFFICE}
+                </p>
+              </div>
+              <div>
+                <span className="font-semibold text-neutral-950 block mb-0.5">
+                  South Delhi Branch
+                </span>
+                <p className="m-0 leading-relaxed text-neutral-600">
+                  {CONTACT_INFO.BRANCH_OFFICE}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom row */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 font-label-md text-label-md text-ink-soft">
+        {/* Bottom Bar */}
+        <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
           <p className="m-0">
             © {new Date().getFullYear()} {FACTS.brandName}. All rights reserved.
           </p>
-          <div className="flex items-center gap-5">
-            <Link className="hover:underline text-secondary" href="/privacy-policy">
+          <div className="flex items-center gap-6">
+            <Link className="hover:text-neutral-950 transition-colors" href="/privacy-policy">
               Privacy Policy
             </Link>
-            <Link className="hover:underline text-secondary" href="/contact-us">
-              Contact Us
+            <Link className="hover:text-neutral-950 transition-colors" href="/contact-us">
+              Contact
             </Link>
+            <a
+              className="hover:text-neutral-950 transition-colors"
+              href="https://www.youtube.com/@solutionsahab"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube
+            </a>
           </div>
         </div>
       </div>

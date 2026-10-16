@@ -20,7 +20,7 @@ export default function HomePage() {
       <Header />
 
       {/* Main Content Area */}
-      <main className="w-full pt-[92px] sm:pt-[116px] bg-paper">
+      <main className="w-full pt-[96px] sm:pt-[116px] bg-white">
         <div className="flex flex-col w-full">
           {/* 1. Hero with areas strip */}
           <HeroSection />
@@ -43,11 +43,13 @@ export default function HomePage() {
           {/* 7. Recent work strip */}
           <ProjectGallerySection />
 
-          {/* 8. Booking form */}
+          {/* 8. FAQs */}
+          <FaqSection />
+
+          {/* 9. Booking form */}
           <BookingSection />
 
-          {/* 9. FAQs */}
-          <FaqSection />
+
         </div>
       </main>
 

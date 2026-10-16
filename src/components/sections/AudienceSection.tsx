@@ -1,181 +1,171 @@
+// File: src/components/sections/AudienceSection.tsx
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { ASSETS, CONTACT_INFO } from "@/const";
+
+interface AudienceRow {
+  index: string;
+  tag: string;
+  title: string;
+  description: string;
+  specs: string[];
+  imageUrl: string;
+  imageAlt: string;
+  ctaText: string;
+  ctaHref: string;
+  isExternalPhone?: boolean;
+}
+
+const AUDIENCES: AudienceRow[] = [
+  {
+    index: "01",
+    tag: "Apartments & Villas",
+    title: "Homeowners & High-Rise Residents",
+    description:
+      "Balcony fall protection for children and pets plus smooth pleated insect screens—approved by RWAs across Gurgaon, Noida, and Delhi.",
+    specs: [
+      "2\" & 3\" Child-Safe Cable Gap",
+      "RWA & Fire-Exit Compliant",
+      "3mm Flat-Track Mosquito Doors",
+    ],
+    imageUrl: ASSETS.PRODUCTS.INVISIBLE_GRILLS,
+    imageAlt: "High-rise residential balcony fitted with invisible safety grills",
+    ctaText: "Book Home Measurement",
+    ctaHref: "#quick-booking",
+  },
+  {
+    index: "02",
+    tag: "Cafes, Offices & Retail",
+    title: "Commercial & Hospitality Spaces",
+    description:
+      "Motorized outdoor weather screens for open-air terraces and acoustic honeycomb dividers for offices and dining rooms.",
+    specs: [
+      "70 km/h Wind & Rain Zip-Screens",
+      "Sound-Damping Room Dividers",
+      "Heavy Alloy Storefront Security Mesh",
+    ],
+    imageUrl: ASSETS.PRODUCTS.WEATHER_SCREENS,
+    imageAlt: "Commercial terrace enclosed with motorized weather screens",
+    ctaText: "Request Commercial Quote",
+    ctaHref: "#quick-booking",
+  },
+  {
+    index: "03",
+    tag: "Trade & B2B Partners",
+    title: "Architects & Interior Designers",
+    description:
+      "Custom RAL powder-coated frames matched to Fenesta, Schüco, or wood-grain profiles, backed by physical sample kits and site engineers.",
+    specs: [
+      "Custom RAL & Wood-Grain Finishes",
+      "Physical Wire & Mesh Sample Kit",
+      "Direct Structural Engineer Support",
+    ],
+    imageUrl: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
+    imageAlt: "Custom architectural honeycomb partition and frame finish",
+    ctaText: "Call Spec Desk",
+    ctaHref: `tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`,
+    isExternalPhone: true,
+  },
+];
 
 export function AudienceSection() {
   return (
     <section
-      className="w-full py-14 sm:py-20 bg-white scroll-mt-28"
+      className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
       id="audience-solutions"
       aria-labelledby="audience-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="max-w-2xl mb-10">
-          <span className="kicker text-primary">Who we fit for</span>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        {/* Minimal Section Header */}
+        <div className="pb-8 border-b border-neutral-300">
           <h2
             id="audience-heading"
-            className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-3"
+            className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-950 tracking-tight m-0"
           >
-            Homes, workplaces, and the architects between
+            Built for Homes, Commercial Spaces &amp; Architects
           </h2>
-          <p className="font-body-lg text-body-lg text-ink-soft m-0">
-            Grills, mesh and screens fitted to the space — not the other way
-            round.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Segment 1: Residential */}
-          <div className="card-flat p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-primary mb-6">
-                <span className="material-symbols-outlined text-[28px]" aria-hidden="true">
-                  home
-                </span>
+        {/* Horizontal Architectural Rows with Dedicated Image Space */}
+        <div className="divide-y divide-neutral-300 border-b border-neutral-300">
+          {AUDIENCES.map((item) => (
+            <div
+              key={item.index}
+              className="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center"
+            >
+              {/* Left 4 Columns: Sharp Architectural Image Frame */}
+              <div className="lg:col-span-4 w-full">
+                <div className="relative h-56 sm:h-64 lg:h-52 w-full overflow-hidden bg-neutral-200 border border-neutral-300">
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.imageAlt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-              <div className="font-caption-caps text-caption-caps text-primary uppercase font-bold tracking-wider">
-                Apartments &amp; Villas
-              </div>
-              <h3 className="font-headline-md text-headline-md text-ink mt-1 mb-4">
-                Residential Owners
-              </h3>
-              <p className="font-body-md text-body-md text-ink-soft mb-6">
-                Child fall protection, pet security on high-floor balconies, and mosquito-free air without iron bars.
-              </p>
-              <ul className="space-y-3 font-body-md text-body-md text-ink">
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                  <span>Child &amp; cat safe 2&quot; and 3&quot; wire spacing</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                  <span>Unobstructed panoramic morning &amp; sunset views</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                  <span>Retractable pleated mosquito screening</span>
-                </li>
-              </ul>
-            </div>
-            <div className="pt-8">
-              <Link
-                className="text-primary font-label-md text-label-md font-bold flex items-center gap-1 hover:gap-2 transition-all"
-                href="#quick-booking"
-              >
-                Protect Your Home
-                <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
-                  arrow_forward
-                </span>
-              </Link>
-            </div>
-          </div>
 
-          {/* Segment 2: Commercial & Hospitality */}
-          <div className="card-flat p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-secondary mb-6">
-                <span className="material-symbols-outlined text-[28px]" aria-hidden="true">
-                  domain
-                </span>
-              </div>
-              <div className="font-caption-caps text-caption-caps text-secondary uppercase font-bold tracking-wider">
-                Offices, Cafes &amp; Hotels
-              </div>
-              <h3 className="font-headline-md text-headline-md text-ink mt-1 mb-4">
-                Commercial &amp; Hospitality
-              </h3>
-              <p className="font-body-md text-body-md text-ink-soft mb-6">
-                Large span weather enclosure, dining terrace insect shielding, acoustic room partition systems, and visitor safety.
-              </p>
-              <ul className="space-y-3 font-body-md text-body-md text-ink">
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-secondary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                  <span>Acoustic honeycomb movable dividers</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-secondary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                   <span>Heavy-gauge aluminium security mesh</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-secondary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                  <span>Minimalist patio &amp; terrace screens</span>
-                </li>
-              </ul>
-            </div>
-            <div className="pt-8">
-              <Link
-                className="text-secondary font-label-md text-label-md font-bold flex items-center gap-1 hover:gap-2 transition-all"
-                href="#quick-booking"
-              >
-                Commercial Consultation
-                <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
-                  arrow_forward
-                </span>
-              </Link>
-            </div>
-          </div>
+              {/* Middle 5 Columns: Tag + Title + Description + Specs */}
+              <div className="lg:col-span-5">
+                <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-500 mb-1.5">
+                  <span>{item.tag}</span>
+                </div>
 
-          {/* Segment 3: Architects & Designers */}
-          <div className="card-flat p-8 flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-primary mb-6">
-                <span className="material-symbols-outlined text-[28px]" aria-hidden="true">
-                  architecture
-                </span>
+                <h3 className="text-xl sm:text-2xl font-semibold text-neutral-950 tracking-tight m-0 mb-2.5">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0 mb-4">
+                  {item.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {item.specs.map((spec) => (
+                    <span
+                      key={spec}
+                      className="text-xs font-mono text-neutral-800 bg-white/80 border border-neutral-300 px-2.5 py-1"
+                    >
+                      {spec}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="font-caption-caps text-caption-caps text-primary uppercase font-bold tracking-wider">
-                Design Partners
+
+              {/* Right 3 Columns: Direct Action CTA */}
+              <div className="lg:col-span-3 flex lg:justify-end">
+                {item.isExternalPhone ? (
+                  <a
+                    href={item.ctaHref}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-neutral-950 bg-transparent hover:bg-neutral-950 text-neutral-950 hover:text-white text-xs sm:text-sm font-mono uppercase tracking-wider px-5 py-3.5 transition-colors"
+                  >
+                    <span>{item.ctaText}</span>
+                    <span
+                      className="material-symbols-outlined text-[16px]"
+                      aria-hidden="true"
+                    >
+                      call
+                    </span>
+                  </a>
+                ) : (
+                  <Link
+                    href={item.ctaHref}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-neutral-950 bg-transparent hover:bg-neutral-950 text-neutral-950 hover:text-white text-xs sm:text-sm font-mono uppercase tracking-wider px-5 py-3.5 transition-colors"
+                  >
+                    <span>{item.ctaText}</span>
+                    <span
+                      className="material-symbols-outlined text-[16px]"
+                      aria-hidden="true"
+                    >
+                      arrow_forward
+                    </span>
+                  </Link>
+                )}
               </div>
-              <h3 className="font-headline-md text-headline-md text-ink mt-1 mb-4">
-                Architects &amp; Designers
-              </h3>
-              <p className="font-body-md text-body-md text-ink-soft mb-6">
-                BIM/CAD cross-sections, custom RAL color powder coating, flush low-profile threshold channels, and fire-compliant safety wire.
-              </p>
-              <ul className="space-y-3 font-body-md text-body-md text-ink">
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                  <span>Custom extrusion anodizing &amp; powder shades</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                  <span>Emergency quick-cut cable certification</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0" aria-hidden="true">
-                      done
-                  </span>
-                  <span>Dedicated project coordinator for site surveys</span>
-                </li>
-              </ul>
             </div>
-            <div className="pt-8">
-              <a
-                className="text-primary font-label-md text-label-md font-bold flex items-center gap-1 hover:gap-2 transition-all"
-                href="tel:+919971143143"
-              >
-                Architect Spec Desk
-                <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
-                  arrow_forward
-                </span>
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

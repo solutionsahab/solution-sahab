@@ -31,7 +31,7 @@ export const productFaqData: ProductFaqItem[] = [
     id: "installation-turnaround",
     question: "What is the standard installation turnaround time across Delhi NCR?",
     answer:
-      "Following your free laser measurement, profiles are prefabricated at our Nangloi/Nilothi manufacturing unit. A typical 2-balcony residential apartment takes approximately 4 to 6 hours for complete, tidy, dust-controlled installation. Most projects are completed within 48 to 72 hours of initial site confirmation.",
+      "Following your  laser measurement, profiles are prefabricated at our Nangloi/Nilothi manufacturing unit. A typical 2-balcony residential apartment takes approximately 4 to 6 hours for complete, tidy, dust-controlled installation. Most projects are completed within 48 to 72 hours of initial site confirmation.",
   },
   {
     id: "rwa-compliance",

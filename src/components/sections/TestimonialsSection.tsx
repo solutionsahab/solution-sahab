@@ -2,68 +2,80 @@
 import React from "react";
 import { VideoEmbed } from "@/components/common/VideoEmbed";
 
-interface CustomerVideoProps {
-  videoId: string;
-  title: string;
-}
+const VIDEOS = [
+  {
+    videoId: "ra8Bwmo1SE0",
+    customer: "Mr. Kamal Thakur · Ashiyana Town, Bhiwadi",
+    product: "Balcony Pleated Mesh",
+  },
+  {
+    videoId: "7F6Z-WV5ylA",
+    customer: "Verified Homeowner · Delhi NCR",
+    product: "Pleated Mesh Door",
+  },
+  {
+    videoId: "3rd_YCsZWAY",
+    customer: "Verified Homeowner · Delhi NCR",
+    product: "Pleated Mesh Door",
+  },
+];
 
 export function TestimonialsSection() {
-  const customerVideos: CustomerVideoProps[] = [
-    {
-      videoId: "7F6Z-WV5ylA",
-      title: "Our customer feedback for pleated mesh",
-    },
-    {
-      videoId: "ra8Bwmo1SE0",
-      title: "Our mesh customer feedback !",
-    },
-  ];
-
   return (
     <section
-      className="w-full py-14 sm:py-20 bg-white scroll-mt-28"
+      className="w-full py-14 sm:py-20 border-b border-neutral-300 scroll-mt-28"
       id="customer-videos"
       aria-labelledby="customer-videos-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        {/* Minimal Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
           <div>
-            <span className="kicker text-primary">Reviews</span>
             <h2
               id="customer-videos-heading"
-              className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-0"
+              className="text-2xl sm:text-4xl font-semibold text-neutral-950 tracking-tight m-0"
             >
-              What customers say after we leave
+              Customer's Feedback
             </h2>
+            <p className="text-sm text-neutral-600 mt-1 mb-0">
+              Filmed on-site after installation across Delhi NCR.
+            </p>
           </div>
-          <p className="font-body-md text-body-md text-ink-soft max-w-md">
-            Unedited vertical reviews recorded on site after our crews finished
-            the installation. Tap any video to play.
-          </p>
+
+          <a
+            href="https://www.youtube.com/@solutionsahab"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-mono uppercase tracking-wider text-neutral-900 underline underline-offset-4 hover:opacity-70 shrink-0"
+          >
+            All Videos on YouTube →
+          </a>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          {customerVideos.map((video) => (
-            <VideoEmbed
-              key={video.videoId}
-              orientation="vertical"
-              title={video.title}
-              videoId={video.videoId}
-            />
+        {/* Clean 2-Video Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 pt-8">
+          {VIDEOS.map((video) => (
+            <div key={video.videoId} className="flex flex-col">
+              <div className="w-full bg-neutral-950 overflow-hidden">
+                <VideoEmbed
+                  orientation="vertical"
+                  title={`${video.product} - ${video.customer}`}
+                  videoId={video.videoId}
+                  className="rounded-none"
+                />
+              </div>
+
+              <div className="pt-3 flex items-baseline justify-between gap-2">
+                <span className="text-sm font-semibold text-neutral-950">
+                  {video.product}
+                </span>
+                <span className="text-xs text-neutral-500">
+                  {video.customer}
+                </span>
+              </div>
+            </div>
           ))}
         </div>
-
-        <p className="font-label-sm text-label-sm text-ink-soft text-center mt-8">
-          Videos published by Solution Sahab on{" "}
-          <a
-            className="text-secondary hover:underline font-bold"
-            href="https://www.youtube.com/@solutionsahab"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            youtube.com/@solutionsahab
-          </a>
-        </p>
       </div>
     </section>
   );
