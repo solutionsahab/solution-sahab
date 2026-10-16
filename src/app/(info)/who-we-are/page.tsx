@@ -4,7 +4,6 @@ import { InfoPage } from "@/components/common/InfoPage";
 import { PageHero } from "@/components/common/PageHero";
 import { ProseSections } from "@/components/common/ProseSections";
 import { RelatedLinks } from "@/components/common/RelatedLinks";
-import { ProductCtaBanner } from "@/components/product/ProductCtaBanner";
 import { buildPageMetadata } from "@/lib/seo";
 import { WHO_WE_ARE } from "@/lib/info-pages";
 import { PRODUCT_LINKS } from "@/lib/site-links";
@@ -33,7 +32,6 @@ export default function WhoWeArePage() {
         links={PRODUCT_LINKS}
         tone="low"
       />
-      <ProductCtaBanner />
     </InfoPage>
   );
 }

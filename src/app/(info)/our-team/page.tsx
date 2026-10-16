@@ -4,7 +4,6 @@ import { InfoPage } from "@/components/common/InfoPage";
 import { PageHero } from "@/components/common/PageHero";
 import { ImageGrid } from "@/components/common/ImageGrid";
 import { RelatedLinks } from "@/components/common/RelatedLinks";
-import { ProductCtaBanner } from "@/components/product/ProductCtaBanner";
 import { buildPageMetadata } from "@/lib/seo";
 import { TEAM_IMAGES } from "@/lib/info-pages";
 import { PRODUCT_LINKS } from "@/lib/site-links";
@@ -48,7 +47,6 @@ export default function OurTeamPage() {
         links={PRODUCT_LINKS}
         tone="low"
       />
-      <ProductCtaBanner />
     </InfoPage>
   );
 }

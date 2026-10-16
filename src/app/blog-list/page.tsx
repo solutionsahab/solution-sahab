@@ -5,7 +5,6 @@ import Image from "next/image";
 import { InfoPage } from "@/components/common/InfoPage";
 import { PageHero } from "@/components/common/PageHero";
 import { BlogCard } from "@/components/blog/BlogCard";
-import { ProductCtaBanner } from "@/components/product/ProductCtaBanner";
 import { buildPageMetadata, SITE } from "@/lib/seo";
 import {
   BLOG_POSTS,
@@ -190,7 +189,6 @@ export default async function BlogListPage({ searchParams }: BlogListProps) {
         </div>
       </section>
 
-      <ProductCtaBanner />
     </InfoPage>
   );
 }

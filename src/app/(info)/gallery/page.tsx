@@ -4,7 +4,6 @@ import { InfoPage } from "@/components/common/InfoPage";
 import { PageHero } from "@/components/common/PageHero";
 import { ImageGrid } from "@/components/common/ImageGrid";
 import { RelatedLinks } from "@/components/common/RelatedLinks";
-import { ProductCtaBanner } from "@/components/product/ProductCtaBanner";
 import { Button } from "@/components/ui/Button";
 import { buildPageMetadata } from "@/lib/seo";
 import { GALLERY_IMAGES, INSTAGRAM_URL } from "@/lib/info-pages";
@@ -81,7 +80,6 @@ export default function GalleryPage() {
         links={PRODUCT_LINKS}
         tone="surface"
       />
-      <ProductCtaBanner />
     </InfoPage>
   );
 }
