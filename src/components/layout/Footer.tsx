@@ -43,7 +43,6 @@ export function Footer() {
               {CONTACT_INFO.PHONE_PRIMARY}
             </Link>
             <div className="mt-2 flex flex-wrap items-center lg:justify-end gap-4 text-xs font-mono uppercase tracking-wider">
-              <span className="text-neutral-400">|</span>
               <Link
                 href={`mailto:${CONTACT_INFO.EMAIL}`}
                 className="text-neutral-600 hover:text-neutral-950 transition-colors lowercase font-sans text-xs"
