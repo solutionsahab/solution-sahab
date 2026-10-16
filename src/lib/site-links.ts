@@ -10,7 +10,7 @@ export const PRODUCT_LINKS: RelatedLink[] = [
     label: "Invisible Grills",
     href: "/invisible-grills",
     description:
-      "316 marine-grade stainless steel cables with 400kgf+ tensile capacity and 10-year anti-rust warranty.",
+      "316 marine-grade stainless steel cables with 400kgf+ tensile capacity and 5-year anti-rust warranty.",
   },
   {
     label: "Pleated Mesh",

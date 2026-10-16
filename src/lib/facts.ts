@@ -16,7 +16,7 @@ export const FACTS = {
    */
   happyCustomers: "150+",
   /** Consistent across all live pages. */
-  warrantyLabel: "10-year anti-rust warranty",
+  warrantyLabel: "5-year anti-rust warranty",
   /** From the rooftop Delhi NCR post. */
   serviceAreas: [
     "Delhi",

@@ -23,7 +23,7 @@ const FAQ_ITEMS: FaqItem[] = [
     id: 3,
     question: "Will the cables rust in Delhi NCR rain, humidity, or pollution?",
     answer:
-      "No. We use genuine AISI 316 marine-grade stainless steel with protective nylon coating. Every installation comes with a signed 10-year anti-rust warranty card.",
+      "No. We use genuine AISI 316 marine-grade stainless steel with protective nylon coating. Every installation comes with a signed 5-year anti-rust warranty card.",
   },
   {
     id: 4,

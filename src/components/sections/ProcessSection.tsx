@@ -19,7 +19,7 @@ const STEPS = [
     number: "03",
     title: "Easy Installation",
     description:
-      "Our in-house team installs your system cleanly in a few hours, backed by a 10-year warranty.",
+      "Our in-house team installs your system cleanly in a few hours, backed by a 5-year warranty.",
   },
 ];
 

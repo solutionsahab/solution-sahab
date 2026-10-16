@@ -65,7 +65,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "**Spacing:** 50 mm (2-inch) for homes with young children, cats and birds; 75 mm (3-inch) for standard perimeter demarcation",
           "**Anchoring:** Hilti or Fischer stainless mechanical expansion bolts into RCC parapet or beam at 200 mm centres",
           "**Deflection:** under 15 mm of movement under 120 kg of force",
-          "**Warranty:** signed 10-Year Anti-Rust Warranty card at handover",
+          "**Warranty:** signed 5-Year Anti-Rust Warranty card at handover",
         ],
       },
       {
@@ -84,7 +84,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Installation process for rooftop projects",
         paragraphs: [
-          "A certified Solution Sahab technician visits within 24-48 hours with a digital Leica laser distance meter to measure parapet levels and load substrates. Profiles are CNC-cut at our Nilothi facility so no cutting is done on your roof. Cables are tensioned on site to a 110 Nm load, pull-tested, and handed over with the emergency wire cutting shears and the signed 10-Year Anti-Rust Warranty card.",
+          "A certified Solution Sahab technician visits within 24-48 hours with a digital Leica laser distance meter to measure parapet levels and load substrates. Profiles are CNC-cut at our Nilothi facility so no cutting is done on your roof. Cables are tensioned on site to a 110 Nm load, pull-tested, and handed over with the emergency wire cutting shears and the signed 5-Year Anti-Rust Warranty card.",
         ],
       },
       {
@@ -124,7 +124,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "**Spacing:** 50 mm (2-inch) for flats with young children, cats and birds, 75 mm (3-inch) for standard perimeter work",
           "**Anchoring:** Hilti or Fischer stainless mechanical expansion bolts into RCC beams, lintels and parapet slabs at 200 mm centres",
           "**Deflection:** under 15 mm of movement under 120 kg of force",
-          "**Warranty:** signed 10-Year Anti-Rust Warranty card at handover",
+          "**Warranty:** signed 5-Year Anti-Rust Warranty card at handover",
         ],
       },
       {
@@ -264,7 +264,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Why choose Solution Sahab for Patna",
         paragraphs: [
-          "Installation is carried out by certified Solution Sahab technicians, not outsourced labour. Profiles are CNC-cut at our Nilothi manufacturing facility so there is no noisy cutting on your floor, and every run is pull-tested before handover with a signed 10-Year Anti-Rust Warranty card.",
+          "Installation is carried out by certified Solution Sahab technicians, not outsourced labour. Profiles are CNC-cut at our Nilothi manufacturing facility so there is no noisy cutting on your floor, and every run is pull-tested before handover with a signed 5-Year Anti-Rust Warranty card.",
         ],
         items: [
           "Customized solutions for every balcony",
@@ -318,7 +318,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "Safety that keeps the view, the light and the air",
         paragraphs: [
           "Because the cables are only a few millimetres thick, they disappear into the background from inside or outside the flat. The original architectural facade stays intact and the sky view from the living room or balcony is not interrupted, which is the main reason architects specify them on high-rise projects.",
-          "Unlike mild-steel grilles that corrode in monsoon rain and need repainting every year, 316-grade alloy cables do not rust or flake over decades. Every installation is handed over with a signed 10-Year Anti-Rust Warranty card.",
+          "Unlike mild-steel grilles that corrode in monsoon rain and need repainting every year, 316-grade alloy cables do not rust or flake over decades. Every installation is handed over with a signed 5-Year Anti-Rust Warranty card.",
           "Fire safety is the other half of the story. In an emergency the cables can be cleanly severed in about 15 seconds with the wire cutter kit that is included at handover, so the balcony is never a trap.",
         ],
       },
@@ -343,7 +343,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "**Laser survey:** engineers visit within 24-48 hours with digital Leica laser distance meters to measure beam levels, load substrates and structural camber",
           "**Factory pre-assembly:** aluminium profiles are CNC-cut and pre-slotted at our Nilothi manufacturing facility, so there is no noisy cutting on your floor",
           "**Calibrated tensioning:** profiles are anchored with Hilti concrete bolts and the 316-grade wires are tightened with torque tensioners to a 110 Nm load",
-          "**Load testing and warranty:** technicians run manual lateral pull-tests, hand over the emergency wire cutting shears and issue the signed 10-Year Anti-Rust Warranty card",
+          "**Load testing and warranty:** technicians run manual lateral pull-tests, hand over the emergency wire cutting shears and issue the signed 5-Year Anti-Rust Warranty card",
         ],
       },
       {
@@ -453,7 +453,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "**Spacing:** 50 mm (2-inch) for flats with young children, cats and birds, 75 mm (3-inch) for standard perimeter work",
           "**Anchoring:** Hilti or Fischer stainless mechanical expansion bolts into RCC beams, lintels and parapet slabs at 200 mm centres",
           "**Deflection:** under 15 mm of movement under 120 kg of force",
-          "**Warranty:** signed 10-Year Anti-Rust Warranty card at handover",
+          "**Warranty:** signed 5-Year Anti-Rust Warranty card at handover",
         ],
       },
       {
@@ -525,7 +525,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "**Child-safe spacing:** for buildings where small children are present we work to a 50 mm (2-inch) cable pitch, which is the spacing we recommend wherever children and pets are around",
           "**No cage effect:** the facade keeps its original architectural character rather than reading as a secured block",
           "**Fire egress:** cables can be cleanly severed in about 15 seconds with the wire cutter kit supplied at handover, so an opening never becomes a dead end",
-          "**Low maintenance:** 316 marine-grade stainless steel does not rust or need repainting, backed by a 10-Year Anti-Rust Warranty",
+          "**Low maintenance:** 316 marine-grade stainless steel does not rust or need repainting, backed by a 5-Year Anti-Rust Warranty",
         ],
       },
       {
@@ -1121,7 +1121,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "**Spacing:** 50 mm (2-inch) for homes with young children, cats and birds; 75 mm (3-inch) for standard perimeters",
           "**Deflection:** under 15 mm of movement under 120 kg of force",
           "**Fire egress:** cables sever cleanly in about 15 seconds with the supplied cutter kit",
-          "**Warranty:** signed 10-Year Anti-Rust Warranty card at handover",
+          "**Warranty:** signed 5-Year Anti-Rust Warranty card at handover",
         ],
       },
       {
@@ -1339,7 +1339,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Specification and installation",
         paragraphs: [
-          "More than 400 kgf tensile capacity per run, verified under NABL-certified static proof testing; 50 mm (2-inch) pitch where children and pets are around, 75 mm (3-inch) for standard perimeters; Hilti or Fischer stainless anchoring at 200 mm centres; and a signed 10-Year Anti-Rust Warranty at handover.",
+          "More than 400 kgf tensile capacity per run, verified under NABL-certified static proof testing; 50 mm (2-inch) pitch where children and pets are around, 75 mm (3-inch) for standard perimeters; Hilti or Fischer stainless anchoring at 200 mm centres; and a signed 5-Year Anti-Rust Warranty at handover.",
           "Certified technicians survey with Leica laser meters, CNC-cut profiles at our Nilothi facility, tension cables to a 110 Nm load, pull-test every run, and hand over the emergency cutter kit. Call 99711 43143 or use the [contact page](/contact-us) to book a  measurement.",
         ],
       },
@@ -1366,7 +1366,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Specification and booking",
         paragraphs: [
-          "More than 400 kgf tensile capacity per run with NABL-certified verification, 50 mm (2-inch) pitch for homes with young children and pets, 6063-T6 aluminium frames in Charcoal, White, Bronze or Silver, Hilti or Fischer stainless anchoring, and a signed 10-Year Anti-Rust Warranty.",
+          "More than 400 kgf tensile capacity per run with NABL-certified verification, 50 mm (2-inch) pitch for homes with young children and pets, 6063-T6 aluminium frames in Charcoal, White, Bronze or Silver, Hilti or Fischer stainless anchoring, and a signed 5-Year Anti-Rust Warranty.",
           "Send a balcony photo through the [contact page](/contact-us) or call 99711 43143 — an engineer will measure at no cost, and [pleated mesh](/pleated-mesh) can be added for insect protection.",
         ],
       },
@@ -1422,7 +1422,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "Materials, strength and safety",
         paragraphs: [
           "316 marine-grade stainless steel cables (2.5 mm or 3.0 mm) with a twisted multi-strand core, more than 400 kgf tensile capacity per run verified under NABL-certified testing, 50 mm (2-inch) pitch for homes with children and pets or 75 mm (3-inch) for standard perimeters, 6063-T6 aluminium frames in Charcoal, White, Bronze or Silver, and Hilti or Fischer stainless anchoring at 200 mm centres.",
-          "The cables read as almost nothing from inside the flat, so light and airflow stay; 316-grade alloy needs no repainting through monsoons, backed by a signed 10-Year Anti-Rust Warranty; and in emergencies the cables sever cleanly in about 15 seconds with the supplied cutter kit.",
+          "The cables read as almost nothing from inside the flat, so light and airflow stay; 316-grade alloy needs no repainting through monsoons, backed by a signed 5-Year Anti-Rust Warranty; and in emergencies the cables sever cleanly in about 15 seconds with the supplied cutter kit.",
         ],
       },
       {
@@ -1481,7 +1481,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Specification and booking in Noida Extension",
         paragraphs: [
-          "More than 400 kgf tensile capacity per run with NABL-certified verification; 50 mm (2-inch) pitch for homes with young children, cats and birds; Hilti or Fischer stainless anchoring at 200 mm centres; under 15 mm deflection under 120 kg; and a signed 10-Year Anti-Rust Warranty with 15-second emergency wire cutting.",
+          "More than 400 kgf tensile capacity per run with NABL-certified verification; 50 mm (2-inch) pitch for homes with young children, cats and birds; Hilti or Fischer stainless anchoring at 200 mm centres; under 15 mm deflection under 120 kg; and a signed 5-Year Anti-Rust Warranty with 15-second emergency wire cutting.",
           "Our teams cover Noida Extension, the Expressway and Sector 150 with  measurement. Call 99711 43143 or send balcony photos through the [contact page](/contact-us) — [pleated mesh](/pleated-mesh) can be added on the same visit.",
         ],
       },
@@ -1508,7 +1508,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Specification and booking",
         paragraphs: [
-          "2.5 mm or 3.0 mm cables with more than 400 kgf tensile capacity, NABL-certified verification, 50 mm (2-inch) child-safe pitch, AkzoNobel powder coating in Charcoal, White, Bronze or Silver, and a signed 10-Year Anti-Rust Warranty.",
+          "2.5 mm or 3.0 mm cables with more than 400 kgf tensile capacity, NABL-certified verification, 50 mm (2-inch) child-safe pitch, AkzoNobel powder coating in Charcoal, White, Bronze or Silver, and a signed 5-Year Anti-Rust Warranty.",
           "Call 99711 43143 or send photos through the [contact page](/contact-us) for a  measurement in Mayur Vihar and nearby East Delhi.",
         ],
       },

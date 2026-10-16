@@ -90,7 +90,7 @@ export function StructuredData() {
         name: "What is the warranty and expected lifespan in harsh Delhi NCR weather?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Because AISI 316 contains molybdenum, it has exceptional resistance to chlorides, monsoon humidity, and Delhi urban pollution. Our invisible grills carry a 10-Year Rust Guarantee and have an expected field lifespan of 15+ years without painting or rust maintenance.",
+          text: "Because AISI 316 contains molybdenum, it has exceptional resistance to chlorides, monsoon humidity, and Delhi urban pollution. Our invisible grills carry a 5-Year Rust Guarantee and have an expected field lifespan of 15+ years without painting or rust maintenance.",
         },
       },
       {

@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://solutionsahab.com"),
   title: "Solution Sahab | Invisible Grills, Pleated Mosquito Mesh & Architectural Fenestration Delhi NCR",
   description:
-    "Solution Sahab provides custom-engineered invisible grills, pleated mosquito mesh, honeycomb partitions, and security screens across Delhi NCR. 400kg tensile load tested AISI 316 marine-grade cables with a 10-year rust guarantee.",
+    "Solution Sahab provides custom-engineered invisible grills, pleated mosquito mesh, honeycomb partitions, and security screens across Delhi NCR. 400kg tensile load tested AISI 316 marine-grade cables with a 5-year rust guarantee.",
   keywords: [
     "Invisible Grills Delhi NCR",
     "Invisible Grills Gurgaon",
