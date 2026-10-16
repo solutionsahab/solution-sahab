@@ -269,28 +269,13 @@ export const GALLERY_IMAGES: (GridImage & { caption: string })[] = [
   },
 ];
 
-const TEAM_BASE = "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/A3QrolLwe7UBnQrp/";
-
-const TEAM_FILES = [
-  "dsc02920-FPdp1kjRT5DafUVZ.JPG",
-  "dsc02357-ievle7tCgtGYyIuR.JPG",
-  "dsc02270-lU1JSFbhxr1GxgyU.JPG",
-  "dsc03417-jHcixlvxw6BR1ewO.JPG",
-  "dsc03397-61FxHlXfrNfkp5L7.JPG",
-  "dsc03329-odlPPmenyCORBFVR.JPG",
-  "dsc03328-HG3s3Jegbg1YRZhk.JPG",
-  "dsc02359-s61splDDvnDCnEQG.JPG",
-  "dsc02351-bNKCDLn3s98aqx4j.JPG",
-  "dsc02288-0mh8hfDjdpuudNis.JPG",
-  "dsc02280-Z9fUDJfKXp2bUUW4.JPG",
-  "dsc02273-JIXWvSUkI70w7JUu.JPG",
-  "dsc02271-wE0xZ5JGQJtWp1dO.JPG",
-];
-
-export const TEAM_IMAGES: GridImage[] = TEAM_FILES.map((file, index) => ({
-  src: `${TEAM_BASE}${file}`,
-  alt: `Solution Sahab team member photo ${String(index + 1).padStart(2, "0")}`,
-}));
+export const TEAM_IMAGES: GridImage[] = Array.from({ length: 13 }, (_, index) => {
+  const num = String(index + 1).padStart(2, "0");
+  return {
+    src: `/images/team/team-${num}.jpg`,
+    alt: `Solution Sahab team member photo ${num}`,
+  };
+});
 
 export interface ContactPhone {
   label: string;

@@ -10,6 +10,7 @@ export async function POST(req: NextRequest) {
     const rawPhone = body.phone || body.contactNumber || "";
     // Extract standard 10-digit mobile number for CRM
     const cleanPhone = rawPhone.replace(/\D/g, "").slice(-10) || rawPhone;
+    const address = body.address || body.location || body.city || "";
     const email = body.email || `${cleanPhone || "lead"}@solutionsahab.com`;
     const today = new Date().toISOString().split("T")[0];
     const createdBy =
@@ -34,6 +35,7 @@ export async function POST(req: NextRequest) {
           "Contact Name": name,
           "Mobile Number": cleanPhone,
           "Email": email,
+          "Address": address,
           "Lead Date": today,
           "Lead Source": leadSource,
           "Lead Stage": "New",

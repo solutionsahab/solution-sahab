@@ -1,4 +1,5 @@
 // File: src/lib/products.ts
+import { ASSETS } from "@/lib/const";
 
 export type ProductBlock =
   | {
@@ -71,8 +72,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     hero: {
       intro:
         "Pleated mesh is an innovative insect screen system designed to provide efficient protection against insects while allowing fresh air to circulate. Unlike traditional flat screens, pleated mesh has a zigzag structure that folds and unfolds smoothly. This design enhances the aesthetic appeal and keeps the mesh taut and functional over time. Pleated mesh systems are used in residential and commercial spaces for their durability, ease of operation, and space-saving design, and can be installed on windows, doors, and large openings such as balconies and patios.",
-      imageUrl:
-        "https://lh3.googleusercontent.com/aida/AEtjO1XM1X6kR1yxKiZY_kVOykn4MnOBbn0DqC--gKelX7ntn-0VCkZp_BdWwVb_hBJPuCsShGdv9mmC-77nkM06NiHZVMsNc7ngEBhod11F6N35JcuNfzYdl-4QyShXUWLOZNFaxTg9MvKH_ki9q7Q7752RQv13TZCSSoxJ3iEkee4sf4cUCC8c4rWk_n3zZy9XpqKZgBpB1r9NrxhYH1n-x1kU8iVg_B_19OqBn9a08_dMCzTsNYJPc0YUHVuR",
+      imageUrl: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
       imageAlt:
         "Retractable pleated mosquito mesh installed on a Delhi NCR balcony sliding door",
     },
@@ -160,8 +160,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     hero: {
       intro:
         "The Honeycomb System is a revolutionary combination of aesthetics and functionality, offering privacy, energy efficiency, and stylish design in one sleek solution. With its unique honeycomb structure, this system not only adds a modern look to any space but also provides enhanced insulation, reducing energy costs and improving indoor comfort.",
-      imageUrl:
-        "https://lh3.googleusercontent.com/aida/AEtjO1WZHt4-kNxejks6UGDlq4JyLQlN5Mz2ci0pg_9APodXV-bCBHtxjwU0A8vTWpODyP4dZabmzD4V0zqFOHcFxKUbU4FOOf3vTxwqsfRXDADPu8KVSmr-9fOKnN9zIBWPRuXr92HtoMSffkUCtLivvlr0tPV5SLqilSmef0T0xY_b2lRbsfDpTGUuIngMgx7mj0bCiDbDHtWnRFUCMYR8jWwdsAKgsX1I_ZhLhdDGoRu52lMzbgIKEmCHxuhW",
+      imageUrl: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
       imageAlt:
         "Honeycomb partition system installed in a Delhi residence for privacy and light control",
     },
@@ -273,8 +272,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     hero: {
       intro:
         "Aluminium Security Pleated Mesh by Solution Sahab is an advanced protective screen designed to provide superior security while allowing maximum airflow and visibility. Made from high-quality aluminium, this pleated mesh system is durable, corrosion-resistant, and easy to operate. It is the perfect solution for keeping your home secure from insects, dust, and intruders without compromising ventilation and aesthetics.",
-      imageUrl:
-        "https://lh3.googleusercontent.com/aida/AEtjO1VI0H-Bs-4_uqaIdjz2725kmSzBt2-buKI_mxhiAgcKpEO_Eqycat3KpKRfJD55P6fQ3Sdvv4VDYPRItHIlhLHTELj3WzsOOWpB9cy1ZDdWLJwOYnlWPbPag9D3RKYEqoqhpw9e9qaFaOmP616oHfuK3VyPwt6aVNx-vVBku4PCePv7rVYbm2MJLd5pQYnQsyBuKobibIo5MFBbZb_5MyDa5cJM2qqqUfuAgTAE83_wmobqoC3mzmQxzsg9",
+      imageUrl: ASSETS.PRODUCTS.SKYLIGHT,
       imageAlt:
         "Aluminium security pleated mesh screen installed on a Delhi apartment window",
     },
@@ -461,8 +459,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     hero: {
       intro:
         "Outdoor spaces are no longer just add-ons to a building—they are extensions of how we live, work, and relax. But changing weather conditions often make balconies, terraces, pergolas, and open areas uncomfortable or unusable. An Automatic Weather Screen is a motorized, high-performance screening system designed to protect outdoor and semi-outdoor spaces from sunlight, heat, wind, rain, dust, and insects, while still allowing airflow and maintaining openness. It transforms exposed areas into comfortable, usable environments throughout the year.",
-      imageUrl:
-        "https://lh3.googleusercontent.com/aida/AEtjO1Up4i5p334j-UdC-pQz0Jv-CzSLNQOgYIqCEuEaLo9EsaxLzjtUxDVSxd3kiLgs8p_gxznkt6pbJAHZns5ZiRbjjBYvDhtI8ZBt_OVF2FYRSdWR-A433I2hk60R6VqI5BhIccYHu7ZnZP1Voy8ahcrBT8Jwkt21PBmO9UD3B9r84Mubqk-cZDhYlKREvqyBHsxfHd35gQZ3AX3mbA9atsRO8lRWjDz4l9ACHqvw-EXZ1gPp_jelyHohTBru",
+      imageUrl: ASSETS.PRODUCTS.WEATHER_SCREENS,
       imageAlt:
         "Motorised zip weather screen enclosing an outdoor terrace in Delhi",
     },
@@ -651,8 +648,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     hero: {
       intro:
         "Say goodbye to cluttered drying racks and limited floor space. Our Ceiling Cloth Hanger is a modern and space-saving solution designed to make drying clothes indoors easier than ever. Whether you are dealing with rainy days, small living spaces, or the inconvenience of traditional drying methods, this innovative hanger provides a hassle- way to keep your clothes fresh and dry. It enhances air circulation, speeds up drying time, and ensures your garments remain in excellent condition without excessive wrinkling or damp odors.",
-      imageUrl:
-        "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A3QrolLwe7UBnQrp/w1-YZ9xgKQ0ybHoMx9k.png",
+      imageUrl: ASSETS.PRODUCTS.CEILING_CLOTH_HANGER,
       imageAlt:
         "Ceiling-mounted cloth hanger with pulley mechanism installed on a Delhi balcony",
     },

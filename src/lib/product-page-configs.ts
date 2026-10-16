@@ -668,15 +668,13 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab honeycomb partition",
       ],
       canonical: "https://solutionsahab.com/honeycomb-partition",
-      ogImage:
-        "https://lh3.googleusercontent.com/aida/AEtjO1WZHt4-kNxejks6UGDlq4JyLQlN5Mz2ci0pg_9APodXV-bCBHtxjwU0A8vTWpODyP4dZabmzD4V0zqFOHcFxKUbU4FOOf3vTxwqsfRXDADPu8KVSmr-9fOKnN9zIBWPRuXr92HtoMSffkUCtLivvlr0tPV5SLqilSmef0T0xY_b2lRbsfDpTGUuIngMgx7mj0bCiDbDHtWnRFUCMYR8jWwdsAKgsX1I_ZhLhdDGoRu52lMzbgIKEmCHxuhW",
+      ogImage: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
     },
     structuredData: {
       productName: "Honeycomb Cellular Partitions and Retractable Thermal Blinds",
       description:
         "Retractable honeycomb cellular room dividers, thermal insulation blinds, and 2-in-1 Duet mesh systems for homes and offices in Delhi NCR.",
-      image:
-        "https://lh3.googleusercontent.com/aida/AEtjO1WZHt4-kNxejks6UGDlq4JyLQlN5Mz2ci0pg_9APodXV-bCBHtxjwU0A8vTWpODyP4dZabmzD4V0zqFOHcFxKUbU4FOOf3vTxwqsfRXDADPu8KVSmr-9fOKnN9zIBWPRuXr92HtoMSffkUCtLivvlr0tPV5SLqilSmef0T0xY_b2lRbsfDpTGUuIngMgx7mj0bCiDbDHtWnRFUCMYR8jWwdsAKgsX1I_ZhLhdDGoRu52lMzbgIKEmCHxuhW",
+      image: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
       material: "Jindal T6 Aluminum & Cellular Spunlace Polyester",
       lowPrice: "220",
       highPrice: "340",
@@ -692,8 +690,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "2-in-1 Duet System",
         "5-Year Guarantee",
       ],
-      heroImage:
-        "https://lh3.googleusercontent.com/aida/AEtjO1WZHt4-kNxejks6UGDlq4JyLQlN5Mz2ci0pg_9APodXV-bCBHtxjwU0A8vTWpODyP4dZabmzD4V0zqFOHcFxKUbU4FOOf3vTxwqsfRXDADPu8KVSmr-9fOKnN9zIBWPRuXr92HtoMSffkUCtLivvlr0tPV5SLqilSmef0T0xY_b2lRbsfDpTGUuIngMgx7mj0bCiDbDHtWnRFUCMYR8jWwdsAKgsX1I_ZhLhdDGoRu52lMzbgIKEmCHxuhW",
+      heroImage: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
       heroImageAlt: "Honeycomb Partition and Blinds Installation by Solution Sahab",
       breadcrumbName: "Honeycomb Partition",
       bookingTargetId: "#booking-form",
@@ -729,8 +726,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       title: "Why Choose Honeycomb Partition & Blinds?",
       subtitle:
         "Masonry walls are permanent and expensive. Curtains accumulate dust and block breezes. Honeycomb partitions provide flexible, on-demand zoning with superior thermal resistance.",
-      image:
-        "https://lh3.googleusercontent.com/aida/AEtjO1WZHt4-kNxejks6UGDlq4JyLQlN5Mz2ci0pg_9APodXV-bCBHtxjwU0A8vTWpODyP4dZabmzD4V0zqFOHcFxKUbU4FOOf3vTxwqsfRXDADPu8KVSmr-9fOKnN9zIBWPRuXr92HtoMSffkUCtLivvlr0tPV5SLqilSmef0T0xY_b2lRbsfDpTGUuIngMgx7mj0bCiDbDHtWnRFUCMYR8jWwdsAKgsX1I_ZhLhdDGoRu52lMzbgIKEmCHxuhW",
+      image: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
       imageAlt: "Honeycomb partition dividing modern apartment space",
       benefits: [
         {
@@ -797,8 +793,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         {
           title: "Living & Dining Room Dividers",
           desc: "Subdivides large living and dining spaces when hosting guests. Retracts completely into a 50mm slim side stack when full space is needed.",
-          imageUrl:
-            "https://lh3.googleusercontent.com/aida/AEtjO1WZHt4-kNxejks6UGDlq4JyLQlN5Mz2ci0pg_9APodXV-bCBHtxjwU0A8vTWpODyP4dZabmzD4V0zqFOHcFxKUbU4FOOf3vTxwqsfRXDADPu8KVSmr-9fOKnN9zIBWPRuXr92HtoMSffkUCtLivvlr0tPV5SLqilSmef0T0xY_b2lRbsfDpTGUuIngMgx7mj0bCiDbDHtWnRFUCMYR8jWwdsAKgsX1I_ZhLhdDGoRu52lMzbgIKEmCHxuhW",
+          imageUrl: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
           alt: "Retractable honeycomb room divider separating living and dining areas",
         },
         {
@@ -868,15 +863,13 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab weather screen",
       ],
       canonical: "https://solutionsahab.com/automatic-weather-screen",
-      ogImage:
-        "https://lh3.googleusercontent.com/aida/AEtjO1Up4i5p334j-UdC-pQz0Jv-CzSLNQOgYIqCEuEaLo9EsaxLzjtUxDVSxd3kiLgs8p_gxznkt6pbJAHZns5ZiRbjjBYvDhtI8ZBt_OVF2FYRSdWR-A433I2hk60R6VqI5BhIccYHu7ZnZP1Voy8ahcrBT8Jwkt21PBmO9UD3B9r84Mubqk-cZDhYlKREvqyBHsxfHd35gQZ3AX3mbA9atsRO8lRWjDz4l9ACHqvw-EXZ1gPp_jelyHohTBru",
+      ogImage: ASSETS.PRODUCTS.WEATHER_SCREENS,
     },
     structuredData: {
       productName: "Motorized Automatic Weather Screens & Outdoor Zip Blinds",
       description:
         "Heavy-duty motorized outdoor zip screens, wind-resistant balcony weather blinds, and solar shading systems across Delhi NCR.",
-      image:
-        "https://lh3.googleusercontent.com/aida/AEtjO1Up4i5p334j-UdC-pQz0Jv-CzSLNQOgYIqCEuEaLo9EsaxLzjtUxDVSxd3kiLgs8p_gxznkt6pbJAHZns5ZiRbjjBYvDhtI8ZBt_OVF2FYRSdWR-A433I2hk60R6VqI5BhIccYHu7ZnZP1Voy8ahcrBT8Jwkt21PBmO9UD3B9r84Mubqk-cZDhYlKREvqyBHsxfHd35gQZ3AX3mbA9atsRO8lRWjDz4l9ACHqvw-EXZ1gPp_jelyHohTBru",
+      image: ASSETS.PRODUCTS.WEATHER_SCREENS,
       material: "Architectural Aluminum & PVC-Coated Polyester Technical Solar Screen",
       lowPrice: "350",
       highPrice: "550",
@@ -892,8 +885,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Blocks 90% Heat",
         "5-Year Guarantee",
       ],
-      heroImage:
-        "https://lh3.googleusercontent.com/aida/AEtjO1Up4i5p334j-UdC-pQz0Jv-CzSLNQOgYIqCEuEaLo9EsaxLzjtUxDVSxd3kiLgs8p_gxznkt6pbJAHZns5ZiRbjjBYvDhtI8ZBt_OVF2FYRSdWR-A433I2hk60R6VqI5BhIccYHu7ZnZP1Voy8ahcrBT8Jwkt21PBmO9UD3B9r84Mubqk-cZDhYlKREvqyBHsxfHd35gQZ3AX3mbA9atsRO8lRWjDz4l9ACHqvw-EXZ1gPp_jelyHohTBru",
+      heroImage: ASSETS.PRODUCTS.WEATHER_SCREENS,
       heroImageAlt: "Automatic Weather Screen Installation by Solution Sahab",
       breadcrumbName: "Automatic Weather Screens",
       bookingTargetId: "#booking-form",
@@ -929,8 +921,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       title: "Why Choose Automatic Weather Screens?",
       subtitle:
         "Traditional bamboo chiks rot and manual roller blinds tear in balcony winds. Motorized zip screens provide heavy-duty, weather-sealed outdoor comfort.",
-      image:
-        "https://lh3.googleusercontent.com/aida/AEtjO1Up4i5p334j-UdC-pQz0Jv-CzSLNQOgYIqCEuEaLo9EsaxLzjtUxDVSxd3kiLgs8p_gxznkt6pbJAHZns5ZiRbjjBYvDhtI8ZBt_OVF2FYRSdWR-A433I2hk60R6VqI5BhIccYHu7ZnZP1Voy8ahcrBT8Jwkt21PBmO9UD3B9r84Mubqk-cZDhYlKREvqyBHsxfHd35gQZ3AX3mbA9atsRO8lRWjDz4l9ACHqvw-EXZ1gPp_jelyHohTBru",
+      image: ASSETS.PRODUCTS.WEATHER_SCREENS,
       imageAlt: "Automatic weather screen installed on outdoor balcony",
       benefits: [
         {
@@ -1003,8 +994,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         {
           title: "Garden Pergolas & Gazebos",
           desc: "Custom-mounted into wooden, steel, or aluminum pergolas to create flexible outdoor garden living rooms that seal against wind and bugs.",
-          imageUrl:
-            "https://lh3.googleusercontent.com/aida/AEtjO1Up4i5p334j-UdC-pQz0Jv-CzSLNQOgYIqCEuEaLo9EsaxLzjtUxDVSxd3kiLgs8p_gxznkt6pbJAHZns5ZiRbjjBYvDhtI8ZBt_OVF2FYRSdWR-A433I2hk60R6VqI5BhIccYHu7ZnZP1Voy8ahcrBT8Jwkt21PBmO9UD3B9r84Mubqk-cZDhYlKREvqyBHsxfHd35gQZ3AX3mbA9atsRO8lRWjDz4l9ACHqvw-EXZ1gPp_jelyHohTBru",
+          imageUrl: ASSETS.PRODUCTS.WEATHER_SCREENS,
           alt: "Motorized weather screen fitted onto luxury villa pergola",
         },
         {
@@ -1263,15 +1253,13 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab cloth hanger",
       ],
       canonical: "https://solutionsahab.com/ceiling-cloth-hanger",
-      ogImage:
-        "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A3QrolLwe7UBnQrp/w1-YZ9xgKQ0ybHoMx9k.png",
+      ogImage: ASSETS.PRODUCTS.CEILING_CLOTH_HANGER,
     },
     structuredData: {
       productName: "Stainless Steel 304 Ceiling Cloth Drying Hangers & Pulley Racks",
       description:
         "Space-saving SS-304 ceiling cloth drying racks and pulley systems with independent pipe control for balcony and utility areas in Delhi NCR.",
-      image:
-        "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A3QrolLwe7UBnQrp/w1-YZ9xgKQ0ybHoMx9k.png",
+      image: ASSETS.PRODUCTS.CEILING_CLOTH_HANGER,
       material: "100% Genuine Stainless Steel 304 Grade Seamless Pipes",
       lowPrice: "1800",
       highPrice: "3500",
@@ -1287,8 +1275,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Individual Pulley Control",
         "5-Year Guarantee",
       ],
-      heroImage:
-        "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A3QrolLwe7UBnQrp/w1-YZ9xgKQ0ybHoMx9k.png",
+      heroImage: ASSETS.PRODUCTS.CEILING_CLOTH_HANGER,
       heroImageAlt: "Ceiling Cloth Hanger Installation by Solution Sahab",
       breadcrumbName: "Ceiling Cloth Hanger",
       bookingTargetId: "#booking-form",
@@ -1324,8 +1311,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       title: "Why Choose Solution Sahab Ceiling Hangers?",
       subtitle:
         "Floor drying racks crowd your balcony and rust in the rain. Our stainless steel ceiling drying systems keep your balcony spotless and open.",
-      image:
-        "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A3QrolLwe7UBnQrp/w1-YZ9xgKQ0ybHoMx9k.png",
+      image: ASSETS.PRODUCTS.CEILING_CLOTH_HANGER,
       imageAlt: "Ceiling cloth drying rack installed on residential balcony",
       benefits: [
         {
@@ -1386,8 +1372,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         {
           title: "Apartment Balconies",
           desc: "Mounts securely to high-rise concrete balcony ceilings. Keeps wet clothes elevated out of direct eye-line while freeing up floor space.",
-          imageUrl:
-            "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/A3QrolLwe7UBnQrp/w1-YZ9xgKQ0ybHoMx9k.png",
+          imageUrl: ASSETS.PRODUCTS.CEILING_CLOTH_HANGER,
           alt: "Ceiling cloth hanger installed on apartment balcony",
         },
         {

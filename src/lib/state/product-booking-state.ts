@@ -5,7 +5,7 @@ import { useState, useCallback, useTransition } from "react";
 export interface ProductBookingFormData {
   homeownerName: string;
   contactNumber: string;
-  email: string;
+  address: string;
 }
 
 export type ProductBookingStatus = "idle" | "submitting" | "success" | "error";
@@ -13,13 +13,13 @@ export type ProductBookingStatus = "idle" | "submitting" | "success" | "error";
 export interface ProductBookingErrors {
   homeownerName?: string;
   contactNumber?: string;
-  email?: string;
+  address?: string;
 }
 
 export const initialProductBookingData: ProductBookingFormData = {
   homeownerName: "",
   contactNumber: "",
-  email: "",
+  address: "",
 };
 
 export function validateProductBookingForm(data: ProductBookingFormData): ProductBookingErrors {
@@ -35,8 +35,8 @@ export function validateProductBookingForm(data: ProductBookingFormData): Produc
     errors.contactNumber = "Please enter a valid 10-digit mobile number";
   }
 
-  if (data.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
-    errors.email = "Please enter a valid email address";
+  if (!data.address.trim()) {
+    errors.address = "Please enter your address";
   }
 
   return errors;
@@ -83,7 +83,7 @@ export function useProductBooking() {
             body: JSON.stringify({
               homeownerName: formData.homeownerName,
               contactNumber: formData.contactNumber,
-              email: formData.email,
+              address: formData.address,
               leadSource: "Product Page - Invisible Grills",
             }),
           });

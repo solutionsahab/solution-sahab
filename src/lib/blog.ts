@@ -219,7 +219,7 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-06-01T06:30:00.000Z",
     dateLabel: "1 June 2026",
     image: {
-      src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=756,fit=crop,f=jpeg/A3QrolLwe7UBnQrp/invisible-grill-installation-in-patna-AzgPP9K1HInCMyJS.jpeg",
+      src: ASSETS.HERO_IMAGE_HOME,
       alt: "Invisible grill installation completed on a balcony in Danapur, Patna",
     },
     relatedProductSlug: "invisible-grills",
@@ -361,16 +361,16 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-06-18T06:30:00.000Z",
     dateLabel: "18 June 2026",
     image: {
-      src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=756,fit=crop,f=jpeg/A3QrolLwe7UBnQrp/pleated-mesh-for-balcony-of-flats-XwwXxImDUy7FijWC.jpeg",
+      src: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
       alt: "Pleated mosquito mesh fitted to a flat balcony door by Solution Sahab",
     },
     images: [
       {
-        src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=768,fit=crop,f=jpeg/A3QrolLwe7UBnQrp/pleated-mesh-for-balcony-of-flats-XwwXxImDUy7FijWC.jpeg",
+        src: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
         alt: "Pleated mosquito mesh on a flat balcony",
       },
       {
-        src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=768,fit=crop,f=jpeg/A3QrolLwe7UBnQrp/pleated-mesh-for-window-of-flats-JqnJSNLtQtSUX2LP.jpeg",
+        src: ASSETS.GALLERY.NOIDA_VILLA,
         alt: "Pleated mosquito mesh fitted to a flat window",
       },
     ],
@@ -497,12 +497,12 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-06-12T06:30:00.000Z",
     dateLabel: "12 June 2026",
     image: {
-      src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=756,fit=crop,f=jpeg/A3QrolLwe7UBnQrp/gd-goinkna-school-3-xFb9g3Kj1wHyAbZs.jpeg",
+      src: ASSETS.GALLERY.TRADE_FAIR_EXPO,
       alt: "Invisible grill installation carried out at GD Goenka School, Vasant Kunj",
     },
     images: [
       {
-        src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=756,fit=crop,f=jpeg/A3QrolLwe7UBnQrp/gd-goinkna-school-3-xFb9g3Kj1wHyAbZs.jpeg",
+        src: ASSETS.GALLERY.TRADE_FAIR_EXPO,
         alt: "Invisible grill installation at GD Goenka School, Vasant Kunj",
       },
     ],

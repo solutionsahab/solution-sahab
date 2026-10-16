@@ -16,13 +16,11 @@ export function ContactForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  const [product, setProduct] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<{
     name?: string;
     phone?: string;
     address?: string;
-    product?: string;
   }>({});
 
   const validate = () => {
@@ -35,7 +33,6 @@ export function ContactForm() {
       next.phone = "Please enter a valid 10-digit mobile number";
 
     if (!address.trim()) next.address = "Please enter your address";
-    if (!product) next.product = "Please select a product";
 
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -55,14 +52,13 @@ export function ContactForm() {
           phone: phone.trim(),
           email: "",
           address: address.trim(),
-          leadSource: `Website - Contact Us - ${product}`,
+          leadSource: "Website - Contact Us",
         }),
       });
       setStatus("success");
       setName("");
       setPhone("");
       setAddress("");
-      setProduct("");
     } catch {
       setStatus("error");
     }
@@ -178,37 +174,6 @@ export function ContactForm() {
         )}
       </div>
 
-      <div className="flex flex-col gap-1.5">
-        <label
-          className="font-label-sm text-label-sm font-bold text-ink"
-          htmlFor="contact-product"
-        >
-          Product You Want *
-        </label>
-        <select
-          id="contact-product"
-          name="product"
-          required
-          className={`${INPUT_CLASS} ${
-            errors.product ? "border-red-500" : ""
-          } ${product ? "" : "text-slate-500"}`}
-          value={product}
-          onChange={(e) => {
-            setProduct(e.target.value);
-            setErrors((prev) => ({ ...prev, product: undefined }));
-          }}
-        >
-          <option value="">Select a product</option>
-          {CONTACT_DATA.productOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-        {errors.product && (
-          <span className="text-red-600 text-xs">{errors.product}</span>
-        )}
-      </div>
 
       <Button
         type="submit"

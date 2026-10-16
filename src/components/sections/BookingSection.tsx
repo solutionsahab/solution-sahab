@@ -99,13 +99,13 @@ export function BookingSection({
                       htmlFor="full-name"
                       className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
                     >
-                      Full Name <span className="text-red-600">*</span>
+                      Name <span className="text-red-600">*</span>
                     </label>
                     <input
                       id="full-name"
                       type="text"
                       required
-                      placeholder="e.g. Rajesh Kumar"
+                      placeholder="Your full name"
                       value={formData.fullName}
                       onChange={(e) => updateField("fullName", e.target.value)}
                       className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.fullName
@@ -125,14 +125,14 @@ export function BookingSection({
                       htmlFor="phone-number"
                       className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
                     >
-                      Phone / WhatsApp <span className="text-red-600">*</span>
+                      Phone number <span className="text-red-600">*</span>
                     </label>
                     <input
                       id="phone-number"
                       type="tel"
                       inputMode="tel"
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="10-digit mobile number"
                       value={formData.phone}
                       onChange={(e) => updateField("phone", e.target.value)}
                       className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.phone
@@ -150,25 +150,26 @@ export function BookingSection({
 
                 <div>
                   <label
-                    htmlFor="email-address"
+                    htmlFor="booking-address"
                     className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
                   >
-                    Email Address (Optional)
+                    Address <span className="text-red-600">*</span>
                   </label>
-                  <input
-                    id="email-address"
-                    type="email"
-                    placeholder="you@example.com"
-                    value={formData.email}
-                    onChange={(e) => updateField("email", e.target.value)}
-                    className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.email
+                  <textarea
+                    id="booking-address"
+                    required
+                    rows={3}
+                    placeholder="House / flat no., building or society name, street, area, city"
+                    value={formData.address}
+                    onChange={(e) => updateField("address", e.target.value)}
+                    className={`w-full p-4 bg-[#F7F6F2] border ${errors.address
                       ? "border-red-500 bg-red-50/20"
                       : "border-neutral-300 focus:border-neutral-950"
-                      } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
+                      } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors resize-y`}
                   />
-                  {errors.email && (
+                  {errors.address && (
                     <p className="text-red-600 text-xs mt-1.5 m-0">
-                      {errors.email}
+                      {errors.address}
                     </p>
                   )}
                 </div>

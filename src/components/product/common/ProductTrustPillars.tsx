@@ -18,17 +18,17 @@ const DEFAULT_CERTIFICATES = [
   {
     title: "ISO-9001:2015 Quality Certificate",
     alt: "Solution Sahab ISO-9001:2015 Quality Certification",
-    src: "https://assets.zyrosite.com/A3QrolLwe7UBnQrp/iso-certifatee-_page-0001-YrDqnRELLPheB3e3.jpg",
+    src: "/images/certificates/iso-9001-certificate.jpg",
   },
   {
     title: "NABL Tensile Load Test Report",
     alt: "Solution Sahab Wire Tensile Strength Test Report",
-    src: "https://assets.zyrosite.com/A3QrolLwe7UBnQrp/241018032-1_page-0001-A1aBxyjzeOtR9NVn.jpg",
+    src: "/images/certificates/nabl-tensile-test-report.jpg",
   },
   {
     title: "RWA Society Safety Compliance",
     alt: "Solution Sahab High-Rise Balcony Safety Compliance Certificate",
-    src: "https://assets.zyrosite.com/A3QrolLwe7UBnQrp/241018032-2_page-0001-ALpBr61W2lhwVn6O.jpg",
+    src: "/images/certificates/metallurgy-compliance-certificate.jpg",
   },
 ];
 

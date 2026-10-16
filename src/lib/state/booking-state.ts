@@ -3,7 +3,7 @@ import { useState, useCallback } from "react";
 export interface BookingFormData {
   fullName: string;
   phone: string;
-  email: string;
+  address: string;
 }
 
 export type BookingStatus = "idle" | "submitting" | "success" | "error";
@@ -18,7 +18,7 @@ export interface BookingState {
 export const initialBookingFormData: BookingFormData = {
   fullName: "",
   phone: "",
-  email: "",
+  address: "",
 };
 
 export const initialBookingState: BookingState = {
@@ -33,18 +33,18 @@ export function validateBookingForm(
   const errors: Partial<Record<keyof BookingFormData, string>> = {};
 
   if (!data.fullName.trim()) {
-    errors.fullName = "Please enter your full name";
+    errors.fullName = "Please enter your name";
   }
 
   const phoneClean = data.phone.replace(/[\s-]/g, "");
   if (!phoneClean) {
-    errors.phone = "Please enter your phone/WhatsApp number";
+    errors.phone = "Please enter your phone number";
   } else if (!/^\+?[0-9]{10,14}$/.test(phoneClean)) {
     errors.phone = "Please enter a valid 10-digit mobile number";
   }
 
-  if (data.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
-    errors.email = "Please enter a valid email address";
+  if (!data.address.trim()) {
+    errors.address = "Please enter your address";
   }
 
   return errors;
@@ -124,9 +124,9 @@ export function useBookingForm(defaultLeadSource: string = "Homepage Consultatio
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            fullName: state.data.fullName,
+            name: state.data.fullName,
             phone: state.data.phone,
-            email: state.data.email,
+            address: state.data.address,
             leadSource: defaultLeadSource,
           }),
         });
