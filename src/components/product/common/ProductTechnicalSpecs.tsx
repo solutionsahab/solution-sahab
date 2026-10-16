@@ -15,7 +15,7 @@ export interface ProductTechnicalSpecsProps {
   title?: string;
   subtitle?: string;
   callout?: TechSpecCallout;
-  specs: TechSpecItem[];
+  specs?: TechSpecItem[];
 }
 
 export function ProductTechnicalSpecs({

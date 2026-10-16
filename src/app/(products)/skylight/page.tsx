@@ -68,7 +68,7 @@ export default function SkylightProductPage() {
         <ProductHeroSection {...config.hero} />
         <ProductOverviewSection {...config.overview} />
         <ProductBenefitsSection {...config.benefits} />
-        <ProductTechnicalSpecs {...config.specs} />
+        {/* <ProductTechnicalSpecs {...config.specs} /> */}
         {/* <ProductTrustPillars {...config.trustPillars} /> */}
         <ProductApplicationsSection {...config.applications} />
         <FaqSection

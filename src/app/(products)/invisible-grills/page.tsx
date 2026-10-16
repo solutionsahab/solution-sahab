@@ -69,7 +69,7 @@ export default function InvisibleGrillsProductPage() {
         <ProductOverviewSection {...config.overview} />
         <ProductBenefitsSection {...config.benefits} />
         {/* <ProductTechnicalSpecs {...config.specs} /> */}
-        <ProductTrustPillars {...config.trustPillars} />
+        {config.trustPillars && <ProductTrustPillars {...config.trustPillars} />}
         <ProductApplicationsSection {...config.applications} />
         <FaqSection
           items={config.faqs}

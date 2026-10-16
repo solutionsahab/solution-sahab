@@ -31,8 +31,8 @@ export interface ProductPageConfig {
   hero: ProductHeroSectionProps;
   overview: ProductOverviewSectionProps;
   benefits: ProductBenefitsSectionProps;
-  specs: ProductTechnicalSpecsProps;
-  trustPillars: ProductTrustPillarsProps;
+  specs?: ProductTechnicalSpecsProps;
+  trustPillars?: ProductTrustPillarsProps;
   applications: ProductApplicationsSectionProps;
   faqs: FaqItem[];
   bookingTitle?: string;

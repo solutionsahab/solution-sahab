@@ -10,7 +10,7 @@ export interface TrustPillarItem {
 export interface ProductTrustPillarsProps {
   title?: string;
   subtitle?: string;
-  pillars: TrustPillarItem[];
+  pillars?: TrustPillarItem[];
   showCertificates?: boolean;
 }
 
@@ -52,21 +52,23 @@ export function ProductTrustPillars({
         </div>
 
         {/* 6 Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
-          {pillars.map((p) => (
-            <div
-              key={p.title}
-              className="bg-white border border-neutral-200 p-6 flex flex-col justify-start"
-            >
-              <h3 className="text-base sm:text-lg font-gilroy font-bold text-neutral-950 mb-2">
-                {p.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-body m-0">
-                {p.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+        {pillars && pillars.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                className="bg-white border border-neutral-200 p-6 flex flex-col justify-start"
+              >
+                <h3 className="text-base sm:text-lg font-gilroy font-bold text-neutral-950 mb-2">
+                  {p.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-body m-0">
+                  {p.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Real Certification Proof Cards */}
         {showCertificates && (
