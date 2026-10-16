@@ -67,7 +67,7 @@ export function BookingSection({
                   Thank you, {formData.fullName || "Customer"}.
                 </h3>
                 <p className="text-sm sm:text-base text-neutral-600 mt-3 mb-8 max-w-md leading-relaxed">
-                  Our Delhi NCR coordinator will call you within 60 minutes to confirm your measurement time slot.
+                  Our Delhi NCR coordinator will contact you shortly to confirm your measurement schedule.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4">

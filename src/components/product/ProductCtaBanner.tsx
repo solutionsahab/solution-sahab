@@ -10,7 +10,7 @@ export function ProductCtaBanner() {
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
           <div className="max-w-2xl">
             <span className="text-xs font-mono uppercase tracking-widest text-blue-200 block mb-2 font-semibold">
-              FAST SAME-WEEK TURNAROUND
+              FAST & PROMPT INSTALLATION
             </span>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-gilroy font-extrabold text-white tracking-tight m-0 mb-4 leading-tight">
               Ready to Secure Your Balcony Without Blocking the View?

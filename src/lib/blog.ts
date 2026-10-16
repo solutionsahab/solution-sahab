@@ -84,7 +84,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Installation process for rooftop projects",
         paragraphs: [
-          "A certified Solution Sahab technician visits within 24-48 hours with a digital Leica laser distance meter to measure parapet levels and load substrates. Profiles are CNC-cut at our Nilothi facility so no cutting is done on your roof. Cables are tensioned on site to a 110 Nm load, pull-tested, and handed over with the emergency wire cutting shears and the signed 5-Year Anti-Rust Warranty card.",
+          "A certified Solution Sahab technician visits promptly with a digital Leica laser distance meter to measure parapet levels and load substrates. Profiles are CNC-cut at our Nilothi facility so no cutting is done on your roof. Cables are tensioned on site to a 110 Nm load, pull-tested, and handed over with the emergency wire cutting shears and the signed 5-Year Anti-Rust Warranty card.",
         ],
       },
       {
@@ -150,7 +150,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "From measurement to handover in four stages",
         paragraphs: [
-          "A certified Solution Sahab technician visits within 24-48 hours with a digital Leica laser distance meter to measure beam levels and load substrates. Profiles are then CNC-cut at our Nilothi facility so no cutting is done on your floor, and the cables are tensioned on site to a 110 Nm load. The job closes with manual lateral pull-tests, the wire cutting shears and the signed warranty card.",
+          "A certified Solution Sahab technician visits promptly with a digital Leica laser distance meter to measure beam levels and load substrates. Profiles are then CNC-cut at our Nilothi facility so no cutting is done on your floor, and the cables are tensioned on site to a 110 Nm load. The job closes with manual lateral pull-tests, the wire cutting shears and the signed warranty card.",
         ],
       },
       {
@@ -340,7 +340,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Installation is done by certified Solution Sahab technicians, not outsourced labour, in four stages.",
         ],
         items: [
-          "**Laser survey:** engineers visit within 24-48 hours with digital Leica laser distance meters to measure beam levels, load substrates and structural camber",
+          "**Laser survey:** engineers visit promptly with digital Leica laser distance meters to measure beam levels, load substrates and structural camber",
           "**Factory pre-assembly:** aluminium profiles are CNC-cut and pre-slotted at our Nilothi manufacturing facility, so there is no noisy cutting on your floor",
           "**Calibrated tensioning:** profiles are anchored with Hilti concrete bolts and the 316-grade wires are tightened with torque tensioners to a 110 Nm load",
           "**Load testing and warranty:** technicians run manual lateral pull-tests, hand over the emergency wire cutting shears and issue the signed 5-Year Anti-Rust Warranty card",
@@ -479,7 +479,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "From measurement to handover in four stages",
         paragraphs: [
-          "A certified Solution Sahab technician visits within 24-48 hours with a digital Leica laser distance meter to measure beam levels and load substrates. Profiles are then CNC-cut at our Nilothi facility so no cutting is done on your floor, and the cables are tensioned on site to a 110 Nm load. The job closes with manual lateral pull-tests, the wire cutting shears and the signed warranty card.",
+          "A certified Solution Sahab technician visits promptly with a digital Leica laser distance meter to measure beam levels and load substrates. Profiles are then CNC-cut at our Nilothi facility so no cutting is done on your floor, and the cables are tensioned on site to a 110 Nm load. The job closes with manual lateral pull-tests, the wire cutting shears and the signed warranty card.",
         ],
       },
       {
@@ -1428,7 +1428,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Installation and booking",
         paragraphs: [
-          "Certified technicians survey within 24-48 hours with Leica laser meters, CNC-cut profiles at our Nilothi facility, tension cables to a 110 Nm load, and close with pull-tests, cutter shears and the warranty card. Read the full [invisible grills](/invisible-grills) guide, or send photos through the [contact page](/contact-us) — call 99711 43143 for a  measurement.",
+          "Certified technicians survey promptly with Leica laser meters, CNC-cut profiles at our Nilothi facility, tension cables to a 110 Nm load, and close with pull-tests, cutter shears and the warranty card. Read the full [invisible grills](/invisible-grills) guide, or send photos through the [contact page](/contact-us) — call 99711 43143 for a  measurement.",
         ],
       },
     ],

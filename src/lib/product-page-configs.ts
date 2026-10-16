@@ -62,7 +62,7 @@ const COMMON_TRUST_PILLARS = [
   },
   {
     title: "10,000+ Happy Homes Across Delhi NCR",
-    desc: "Trusted across Gurgaon, Noida, Greater Noida, and Delhi with proven 5-star customer ratings and same-week installation availability.",
+    desc: "Trusted across Gurgaon, Noida, Greater Noida, and Delhi with proven 5-star customer ratings and prompt, reliable installation.",
   },
 ];
 
@@ -254,12 +254,12 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         id: 5,
         question: "How long does measurement and installation take?",
         answer:
-          "Our engineer visits your home with material samples and takes laser measurements. Once confirmed, installation is completed in 3 to 5 hours with dust-controlled tools.",
+          "Our engineer visits your home with material samples and takes laser measurements. Once confirmed, installation is completed cleanly in a short time with dust-controlled tools.",
       },
     ],
     bookingTitle: "Schedule Laser Site Measurement",
     bookingDescription:
-      "Book an engineer visit with wire and track samples for your home or project. Same-week installation across Delhi NCR.",
+      "Book an engineer visit with wire and track samples for your home or project. Prompt installation across Delhi NCR.",
   },
 
   "pleated-mesh": {
@@ -449,12 +449,12 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         id: 5,
         question: "How long does measurement and installation take?",
         answer:
-          "Our technician visits your home with physical frame swatches and mesh samples, takes laser measurements, and provides an exact quote. Following confirmation, installation is completed in 2 to 4 hours.",
+          "Our technician visits your home with physical frame swatches and mesh samples, takes laser measurements, and provides an exact quote. Following confirmation, installation is completed cleanly in a short time.",
       },
     ],
     bookingTitle: "Schedule Laser Site Measurement",
     bookingDescription:
-      "Book an engineer visit with frame color swatches and mesh samples for your home. Same-week installation across Delhi NCR.",
+      "Book an engineer visit with frame color swatches and mesh samples for your home. Prompt installation across Delhi NCR.",
   },
 
   "aluminum-mesh-partition": {
@@ -644,12 +644,12 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         id: 5,
         question: "How does the site measurement and installation process work?",
         answer:
-          "A certified Solution Sahab technician visits your property with aluminum swatches and mesh samples, conducts laser measurements, and provides an exact quote. Installation is completed cleanly in 3 to 4 hours.",
+          "A certified Solution Sahab technician visits your property with aluminum swatches and mesh samples, conducts laser measurements, and provides an exact quote. Installation is completed cleanly in a short time.",
       },
     ],
     bookingTitle: "Schedule Laser Site Measurement",
     bookingDescription:
-      "Book an engineer visit with aluminum frame and security mesh samples for your home. Same-week installation across Delhi NCR.",
+      "Book an engineer visit with aluminum frame and security mesh samples for your home. Prompt installation across Delhi NCR.",
   },
 
   "honeycomb-partition": {
@@ -844,7 +844,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     ],
     bookingTitle: "Schedule Laser Site Measurement",
     bookingDescription:
-      "Book an engineer visit with cellular fabric swatches and frame profiles for your home. Same-week installation across Delhi NCR.",
+      "Book an engineer visit with cellular fabric swatches and frame profiles for your home. Prompt installation across Delhi NCR.",
   },
 
   "automatic-weather-screen": {
@@ -1034,12 +1034,12 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         id: 5,
         question: "How does the site measurement and installation process work?",
         answer:
-          "A Solution Sahab technical specialist visits your site with physical fabric swatches and cassette profiles, records laser measurements, and provides a detailed quote. Installation is completed in 3 to 5 hours.",
+          "A Solution Sahab technical specialist visits your site with physical fabric swatches and cassette profiles, records laser measurements, and provides a detailed quote. Installation is completed cleanly in a short time.",
       },
     ],
     bookingTitle: "Schedule Laser Site Measurement",
     bookingDescription:
-      "Book an engineer visit with motor specifications and fabric swatches for your outdoor patio or balcony. Same-week installation across Delhi NCR.",
+      "Book an engineer visit with motor specifications and fabric swatches for your outdoor patio or balcony. Prompt installation across Delhi NCR.",
   },
 
   "skylight": {
@@ -1234,7 +1234,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     ],
     bookingTitle: "Schedule Laser Site Measurement",
     bookingDescription:
-      "Book an engineer visit with glass specification samples and curb profile details. Same-week consultation across Delhi NCR.",
+      "Book an engineer visit with glass specification samples and curb profile details. Prompt consultation across Delhi NCR.",
   },
 
   "ceiling-cloth-hanger": {
@@ -1360,7 +1360,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     // trustPillars: {
     //   title: "Why Choose Solution Sahab for Ceiling Hangers?",
     //   subtitle:
-    //     "High-grade SS-304 components, smooth dual pulleys, and prompt same-week installation across Delhi NCR.",
+    //     "High-grade SS-304 components, smooth dual pulleys, and prompt installation across Delhi NCR.",
     //   pillars: COMMON_TRUST_PILLARS,
     //   showCertificates: true,
     // },
@@ -1424,11 +1424,11 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         id: 5,
         question: "What is the site measurement and installation process?",
         answer:
-          "A Solution Sahab technician visits your home, measures your ceiling length to recommend the ideal rod length (4ft to 8ft) and rod count, and provides an instant quote. Installation is completed cleanly in 1 to 2 hours.",
+          "A Solution Sahab technician visits your home, measures your ceiling length to recommend the ideal rod length (4ft to 8ft) and rod count, and provides an instant quote. Installation is completed cleanly in a short time.",
       },
     ],
     bookingTitle: "Schedule Laser Site Measurement",
     bookingDescription:
-      "Book a technician visit with SS-304 pipe samples and pulley demonstrations for your balcony or utility ceiling. Same-week installation across Delhi NCR.",
+      "Book a technician visit with SS-304 pipe samples and pulley demonstrations for your balcony or utility ceiling. Prompt installation across Delhi NCR.",
   },
 };

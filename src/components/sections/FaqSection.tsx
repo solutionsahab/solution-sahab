@@ -41,7 +41,7 @@ const FAQ_ITEMS: FaqItem[] = [
     id: 6,
     question: "How long does measurement and installation take?",
     answer:
-      "Our engineer visits your home with material samples. Once confirmed, installation is completed in 3 to 5 hours.",
+      "Our engineer visits your home with material samples. Once confirmed, installation is completed cleanly in a short time.",
   },
 ];
 
