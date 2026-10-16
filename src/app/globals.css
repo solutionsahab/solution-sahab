@@ -2,62 +2,81 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #006046;
-  --color-primary-container: #0e7b5b;
-  --color-primary-fixed: #98f5cd;
-  --color-primary-fixed-dim: #7cd8b2;
+  /* ── Blue & White Global Theme ─────────────────────────── */
+  --color-primary: #1B4D8E;
+  --color-primary-container: #1565C0;
+  --color-primary-fixed: #D6E4FF;
+  --color-primary-fixed-dim: #A8C4F5;
   --color-on-primary: #ffffff;
-  --color-on-primary-container: #b1ffdc;
-  --color-on-primary-fixed: #002115;
-  --color-on-primary-fixed-variant: #00513a;
+  --color-on-primary-container: #E3EFFF;
+  --color-on-primary-fixed: #002966;
+  --color-on-primary-fixed-variant: #0D3F7E;
 
-  --color-secondary: #1d4ed8;
-  --color-secondary-container: #2563eb;
-  --color-secondary-fixed: #dce1ff;
-  --color-secondary-fixed-dim: #b7c4ff;
+  --color-secondary: #1D4ED8;
+  --color-secondary-container: #2563EB;
+  --color-secondary-fixed: #DCE1FF;
+  --color-secondary-fixed-dim: #B7C4FF;
   --color-on-secondary: #ffffff;
-  --color-on-secondary-container: #fffbff;
+  --color-on-secondary-container: #FFFBFF;
   --color-on-secondary-fixed: #001551;
-  --color-on-secondary-fixed-variant: #0039b5;
+  --color-on-secondary-fixed-variant: #0039B5;
 
-  --color-tertiary: #005988;
-  --color-tertiary-container: #0072ad;
-  --color-tertiary-fixed: #cce5ff;
-  --color-tertiary-fixed-dim: #93ccff;
+  --color-tertiary: #0F5A94;
+  --color-tertiary-container: #1976D2;
+  --color-tertiary-fixed: #CBE6FF;
+  --color-tertiary-fixed-dim: #8FC8F5;
   --color-on-tertiary: #ffffff;
-  --color-on-tertiary-container: #e4f0ff;
-  --color-on-tertiary-fixed: #001d31;
-  --color-on-tertiary-fixed-variant: #004b73;
+  --color-on-tertiary-container: #E3F2FF;
+  --color-on-tertiary-fixed: #001D33;
+  --color-on-tertiary-fixed-variant: #004B77;
 
-  --color-surface: #faf8ff;
-  --color-surface-bright: #faf8ff;
-  --color-surface-dim: #d2d9f4;
-  --color-surface-variant: #dae2fd;
-  --color-surface-tint: #006c4f;
-  --color-surface-container: #eaedff;
-  --color-surface-container-low: #f2f5fd;
+  --color-surface: #F8FAFF;
+  --color-surface-bright: #F8FAFF;
+  --color-surface-dim: #D4DAE8;
+  --color-surface-variant: #DDE4F2;
+  --color-surface-tint: #1B4D8E;
+  --color-surface-container: #EDF0F9;
+  --color-surface-container-low: #F3F5FB;
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-high: #e2e7ff;
-  --color-surface-container-highest: #dae2fd;
+  --color-surface-container-high: #E4E8F4;
+  --color-surface-container-highest: #DDE4F2;
 
-  --color-on-surface: #131b2e;
-  --color-on-surface-variant: #3e4943;
-  --color-on-background: #131b2e;
+  --color-on-surface: #0F1B2D;
+  --color-on-surface-variant: #3B4A5C;
+  --color-on-background: #0F1B2D;
 
-  --color-inverse-surface: #0f172a;
-  --color-inverse-on-surface: #eef0ff;
-  --color-inverse-primary: #7cd8b2;
+  --color-inverse-surface: #0F172A;
+  --color-inverse-on-surface: #EEF0FF;
+  --color-inverse-primary: #A8C4F5;
 
-  --color-outline: #6e7a73;
-  --color-outline-variant: #bdc9c2;
+  --color-outline: #6B7B8D;
+  --color-outline-variant: #B8C5D4;
 
-  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-gilroy), var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  --font-gilroy: var(--font-gilroy), 'Gilroy', var(--font-jakarta), system-ui, sans-serif;
+  --font-display: var(--font-gilroy), var(--font-fraunces), Georgia, "Times New Roman", serif;
 
-  --color-paper: #faf7f1;
-  --color-paper-deep: #f1ebe0;
-  --color-ink: #101828;
-  --color-ink-soft: #344054;
+  --color-paper: #F8FAFF;
+  --color-paper-deep: #EDF0F9;
+  --color-ink: #0F1B2D;
+  --color-ink-soft: #3B4A5C;
+}
+
+/* ── Gilroy Local Font-Face Fallback ──────────────────────── */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-ExtraBold.otf') format('opentype');
+  font-weight: 700 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Light.otf') format('opentype');
+  font-weight: 200 300 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {
@@ -65,14 +84,68 @@ html {
 }
 
 body {
-  background-color: #faf8ff;
-  color: #131b2e;
+  background-color: #F8FAFF;
+  color: #0F1B2D;
   font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings inherit Gilroy ExtraBold geometric architectural aesthetic */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-gilroy), 'Gilroy', var(--font-jakarta), system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.font-gilroy {
+  font-family: var(--font-gilroy), 'Gilroy', var(--font-jakarta), sans-serif;
+}
+
+.font-gilroy-bold {
+  font-family: var(--font-gilroy), 'Gilroy', sans-serif;
+  font-weight: 800;
+}
+
+.font-gilroy-light {
+  font-family: var(--font-gilroy), 'Gilroy', sans-serif;
+  font-weight: 300;
+}
+
+.font-body {
+  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+}
+
+.stat-number, .step-number {
+  font-family: var(--font-gilroy), 'Gilroy', sans-serif;
+  font-weight: 800;
+}
+
+/* ── Global Interactive Elements Cursor ─────────────────── */
+button,
+a,
+select,
+summary,
+[role="button"],
+[role="tab"],
+[type="button"],
+[type="reset"],
+[type="submit"],
+input[type="checkbox"],
+input[type="radio"],
+label[for] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
 }
 
 /* Material Symbols icon support */

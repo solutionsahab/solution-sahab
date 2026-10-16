@@ -81,9 +81,6 @@ export function ProductCatalogSection() {
         {/* Clean Editorial Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-10">
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-2">
-              Product
-            </p>
             <h2
               id="products-heading"
               className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-950 tracking-tight m-0"
@@ -125,7 +122,7 @@ export function ProductCatalogSection() {
 
                 {/* Minimal Product Details */}
                 <div className="p-5 sm:p-6">
-                  <h3 className="text-xl font-semibold text-neutral-950 tracking-tight m-0">
+                  <h3 className="text-xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
                     <Link href={product.href} className="hover:underline underline-offset-4">
                       {product.title}
                     </Link>
@@ -143,7 +140,7 @@ export function ProductCatalogSection() {
               <div className="px-4 sm:px-5 py-3 border-t border-neutral-300 flex items-center justify-between text-xs font-semibold">
                 <Link
                   href={product.href}
-                  className="text-neutral-950 hover:opacity-70 inline-flex items-center gap-1 uppercase tracking-wider font-mono"
+                  className="text-neutral-950 hover:opacity-70 inline-flex items-center gap-1 uppercase tracking-wider font-gilroy font-extrabold"
                 >
                   <span>Read Full Detail</span>
                   <span className="material-symbols-outlined text-[15px]" aria-hidden="true">

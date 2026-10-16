@@ -315,14 +315,9 @@ export const CONTACT_DATA = {
         "35, Kh.No.-7/8, Road No. 5, Shri Ram Colony, Nilothi Extn. Nangloi, New Delhi-110041",
     },
     {
-      label: "New Delhi",
-      address:
-        "B-45 First Floor, Indra Enclave, Near IGNOU University, New Delhi - 110068",
-    },
-    {
       label: "Branch Office",
       address:
-        "A32, Lower Ground 1, IGNOU Main Rd, Maidan Garhi, New Delhi 110030",
+        "B- 45 first floor indra enclave near ignou university new delhi - 110068",
     },
   ],
   partners: [

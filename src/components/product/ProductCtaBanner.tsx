@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@/components/ui/Button";
 import { CONTACT_INFO } from "@/const";
 
 export function ProductCtaBanner() {
@@ -16,23 +17,22 @@ export function ProductCtaBanner() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            <a
-              className="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3.5 rounded-xl font-label-md text-label-md font-bold hover:bg-primary-container transition-colors text-center"
+            <Button
               href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
+              variant="primary"
+              size="md"
+              icon="call"
             >
-              <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
-                call
-              </span>
               {CONTACT_INFO.PHONE_PRIMARY}
-            </a>
-            <a
-              className="font-label-md text-label-md font-semibold text-ink hover:text-primary transition-colors text-center sm:self-center"
+            </Button>
+            <Button
               href={CONTACT_INFO.WHATSAPP_URL}
-              rel="noopener noreferrer"
-              target="_blank"
+              variant="whatsapp"
+              size="md"
+              icon="chat"
             >
-              or WhatsApp a photo
-            </a>
+              WhatsApp a Photo
+            </Button>
           </div>
         </div>
       </div>

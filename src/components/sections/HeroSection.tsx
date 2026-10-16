@@ -4,6 +4,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 import { ASSETS, CONTACT_INFO } from "@/const";
 
 function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
@@ -126,29 +127,25 @@ export function HeroSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6">
           {/* Left: Slide Counter + Product Name + Short Tagline */}
           <div className="max-w-2xl">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-white tracking-tight leading-[1.08] m-0">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-gilroy text-white tracking-tight leading-[1.08] m-0">
               {slide.name}
             </h1>
 
-            <p className="mt-2 text-sm sm:text-lg text-white/80 font-normal m-0">
+            <p className="mt-2 text-sm sm:text-lg text-white/90 font-normal m-0">
               {slide.tagline}
             </p>
           </div>
 
           {/* Right: Clean Sharp CTAs */}
           <div className="flex flex-wrap items-center gap-3 shrink-0">
-            <Link
+            <Button
               href="#quick-booking"
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-neutral-100 text-neutral-950 text-sm sm:text-base font-semibold px-6 py-3.5 transition-colors min-h-[48px]"
+              variant="white"
+              size="lg"
+              icon="arrow_outward"
             >
-              <span>Book Site Visit</span>
-              <span
-                className="material-symbols-outlined text-[18px]"
-                aria-hidden="true"
-              >
-                arrow_outward
-              </span>
-            </Link>
+              Book Site Visit
+            </Button>
           </div>
         </div>
         <div className="pt-4 flex items-center justify-between gap-4">
@@ -172,7 +169,7 @@ export function HeroSection() {
                     : "border-white/20 text-white/50 hover:text-white/80 hover:border-white/40"
                     }`}
                 >
-                  <span className="block text-[10px] font-mono uppercase tracking-wider opacity-70">
+                  <span className="block text-[10px] font-gilroy font-extrabold uppercase tracking-wider opacity-70">
                     0{index + 1}
                   </span>
                   <span className="block text-xs font-medium truncate mt-0.5">

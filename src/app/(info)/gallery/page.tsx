@@ -5,6 +5,7 @@ import { PageHero } from "@/components/common/PageHero";
 import { ImageGrid } from "@/components/common/ImageGrid";
 import { RelatedLinks } from "@/components/common/RelatedLinks";
 import { ProductCtaBanner } from "@/components/product/ProductCtaBanner";
+import { Button } from "@/components/ui/Button";
 import { buildPageMetadata } from "@/lib/seo";
 import { GALLERY_IMAGES, INSTAGRAM_URL } from "@/lib/info-pages";
 import { PRODUCT_LINKS } from "@/lib/site-links";
@@ -62,20 +63,15 @@ export default function GalleryPage() {
                 Instagram profile.
               </p>
             </div>
-            <a
+            <Button
               href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-bold hover:bg-blue-800 transition-colors shrink-0"
+              variant="primary"
+              size="md"
+              icon="photo_camera"
+              className="shrink-0"
             >
-              <span
-                className="material-symbols-outlined text-[20px]"
-                aria-hidden="true"
-              >
-                photo_camera
-              </span>
               View on Instagram
-            </a>
+            </Button>
           </div>
         </div>
       </section>

@@ -3,7 +3,9 @@
 // File: src/components/common/ContactForm.tsx
 import React from "react";
 import { useState } from "react";
+import { Button } from "@/components/ui/Button";
 import { CONTACT_DATA } from "@/lib/info-pages";
+import Link from "next/link";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -69,7 +71,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="p-6 rounded-xl bg-paper-deep text-primary font-label-md text-label-md flex flex-col items-center text-center gap-4 border border-primary/20">
-        <div className="w-14 h-14 rounded-full bg-emerald-100 text-primary flex items-center justify-center">
+        <div className="w-14 h-14 rounded-full bg-blue-100 text-primary flex items-center justify-center">
           <span
             className="material-symbols-outlined text-[32px]"
             aria-hidden="true"
@@ -84,13 +86,15 @@ export function ContactForm() {
           Thank you! Our team will call you shortly to discuss your requirement
           and arrange a site visit.
         </p>
-        <button
+        <Button
           type="button"
+          variant="primary"
+          size="md"
           onClick={() => setStatus("idle")}
-          className="mt-1 px-5 py-2.5 rounded-lg bg-primary text-on-primary font-bold text-sm hover:bg-primary-container transition-colors"
+          className="mt-1"
         >
           Send Another Enquiry
-        </button>
+        </Button>
       </div>
     );
   }
@@ -206,30 +210,29 @@ export function ContactForm() {
         )}
       </div>
 
-      <button
+      <Button
         type="submit"
+        variant="primary"
+        size="lg"
+        fullWidth
+        icon="send"
+        loading={status === "submitting"}
         disabled={status === "submitting"}
-        className="w-full mt-1 h-12 bg-secondary hover:bg-blue-800 text-on-secondary font-label-md text-label-md font-bold rounded-lg shadow-md transition-all flex items-center justify-center gap-2 transform active:scale-95 disabled:opacity-70"
+        className="mt-1"
       >
-        <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
-          send
-        </span>
         {status === "submitting" ? "Submitting..." : "Submit"}
-      </button>
+      </Button>
 
       {status === "error" && (
         <p className="text-red-600 text-xs m-0 text-center">
           Something went wrong. Please call us directly on{" "}
-          <a href="tel:+919971143143" className="underline font-semibold">
+          <Link href="tel:+919971143143" className="underline font-semibold">
             +91 9971-143-143
-          </a>
+          </Link>
           .
         </p>
       )}
 
-      <p className="font-caption-caps text-[10px] sm:text-caption-caps text-ink-soft text-center uppercase tracking-wide m-0">
-        We call back within 2 hours • No spam guarantee
-      </p>
     </form>
   );
 }

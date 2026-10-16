@@ -4,6 +4,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 import { useNavState } from "@/lib/state/nav-state";
 import { ASSETS, CONTACT_INFO } from "@/const";
 
@@ -28,19 +29,14 @@ export function Header() {
           <span className="opacity-40" aria-hidden="true">
             •
           </span>
-          <a
+          <Link
             className="text-primary-fixed hover:underline flex items-center gap-1 font-bold whitespace-nowrap"
             href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
             aria-label="Call Solution Sahab"
           >
-            <span
-              className="material-symbols-outlined text-[13px]"
-              aria-hidden="true"
-            >
-              call
-            </span>
+           
             {CONTACT_INFO.PHONE_PRIMARY}
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -55,7 +51,7 @@ export function Header() {
           >
             <Image
               alt="Solution Sahab - Architectural Safety & Fenestration"
-              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+              className="h-6 sm:h-10 md:h-12 w-auto object-contain"
               src={logoUrl}
               width={256}
               height={45}
@@ -102,9 +98,6 @@ export function Header() {
                   <div className="font-label-md text-label-md text-on-surface font-semibold">
                     Invisible Grills
                   </div>
-                  <div className="font-caption-caps text-caption-caps text">
-                    316 Grade SS High-Tensile Wire Cables
-                  </div>
                 </Link>
                 <Link
                   className="p-2.5 rounded-lg hover:bg-surface-container-low transition-colors block"
@@ -116,9 +109,6 @@ export function Header() {
                 >
                   <div className="font-label-md text-label-md text-on-surface font-semibold">
                     Pleated Mosquito Mesh
-                  </div>
-                  <div className="font-caption-caps text-caption-caps text-secondary">
-                    Retractable German Zig-Zag Mesh Screen
                   </div>
                 </Link>
                 <Link
@@ -132,9 +122,6 @@ export function Header() {
                   <div className="font-label-md text-label-md text-on-surface font-semibold">
                     Honeycomb Partitions
                   </div>
-                  <div className="font-caption-caps text-caption-caps text-secondary">
-                    Acoustic Thermal Room Dividers
-                  </div>
                 </Link>
                 <Link
                   className="p-2.5 rounded-lg hover:bg-surface-container-low transition-colors block"
@@ -146,9 +133,6 @@ export function Header() {
                 >
                   <div className="font-label-md text-label-md text-on-surface font-semibold">
                     Aluminum Security Mesh
-                  </div>
-                  <div className="font-caption-caps text-caption-caps text-secondary">
-                    Heavy Gauge Burglar-Proof Fenestration
                   </div>
                 </Link>
                 <Link
@@ -162,9 +146,6 @@ export function Header() {
                   <div className="font-label-md text-label-md text-on-surface font-semibold">
                     Automatic Weather Screens
                   </div>
-                  <div className="font-caption-caps text-caption-caps text-secondary">
-                    Motorized Balcony Rain &amp; Dust Barriers
-                  </div>
                 </Link>
                 <Link
                   className="p-2.5 rounded-lg hover:bg-surface-container-low transition-colors block"
@@ -177,9 +158,6 @@ export function Header() {
                   <div className="font-label-md text-label-md text-on-surface font-semibold">
                     Glass Skylights
                   </div>
-                  <div className="font-caption-caps text-caption-caps text-secondary">
-                    Laminated Safety Glass Stairwell Casings
-                  </div>
                 </Link>
                 <Link
                   className="p-2.5 rounded-lg hover:bg-surface-container-low transition-colors block"
@@ -191,9 +169,6 @@ export function Header() {
                 >
                   <div className="font-label-md text-label-md text-on-surface font-semibold">
                     Ceiling Cloth Hangers
-                  </div>
-                  <div className="font-caption-caps text-caption-caps text-secondary">
-                    Space-Saving Stainless Pulley Drying Systems
                   </div>
                 </Link>
               </div>
@@ -287,13 +262,20 @@ export function Header() {
 
           {/* Desktop & Mobile Actions */}
           <div className="flex items-center gap-3 shrink-0">
-            {/* Desktop Booking Button */}
-            <Link
-              className="hidden xl:inline-flex items-center justify-center bg-primary hover:bg-primary-container text-white font-sans text-sm px-5 py-2.5 rounded-xl shadow-md shadow-emerald-950/15 hover:shadow-lg transition-all duration-200 whitespace-nowrap font-bold"
+
+            <div className="hidden sm:flex">
+              {/* Desktop Booking Button */}
+            <Button
               href="/#quick-booking"
+              variant="primary"
+              size="sm"
+              className=""
             >
               Book Site Visit
-            </Link>
+            </Button>
+
+            </div>
+            
 
             {/* Mobile Hamburger Menu Toggle */}
             <button
@@ -322,16 +304,17 @@ export function Header() {
             <div className="flex flex-col gap-3">
               {/* Primary Mobile CTA Button */}
               <div className="pb-3 border-b border-slate-100">
-                <Link
+                <Button
                   href="/#quick-booking"
+                  variant="primary"
+                  size="md"
+                  fullWidth
+                  icon="calendar_month"
+                  iconPosition="left"
                   onClick={closeMobileMenu}
-                  className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary-container text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-colors text-center"
                 >
-                  <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
-                    calendar_month
-                  </span>
                   Book Site Visit
-                </Link>
+                </Button>
               </div>
 
               <div className="pb-3 border-b border-slate-100">
@@ -493,26 +476,26 @@ export function Header() {
               </Link>
 
               <div className="pt-3 flex flex-col gap-2.5 border-t border-slate-100">
-                <a
-                  className="flex items-center justify-center gap-2 bg-emerald-50 text-primary py-2.5 rounded-xl font-bold border border-emerald-200 text-sm"
+                <Button
                   href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
+                  variant="outline"
+                  size="md"
+                  fullWidth
+                  icon="call"
+                  iconPosition="left"
                 >
-                  <span className="material-symbols-outlined text-[18px]">
-                    call
-                  </span>
                   Call {CONTACT_INFO.PHONE_PRIMARY}
-                </a>
-                <a
-                  className="flex items-center justify-center gap-2 bg-primary text-on-primary py-2.5 rounded-xl font-bold text-sm"
+                </Button>
+                <Button
                   href={CONTACT_INFO.WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  variant="whatsapp"
+                  size="md"
+                  fullWidth
+                  icon="chat"
+                  iconPosition="left"
                 >
-                  <span className="material-symbols-outlined text-[18px]">
-                    chat
-                  </span>
                   WhatsApp Us Direct
-                </a>
+                </Button>
               </div>
             </div>
           </div>

@@ -38,44 +38,23 @@ export function BookingSection() {
               </p>
 
               {/* Simple Spec List Instead of Checkmark Icons */}
-              <div className="space-y-3 border-t border-neutral-300 pt-6 text-xs font-mono uppercase tracking-wider text-neutral-800">
+              <div className="space-y-3 border-t border-neutral-300 pt-6 text-xs font-gilroy font-bold uppercase tracking-wider text-neutral-800">
                 <div className="flex items-center justify-between">
-                  <span className="text-neutral-500">Cost</span>
-                  <span>Free Doorstep Visit</span>
+                  <span className="text-neutral-500 font-light">MODE</span>
+                  <span>Doorstep Visit</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-neutral-500">Kit</span>
+                  <span className="text-neutral-500 font-light">Kit</span>
                   <span>Physical Wire &amp; Mesh Samples</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-neutral-500">Coverage</span>
+                  <span className="text-neutral-500 font-light">Coverage</span>
                   <span>Delhi · Gurugram · Noida · NCR</span>
                 </div>
               </div>
             </div>
 
-            {/* Direct Phone / WhatsApp Block */}
-            <div className="mt-10 pt-6 border-t border-neutral-300">
-              <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 m-0 mb-3">
-                Prefer Instant WhatsApp or Call?
-              </p>
-              <div className="flex flex-wrap items-center gap-3">
-                <a
-                  href={CONTACT_INFO.WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg- hover:bg-[#20bd5a] text-white text-xs font-mono uppercase tracking-wider font-semibold px-4 py-3 transition-colors"
-                >
-                  <span>WhatsApp Balcony Photo</span>
-                </a>
-                <a
-                  href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-                  className="inline-flex items-center justify-center gap-2 border border-neutral-950 bg-transparent hover:bg-neutral-950 text-neutral-950 hover:text-white text-xs font-mono uppercase tracking-wider font-semibold px-4 py-3 transition-colors"
-                >
-                  <span>{CONTACT_INFO.PHONE_PRIMARY}</span>
-                </a>
-              </div>
-            </div>
+
           </div>
 
           {/* Right 7 Columns: Clean Architectural Form */}
@@ -86,10 +65,10 @@ export function BookingSection() {
                 id="booking-success"
                 role="alert"
               >
-                <p className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-2">
+                <p className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] m-0 mb-2">
                   Request Confirmed
                 </p>
-                <h3 className="text-2xl sm:text-3xl font-semibold text-neutral-950 m-0">
+                <h3 className="text-2xl sm:text-3xl font-extrabold font-gilroy text-neutral-950 m-0">
                   Thank you, {formData.fullName || "Customer"}.
                 </h3>
                 <p className="text-sm sm:text-base text-neutral-600 mt-3 mb-8 max-w-md leading-relaxed">
@@ -134,11 +113,10 @@ export function BookingSection() {
                       placeholder="e.g. Rajesh Kumar"
                       value={formData.fullName}
                       onChange={(e) => updateField("fullName", e.target.value)}
-                      className={`w-full h-12 px-4 bg-[#F7F6F2] border ${
-                        errors.fullName
-                          ? "border-red-500 bg-red-50/20"
-                          : "border-neutral-300 focus:border-neutral-950"
-                      } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
+                      className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.fullName
+                        ? "border-red-500 bg-red-50/20"
+                        : "border-neutral-300 focus:border-neutral-950"
+                        } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
                     />
                     {errors.fullName && (
                       <p className="text-red-600 text-xs mt-1.5 m-0">
@@ -162,11 +140,10 @@ export function BookingSection() {
                       placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => updateField("phone", e.target.value)}
-                      className={`w-full h-12 px-4 bg-[#F7F6F2] border ${
-                        errors.phone
-                          ? "border-red-500 bg-red-50/20"
-                          : "border-neutral-300 focus:border-neutral-950"
-                      } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
+                      className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.phone
+                        ? "border-red-500 bg-red-50/20"
+                        : "border-neutral-300 focus:border-neutral-950"
+                        } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
                     />
                     {errors.phone && (
                       <p className="text-red-600 text-xs mt-1.5 m-0">
@@ -189,11 +166,10 @@ export function BookingSection() {
                     placeholder="e.g. DLF Phase 5, Gurugram or Sector 150, Noida"
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
-                    className={`w-full h-12 px-4 bg-[#F7F6F2] border ${
-                      errors.email
-                        ? "border-red-500 bg-red-50/20"
-                        : "border-neutral-300 focus:border-neutral-950"
-                    } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
+                    className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.email
+                      ? "border-red-500 bg-red-50/20"
+                      : "border-neutral-300 focus:border-neutral-950"
+                      } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
                   />
                   {errors.email && (
                     <p className="text-red-600 text-xs mt-1.5 m-0">

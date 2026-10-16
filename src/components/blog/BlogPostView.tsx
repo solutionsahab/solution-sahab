@@ -1,7 +1,7 @@
-// File: src/components/blog/BlogPostView.tsx
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
 import { InfoPage } from "@/components/common/InfoPage";
 import { PageHero } from "@/components/common/PageHero";
 import { BlogCard } from "@/components/blog/BlogCard";
@@ -256,46 +256,32 @@ export function BlogPostView({ post }: BlogPostViewProps) {
             )}
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               {closingVariant === 1 ? (
-                <a
+                <Button
                   href={CONTACT_INFO.WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-colors"
+                  variant="whatsapp"
+                  size="md"
+                  icon="chat"
                 >
-                  <span
-                    className="material-symbols-outlined text-[20px]"
-                    aria-hidden="true"
-                  >
-                    chat
-                  </span>
                   WhatsApp photos
-                </a>
+                </Button>
               ) : closingVariant === 2 ? (
-                <Link
+                <Button
                   href="/contact-us"
-                  className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-colors"
+                  variant="primary"
+                  size="md"
+                  icon="arrow_forward"
                 >
                   Contact us
-                  <span
-                    className="material-symbols-outlined text-[18px]"
-                    aria-hidden="true"
-                  >
-                    arrow_forward
-                  </span>
-                </Link>
+                </Button>
               ) : (
-                <a
+                <Button
                   href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-                  className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-colors"
+                  variant="primary"
+                  size="md"
+                  icon="call"
                 >
-                  <span
-                    className="material-symbols-outlined text-[20px]"
-                    aria-hidden="true"
-                  >
-                    call
-                  </span>
                   {CONTACT_INFO.PHONE_PRIMARY}
-                </a>
+                </Button>
               )}
             </div>
           </div>

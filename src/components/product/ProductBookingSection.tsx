@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
+import { Button } from "@/components/ui/Button";
 import { useProductBooking } from "@/lib/state/product-booking-state";
 import { CONTACT_INFO } from "@/const";
+import Link from "next/link";
 
 export function ProductBookingSection() {
   const {
@@ -76,12 +78,12 @@ export function ProductBookingSection() {
                 <div className="font-caption-caps text-caption-caps uppercase text-ink-soft font-semibold">
                   Direct Consultation Hotline
                 </div>
-                <a
+                <Link
                   className="font-headline-sm text-headline-sm font-bold text-secondary hover:underline"
                   href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
                 >
                   {CONTACT_INFO.PHONE_PRIMARY}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -90,7 +92,7 @@ export function ProductBookingSection() {
           <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-ink/10">
             {status === "success" ? (
               <div className="p-6 rounded-xl bg-paper-deep text-primary font-label-md text-label-md flex flex-col items-center text-center gap-4 border border-primary/20">
-                <div className="w-14 h-14 rounded-full bg-emerald-100 text-primary flex items-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-blue-100 text-primary flex items-center justify-center">
                   <span className="material-symbols-outlined text-[32px]" aria-hidden="true">
                     task_alt
                   </span>
@@ -103,13 +105,15 @@ export function ProductBookingSection() {
                   hours to confirm your laser measurement appointment and bring
                   physical cable samples.
                 </p>
-                <button
+                <Button
                   type="button"
+                  variant="primary"
+                  size="md"
                   onClick={resetForm}
-                  className="mt-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary font-bold text-sm hover:bg-primary-container transition-colors"
+                  className="mt-2"
                 >
                   Submit Another Request
-                </button>
+                </Button>
               </div>
             ) : (
               <form className="flex flex-col gap-4 sm:gap-5" onSubmit={submitForm}>
@@ -184,18 +188,21 @@ export function ProductBookingSection() {
                   )}
                 </div>
 
-                <button
-                  className="w-full mt-2 h-12 bg-secondary hover:bg-blue-800 text-on-secondary font-label-md text-label-md font-bold rounded-lg shadow-md transition-all flex items-center justify-center gap-2 transform active:scale-95 disabled:opacity-70"
+                <Button
                   type="submit"
+                  variant="primary"
+                  size="lg"
+                  fullWidth
+                  icon="calendar_today"
+                  iconPosition="left"
+                  loading={isPending || status === "submitting"}
                   disabled={isPending || status === "submitting"}
+                  className="mt-2"
                 >
-                  <span className="material-symbols-outlined text-[20px]" aria-hidden="true">
-                    calendar_today
-                  </span>
                   {status === "submitting"
                     ? "Submitting Your Request..."
-                    : "Confirm  Site Inspection"}
-                </button>
+                    : "Confirm Site Inspection"}
+                </Button>
 
                 <p className="font-caption-caps text-[10px] sm:text-caption-caps text-ink-soft text-center uppercase tracking-wide">
                   No Spam Guarantee • Delhi • Gurugram • Noida • Greater Noida • Faridabad • Ghaziabad

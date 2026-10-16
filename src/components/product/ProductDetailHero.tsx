@@ -1,7 +1,7 @@
-// File: src/components/product/ProductDetailHero.tsx
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
 interface ProductDetailHeroProps {
   name: string;
@@ -33,19 +33,22 @@ export function ProductDetailHero({
             <p className="font-body-lg text-body-lg text-ink-soft leading-relaxed m-0">
               {intro}
             </p>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mt-2">
-              <Link
-                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3.5 rounded-xl transition-colors font-bold shadow-sm text-center"
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mt-2">
+              <Button
                 href="/#quick-booking"
+                variant="primary"
+                size="md"
               >
-                Book a  site visit
-              </Link>
-              <a
-                className="font-label-md text-label-md font-semibold text-ink hover:text-primary transition-colors text-center sm:text-left"
+                Book a site visit
+              </Button>
+              <Button
                 href="tel:+919971143143"
+                variant="outline"
+                size="md"
+                icon="call"
               >
-                or call 99711 43143
-              </a>
+                Call 99711 43143
+              </Button>
             </div>
           </div>
 

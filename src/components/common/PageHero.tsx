@@ -29,9 +29,9 @@ export function PageHero({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 pb-8 sm:pt-8 sm:pb-10">
           <Breadcrumbs items={breadcrumbs} />
           <div className="mt-4 max-w-3xl">
-            {eyebrow && (
+            {/* {eyebrow && (
               <span className="kicker text-primary">{eyebrow}</span>
-            )}
+            )} */}
             <h1 className="font-display-serif text-3xl sm:text-4xl text-ink mt-3 mb-0">
               {title}
             </h1>

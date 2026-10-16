@@ -7,7 +7,6 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ProductCatalogSection } from "@/components/sections/ProductCatalogSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
-import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ProjectGallerySection } from "@/components/sections/ProjectGallerySection";
 import { BookingSection } from "@/components/sections/BookingSection";
@@ -34,19 +33,16 @@ export default function HomePage() {
           {/* 4. Who we fit for */}
           <AudienceSection />
 
-          {/* 5. Honest comparison table */}
-          <ComparisonSection />
-
-          {/* 6. Process ink band with warranty */}
+          {/* 5. Process ink band with warranty */}
           <ProcessSection />
 
-          {/* 7. Recent work strip */}
+          {/* 6. Recent work strip */}
           <ProjectGallerySection />
 
-          {/* 8. FAQs */}
+          {/* 7. FAQs */}
           <FaqSection />
 
-          {/* 9. Booking form */}
+          {/* 8. Booking form */}
           <BookingSection />
 
 

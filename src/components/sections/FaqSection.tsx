@@ -41,7 +41,7 @@ const FAQ_ITEMS: FaqItem[] = [
     id: 6,
     question: "How long does measurement and installation take?",
     answer:
-      "Our engineer visits your home free of charge within 24 hours with material samples (takes 20 minutes). Once confirmed, installation is completed in 3 to 5 hours.",
+      "Our engineer visits your home with material samples. Once confirmed, installation is completed in 3 to 5 hours.",
   },
 ];
 
@@ -116,10 +116,10 @@ export function FaqSection() {
                     className="w-full text-left py-5 sm:py-6 flex items-start justify-between gap-6 focus:outline-none group"
                   >
                     <div className="flex items-baseline gap-4">
-                      <span className="text-xs font-mono text-neutral-400 shrink-0">
+                      <span className="text-xs font-gilroy font-extrabold text-[#1B4D8E] shrink-0">
                         0{idx + 1}
                       </span>
-                      <h3 className="text-base sm:text-lg font-semibold text-neutral-950 group-hover:opacity-75 transition-opacity m-0 leading-snug">
+                      <h3 className="text-base sm:text-lg font-bold font-gilroy text-neutral-950 group-hover:opacity-75 transition-opacity m-0 leading-snug">
                         {item.question}
                       </h3>
                     </div>

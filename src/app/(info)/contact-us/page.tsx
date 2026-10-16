@@ -7,6 +7,7 @@ import { ContactForm } from "@/components/common/ContactForm";
 import { buildPageMetadata } from "@/lib/seo";
 import { CONTACT_DATA } from "@/lib/info-pages";
 import { PRODUCT_LINKS } from "@/lib/site-links";
+import Link from "next/link";
 
 const DESCRIPTION =
   "Contact Solution Sahab for invisible grills, pleated mesh and honeycomb mesh. Call +91 9971-143-143 or send your details for a  site visit across Delhi NCR.";
@@ -54,7 +55,7 @@ export default function ContactUsPage() {
                 <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 list-none p-0 m-0">
                   {CONTACT_DATA.phones.map((phone) => (
                     <li key={phone.raw}>
-                      <a
+                      <Link
                         href={`tel:${phone.raw}`}
                         className="font-label-md text-label-md font-bold text-secondary hover:underline flex items-center gap-2"
                       >
@@ -64,7 +65,7 @@ export default function ContactUsPage() {
                             (Landline)
                           </span>
                         )}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -79,12 +80,12 @@ export default function ContactUsPage() {
                     </span>
                     Email
                   </h3>
-                  <a
+                  <Link
                     href={`mailto:${CONTACT_DATA.email}`}
                     className="mt-2 inline-block font-label-md text-label-md font-bold text-secondary hover:underline"
                   >
                     {CONTACT_DATA.email}
-                  </a>
+                  </Link>
                 </div>
               </div>
 

@@ -1,6 +1,7 @@
 // File: src/components/sections/TestimonialsSection.tsx
 import React from "react";
 import { VideoEmbed } from "@/components/common/VideoEmbed";
+import Link from "next/link";
 
 const VIDEOS = [
   {
@@ -33,7 +34,7 @@ export function TestimonialsSection() {
           <div>
             <h2
               id="customer-videos-heading"
-              className="text-2xl sm:text-4xl font-semibold text-neutral-950 tracking-tight m-0"
+              className="text-2xl sm:text-4xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0"
             >
               Customer's Feedback
             </h2>
@@ -42,14 +43,14 @@ export function TestimonialsSection() {
             </p>
           </div>
 
-          <a
+          <Link
             href="https://www.youtube.com/@solutionsahab"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs font-mono uppercase tracking-wider text-neutral-900 underline underline-offset-4 hover:opacity-70 shrink-0"
           >
             All Videos on YouTube →
-          </a>
+          </Link>
         </div>
 
         {/* Clean 2-Video Grid */}

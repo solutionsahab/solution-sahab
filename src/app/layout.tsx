@@ -1,8 +1,26 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { StructuredData } from "@/components/common/StructuredData";
 import { ASSETS } from "@/const";
+
+const gilroy = localFont({
+  src: [
+    {
+      path: "../fonts/Gilroy-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Gilroy-ExtraBold.otf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gilroy",
+  display: "swap",
+});
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -18,7 +36,7 @@ const fraunces = Fraunces({
   display: "swap",
 });
 export const viewport: Viewport = {
-  themeColor: "#006046",
+  themeColor: "#1B4D8E",
   width: "device-width",
   initialScale: 1,
 };
@@ -105,7 +123,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${jakarta.variable} ${fraunces.variable} scroll-smooth antialiased`}
+      className={`${gilroy.variable} ${jakarta.variable} ${fraunces.variable} scroll-smooth antialiased`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

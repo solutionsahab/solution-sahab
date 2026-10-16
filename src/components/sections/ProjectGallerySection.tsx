@@ -115,10 +115,10 @@ export function ProjectGallerySection() {
                   key={tab.id}
                   type="button"
                   onClick={() => setFilter(tab.id)}
-                  className={`px-3.5 py-2 text-xs font-mono uppercase tracking-wider border transition-colors ${
+                  className={`px-3.5 py-2 text-xs font-gilroy font-extrabold uppercase tracking-wider border transition-colors ${
                     isActive
-                      ? "bg-neutral-950 text-white border-neutral-950"
-                      : "bg-transparent text-neutral-700 border-neutral-300 hover:border-neutral-950"
+                      ? "bg-[#1B4D8E] text-white border-[#1B4D8E]"
+                      : "bg-transparent text-neutral-700 border-neutral-300 hover:border-[#1B4D8E] hover:text-[#1B4D8E]"
                   }`}
                 >
                   {tab.label}
@@ -149,12 +149,12 @@ export function ProjectGallerySection() {
 
               {/* Minimal Caption Below Image */}
               <div className="p-5">
-                <div className="flex items-center justify-between gap-2 text-[11px] font-mono uppercase tracking-wider text-neutral-500 mb-1.5">
+                <div className="flex items-center justify-between gap-2 text-[11px] font-gilroy font-extrabold uppercase tracking-wider text-[#1B4D8E] mb-1.5">
                   <span>{item.system}</span>
                   <span>{item.location}</span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-semibold text-neutral-950 tracking-tight m-0">
+                <h3 className="text-base sm:text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
                   {item.title}
                 </h3>
 
@@ -167,11 +167,11 @@ export function ProjectGallerySection() {
         </div>
 
         {/* Minimal Bottom Link */}
-        <div className="pt-6 flex items-center justify-between text-xs font-mono uppercase tracking-wider">
-          <span className="text-neutral-500">Photographed by our installation crew</span>
+        <div className="pt-6 flex items-center justify-between text-xs font-gilroy uppercase tracking-wider">
+          <span className="text-neutral-500 font-light">Photographed by our installation crew</span>
           <Link
             href="/gallery"
-            className="text-neutral-950 font-semibold underline underline-offset-4 hover:opacity-70"
+            className="text-neutral-950 font-extrabold underline underline-offset-4 hover:opacity-70"
           >
             View Full Gallery →
           </Link>

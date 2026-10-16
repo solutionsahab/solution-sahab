@@ -45,8 +45,7 @@ export async function POST(req: NextRequest) {
 
     const apiKey =
       process.env.CRATIO_API_KEY ||
-      CRM_CONFIG.API_KEY ||
-      "NF8xXzUwMDYkQDU4IyMyMDI2LTEwLTA0IDE4OjE1OjA3";
+      CRM_CONFIG.API_KEY
 
     // Send to Cratio CRM
     if (

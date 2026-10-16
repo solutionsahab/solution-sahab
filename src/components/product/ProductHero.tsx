@@ -1,7 +1,7 @@
-// File: src/components/product/ProductHero.tsx
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 import { ASSETS, CONTACT_INFO } from "@/const";
 
 export function ProductHero() {
@@ -32,19 +32,22 @@ export function ProductHero() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 pt-3">
-              <Link
-                className="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3.5 rounded-xl font-label-md text-label-md font-bold shadow-md hover:bg-primary-container transition-colors text-center"
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 pt-3">
+              <Button
                 href="#booking-section"
+                variant="primary"
+                size="md"
               >
-                Book a  site visit
-              </Link>
-              <a
-                className="font-label-md text-label-md font-semibold text-ink hover:text-primary transition-colors text-center sm:text-left"
+                Book a Site Visit
+              </Button>
+              <Button
                 href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
+                variant="outline"
+                size="md"
+                icon="call"
               >
-                or call {CONTACT_INFO.PHONE_PRIMARY}
-              </a>
+                Call {CONTACT_INFO.PHONE_PRIMARY}
+              </Button>
             </div>
           </div>
 

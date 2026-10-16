@@ -68,14 +68,14 @@ export const CONTACT_INFO = {
   PHONE_ALT_3_RAW: "+919999277255",
   PHONE_ALT_4: "+91 9311-559-977",
   PHONE_ALT_4_RAW: "+919311559977",
-  PHONE_ALT_4: "+91 9990-381-116",
-  PHONE_ALT_4_RAW: "+919990381116",
+  PHONE_ALT_5: "+91 9990-381-116",
+  PHONE_ALT_5_RAW: "+919990381116",
   WHATSAPP_NUMBER: "919971143143",
   WHATSAPP_URL: "https://wa.me/919971143143",
   EMAIL: "solutionsahab@gmail.com",
   HEAD_OFFICE:
     "35, Kh.No.-7/8, Road No. 5, Shri Ram Colony, Nilothi Extn. Nangloi, New Delhi-110041",
-  BRANCH_OFFICE: "Maidan Garhi, South Delhi, New Delhi",
+  BRANCH_OFFICE: "B- 45 first floor indra enclave near ignou university new delhi - 110068",
   SERVED_CITIES: [
     "Delhi",
     "New Delhi",
@@ -100,3 +100,4 @@ export const CRM_CONFIG = {
   OPERATION: "insertRecords",
   OVERWRITE: "true",
 };
+

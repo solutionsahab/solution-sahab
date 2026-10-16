@@ -36,28 +36,20 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-5 flex flex-col lg:items-end lg:text-right">
-            <a
+            <Link
               href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-              className="text-2xl sm:text-4xl font-semibold text-neutral-950 hover:opacity-70 transition-opacity tracking-tight"
+              className="text-2xl sm:text-4xl font-gilroy font-extrabold text-neutral-950 hover:opacity-70 transition-opacity tracking-tight"
             >
               {CONTACT_INFO.PHONE_PRIMARY}
-            </a>
+            </Link>
             <div className="mt-2 flex flex-wrap items-center lg:justify-end gap-4 text-xs font-mono uppercase tracking-wider">
-              <a
-                href={CONTACT_INFO.WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-950 font-semibold underline underline-offset-4 hover:opacity-70"
-              >
-                WhatsApp Quote →
-              </a>
               <span className="text-neutral-400">|</span>
-              <a
+              <Link
                 href={`mailto:${CONTACT_INFO.EMAIL}`}
                 className="text-neutral-600 hover:text-neutral-950 transition-colors lowercase font-sans text-xs"
               >
                 {CONTACT_INFO.EMAIL}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -67,7 +59,7 @@ export function Footer() {
           {/* Column 1: Systems */}
           <div className="lg:col-span-4 py-8 sm:pr-8">
             <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-4">
-              Our Products
+              Our Product's
             </h3>
             <ul className="space-y-2.5 text-sm text-neutral-800 list-none m-0 p-0">
               <li>
@@ -155,7 +147,7 @@ export function Footer() {
             <div className="space-y-4 text-sm text-neutral-700">
               <div>
                 <span className="font-semibold text-neutral-950 block mb-0.5">
-                  Head Office &amp; Fabrication
+                  Head Office
                 </span>
                 <p className="m-0 leading-relaxed text-neutral-600">
                   {CONTACT_INFO.HEAD_OFFICE}
@@ -163,7 +155,7 @@ export function Footer() {
               </div>
               <div>
                 <span className="font-semibold text-neutral-950 block mb-0.5">
-                  South Delhi Branch
+                  Our Branch
                 </span>
                 <p className="m-0 leading-relaxed text-neutral-600">
                   {CONTACT_INFO.BRANCH_OFFICE}
@@ -185,14 +177,14 @@ export function Footer() {
             <Link className="hover:text-neutral-950 transition-colors" href="/contact-us">
               Contact
             </Link>
-            <a
+            <Link
               className="hover:text-neutral-950 transition-colors"
               href="https://www.youtube.com/@solutionsahab"
               target="_blank"
               rel="noopener noreferrer"
             >
               YouTube
-            </a>
+            </Link>
           </div>
         </div>
       </div>

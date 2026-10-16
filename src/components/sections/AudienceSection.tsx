@@ -1,7 +1,7 @@
-// File: src/components/sections/AudienceSection.tsx
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 import { ASSETS, CONTACT_INFO } from "@/const";
 
 interface AudienceRow {
@@ -9,7 +9,6 @@ interface AudienceRow {
   tag: string;
   title: string;
   description: string;
-  specs: string[];
   imageUrl: string;
   imageAlt: string;
   ctaText: string;
@@ -24,11 +23,6 @@ const AUDIENCES: AudienceRow[] = [
     title: "Homeowners & High-Rise Residents",
     description:
       "Balcony fall protection for children and pets plus smooth pleated insect screens—approved by RWAs across Gurgaon, Noida, and Delhi.",
-    specs: [
-      "2\" & 3\" Child-Safe Cable Gap",
-      "RWA & Fire-Exit Compliant",
-      "3mm Flat-Track Mosquito Doors",
-    ],
     imageUrl: ASSETS.PRODUCTS.INVISIBLE_GRILLS,
     imageAlt: "High-rise residential balcony fitted with invisible safety grills",
     ctaText: "Book Home Measurement",
@@ -40,11 +34,6 @@ const AUDIENCES: AudienceRow[] = [
     title: "Commercial & Hospitality Spaces",
     description:
       "Motorized outdoor weather screens for open-air terraces and acoustic honeycomb dividers for offices and dining rooms.",
-    specs: [
-      "70 km/h Wind & Rain Zip-Screens",
-      "Sound-Damping Room Dividers",
-      "Heavy Alloy Storefront Security Mesh",
-    ],
     imageUrl: ASSETS.PRODUCTS.WEATHER_SCREENS,
     imageAlt: "Commercial terrace enclosed with motorized weather screens",
     ctaText: "Request Commercial Quote",
@@ -56,11 +45,7 @@ const AUDIENCES: AudienceRow[] = [
     title: "Architects & Interior Designers",
     description:
       "Custom RAL powder-coated frames matched to Fenesta, Schüco, or wood-grain profiles, backed by physical sample kits and site engineers.",
-    specs: [
-      "Custom RAL & Wood-Grain Finishes",
-      "Physical Wire & Mesh Sample Kit",
-      "Direct Structural Engineer Support",
-    ],
+
     imageUrl: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
     imageAlt: "Custom architectural honeycomb partition and frame finish",
     ctaText: "Call Spec Desk",
@@ -110,11 +95,11 @@ export function AudienceSection() {
 
               {/* Middle 5 Columns: Tag + Title + Description + Specs */}
               <div className="lg:col-span-5">
-                <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-500 mb-1.5">
+                <div className="flex items-center gap-2 text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] mb-1.5">
                   <span>{item.tag}</span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-semibold text-neutral-950 tracking-tight m-0 mb-2.5">
+                <h3 className="text-xl sm:text-2xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-2.5">
                   {item.title}
                 </h3>
 
@@ -122,47 +107,20 @@ export function AudienceSection() {
                   {item.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
-                  {item.specs.map((spec) => (
-                    <span
-                      key={spec}
-                      className="text-xs font-mono text-neutral-800 bg-white/80 border border-neutral-300 px-2.5 py-1"
-                    >
-                      {spec}
-                    </span>
-                  ))}
-                </div>
+                
               </div>
 
               {/* Right 3 Columns: Direct Action CTA */}
               <div className="lg:col-span-3 flex lg:justify-end">
-                {item.isExternalPhone ? (
-                  <a
-                    href={item.ctaHref}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-neutral-950 bg-transparent hover:bg-neutral-950 text-neutral-950 hover:text-white text-xs sm:text-sm font-mono uppercase tracking-wider px-5 py-3.5 transition-colors"
-                  >
-                    <span>{item.ctaText}</span>
-                    <span
-                      className="material-symbols-outlined text-[16px]"
-                      aria-hidden="true"
-                    >
-                      call
-                    </span>
-                  </a>
-                ) : (
-                  <Link
-                    href={item.ctaHref}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-neutral-950 bg-transparent hover:bg-neutral-950 text-neutral-950 hover:text-white text-xs sm:text-sm font-mono uppercase tracking-wider px-5 py-3.5 transition-colors"
-                  >
-                    <span>{item.ctaText}</span>
-                    <span
-                      className="material-symbols-outlined text-[16px]"
-                      aria-hidden="true"
-                    >
-                      arrow_forward
-                    </span>
-                  </Link>
-                )}
+                <Button
+                  href={item.ctaHref}
+                  variant="outline"
+                  size="md"
+                  icon={item.isExternalPhone ? "call" : "arrow_forward"}
+                  className="w-full sm:w-auto"
+                >
+                  {item.ctaText}
+                </Button>
               </div>
             </div>
           ))}
