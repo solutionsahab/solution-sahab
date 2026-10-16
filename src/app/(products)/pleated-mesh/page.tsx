@@ -3,92 +3,86 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/common/FloatingWhatsApp";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { BookingSection } from "@/components/sections/BookingSection";
 import {
-  PleatedMeshStructuredData,
-  PleatedMeshHero,
-  WhatIsPleatedMesh,
-  WhyChoosePleatedMesh,
-  PleatedMeshSpecs,
-  WhyChooseSolutionSahabMesh,
-  WhereCanYouInstallMesh,
-  PleatedMeshFaqSection,
-  PleatedMeshBookingSection,
-  MobileStickyBar,
-} from "@/components/product/pleated-mesh";
-import { ASSETS } from "@/const";
+  ProductHeroSection,
+  ProductOverviewSection,
+  ProductBenefitsSection,
+  ProductTechnicalSpecs,
+  ProductTrustPillars,
+  ProductApplicationsSection,
+  ProductStructuredData,
+
+} from "@/components/product/common";
+import { PRODUCT_CONFIGS } from "@/lib/product-page-configs";
+
+const config = PRODUCT_CONFIGS["pleated-mesh"];
 
 export const metadata: Metadata = {
-  title: "Pleated Mosquito Mesh Installation in Delhi NCR – Solution Sahab",
-  description:
-    "Premium retractable pleated mosquito mesh for balcony doors and windows across Delhi, Gurgaon, and Noida by Solution Sahab. Jindal T6 6063 aluminum frames, tear-resistant accordion mesh, and 5-year warranty.",
-  keywords: [
-    "pleated mosquito mesh delhi",
-    "mosquito mesh for balcony",
-    "retractable insect screen gurgaon",
-    "pleated mesh price noida",
-    "roller mesh for windows",
-    "Solution Sahab pleated mesh",
-  ],
+  title: config.metadata.title,
+  description: config.metadata.description,
+  keywords: config.metadata.keywords,
   alternates: {
-    canonical: "https://solutionsahab.com/pleated-mesh",
+    canonical: config.metadata.canonical,
   },
   openGraph: {
-    title: "Pleated Mosquito Mesh Installation in Delhi NCR – Solution Sahab",
-    description:
-      "Premium retractable pleated mosquito mesh for balcony doors and windows in Delhi NCR. Protect your family from mosquitoes without blocking ventilation.",
-    url: "https://solutionsahab.com/pleated-mesh",
+    title: config.metadata.title,
+    description: config.metadata.description,
+    url: config.metadata.canonical,
     siteName: "Solution Sahab",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
+        url: config.metadata.ogImage,
         width: 1200,
         height: 630,
-        alt: "Pleated Mosquito Mesh Installation in Delhi NCR by Solution Sahab",
+        alt: `${config.hero.productName} by Solution Sahab`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pleated Mosquito Mesh Installation in Delhi NCR – Solution Sahab",
-    description:
-      "Tear-resistant retractable pleated mosquito mesh for balconies and windows across Delhi NCR.",
-    images: [ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH],
+    title: config.metadata.title,
+    description: config.metadata.description,
+    images: [config.metadata.ogImage],
   },
 };
 
 export default function PleatedMeshProductPage() {
   return (
     <>
-      <PleatedMeshStructuredData />
+      <ProductStructuredData
+        productName={config.structuredData.productName}
+        description={config.structuredData.description}
+        image={config.structuredData.image}
+        material={config.structuredData.material}
+        lowPrice={config.structuredData.lowPrice}
+        highPrice={config.structuredData.highPrice}
+        slug={config.slug}
+        faqs={config.faqs}
+      />
       <Header />
       <main className="w-full pt-[92px] sm:pt-[116px] bg-white min-h-screen">
-        {/* 1. Top Page Hero: Product Name, Brand Name & Real Balcony Installation */}
-        <PleatedMeshHero />
-
-        {/* 2. What Is Pleated Mosquito Mesh? with YouTube Video Demonstration */}
-        <WhatIsPleatedMesh />
-
-        {/* 3. Why Choose Pleated Mosquito Mesh? 2-Col Editorial */}
-        <WhyChoosePleatedMesh />
-
-        {/* 4. Technical Specification: Jindal T6 6063 Aluminum & PVC-Coated Polyester */}
-        <PleatedMeshSpecs />
-
-        {/* 5. Why Choose Solution Sahab for Pleated Mesh? with Real Certificates */}
-        <WhyChooseSolutionSahabMesh />
-
-        {/* 6. Where Can You Install Pleated Mosquito Mesh? with 4 Application Cards */}
-        <WhereCanYouInstallMesh />
-
-        {/* 7. Frequently Asked Questions (FAQ) Hairline Accordion */}
-        <PleatedMeshFaqSection />
-
-        {/* 8. Laser Site Measurement Booking & Direct WhatsApp */}
-        <PleatedMeshBookingSection />
+        <ProductHeroSection {...config.hero} />
+        <ProductOverviewSection {...config.overview} />
+        <ProductBenefitsSection {...config.benefits} />
+        {/* <ProductTechnicalSpecs {...config.specs} /> */}
+        {/* <ProductTrustPillars {...config.trustPillars} /> */}
+        <ProductApplicationsSection {...config.applications} />
+        <FaqSection
+          items={config.faqs}
+          title="Common Questions"
+          description="Clear answers on pleated mosquito mesh materials, durability, daily cleaning, and installation."
+        />
+        <BookingSection
+          leadSource={config.leadSource}
+          title={config.bookingTitle}
+          description={config.bookingDescription}
+        />
       </main>
-      <MobileStickyBar />
+
       <FloatingWhatsApp />
       <Footer />
     </>

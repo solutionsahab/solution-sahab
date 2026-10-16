@@ -45,27 +45,42 @@ const FAQ_ITEMS: FaqItem[] = [
   },
 ];
 
-export function FaqSection() {
-  const { isOpen, toggleItem } = useFaqState(1, false);
+export interface FaqSectionProps {
+  items?: FaqItem[];
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  id?: string;
+}
+
+export function FaqSection({
+  items,
+  title = "Common Questions",
+  description = "Clear answers on safety, RWA approval, warranty, and installation across Delhi NCR.",
+  id = "faqs",
+}: FaqSectionProps = {}) {
+  const activeItems = items && items.length > 0 ? items : FAQ_ITEMS;
+  const firstItemId = activeItems[0]?.id ?? 1;
+  const { isOpen, toggleItem } = useFaqState(firstItemId, false);
 
   return (
     <section
       className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
-      id="faqs"
-      aria-labelledby="faq-heading"
+      id={id}
+      aria-labelledby={`${id}-heading`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left 4 Columns: Title + Direct Call */}
           <div className="lg:col-span-4 lg:sticky lg:top-28">
             <h2
-              id="faq-heading"
+              id={`${id}-heading`}
               className="text-3xl sm:text-4xl font-semibold text-neutral-950 tracking-tight m-0"
             >
-              Common Questions
+              {title}
             </h2>
             <p className="text-sm text-neutral-600 mt-3 mb-6 leading-relaxed">
-              Clear answers on safety, RWA approval, warranty, and installation across Delhi NCR.
+              {description}
             </p>
 
             <div className="pt-5 border-t border-neutral-300">
@@ -104,7 +119,7 @@ export function FaqSection() {
             className="lg:col-span-8 border-t border-b border-neutral-300 divide-y divide-neutral-300"
             id="faq-container"
           >
-            {FAQ_ITEMS.map((item, idx) => {
+            {activeItems.map((item, idx) => {
               const itemOpen = isOpen(item.id);
               return (
                 <div key={item.id} className="bg-transparent">
@@ -117,7 +132,7 @@ export function FaqSection() {
                   >
                     <div className="flex items-baseline gap-4">
                       <span className="text-xs font-gilroy font-extrabold text-[#1B4D8E] shrink-0">
-                        0{idx + 1}
+                        {idx < 9 ? `0${idx + 1}` : `${idx + 1}`}
                       </span>
                       <h3 className="text-base sm:text-lg font-bold font-gilroy text-neutral-950 group-hover:opacity-75 transition-opacity m-0 leading-snug">
                         {item.question}

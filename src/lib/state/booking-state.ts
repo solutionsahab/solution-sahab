@@ -99,7 +99,7 @@ export function resetBookingState(): BookingState {
   return initialBookingState;
 }
 
-export function useBookingForm() {
+export function useBookingForm(defaultLeadSource: string = "Homepage Consultation") {
   const [state, setState] = useState<BookingState>(initialBookingState);
 
   const updateField = useCallback(
@@ -127,7 +127,7 @@ export function useBookingForm() {
             fullName: state.data.fullName,
             phone: state.data.phone,
             email: state.data.email,
-            leadSource: "Homepage Consultation",
+            leadSource: defaultLeadSource,
           }),
         });
 
@@ -142,7 +142,7 @@ export function useBookingForm() {
         setState((prev) => submitSuccessState(prev));
       }
     },
-    [state]
+    [state, defaultLeadSource]
   );
 
   const resetForm = useCallback(() => {

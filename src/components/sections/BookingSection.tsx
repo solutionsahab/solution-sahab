@@ -6,7 +6,19 @@ import { useBookingForm } from "@/lib/state/booking-state";
 import { CONTACT_INFO } from "@/const";
 import { Button } from "@/components/ui/Button";
 
-export function BookingSection() {
+export interface BookingSectionProps {
+  leadSource?: string;
+  title?: string;
+  description?: string;
+  id?: string;
+}
+
+export function BookingSection({
+  leadSource = "Homepage Consultation",
+  title = "Schedule a Site Measurement",
+  description = "Our technician visits with physical material swatches and samples, measures your doors, windows, or balconies with a precision laser meter, and quotes on the spot.",
+  id = "book-visit",
+}: BookingSectionProps) {
   const {
     formData,
     status,
@@ -14,47 +26,30 @@ export function BookingSection() {
     updateField,
     handleSubmit,
     resetForm,
-  } = useBookingForm();
+  } = useBookingForm(leadSource);
 
   return (
     <section
       className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
-      id="quick-booking"
+      id={id}
       aria-labelledby="booking-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 border border-neutral-300 bg-white">
           {/* Left 5 Columns: Direct Info & Instant Channels */}
-          <div className="lg:col-span-5 p-6 sm:p-10 border-b lg:border-b-0 lg:border-r border-neutral-300 flex flex-col justify-between">
+         <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between gap-8">
             <div>
-              <h2
-                id="booking-heading"
-                className="text-3xl sm:text-4xl font-semibold text-neutral-950 tracking-tight m-0"
-              >
-                Book a Measurement &amp; Sample Visit
+              <h2 className="text-2xl sm:text-3xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0 mb-3">
+                {title}
               </h2>
-              <p className="text-sm sm:text-base text-neutral-600 mt-3 mb-8 leading-relaxed">
-                Our engineer brings AISI 316 cable samples, pleated mesh swatches, and track profiles to your home across Delhi NCR, measures your opening, and gives an exact quote on the spot.
+              <p className="text-sm text-neutral-600 leading-relaxed font-body m-0 mb-6">
+                {description}
               </p>
-
-              {/* Simple Spec List Instead of Checkmark Icons */}
-              <div className="space-y-3 border-t border-neutral-300 pt-6 text-xs font-gilroy font-bold uppercase tracking-wider text-neutral-800">
-                <div className="flex items-center justify-between">
-                  <span className="text-neutral-500 font-light">MODE</span>
-                  <span>Doorstep Visit</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-neutral-500 font-light">Kit</span>
-                  <span>Physical Wire &amp; Mesh Samples</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-neutral-500 font-light">Coverage</span>
-                  <span>Delhi · Gurugram · Noida · NCR</span>
-                </div>
-              </div>
             </div>
 
-
+            <div className="pt-4 border-t border-neutral-200 text-xs text-neutral-500 font-sans">
+              Serving Gurgaon · Noida · Greater Noida · Delhi · Faridabad · Ghaziabad
+            </div>
           </div>
 
           {/* Right 7 Columns: Clean Architectural Form */}
@@ -85,7 +80,7 @@ export function BookingSection() {
                   <button
                     type="button"
                     onClick={resetForm}
-                    className="text-xs font-mono uppercase tracking-wider text-neutral-600 hover:text-neutral-950 underline underline-offset-4 px-3 py-2"
+                    className="text-xs font-mono uppercase tracking-wider text-neutral-600 hover:text-neutral-950 underline underline-offset-4 px-3 py-2 cursor-pointer"
                   >
                     Book Another Visit
                   </button>
@@ -158,12 +153,12 @@ export function BookingSection() {
                     htmlFor="email-address"
                     className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
                   >
-                    Society / Location in NCR (Optional)
+                    Email Address (Optional)
                   </label>
                   <input
                     id="email-address"
-                    type="text"
-                    placeholder="e.g. DLF Phase 5, Gurugram or Sector 150, Noida"
+                    type="email"
+                    placeholder="you@example.com"
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
                     className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.email
