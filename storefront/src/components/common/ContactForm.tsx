@@ -1,77 +1,17 @@
 "use client";
 
 // File: src/components/common/ContactForm.tsx
-import React from "react";
-import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
-
-type Status = "idle" | "submitting" | "success" | "error";
+import { useBookingForm } from "@/lib/state/booking-state";
+import { CONTACT_INFO } from "@/lib/constants";
 
 const INPUT_CLASS =
   "w-full px-3.5 py-3 min-h-11 bg-paper text-ink font-body-md text-body-md border border-ink/10 focus:outline-none focus:ring-2 focus:ring-secondary";
 
 export function ContactForm() {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [status, setStatus] = useState<Status>("idle");
-  const [errors, setErrors] = useState<{
-    name?: string;
-    phone?: string;
-    address?: string;
-  }>({});
-
-  const validate = () => {
-    const next: typeof errors = {};
-    if (!name.trim()) next.name = "Please enter your name";
-
-    const phoneRegex = /^[6-9]\d{9}$/;
-    const cleanPhone = phone.replace(/[\s\-+()]/g, "").slice(-10);
-    if (!phoneRegex.test(cleanPhone))
-      next.phone = "Please enter a valid 10-digit mobile number";
-
-    if (!address.trim()) next.address = "Please enter your address";
-
-    setErrors(next);
-    return Object.keys(next).length === 0;
-  };
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    if (!validate()) return;
-
-    setStatus("submitting");
-    try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          phone: phone.trim(),
-          email: "",
-          address: address.trim(),
-          leadSource: "Website - Contact Us",
-        }),
-      });
-
-      const json = await res.json().catch(() => null);
-
-      if (!res.ok || !json?.success) {
-        console.error("[Contact Lead Error] Submission failed:", res.status, json);
-        setStatus("error");
-        return;
-      }
-
-      setStatus("success");
-      setName("");
-      setPhone("");
-      setAddress("");
-    } catch (err) {
-      console.error("[Contact Lead Network Error]", err);
-      setStatus("error");
-    }
-  };
+  const { formData, status, errors, updateField, handleSubmit, resetForm } =
+    useBookingForm("Website - Contact Us");
 
   if (status === "success") {
     return (
@@ -95,7 +35,7 @@ export function ContactForm() {
           type="button"
           variant="primary"
           size="md"
-          onClick={() => setStatus("idle")}
+          onClick={resetForm}
           className="mt-1"
         >
           Send Another Enquiry
@@ -120,14 +60,11 @@ export function ContactForm() {
           required
           autoComplete="name"
           placeholder="Your full name"
-          className={`${INPUT_CLASS} ${errors.name ? "border-red-500" : ""}`}
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-            setErrors((prev) => ({ ...prev, name: undefined }));
-          }}
+          className={`${INPUT_CLASS} ${errors.fullName ? "border-red-500" : ""}`}
+          value={formData.fullName}
+          onChange={(e) => updateField("fullName", e.target.value)}
         />
-        {errors.name && <span className="text-red-600 text-xs">{errors.name}</span>}
+        {errors.fullName && <span className="text-red-600 text-xs">{errors.fullName}</span>}
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -146,11 +83,8 @@ export function ContactForm() {
           autoComplete="tel"
           placeholder="10-digit mobile number"
           className={`${INPUT_CLASS} ${errors.phone ? "border-red-500" : ""}`}
-          value={phone}
-          onChange={(e) => {
-            setPhone(e.target.value);
-            setErrors((prev) => ({ ...prev, phone: undefined }));
-          }}
+          value={formData.phone}
+          onChange={(e) => updateField("phone", e.target.value)}
         />
         {errors.phone && <span className="text-red-600 text-xs">{errors.phone}</span>}
       </div>
@@ -172,11 +106,8 @@ export function ContactForm() {
           className={`${INPUT_CLASS} resize-y ${
             errors.address ? "border-red-500" : ""
           }`}
-          value={address}
-          onChange={(e) => {
-            setAddress(e.target.value);
-            setErrors((prev) => ({ ...prev, address: undefined }));
-          }}
+          value={formData.address}
+          onChange={(e) => updateField("address", e.target.value)}
         />
         {errors.address && (
           <span className="text-red-600 text-xs">{errors.address}</span>
@@ -200,8 +131,8 @@ export function ContactForm() {
       {status === "error" && (
         <p className="text-red-600 text-xs m-0 text-center">
           Something went wrong. Please call us directly on{" "}
-          <Link href="tel:+919971143143" className="underline font-semibold">
-            +91 9971-143-143
+          <Link href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`} className="underline font-semibold">
+            {CONTACT_INFO.PHONE_PRIMARY}
           </Link>
           .
         </p>

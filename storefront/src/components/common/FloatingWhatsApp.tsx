@@ -1,7 +1,7 @@
 // File: src/components/common/FloatingWhatsApp.tsx
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { CONTACT_INFO } from "@/const";
+import { CONTACT_INFO } from "@/lib/constants";
 import Link from "next/link";
 
 export function FloatingWhatsApp() {

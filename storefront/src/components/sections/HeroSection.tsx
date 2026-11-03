@@ -4,7 +4,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { ASSETS } from "@/const";
+import { ASSETS } from "@/lib/constants";
 
 const SLIDES = [
   {

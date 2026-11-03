@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Solution Sahab website
 
-## Getting Started
+Marketing and lead-generation site for Solution Sahab (invisible grills, pleated mesh and related products, Delhi NCR). Built with Next.js 16 (App Router), React 19, TypeScript and Tailwind CSS 4. The app lives in [`storefront/`](storefront).
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd storefront
+npm install
+cp .env.example .env   # fill in the CRM values
+npm run dev            # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Script | What it does |
+|---|---|
+| `npm run dev` | Dev server |
+| `npm run build` / `npm start` | Production build / serve it |
+| `npm run lint` | ESLint |
+| `npm test` | Unit tests (`src/**/*.test.ts`, Node's built-in runner) |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+See [`storefront/.env.example`](storefront/.env.example). Secrets go only in `.env` (git-ignored) or the hosting provider's settings, never in code.
 
-## Learn More
+| Variable | Required | Purpose |
+|---|---|---|
+| `CRATIO_API_KEY` | In production | Cratio CRM key. Without it, leads are only logged in dev and rejected in production. |
+| `CRATIO_LEAD_CREATED_BY` | With the key | CRM "Created By" user |
+| `CRATIO_ASSIGNED_TO` | With the key | CRM user new leads are assigned to |
+| `CRATIO_LEAD_SOURCE` | No | Overrides the per-form lead source for every lead |
 
-To learn more about Next.js, take a look at the following resources:
+## Folder map (`storefront/src`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app/                    Routes (App Router)
+  (info)/               About, contact, gallery, team, privacy, payments pages
+  (posts)/[slug]/       Blog posts
+  (products)/           One folder per product page
+  blog-list/            Blog index with prebuilt category/page paths
+  api/leads/route.ts    POST endpoint for every lead form
+  error.tsx, not-found.tsx
+components/
+  ui/                   Base building blocks (Button)
+  common/               Shared pieces (forms, hero, breadcrumbs, rich text...)
+  layout/               Header, Footer
+  sections/             Home page sections
+  product/common/       Sections shared by all product pages
+  blog/                 Blog card and post view
+lib/
+  constants.ts          Asset paths and contact details
+  leads.ts              Lead validation + browser-side submit (shared with the API)
+  crm.ts                Server-only Cratio CRM client
+  state/                Client hooks for forms, FAQ and navigation
+  blog.ts, products.ts, product-page-configs.ts, info-pages.ts   Page content
+  seo.ts, site-links.ts, facts.ts                                SEO and link helpers
+proxy.ts                Redirects old /blog-list?cat=&page= URLs
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How a lead flows
 
-## Deploy on Vercel
+Form (`ContactForm` / `BookingSection`) → `useBookingForm` in `lib/state/booking-state.ts` validates → `submitLead()` in `lib/leads.ts` POSTs to `/api/leads` → the route re-validates and calls `insertLead()` in `lib/crm.ts` → Cratio CRM. Any failure shows the visitor a message with the phone number to call.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Conventions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Components: `PascalCase.tsx`, named exports. Lib and state files: `kebab-case.ts`.
+- Import through the `@/` alias (`@/lib/constants`, `@/components/...`).
+- Page content is data in `lib/`; components only render it.

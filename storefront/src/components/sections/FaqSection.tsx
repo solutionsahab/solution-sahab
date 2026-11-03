@@ -3,7 +3,7 @@
 
 import React from "react";
 import { useFaqState, FaqItem } from "@/lib/state/faq-state";
-import { CONTACT_INFO } from "@/const";
+import { CONTACT_INFO } from "@/lib/constants";
 import Link from "next/link";
 
 const FAQ_ITEMS: FaqItem[] = [

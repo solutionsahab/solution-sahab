@@ -1,6 +1,6 @@
 // File: src/lib/seo.ts
 import type { Metadata } from "next";
-import { ASSETS } from "@/const";
+import { ASSETS } from "@/lib/constants";
 
 export const SITE = "https://solutionsahab.com";
 

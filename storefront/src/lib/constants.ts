@@ -1,6 +1,6 @@
-// File: src/lib/const.js
-// Central Constants File for Solution Sahab
-// Contains all Assets, Image URLs, Contact Information, and CRM API Configuration
+// File: src/lib/constants.ts
+// Central constants for Solution Sahab: asset paths and contact details.
+// Secrets and CRM settings live in .env (see src/lib/crm.ts), never here.
 
 export const ASSETS = {
   // Brand Logo (local file)
@@ -78,18 +78,3 @@ export const CONTACT_INFO = {
     "Ghaziabad",
   ],
 };
-
-// Cratio CRM Integration Configuration from Postman
-// Reference: https://www.postman.com/red-spaceship-7195/api-request/http-request/rykv1rk/insert-leads
-export const CRM_CONFIG = {
-  ENDPOINT: "https://apps.cratiocrm.com/api/apirequest.php",
-  API_KEY:
-    process.env.CRATIO_API_KEY || "NF8xXzUwMDYkQDU4IyMyMDI2LTEwLTA0IDE4OjE1OjA3",
-  CREATED_BY: process.env.CRATIO_LEAD_CREATED_BY || "Deepak",
-  LEAD_SOURCE: process.env.CRATIO_LEAD_SOURCE || "Website",
-  ASSIGNED_TO: process.env.CRATIO_ASSIGNED_TO || "shivani",
-  FORM_NAME: "Leads",
-  OPERATION: "insertRecords",
-  OVERWRITE: "true",
-};
-

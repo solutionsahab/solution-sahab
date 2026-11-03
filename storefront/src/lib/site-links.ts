@@ -49,36 +49,3 @@ export const PRODUCT_LINKS: RelatedLink[] = [
       "Space-saving aluminium pulley ceiling cloth drying systems for utility balconies.",
   },
 ];
-
-export const INFO_LINKS: RelatedLink[] = [
-  {
-    label: "Who We Are",
-    href: "/who-we-are",
-    description: "Our story, values, product portfolio and dealership program.",
-  },
-  {
-    label: "Gallery",
-    href: "/gallery",
-    description: "Installation photos from Gurgaon, Noida, exhibitions and factory.",
-  },
-  {
-    label: "Our Team",
-    href: "/our-team",
-    description: "The people behind Solution Sahab.",
-  },
-  {
-    label: "Blog",
-    href: "/blog-list",
-    description: "Guides on invisible grills, pleated mesh and balcony safety.",
-  },
-  {
-    label: "Privacy Policy",
-    href: "/privacy-policy",
-    description: "How solutionsahab.com collects, uses and protects your data.",
-  },
-  {
-    label: "Contact Us",
-    href: "/contact-us",
-    description: "Phone, addresses, regional partners and a site visit form.",
-  },
-];

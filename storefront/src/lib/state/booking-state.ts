@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { normalizeMobile, submitLead } from "@/lib/leads";
 
 export interface BookingFormData {
   fullName: string;
@@ -36,10 +37,9 @@ export function validateBookingForm(
     errors.fullName = "Please enter your name";
   }
 
-  const phoneClean = data.phone.replace(/[\s-]/g, "");
-  if (!phoneClean) {
+  if (!data.phone.trim()) {
     errors.phone = "Please enter your phone number";
-  } else if (!/^\+?[0-9]{10,14}$/.test(phoneClean)) {
+  } else if (!normalizeMobile(data.phone)) {
     errors.phone = "Please enter a valid 10-digit mobile number";
   }
 
@@ -119,42 +119,18 @@ export function useBookingForm(defaultLeadSource: string = "Homepage Consultatio
         return;
       }
 
-      try {
-        const res = await fetch("/api/leads", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: state.data.fullName,
-            phone: state.data.phone,
-            address: state.data.address,
-            leadSource: defaultLeadSource,
-          }),
-        });
+      const result = await submitLead({
+        name: state.data.fullName,
+        phone: state.data.phone,
+        address: state.data.address,
+        leadSource: defaultLeadSource,
+      });
 
-        const json = await res.json().catch(() => null);
-
-        if (!res.ok || !json?.success) {
-          console.error("[CRM Lead Error] Failed to submit:", res.status, json);
-          setState((prev) => ({
-            ...prev,
-            status: "error",
-            errorMessage:
-              json?.error ||
-              "Unable to submit your booking right now. Please try again or call us directly.",
-          }));
-          return;
-        }
-
-        setState((prev) => submitSuccessState(prev));
-      } catch (err) {
-        console.error("[CRM Lead Network Error]", err);
-        setState((prev) => ({
-          ...prev,
-          status: "error",
-          errorMessage:
-            "A network error occurred. Please check your connection and try again.",
-        }));
-      }
+      setState((prev) =>
+        result.ok
+          ? submitSuccessState(prev)
+          : { ...prev, status: "error", errorMessage: result.error }
+      );
     },
     [state, defaultLeadSource]
   );
