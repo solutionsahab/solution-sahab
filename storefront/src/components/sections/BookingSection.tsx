@@ -17,7 +17,7 @@ export function BookingSection({
   leadSource = "Homepage Consultation",
   title = "Schedule a Site Measurement",
   description = "Our technician visits with physical material swatches and samples, measures your doors, windows, or balconies with a precision laser meter, and quotes on the spot.",
-  id = "book-visit",
+  id = "quick-booking",
 }: BookingSectionProps) {
   const {
     formData,
