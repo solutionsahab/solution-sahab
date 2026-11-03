@@ -91,12 +91,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
-    {
-      url: `${baseUrl}/#quick-booking`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
   ];
 
   const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({

@@ -35,6 +35,9 @@ export const ASSETS = {
     TRADE_FAIR_EXPO: "/images/gallery/trade-fair-expo.jpg",
     NOIDA_VILLA: "/images/gallery/noida-villa.jpg",
     FACTORY_QC: "/images/gallery/factory-qc.jpg",
+    PARUL_ENT_HISAR_1: "/images/gallery/parul-ent-hisar-1.jpg",
+    PARUL_ENT_HISAR_2: "/images/gallery/parul-ent-hisar-2.jpg",
+    PARUL_ENT_HISAR_3: "/images/gallery/parul-ent-hisar-3.jpg",
   },
 
   // Official Certifications
