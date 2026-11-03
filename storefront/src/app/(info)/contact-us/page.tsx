@@ -6,7 +6,7 @@ import { RelatedLinks } from "@/components/common/RelatedLinks";
 import { ContactForm } from "@/components/common/ContactForm";
 import { buildPageMetadata } from "@/lib/seo";
 import { CONTACT_DATA } from "@/lib/info-pages";
-import { CONTACT_INFO } from "@/const";
+import { CONTACT_INFO } from "@/lib/constants";
 import { PRODUCT_LINKS } from "@/lib/site-links";
 import Link from "next/link";
 

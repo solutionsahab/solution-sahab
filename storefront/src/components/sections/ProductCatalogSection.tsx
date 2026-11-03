@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ASSETS } from "@/const";
+import { ASSETS } from "@/lib/constants";
 
 interface ProductItem {
   index: string;

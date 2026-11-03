@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { useNavState } from "@/lib/state/nav-state";
-import { ASSETS, CONTACT_INFO } from "@/const";
+import { ASSETS, CONTACT_INFO } from "@/lib/constants";
 
 export function Header() {
   const {

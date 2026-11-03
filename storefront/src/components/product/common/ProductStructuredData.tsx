@@ -1,6 +1,6 @@
 // File: src/components/product/common/ProductStructuredData.tsx
 import React from "react";
-import { CONTACT_INFO } from "@/const";
+import { CONTACT_INFO } from "@/lib/constants";
 import { BUSINESS_ID } from "@/components/common/StructuredData";
 import { FaqItem } from "@/lib/state/faq-state";
 

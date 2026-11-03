@@ -3,7 +3,7 @@
 // Body sections are written from facts already published on Solution Sahab product pages —
 // no specs, prices or claims have been added that do not appear on the site.
 import { PRODUCT_DETAILS } from "@/lib/products";
-import { ASSETS } from "@/const";
+import { ASSETS } from "@/lib/constants";
 
 export interface BlogImage {
   src: string;

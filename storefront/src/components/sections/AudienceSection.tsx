@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { ASSETS, CONTACT_INFO } from "@/const";
+import { ASSETS, CONTACT_INFO } from "@/lib/constants";
 
 interface AudienceRow {
   index: string;

@@ -1,5 +1,5 @@
 // File: src/lib/products.ts
-import { ASSETS } from "@/lib/const";
+import { ASSETS } from "@/lib/constants";
 
 export type ProductBlock =
   | {

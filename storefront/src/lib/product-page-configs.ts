@@ -1,5 +1,5 @@
 // File: src/lib/product-page-configs.ts
-import { ASSETS } from "@/const";
+import { ASSETS } from "@/lib/constants";
 import { FaqItem } from "@/lib/state/faq-state";
 import {
   ProductHeroSectionProps,

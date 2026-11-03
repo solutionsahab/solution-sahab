@@ -1,6 +1,6 @@
 // File: src/lib/info-pages.ts
 // Real content verified from https://solutionsahab.com live pages.
-import { ASSETS } from "@/const";
+import { ASSETS } from "@/lib/constants";
 import type { GridImage } from "@/components/common/ImageGrid";
 
 export type InfoSection =

@@ -7,7 +7,7 @@ import { PageHero } from "@/components/common/PageHero";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { renderRichText } from "@/components/common/RichText";
 import { SITE } from "@/lib/seo";
-import { CONTACT_INFO } from "@/const";
+import { CONTACT_INFO } from "@/lib/constants";
 import {
   getReadingMinutes,
   getRelatedProductLink,

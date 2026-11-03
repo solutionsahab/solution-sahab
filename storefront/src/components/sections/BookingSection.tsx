@@ -3,7 +3,7 @@
 
 import React from "react";
 import { useBookingForm } from "@/lib/state/booking-state";
-import { CONTACT_INFO } from "@/const";
+import { CONTACT_INFO } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 
 export interface BookingSectionProps {

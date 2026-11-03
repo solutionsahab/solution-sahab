@@ -1,6 +1,6 @@
 // File: src/components/common/StructuredData.tsx
 import React from "react";
-import { ASSETS, CONTACT_INFO } from "@/const";
+import { ASSETS, CONTACT_INFO } from "@/lib/constants";
 
 export const BUSINESS_ID = "https://solutionsahab.com/#business";
 

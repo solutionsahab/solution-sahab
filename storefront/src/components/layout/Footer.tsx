@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ASSETS, CONTACT_INFO } from "@/const";
+import { ASSETS, CONTACT_INFO } from "@/lib/constants";
 import { FACTS } from "@/lib/facts";
 
 export function Footer() {
