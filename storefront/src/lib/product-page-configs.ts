@@ -25,8 +25,6 @@ export interface ProductPageConfig {
     description: string;
     image: string;
     material?: string;
-    lowPrice?: string;
-    highPrice?: string;
   };
   hero: ProductHeroSectionProps;
   overview: ProductOverviewSectionProps;
@@ -73,7 +71,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     metadata: {
       title: "Invisible Grills Installation in Delhi – Solution Sahab",
       description:
-        "Premium invisible grill installation for balconies and windows in Delhi NCR by Solution Sahab. High-tensile AISI 316 stainless steel cables ensure safety without blocking your view. Call +91 9971-143-143.",
+        "Invisible grill installation for balconies and windows in Delhi NCR. AISI 316 stainless steel cables keep you safe without blocking the view.",
       keywords: [
         "grill installation delhi",
         "invisible grills",
@@ -91,8 +89,6 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Safe fenestration solutions utilizing 316-grade stainless steel cables with tensioned installation, preserving panoramic views while protecting children and pets in Delhi NCR high-rises.",
       image: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
       material: "AISI 316 Marine Grade Stainless Steel Wire",
-      lowPrice: "140",
-      highPrice: "220",
     },
     hero: {
       productName: "Invisible Grills",
@@ -266,9 +262,9 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     slug: "pleated-mesh",
     leadSource: "Pleated Mosquito Mesh Product Page",
     metadata: {
-      title: "Pleated Mosquito Mesh Installation in Delhi NCR – Solution Sahab",
+      title: "Pleated Mosquito Mesh in Delhi NCR – Solution Sahab",
       description:
-        "Premium retractable pleated mosquito mesh for balcony doors and windows across Delhi, Gurgaon, and Noida by Solution Sahab. Jindal T6 6063 aluminum frames, tear-resistant accordion mesh, and 5-year warranty.",
+        "Retractable pleated mosquito mesh for balcony doors and windows in Delhi, Gurgaon and Noida. Jindal T6 aluminium frames and a 5-year warranty.",
       keywords: [
         "pleated mosquito mesh delhi",
         "mosquito mesh for balcony",
@@ -286,8 +282,6 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Premium retractable pleated mosquito insect screens made with Jindal T6 aluminum frames and tear-resistant accordion mesh for balconies and French doors in Delhi NCR.",
       image: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
       material: "Jindal T6 6063 Aluminum & PVC-Coated Polyester",
-      lowPrice: "180",
-      highPrice: "260",
     },
     hero: {
       productName: "Pleated Mosquito Mesh",
@@ -461,9 +455,9 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     slug: "aluminum-mesh-partition",
     leadSource: "Aluminum Security Mesh Product Page",
     metadata: {
-      title: "Aluminum Security Mesh & Partition in Delhi NCR – Solution Sahab",
+      title: "Aluminum Security Mesh in Delhi NCR – Solution Sahab",
       description:
-        "Heavy-duty architectural aluminum security mesh and modular partitions across Delhi, Gurgaon, and Noida by Solution Sahab. Jindal T6 6063 structural frames, knife-shear resistant metal mesh, and 5-year warranty.",
+        "Heavy-duty aluminium security mesh doors and partitions in Delhi, Gurgaon and Noida. Knife-shear resistant mesh, Jindal T6 frames, 5-year warranty.",
       keywords: [
         "aluminum security mesh delhi",
         "security mesh doors gurgaon",
@@ -481,8 +475,6 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Architectural heavy-duty aluminum security mesh doors, knife-shear resistant window screens, and modular partitions for homes and offices in Delhi NCR.",
       image: ASSETS.PRODUCTS.ALUMINUM_SECURITY_MESH,
       material: "Jindal T6 6063 Alloy & Marine Grade Woven Steel Mesh",
-      lowPrice: "240",
-      highPrice: "380",
     },
     hero: {
       productName: "Aluminum Security Mesh & Partition",
@@ -658,7 +650,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     metadata: {
       title: "Honeycomb Partition & Blinds in Delhi NCR – Solution Sahab",
       description:
-        "Retractable honeycomb cellular partitions, thermal acoustic blinds, and 2-in-1 Duet mesh systems across Delhi, Gurgaon, and Noida by Solution Sahab. Jindal T6 6063 aluminum frames, blackout air pockets, and 5-year warranty.",
+        "Honeycomb cellular partitions, acoustic blinds and 2-in-1 Duet mesh systems in Delhi, Gurgaon and Noida. Jindal T6 frames, 5-year warranty.",
       keywords: [
         "honeycomb partition delhi",
         "cellular blinds gurgaon",
@@ -676,8 +668,6 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Retractable honeycomb cellular room dividers, thermal insulation blinds, and 2-in-1 Duet mesh systems for homes and offices in Delhi NCR.",
       image: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
       material: "Jindal T6 Aluminum & Cellular Spunlace Polyester",
-      lowPrice: "220",
-      highPrice: "340",
     },
     hero: {
       productName: "Honeycomb Partition & Blinds",
@@ -851,9 +841,9 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     slug: "automatic-weather-screen",
     leadSource: "Automatic Weather Screen Product Page",
     metadata: {
-      title: "Automatic Weather Screens & Zip Blinds in Delhi NCR – Solution Sahab",
+      title: "Weather Screens & Zip Blinds in Delhi NCR – Solution Sahab",
       description:
-        "Motorized outdoor zip screens, wind-stable weather blinds, and sun protection screens across Delhi, Gurgaon, and Noida by Solution Sahab. High-torque tubular motors, 80 km/h wind resistance, and 5-year warranty.",
+        "Motorised zip screens and weather blinds for balconies in Delhi, Gurgaon and Noida. 80 km/h wind resistance and a 5-year warranty.",
       keywords: [
         "automatic weather screen delhi",
         "motorized zip screens gurgaon",
@@ -871,8 +861,6 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Heavy-duty motorized outdoor zip screens, wind-resistant balcony weather blinds, and solar shading systems across Delhi NCR.",
       image: ASSETS.PRODUCTS.WEATHER_SCREENS,
       material: "Architectural Aluminum & PVC-Coated Polyester Technical Solar Screen",
-      lowPrice: "350",
-      highPrice: "550",
     },
     hero: {
       productName: "Automatic Weather Screens",
@@ -1046,9 +1034,9 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     slug: "skylight",
     leadSource: "Architectural Glass Skylight Product Page",
     metadata: {
-      title: "Architectural Glass Skylight Installation in Delhi NCR – Solution Sahab",
+      title: "Glass Skylight Installation in Delhi NCR – Solution Sahab",
       description:
-        "Custom laminated safety glass roof skylights, stairwell glass domes, and terrace roof glazing across Delhi, Gurgaon, and Noida by Solution Sahab. 100% leak-proof EPDM seals, Low-E solar heat control, and 5-year warranty.",
+        "Laminated glass roof skylights and stairwell domes in Delhi, Gurgaon and Noida. Leak-proof EPDM seals, Low-E heat control, 5-year warranty.",
       keywords: [
         "glass skylight installation delhi",
         "roof skylight gurgaon",
@@ -1066,8 +1054,6 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Custom laminated safety glass roof skylights, stairwell glass domes, and terrace roof glazing systems across Delhi NCR.",
       image: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
       material: "13.52mm Laminated Toughened Safety Glass & Jindal T6 Aluminum",
-      lowPrice: "450",
-      highPrice: "850",
     },
     hero: {
       productName: "Architectural Glass Skylights",
@@ -1241,9 +1227,9 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     slug: "ceiling-cloth-hanger",
     leadSource: "Ceiling Cloth Hanger Product Page",
     metadata: {
-      title: "Ceiling Cloth Hanger Installation in Delhi NCR – Solution Sahab",
+      title: "Ceiling Cloth Hanger in Delhi NCR – Solution Sahab",
       description:
-        "Stainless steel 304 ceiling cloth drying hangers and pulley racks across Delhi, Gurgaon, and Noida by Solution Sahab. Individual pipe control, 30kg load capacity, and 5-year warranty.",
+        "SS 304 ceiling cloth drying hangers and pulley racks in Delhi, Gurgaon and Noida. Individual pipe control, 30 kg load, 5-year warranty.",
       keywords: [
         "ceiling cloth hanger delhi",
         "balcony drying rack gurgaon",
@@ -1261,8 +1247,6 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Space-saving SS-304 ceiling cloth drying racks and pulley systems with independent pipe control for balcony and utility areas in Delhi NCR.",
       image: ASSETS.PRODUCTS.CEILING_CLOTH_HANGER,
       material: "100% Genuine Stainless Steel 304 Grade Seamless Pipes",
-      lowPrice: "1800",
-      highPrice: "3500",
     },
     hero: {
       productName: "Ceiling Cloth Hanger",

@@ -119,7 +119,7 @@ export function ProseSections({ sections }: ProseSectionsProps) {
                 {section.items.map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-2xl border border-ink/10 bg-white p-5 flex items-start gap-3.5"
+                    className="border border-ink/10 bg-white p-5 flex items-start gap-3.5"
                   >
                     <span className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                       <span

@@ -13,7 +13,7 @@ export function BlogCard({ post }: BlogCardProps) {
     <article className="h-full">
       <Link
         href={`/${post.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white transition-shadow hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+        className="group flex h-full flex-col overflow-hidden border border-ink/10 bg-white transition-shadow hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
       >
         <div className="relative w-full aspect-[16/9] overflow-hidden bg-paper-deep">
           {post.image ? (

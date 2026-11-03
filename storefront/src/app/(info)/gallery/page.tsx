@@ -49,7 +49,7 @@ export default function GalleryPage() {
         aria-labelledby="follow-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="rounded-2xl border border-ink/10 bg-white p-6 sm:p-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div className="border border-ink/10 bg-white p-6 sm:p-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div className="max-w-2xl">
               <h2
                 id="follow-heading"

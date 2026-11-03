@@ -112,7 +112,7 @@ export function BookingSection({
                       className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.fullName
                         ? "border-red-500 bg-red-50/20"
                         : "border-neutral-300 focus:border-neutral-950"
-                        } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
+                        } text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors`}
                     />
                     {errors.fullName && (
                       <p className="text-red-600 text-xs mt-1.5 m-0">
@@ -139,7 +139,7 @@ export function BookingSection({
                       className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.phone
                         ? "border-red-500 bg-red-50/20"
                         : "border-neutral-300 focus:border-neutral-950"
-                        } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors`}
+                        } text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors`}
                     />
                     {errors.phone && (
                       <p className="text-red-600 text-xs mt-1.5 m-0">
@@ -166,7 +166,7 @@ export function BookingSection({
                     className={`w-full p-4 bg-[#F7F6F2] border ${errors.address
                       ? "border-red-500 bg-red-50/20"
                       : "border-neutral-300 focus:border-neutral-950"
-                      } text-neutral-950 text-sm focus:bg-white focus:outline-none transition-colors resize-y`}
+                      } text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-y`}
                   />
                   {errors.address && (
                     <p className="text-red-600 text-xs mt-1.5 m-0">

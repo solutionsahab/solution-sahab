@@ -45,7 +45,7 @@ export function Footer() {
             <div className="mt-2 flex flex-wrap items-center lg:justify-end gap-4 text-xs font-mono uppercase tracking-wider">
               <Link
                 href={`mailto:${CONTACT_INFO.EMAIL}`}
-                className="text-neutral-600 hover:text-neutral-950 transition-colors lowercase font-sans text-xs"
+                className="py-1 -my-1 text-neutral-600 hover:text-neutral-950 transition-colors lowercase font-sans text-xs"
               >
                 {CONTACT_INFO.EMAIL}
               </Link>
@@ -58,41 +58,41 @@ export function Footer() {
           {/* Column 1: Systems */}
           <div className="lg:col-span-4 py-8 sm:pr-8">
             <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 m-0 mb-4">
-              Our Product's
+              Our Products
             </h3>
             <ul className="space-y-2.5 text-sm text-neutral-800 list-none m-0 p-0">
               <li>
-                <Link className="hover:underline underline-offset-4" href="/invisible-grills">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/invisible-grills">
                   Invisible Safety Grills
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/pleated-mesh">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/pleated-mesh">
                   Pleated Mosquito Mesh
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/aluminum-mesh-partition">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/aluminum-mesh-partition">
                   Aluminum Security Mesh
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/honeycomb-partition">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/honeycomb-partition">
                   Honeycomb Partitions
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/automatic-weather-screen">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/automatic-weather-screen">
                   Motorized Weather Screens
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/skylight">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/skylight">
                   Glass Skylights
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/ceiling-cloth-hanger">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/ceiling-cloth-hanger">
                   Ceiling Cloth Hangers
                 </Link>
               </li>
@@ -106,32 +106,32 @@ export function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm text-neutral-800 list-none m-0 p-0">
               <li>
-                <Link className="hover:underline underline-offset-4" href="/who-we-are">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/who-we-are">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/gallery">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/gallery">
                   Project Gallery
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/our-team">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/our-team">
                   Installation Team
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/#customer-videos">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/#customer-videos">
                   Customer Videos
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/blog-list">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/blog-list">
                   Guides &amp; Blog
                 </Link>
               </li>
               <li>
-                <Link className="hover:underline underline-offset-4" href="/contact-us">
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/contact-us">
                   Contact Us
                 </Link>
               </li>
@@ -170,14 +170,14 @@ export function Footer() {
             © {new Date().getFullYear()} {FACTS.brandName}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link className="hover:text-neutral-950 transition-colors" href="/privacy-policy">
+            <Link className="py-1 -my-1 hover:text-neutral-950 transition-colors" href="/privacy-policy">
               Privacy Policy
             </Link>
-            <Link className="hover:text-neutral-950 transition-colors" href="/contact-us">
+            <Link className="py-1 -my-1 hover:text-neutral-950 transition-colors" href="/contact-us">
               Contact
             </Link>
             <Link
-              className="hover:text-neutral-950 transition-colors"
+              className="py-1 -my-1 hover:text-neutral-950 transition-colors"
               href="https://www.youtube.com/@solutionsahab"
               target="_blank"
               rel="noopener noreferrer"

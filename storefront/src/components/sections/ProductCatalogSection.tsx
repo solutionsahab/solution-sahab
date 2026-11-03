@@ -64,7 +64,7 @@ const PRODUCTS: ProductItem[] = [
     title: "Skylights & Ceiling Hangers",
     category: "Stairwells & Utility Balconies",
     summary:
-      "Laminated safety glass skylights and ceiling-mounted pulley cloth hangers to  up balcony floor space.",
+      "Laminated safety glass skylights and ceiling-mounted pulley cloth hangers to free up balcony floor space.",
     href: "/skylight",
     imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
   },
@@ -150,7 +150,7 @@ export function ProductCatalogSection() {
 
                 <Link
                   href="#quick-booking"
-                  className="text-neutral-600 hover:text-neutral-950 underline underline-offset-4"
+                  className="py-1 -my-1 text-neutral-600 hover:text-neutral-950 underline underline-offset-4"
                 >
                   Book Visit
                 </Link>

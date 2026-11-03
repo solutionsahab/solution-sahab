@@ -1,6 +1,7 @@
-// File: src/app/blog-list/page.tsx
+// File: src/app/blog-list/[[...filter]]/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import { InfoPage } from "@/components/common/InfoPage";
 import { PageHero } from "@/components/common/PageHero";
@@ -15,57 +16,96 @@ import {
 const DESCRIPTION =
   "Job stories, guides and straight answers on invisible grills, pleated mosquito mesh and balcony safety across Delhi NCR.";
 
-export const metadata: Metadata = buildPageMetadata({
-  path: "/blog-list",
-  title: "Blog | Solution Sahab",
-  description: DESCRIPTION,
-  keywords: [
-    "Solution Sahab blog",
-    "Invisible grill blog Delhi NCR",
-    "Pleated mesh guide",
-    "Balcony safety grill articles",
-  ],
-});
 
 const PER_PAGE = 9;
 
-interface BlogListProps {
-  searchParams: Promise<{ cat?: string; page?: string }>;
+// Every category/page combination is prebuilt; anything else 404s.
+export const dynamicParams = false;
+
+function postsFor(cat: string) {
+  return cat === "All"
+    ? BLOG_POSTS
+    : BLOG_POSTS.filter((post) => getPostCategory(post) === cat);
 }
 
-export default async function BlogListPage({ searchParams }: BlogListProps) {
-  const params = await searchParams;
-  const categories = getCategories();
-  const activeCat = categories.includes(params.cat ?? "")
-    ? params.cat!
-    : "All";
-  const filtered =
-    activeCat === "All"
-      ? BLOG_POSTS
-      : BLOG_POSTS.filter((post) => getPostCategory(post) === activeCat);
-  const pageCount = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
-  const page = Math.min(
-    Math.max(1, Number.parseInt(params.page ?? "1", 10) || 1),
-    pageCount
+// Page 1 of "All" also holds the featured post, so it shows one extra.
+function pageCountFor(cat: string) {
+  const extra = cat === "All" ? 1 : 0;
+  return Math.max(1, Math.ceil((postsFor(cat).length - extra) / PER_PAGE));
+}
+
+/** /blog-list, /blog-list/mesh, /blog-list/mesh/2, /blog-list/all/2 */
+function pageHref(page: number, cat: string) {
+  const slug = cat.toLowerCase();
+  if (page === 1) return cat === "All" ? "/blog-list" : `/blog-list/${slug}`;
+  return `/blog-list/${slug}/${page}`;
+}
+
+export function generateStaticParams() {
+  return ["All", ...getCategories()].flatMap((cat) =>
+    Array.from({ length: pageCountFor(cat) }, (_, i) => ({
+      filter: pageHref(i + 1, cat).split("/").slice(2),
+    }))
   );
+}
+
+interface BlogListProps {
+  params: Promise<{ filter?: string[] }>;
+}
+
+function resolveFilter(filter: string[] = []) {
+  const activeCat =
+    ["All", ...getCategories()].find(
+      (cat) => cat.toLowerCase() === (filter[0] ?? "all")
+    ) ?? notFound();
+  return { activeCat, page: Number(filter[1] ?? "1") };
+}
+
+// Each category/page is its own canonical URL with its own title, so Google indexes them separately.
+export async function generateMetadata({
+  params,
+}: BlogListProps): Promise<Metadata> {
+  const { activeCat, page } = resolveFilter((await params).filter);
+  const pageSuffix = page > 1 ? `, Page ${page}` : "";
+  const title =
+    activeCat === "All"
+      ? `Blog: Invisible Grill & Mesh Guides${pageSuffix} | Solution Sahab`
+      : `${activeCat} Articles${pageSuffix} | Solution Sahab Blog`;
+  const description =
+    activeCat === "All"
+      ? `${DESCRIPTION}${page > 1 ? ` Page ${page}.` : ""}`
+      : `${activeCat} job stories and guides from Solution Sahab: invisible grills, pleated mesh and balcony safety across Delhi NCR.${page > 1 ? ` Page ${page}.` : ""}`;
+
+  return buildPageMetadata({
+    path: pageHref(page, activeCat),
+    title,
+    description,
+    keywords: [
+      "Solution Sahab blog",
+      "Invisible grill blog Delhi NCR",
+      "Pleated mesh guide",
+      "Balcony safety grill articles",
+    ],
+  });
+}
+
+export default async function BlogListPage({ params }: BlogListProps) {
+  const { activeCat, page } = resolveFilter((await params).filter);
+  const filtered = postsFor(activeCat);
+  const pageCount = pageCountFor(activeCat);
   const [featured, ...rest] = filtered;
   const showFeatured = activeCat === "All" && page === 1;
-  const gridPosts = (showFeatured ? rest : filtered).slice(
-    showFeatured ? (page - 1) * PER_PAGE : (page - 1) * PER_PAGE,
-    showFeatured ? page * PER_PAGE : page * PER_PAGE
-  );
-
-  const pageHref = (p: number, cat: string) => {
-    const query = cat === "All" ? `page=${p}` : `cat=${cat}&page=${p}`;
-    return `/blog-list?${query}`;
-  };
+  const gridPosts =
+    activeCat === "All"
+      ? rest.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+      : filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
     name: "Solution Sahab Blog",
     description: DESCRIPTION,
-    url: `${SITE}/blog-list`,
+    url: `${SITE}${pageHref(page, activeCat)}`,
     inLanguage: "en",
     publisher: {
       "@type": "Organization",
@@ -104,12 +144,12 @@ export default async function BlogListPage({ searchParams }: BlogListProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex flex-wrap gap-2 mb-8" role="navigation" aria-label="Categories">
-            {["All", ...categories].map((cat) => (
+            {["All", ...getCategories()].map((cat) => (
               <Link
                 key={cat}
-                href={cat === "All" ? "/blog-list" : `/blog-list?cat=${cat}`}
+                href={pageHref(1, cat)}
                 aria-current={activeCat === cat ? "page" : undefined}
-                className={`px-4 py-2 rounded-full font-label-md text-label-md font-semibold transition-colors ${
+                className={`px-4 py-2 font-label-md text-label-md font-semibold transition-colors ${
                   activeCat === cat
                     ? "bg-ink text-white"
                     : "bg-paper-deep text-ink hover:bg-ink/10"
@@ -123,7 +163,7 @@ export default async function BlogListPage({ searchParams }: BlogListProps) {
           {showFeatured && featured && (
             <Link
               href={`/${featured.slug}`}
-              className="group grid grid-cols-1 lg:grid-cols-2 gap-0 mb-8 overflow-hidden rounded-2xl border border-ink/15 bg-paper focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+              className="group grid grid-cols-1 lg:grid-cols-2 gap-0 mb-8 overflow-hidden border border-ink/15 bg-paper focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
             >
               <div className="p-6 sm:p-10 flex flex-col justify-center gap-4">
                 <span className="kicker text-primary">Latest</span>
@@ -168,7 +208,7 @@ export default async function BlogListPage({ searchParams }: BlogListProps) {
               {page > 1 && (
                 <Link
                   href={pageHref(page - 1, activeCat)}
-                  className="px-5 py-2.5 rounded-xl border border-ink/15 font-label-md text-label-md font-bold text-ink hover:bg-paper-deep transition-colors"
+                  className="px-5 py-2.5 border border-ink/15 font-label-md text-label-md font-bold text-ink hover:bg-paper-deep transition-colors"
                 >
                   Newer
                 </Link>
@@ -179,7 +219,7 @@ export default async function BlogListPage({ searchParams }: BlogListProps) {
               {page < pageCount && (
                 <Link
                   href={pageHref(page + 1, activeCat)}
-                  className="px-5 py-2.5 rounded-xl border border-ink/15 font-label-md text-label-md font-bold text-ink hover:bg-paper-deep transition-colors"
+                  className="px-5 py-2.5 border border-ink/15 font-label-md text-label-md font-bold text-ink hover:bg-paper-deep transition-colors"
                 >
                   Older
                 </Link>

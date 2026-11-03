@@ -6,11 +6,12 @@ import { RelatedLinks } from "@/components/common/RelatedLinks";
 import { ContactForm } from "@/components/common/ContactForm";
 import { buildPageMetadata } from "@/lib/seo";
 import { CONTACT_DATA } from "@/lib/info-pages";
+import { CONTACT_INFO } from "@/const";
 import { PRODUCT_LINKS } from "@/lib/site-links";
 import Link from "next/link";
 
 const DESCRIPTION =
-  "Contact Solution Sahab for invisible grills, pleated mesh and honeycomb mesh. Call +91 9971-143-143 or send your details for a  site visit across Delhi NCR.";
+  "Contact Solution Sahab for invisible grills, pleated mesh and honeycomb mesh. Call +91 9971-143-143 or send your details for a site visit across Delhi NCR.";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/contact-us",
@@ -42,7 +43,7 @@ export default function ContactUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-6 flex flex-col gap-6">
-              <div className="rounded-2xl border border-ink/10 bg-white p-6">
+              <div className="border border-ink/10 bg-white p-6">
                 <h2 className="font-headline-md text-headline-md text-ink m-0 flex items-center gap-2">
                   <span
                     className="material-symbols-outlined text-[22px] text-primary"
@@ -89,7 +90,7 @@ export default function ContactUsPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-ink/10 bg-white p-6">
+              <div className="border border-ink/10 bg-white p-6">
                 <h2 className="font-headline-md text-headline-md text-ink m-0 flex items-center gap-2">
                   <span
                     className="material-symbols-outlined text-[22px] text-primary"
@@ -119,11 +120,22 @@ export default function ContactUsPage() {
                     </li>
                   ))}
                 </ul>
+                <a
+                  href={CONTACT_INFO.GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-1.5 min-h-11 font-label-md text-label-md font-semibold text-secondary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+                >
+                  <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
+                    map
+                  </span>
+                  View on Google Maps &amp; reviews
+                </a>
               </div>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="rounded-2xl border border-ink/10 bg-white p-6 sm:p-8 shadow-lg">
+              <div className="border border-ink/10 bg-white p-6 sm:p-8 shadow-sm">
                 <h2 className="font-headline-md text-headline-md text-ink m-0">
                   Send Us Your Enquiry
                 </h2>
@@ -160,7 +172,7 @@ export default function ContactUsPage() {
             {CONTACT_DATA.partners.map((partner) => (
               <div
                 key={partner.city}
-                className="rounded-2xl border border-ink/10 bg-white p-5 flex flex-col gap-2"
+                className="border border-ink/10 bg-white p-5 flex flex-col gap-2"
               >
                 <span className="font-caption-caps text-caption-caps uppercase tracking-widest text-secondary">
                   {partner.city}

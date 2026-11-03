@@ -112,7 +112,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
               {post.images.map((image) => (
                 <div
                   key={image.src}
-                  className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-ink/10"
+                  className="relative w-full aspect-[16/10] overflow-hidden border border-ink/10"
                 >
                   <Image
                     src={image.src}
@@ -194,7 +194,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
               </p>
               <Link
                 href={relatedProduct.href}
-                className="mt-6 inline-flex items-center gap-2 h-11 px-5 rounded-xl bg-ink text-white font-label-md text-label-md font-bold hover:bg-primary transition-colors"
+                className="mt-6 inline-flex items-center gap-2 h-11 px-5 bg-ink text-white font-label-md text-label-md font-bold hover:bg-primary transition-colors"
               >
                 View {relatedProduct.name}
                 <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
@@ -211,7 +211,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
         aria-labelledby="blog-cta-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="rounded-2xl border border-ink/15 bg-white p-6 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div className="border border-ink/15 bg-white p-6 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             {closingVariant === 0 && (
               <div className="max-w-2xl">
                 <h2
@@ -324,5 +324,5 @@ export function BlogPostView({ post }: BlogPostViewProps) {
 }
 
 export function postMetaTitle(post: BlogPost) {
-  return withBrand(post.title);
+  return post.seoTitle ?? withBrand(post.title);
 }

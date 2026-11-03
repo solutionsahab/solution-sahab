@@ -79,6 +79,6 @@ export const INFO_LINKS: RelatedLink[] = [
   {
     label: "Contact Us",
     href: "/contact-us",
-    description: "Phone, addresses, regional partners and a  site visit form.",
+    description: "Phone, addresses, regional partners and a site visit form.",
   },
 ];

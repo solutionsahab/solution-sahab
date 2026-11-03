@@ -39,7 +39,7 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
         aria-label="Breadcrumb"
         className={`min-w-0 ${className}`}
       >
-        <ol className="flex flex-wrap items-center gap-y-1 font-label-sm text-label-sm text-ink-soft m-0 p-0 list-none">
+        <ol className="flex flex-wrap items-center gap-y-1 text-xs font-sans text-neutral-500 m-0 p-0 list-none">
           {traversed.map((crumb, index) => {
             const isLast = index === traversed.length - 1;
             return (
@@ -48,16 +48,13 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
                 className="flex items-center min-w-0 max-w-full"
               >
                 {index > 0 && (
-                  <span
-                    className="material-symbols-outlined text-[14px] text-outline px-0.5 shrink-0"
-                    aria-hidden="true"
-                  >
-                    chevron_right
+                  <span className="px-2 shrink-0" aria-hidden="true">
+                    /
                   </span>
                 )}
                 {isLast || !crumb.href ? (
                   <span
-                    className="truncate text-ink font-semibold"
+                    className="truncate text-neutral-900 font-medium"
                     aria-current={isLast ? "page" : undefined}
                   >
                     {crumb.label}
@@ -65,7 +62,7 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
                 ) : (
                   <Link
                     href={crumb.href}
-                    className="truncate hover:text-secondary transition-colors"
+                    className="truncate hover:text-blue-600 transition-colors"
                   >
                     {crumb.label}
                   </Link>

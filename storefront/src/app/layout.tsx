@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { StructuredData } from "@/components/common/StructuredData";
@@ -29,12 +29,6 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
 export const viewport: Viewport = {
   themeColor: "#1B4D8E",
   width: "device-width",
@@ -43,9 +37,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://solutionsahab.com"),
-  title: "Solution Sahab | Invisible Grills, Pleated Mosquito Mesh & Architectural Fenestration Delhi NCR",
+  title: "Invisible Grills & Pleated Mesh, Delhi NCR | Solution Sahab",
   description:
-    "Solution Sahab provides custom-engineered invisible grills, pleated mosquito mesh, honeycomb partitions, and security screens across Delhi NCR. 400kg tensile load tested AISI 316 marine-grade cables with a 5-year rust guarantee.",
+    "Invisible grills, pleated mosquito mesh, honeycomb partitions and security mesh across Delhi NCR. AISI 316 cables with a 5-year rust guarantee.",
   keywords: [
     "Invisible Grills Delhi NCR",
     "Invisible Grills Gurgaon",
@@ -123,7 +117,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${gilroy.variable} ${jakarta.variable} ${fraunces.variable} scroll-smooth antialiased`}
+      className={`${gilroy.variable} ${jakarta.variable} scroll-smooth antialiased`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -132,12 +126,20 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
+        {/* shortcut: only these icons are downloaded (~5 KB vs 1.1 MB); add any new icon name here (alphabetical) or it renders as text. */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font, @next/next/google-font-display -- root layout loads it on every page; "block" stops icon names flashing as text */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle,apartment,arrow_forward,arrow_outward,article,calendar_month,calendar_today,call,chat,chevron_left,chevron_right,close,design_services,done,expand_more,factory,handshake,lightbulb,location_on,mail,map,menu,payments,photo_camera,play_arrow,schedule,send,task_alt,verified&display=block"
           rel="stylesheet"
         />
       </head>
       <body className="bg-surface text-on-surface min-h-screen flex flex-col font-sans selection:bg-primary selection:text-on-primary">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-primary focus:px-4 focus:py-3 focus:font-semibold focus:ring-2 focus:ring-primary"
+        >
+          Skip to content
+        </a>
         <StructuredData />
         {children}
       </body>
