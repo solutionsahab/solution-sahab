@@ -27,7 +27,7 @@ export async function insertLead(lead: CrmLead): Promise<CrmResult> {
     "Mobile Number": lead.phone,
     Email: `${lead.phone}@solutionsahab.com`,
     Address: lead.address,
-    "Lead Date": new Date().toISOString().split("T")[0],
+    "Lead Date": new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" }), // YYYY-MM-DD in IST
     // The env value wins so every website lead lands under one CRM source.
     "Lead Source": envLeadSource || lead.leadSource || "Website",
     "Lead Stage": "New",
