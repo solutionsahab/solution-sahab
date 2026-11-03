@@ -2,8 +2,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  // No reactCompiler: its Babel worker processes can't start on the deploy host and failed the build.
   // Old live-site URLs kept working; the target page's canonical tag tells Google which URL is main.
   async redirects() {
     return [
