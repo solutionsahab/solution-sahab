@@ -23,7 +23,7 @@ export function VideoEmbed({
 
   return (
     <div
-      className={`relative w-full ${aspect} overflow-hidden rounded-2xl bg-paper border border-ink/10 shadow-sm ${className}`}
+      className={`relative w-full ${aspect} overflow-hidden bg-paper border border-ink/10 shadow-sm ${className}`}
     >
       {isPlaying ? (
         <iframe

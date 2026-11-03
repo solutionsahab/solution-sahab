@@ -7,7 +7,7 @@ const STEPS = [
     number: "01",
     title: "Contact Us",
     description:
-      "Reach out via WhatsApp or book a  doorstep visit anywhere in Delhi NCR.",
+      "Reach out via WhatsApp or book a doorstep visit anywhere in Delhi NCR.",
   },
   {
     number: "02",

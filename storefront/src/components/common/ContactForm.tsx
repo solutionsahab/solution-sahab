@@ -4,13 +4,12 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { CONTACT_DATA } from "@/lib/info-pages";
 import Link from "next/link";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 const INPUT_CLASS =
-  "w-full px-3.5 py-3 min-h-11 rounded-lg bg-paper text-ink font-body-md text-body-md border border-ink/10 focus:outline-none focus:ring-2 focus:ring-secondary";
+  "w-full px-3.5 py-3 min-h-11 bg-paper text-ink font-body-md text-body-md border border-ink/10 focus:outline-none focus:ring-2 focus:ring-secondary";
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -76,7 +75,7 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="p-6 rounded-xl bg-paper-deep text-primary font-label-md text-label-md flex flex-col items-center text-center gap-4 border border-primary/20">
+      <div className="p-6 bg-paper-deep text-primary font-label-md text-label-md flex flex-col items-center text-center gap-4 border border-primary/20">
         <div className="w-14 h-14 rounded-full bg-blue-100 text-primary flex items-center justify-center">
           <span
             className="material-symbols-outlined text-[32px]"

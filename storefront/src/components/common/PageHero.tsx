@@ -25,7 +25,7 @@ export function PageHero({
 }: PageHeroProps) {
   if (compact) {
     return (
-      <section className="w-full border-b border-ink/10 bg-paper">
+      <section className="w-full border-b border-neutral-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 pb-8 sm:pt-8 sm:pb-10">
           <Breadcrumbs items={breadcrumbs} />
           <div className="mt-4 max-w-3xl">
@@ -47,7 +47,7 @@ export function PageHero({
     );
   }
   return (
-    <section className="w-full relative overflow-hidden border-b border-ink/10 bg-paper">
+    <section className="w-full relative overflow-hidden border-b border-neutral-200 bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 pb-8 sm:pt-8 sm:pb-10 lg:pt-10 lg:pb-12">
         <Breadcrumbs items={breadcrumbs} />
 
@@ -75,7 +75,7 @@ export function PageHero({
 
           {image && (
             <div className="lg:col-span-5">
-              <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl shadow-lg">
+              <div className="relative w-full aspect-[16/10] overflow-hidden shadow-sm">
                 <Image
                   src={image.src}
                   alt={image.alt}

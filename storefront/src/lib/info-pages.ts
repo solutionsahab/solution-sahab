@@ -135,7 +135,7 @@ export const PRIVACY_POLICY: InfoPageContent = {
   eyebrow: "Legal",
   title: "Privacy Policy",
   description:
-    "Read the Solution Sahab privacy policy: what data solutionsahab.com collects, why we process it, your data rights, and how to contact us at solutionsahab@gmail.com.",
+    "Solution Sahab privacy policy: what data solutionsahab.com collects, why we process it, your rights, and how to contact us.",
   keywords: [
     "Solution Sahab Privacy Policy",
     "solutionsahab.com privacy",

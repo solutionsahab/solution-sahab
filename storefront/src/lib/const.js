@@ -17,7 +17,7 @@ export const ASSETS = {
     ALUMINUM_SECURITY_MESH: "/images/products/aluminum-mesh-partition.jpg",
     HONEYCOMB_PARTITIONS: "/images/products/honeycomb-partition.jpg",
     WEATHER_SCREENS: "/images/products/automatic-weather-screen.jpg",
-    CEILING_CLOTH_HANGER: "/images/products/ceiling-cloth-hanger.png",
+    CEILING_CLOTH_HANGER: "/images/products/ceiling-cloth-hanger.jpg",
     SKYLIGHT: "/images/products/skylight.jpg",
   },
 
@@ -61,6 +61,9 @@ export const CONTACT_INFO = {
   PHONE_ALT_4_RAW: "+919990381116",
   WHATSAPP_NUMBER: "919971143143",
   WHATSAPP_URL: "https://wa.me/919971143143",
+  GOOGLE_MAPS_URL: "https://maps.app.goo.gl/qWAbFe2HWvLwrDyLA",
+  INSTAGRAM_URL: "https://www.instagram.com/solutionsahab/",
+  YOUTUBE_URL: "https://www.youtube.com/@solutionsahab",
   EMAIL: "solutionsahab@gmail.com",
   HEAD_OFFICE:
     "35, Kh.No.-7/8, Road No. 5, Shri Ram Colony, Nilothi Extn. Nangloi, New Delhi-110041",

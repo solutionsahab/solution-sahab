@@ -7,11 +7,15 @@ import { buildPageMetadata } from "@/lib/seo";
 
 const DESCRIPTION = "Pay Solution Sahab securely online through Razorpay.";
 
-export const metadata: Metadata = buildPageMetadata({
-  path: "/razorpaymesolutionsahab8809",
-  title: "Payments | Solution Sahab",
-  description: DESCRIPTION,
-});
+// Private payment link for customers; kept out of search results.
+export const metadata: Metadata = {
+  ...buildPageMetadata({
+    path: "/razorpaymesolutionsahab8809",
+    title: "Payments | Solution Sahab",
+    description: DESCRIPTION,
+  }),
+  robots: { index: false, follow: false },
+};
 
 export default function PaymentsPage() {
   return (

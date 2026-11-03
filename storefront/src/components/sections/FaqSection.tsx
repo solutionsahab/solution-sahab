@@ -69,6 +69,23 @@ export function FaqSection({
       id={id}
       aria-labelledby={`${id}-heading`}
     >
+      {/* Product pages emit their FAQ schema via ProductStructuredData; only the default (home) list needs it here. */}
+      {activeItems === FAQ_ITEMS && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: FAQ_ITEMS.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            }),
+          }}
+        />
+      )}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left 4 Columns: Title + Direct Call */}
@@ -89,21 +106,21 @@ export function FaqSection({
               </p>
               <div className="flex flex-col"><Link
                 href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-                className="inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
+                className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
               >
                 <span>Call {CONTACT_INFO.PHONE_PRIMARY}</span>
 
               </Link>
                 <Link
                   href={`tel:${CONTACT_INFO.PHONE_ALT_1_RAW}`}
-                  className="inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
+                  className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
                 >
                   <span>Call {CONTACT_INFO.PHONE_ALT_1}</span>
 
                 </Link>
                 <Link
                   href={`tel:${CONTACT_INFO.PHONE_ALT_2_RAW}`}
-                  className="inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
+                  className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
                 >
                   <span>Call {CONTACT_INFO.PHONE_ALT_2}</span>
 
@@ -128,7 +145,7 @@ export function FaqSection({
                     onClick={() => toggleItem(item.id)}
                     aria-expanded={itemOpen}
                     aria-controls={`faq-answer-${item.id}`}
-                    className="w-full text-left py-5 sm:py-6 flex items-start justify-between gap-6 focus:outline-none group"
+                    className="w-full text-left py-5 sm:py-6 flex items-start justify-between gap-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary group"
                   >
                     <div className="flex items-baseline gap-4">
                       <span className="text-xs font-gilroy font-extrabold text-[#1B4D8E] shrink-0">

@@ -9,8 +9,6 @@ import {
   ProductHeroSection,
   ProductOverviewSection,
   ProductBenefitsSection,
-  ProductTechnicalSpecs,
-  ProductTrustPillars,
   ProductApplicationsSection,
   ProductStructuredData,
 
@@ -55,16 +53,15 @@ export default function AutomaticWeatherScreenProductPage() {
     <>
       <ProductStructuredData
         productName={config.structuredData.productName}
+        serviceName={config.hero.productName}
         description={config.structuredData.description}
         image={config.structuredData.image}
         material={config.structuredData.material}
-        lowPrice={config.structuredData.lowPrice}
-        highPrice={config.structuredData.highPrice}
         slug={config.slug}
         faqs={config.faqs}
       />
       <Header />
-      <main className="w-full pt-[92px] sm:pt-[116px] bg-white min-h-screen">
+      <main id="main-content" className="w-full pt-[92px] sm:pt-[116px] bg-white min-h-screen">
         <ProductHeroSection {...config.hero} />
         <ProductOverviewSection {...config.overview} />
         <ProductBenefitsSection {...config.benefits} />

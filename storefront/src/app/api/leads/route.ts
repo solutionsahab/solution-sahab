@@ -120,12 +120,14 @@ export async function POST(req: NextRequest) {
       message: "Lead captured successfully. Configure CRATIO_API_KEY to sync live.",
       payload: crmPayload,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("[Cratio CRM API Route Error]:", error);
     return NextResponse.json(
       {
         success: false,
-        error: error?.message || "Internal server error submitting lead",
+        error:
+          (error instanceof Error && error.message) ||
+          "Internal server error submitting lead",
       },
       { status: 500 }
     );

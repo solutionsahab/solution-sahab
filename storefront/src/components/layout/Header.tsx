@@ -20,6 +20,18 @@ export function Header() {
 
   const logoUrl = ASSETS.LOGO_LOCAL;
 
+  // Escape closes whichever menu is open.
+  React.useEffect(() => {
+    if (!openDropdown && !isMobileMenuOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      closeDropdown();
+      closeMobileMenu();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [openDropdown, isMobileMenuOpen, closeDropdown, closeMobileMenu]);
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
       {/* Top Notification Bar */}
@@ -30,7 +42,7 @@ export function Header() {
             •
           </span>
           <Link
-            className="text-primary-fixed hover:underline flex items-center gap-1 font-bold whitespace-nowrap"
+            className="py-1.5 -my-1.5 text-primary-fixed hover:underline flex items-center gap-1 font-bold whitespace-nowrap"
             href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
             aria-label="Call Solution Sahab"
           >
@@ -68,7 +80,7 @@ export function Header() {
             <div className="relative group h-full flex items-center">
               <button
                 type="button"
-                className="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 flex items-center gap-1 font-semibold focus:outline-none"
+                className="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 flex items-center gap-1 font-semibold rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 onClick={() => toggleDropdown("products")}
                 aria-expanded={openDropdown === "products"}
               >
@@ -83,8 +95,8 @@ export function Header() {
               <div
                 className={`absolute top-full left-0 w-80 max-h-[70vh] overflow-y-auto bg-surface-container-lowest shadow-2xl rounded-xl p-3 ${
                   openDropdown === "products"
-                    ? "opacity-100 translate-y-0 pointer-events-auto"
-                    : "opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
+                    ? "visible opacity-100 translate-y-0 pointer-events-auto"
+                    : "invisible opacity-0 translate-y-2 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
                 } transition-all duration-200 border border-surface-container grid grid-cols-1 gap-1`}
               >
                 <Link
@@ -178,7 +190,7 @@ export function Header() {
             <div className="relative group h-full flex items-center">
               <button
                 type="button"
-                className="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 flex items-center gap-1 font-semibold focus:outline-none"
+                className="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 flex items-center gap-1 font-semibold rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 onClick={() => toggleDropdown("about")}
                 aria-expanded={openDropdown === "about"}
               >
@@ -193,8 +205,8 @@ export function Header() {
               <div
                 className={`absolute top-full left-0 w-56 bg-surface-container-lowest shadow-2xl rounded-xl p-3 ${
                   openDropdown === "about"
-                    ? "opacity-100 translate-y-0 pointer-events-auto"
-                    : "opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
+                    ? "visible opacity-100 translate-y-0 pointer-events-auto"
+                    : "invisible opacity-0 translate-y-2 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
                 } transition-all duration-200 border border-surface-container flex flex-col gap-1`}
               >
                 <Link

@@ -35,7 +35,7 @@ export function ImageGrid({
       {images.map((image) => (
         <figure key={`${image.src}-${image.alt}`} className="m-0 group">
           <div
-            className={`relative w-full overflow-hidden rounded-xl border border-ink/10 bg-paper-deep ${
+            className={`relative w-full overflow-hidden border border-ink/10 bg-paper-deep ${
               ratio === "square" ? "aspect-square" : "aspect-[4/3]"
             }`}
           >

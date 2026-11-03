@@ -27,7 +27,7 @@ export async function generateMetadata({
 
   return buildPageMetadata({
     path: `/${post.slug}`,
-    title: withBrand(post.title),
+    title: post.seoTitle ?? withBrand(post.title),
     description: post.description,
     type: "article",
     publishedTime: post.datePublished,

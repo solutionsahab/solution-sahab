@@ -36,7 +36,7 @@ export function TestimonialsSection() {
               id="customer-videos-heading"
               className="text-2xl sm:text-4xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0"
             >
-              Customer's Feedback
+              Customer Feedback
             </h2>
             <p className="text-sm text-neutral-600 mt-1 mb-0">
               Filmed on-site after installation across Delhi NCR.

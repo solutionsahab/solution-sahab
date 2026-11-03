@@ -46,7 +46,8 @@ export function buildPageMetadata({
   return {
     title,
     description,
-    ...(keywords?.length ? { keywords } : {}),
+    // null stops pages without their own keywords inheriting the home page list.
+    keywords: keywords?.length ? keywords : null,
     alternates: {
       canonical: url,
     },

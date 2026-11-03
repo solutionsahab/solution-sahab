@@ -19,7 +19,7 @@ export default function HomePage() {
       <Header />
 
       {/* Main Content Area */}
-      <main className="w-full pt-[96px] sm:pt-[116px] bg-white">
+      <main id="main-content" className="w-full pt-[96px] sm:pt-[116px] bg-white">
         <div className="flex flex-col w-full">
           {/* 1. Hero with areas strip */}
           <HeroSection />

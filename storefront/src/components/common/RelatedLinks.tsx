@@ -51,7 +51,7 @@ export function RelatedLinks({
             <Link
               key={link.href}
               href={link.href}
-              className="group flex items-start justify-between gap-4 rounded-2xl border border-ink/10 bg-white p-5 transition-all hover:border-primary/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+              className="group flex items-start justify-between gap-4 border border-ink/10 bg-white p-5 transition-all hover:border-primary/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
             >
               <div className="min-w-0">
                 <span className="font-headline-sm text-headline-sm text-ink block group-hover:text-primary transition-colors">

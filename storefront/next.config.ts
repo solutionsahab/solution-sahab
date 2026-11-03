@@ -5,6 +5,16 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   // Old live-site URLs kept working; the target page's canonical tag tells Google which URL is main.
+  async redirects() {
+    return [
+      // Old post URL was the full link pasted into the slug.
+      {
+        source: "/httpssolutionsahabcomhoneycomb-mesh-installation-delhi",
+        destination: "/honeycomb-mesh-installation-delhi",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       { source: "/invisible-grill", destination: "/invisible-grills" },
