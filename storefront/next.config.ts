@@ -36,6 +36,8 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    // 90 is used by the full-width home hero so large photos stay sharp.
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: "https",

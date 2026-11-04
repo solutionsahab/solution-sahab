@@ -8,11 +8,14 @@ export const ASSETS = {
 
   // Hero Banners
   HERO_IMAGE_HOME: "/images/hero/hero-home.jpg",
-  HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS: "/images/products/invisible-grills.jpg",
+  HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS: "/images/products/invisible-grills-balcony.jpg",
+  // Home hero slides only; product pages and cards keep the PRODUCTS.* images
+  HERO_IMAGE_HOME_PLEATED_MESH: "/images/hero/hero-pleated-mesh.jpg",
+  HERO_IMAGE_HOME_HONEYCOMB: "/images/hero/hero-honeycomb-partition.jpg",
 
   // Product Catalog Images
   PRODUCTS: {
-    INVISIBLE_GRILLS: "/images/products/invisible-grills.jpg",
+    INVISIBLE_GRILLS: "/images/products/invisible-grills-balcony.jpg",
     PLEATED_MOSQUITO_MESH: "/images/products/pleated-mesh.jpg",
     ALUMINUM_SECURITY_MESH: "/images/products/aluminum-mesh-partition.jpg",
     HONEYCOMB_PARTITIONS: "/images/products/honeycomb-partition.jpg",
