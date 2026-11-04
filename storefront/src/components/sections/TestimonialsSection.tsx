@@ -6,17 +6,17 @@ import Link from "next/link";
 const VIDEOS = [
   {
     videoId: "ra8Bwmo1SE0",
-    customer: "Mr. Kamal Thakur · Ashiyana Town, Bhiwadi",
+    customer: "Mr. Kamal Thakur, Ashiyana Town, Bhiwadi",
     product: "Balcony Pleated Mesh",
   },
   {
     videoId: "7F6Z-WV5ylA",
-    customer: "Verified Homeowner · Delhi NCR",
+    customer: "Verified Homeowner, Delhi NCR",
     product: "Pleated Mesh Door",
   },
   {
     videoId: "3rd_YCsZWAY",
-    customer: "Verified Homeowner · Delhi NCR",
+    customer: "Verified Homeowner, Delhi NCR",
     product: "Pleated Mesh Door",
   },
 ];
@@ -48,7 +48,7 @@ export function TestimonialsSection() {
             rel="noopener noreferrer"
             className="shrink-0 text-xs font-gilroy font-extrabold uppercase tracking-wider text-neutral-950 underline underline-offset-4 hover:opacity-70"
           >
-            All Videos on YouTube →
+            All Videos on YouTube
           </Link>
         </div>
 

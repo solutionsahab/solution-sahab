@@ -28,7 +28,7 @@ export default function WhoWeArePage() {
       <ProseSections sections={WHO_WE_ARE.sections} />
       <RelatedLinks
         title="Explore our products"
-        intro="From invisible grills and pleated mesh to partitions, weather screens and skylights — every system is engineered, manufactured and installed by Solution Sahab."
+        intro="From invisible grills and pleated mesh to partitions, weather screens and skylights: every system is engineered, manufactured and installed by Solution Sahab."
         links={PRODUCT_LINKS}
         tone="low"
       />

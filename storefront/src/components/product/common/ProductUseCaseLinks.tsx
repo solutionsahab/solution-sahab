@@ -53,7 +53,7 @@ export function ProductUseCaseLinks({
                 />
               </div>
               <h3 className="text-lg font-gilroy font-bold text-neutral-950 mb-2 group-hover:text-blue-600 transition-colors">
-                {item.title} <span aria-hidden="true">→</span>
+                {item.title}
               </h3>
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-body m-0">
                 {item.desc}

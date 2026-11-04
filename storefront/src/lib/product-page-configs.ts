@@ -81,18 +81,18 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab invisible grills",
       ],
       canonical: "https://solutionsahab.com/invisible-grills",
-      ogImage: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      ogImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
     },
     structuredData: {
       productName: "Architectural Grade Invisible Grills for Modern Balconies",
       description:
         "Safe fenestration solutions utilizing 316-grade stainless steel cables with tensioned installation, preserving panoramic views while protecting children and pets in Delhi NCR high-rises.",
-      image: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      image: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
       material: "AISI 316 Marine Grade Stainless Steel Wire",
     },
     hero: {
       productName: "Invisible Grills",
-      brandTag: "Solution Sahab · Delhi NCR",
+      brandTag: "Solution Sahab | Delhi NCR",
       tagline:
         "High-tensile 316 marine-grade stainless steel cable grills for balconies, windows, and open terraces. Protect children and pets from accidental falls without blocking your panoramic skyline view or natural breeze.",
       badges: [
@@ -101,7 +101,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "5-Year Rust Warranty",
         "RWA & Fire Approved",
       ],
-      heroImage: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      heroImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
       heroImageAlt: "Invisible Grills Installed on High-Rise Balcony by Solution Sahab",
       breadcrumbName: "Invisible Grills",
       bookingTargetId: "#booking-form",
@@ -111,7 +111,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       leadParagraph:
         "Invisible grills are the modern replacement for bulky, rusted iron bars. They are made from thin, high-tensile 316 marine-grade stainless steel cables tensioned vertically or horizontally across your balcony, window, or staircase opening.",
       secondaryParagraph:
-        "From inside your room, the cables are so slender that they are barely noticeable, preserving 100% of your open skyline view and natural daylight. Yet, each individual cable is engineered to withstand over 400 kgf of force—making it impossible for toddlers, children, or pets to slip through or bend the wires.",
+        "From inside your room, the cables are so slender that they are barely noticeable, preserving 100% of your open skyline view and natural daylight. Yet, each individual cable is engineered to withstand over 400 kgf of force, making it impossible for toddlers, children, or pets to slip through or bend the wires.",
       bullets: [
         {
           label: "Marine Grade 316 Stainless Steel",
@@ -274,18 +274,18 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab pleated mesh",
       ],
       canonical: "https://solutionsahab.com/pleated-mesh",
-      ogImage: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
+      ogImage: ASSETS.HERO_IMAGE_HOME_PLEATED_MESH,
     },
     structuredData: {
       productName: "Retractable Pleated Mosquito Mesh for Doors & Windows",
       description:
         "Premium retractable pleated mosquito insect screens made with Jindal T6 aluminum frames and tear-resistant accordion mesh for balconies and French doors in Delhi NCR.",
-      image: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
+      image: ASSETS.HERO_IMAGE_HOME_PLEATED_MESH,
       material: "Jindal T6 6063 Aluminum & PVC-Coated Polyester",
     },
     hero: {
       productName: "Pleated Mosquito Mesh",
-      brandTag: "Solution Sahab · Delhi NCR",
+      brandTag: "Solution Sahab | Delhi NCR",
       tagline:
         "Retractable accordion insect screens for balcony sliding doors, French windows, and main entrance openings. Enjoy 100% mosquito and bug defense without compromising your natural airflow or interior elegance.",
       badges: [
@@ -294,7 +294,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "German Kevlar Cords",
         "5-Year Guarantee",
       ],
-      heroImage: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
+      heroImage: ASSETS.HERO_IMAGE_HOME_PLEATED_MESH,
       heroImageAlt: "Pleated Mosquito Mesh Installation in Delhi NCR by Solution Sahab",
       breadcrumbName: "Pleated Mosquito Mesh",
       bookingTargetId: "#booking-form",
@@ -467,18 +467,18 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab aluminum mesh",
       ],
       canonical: "https://solutionsahab.com/aluminum-mesh-partition",
-      ogImage: ASSETS.PRODUCTS.ALUMINUM_SECURITY_MESH,
+      ogImage: ASSETS.HERO_IMAGE_HOME_ALUMINUM_MESH,
     },
     structuredData: {
       productName: "Heavy-Duty Aluminum Security Mesh and Modular Partitions",
       description:
         "Architectural heavy-duty aluminum security mesh doors, knife-shear resistant window screens, and modular partitions for homes and offices in Delhi NCR.",
-      image: ASSETS.PRODUCTS.ALUMINUM_SECURITY_MESH,
+      image: ASSETS.HERO_IMAGE_HOME_ALUMINUM_MESH,
       material: "Jindal T6 6063 Alloy & Marine Grade Woven Steel Mesh",
     },
     hero: {
       productName: "Aluminum Security Mesh & Partition",
-      brandTag: "Solution Sahab · Delhi NCR",
+      brandTag: "Solution Sahab | Delhi NCR",
       tagline:
         "Heavy-duty architectural security mesh and partitions for main entrance doors, sliding balconies, and interior dividers. Enjoy knife-shear intruder security, complete pest defense, and fresh airflow in one elegant system.",
       badges: [
@@ -487,7 +487,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Multi-Point Deadbolt",
         "5-Year Guarantee",
       ],
-      heroImage: ASSETS.PRODUCTS.ALUMINUM_SECURITY_MESH,
+      heroImage: ASSETS.HERO_IMAGE_HOME_ALUMINUM_MESH,
       heroImageAlt: "Aluminum Security Mesh and Partition Installation by Solution Sahab",
       breadcrumbName: "Aluminum Security Mesh",
       bookingTargetId: "#booking-form",
@@ -660,18 +660,18 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab honeycomb partition",
       ],
       canonical: "https://solutionsahab.com/honeycomb-partition",
-      ogImage: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
+      ogImage: ASSETS.HERO_IMAGE_HOME_HONEYCOMB,
     },
     structuredData: {
       productName: "Honeycomb Cellular Partitions and Retractable Thermal Blinds",
       description:
         "Retractable honeycomb cellular room dividers, thermal insulation blinds, and 2-in-1 Duet mesh systems for homes and offices in Delhi NCR.",
-      image: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
+      image: ASSETS.HERO_IMAGE_HOME_HONEYCOMB,
       material: "Jindal T6 Aluminum & Cellular Spunlace Polyester",
     },
     hero: {
       productName: "Honeycomb Partition & Blinds",
-      brandTag: "Solution Sahab · Delhi NCR",
+      brandTag: "Solution Sahab | Delhi NCR",
       tagline:
         "Retractable honeycomb cellular room dividers, thermal insulation blinds, and 2-in-1 Duet mesh systems. Subdivide living zones, block blistering summer heat, and gain instant acoustic privacy without permanent walls.",
       badges: [
@@ -680,7 +680,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "2-in-1 Duet System",
         "5-Year Guarantee",
       ],
-      heroImage: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
+      heroImage: ASSETS.HERO_IMAGE_HOME_HONEYCOMB,
       heroImageAlt: "Honeycomb Partition and Blinds Installation by Solution Sahab",
       breadcrumbName: "Honeycomb Partition",
       bookingTargetId: "#booking-form",
@@ -690,7 +690,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       leadParagraph:
         "Honeycomb Partition (also known as Cellular Shades or Accordion Room Dividers) is an advanced architectural screening system built from interconnected hexagonal fabric air pockets. These engineered cells trap a layer of air, creating a natural thermal barrier between living zones.",
       secondaryParagraph:
-        "Available in single-shutter, double-shutter, and our signature Duet System—which integrates a blackout thermal honeycomb blind on one side and a transparent insect mesh on the other—it retracts smoothly into ultra-slim aluminum side cassettes without taking up valuable floor area.",
+        "Available in single-shutter, double-shutter, and our signature Duet System, which integrates a blackout thermal honeycomb blind on one side and a transparent insect mesh on the other. It retracts smoothly into ultra-slim aluminum side cassettes without taking up valuable floor area.",
       bullets: [
         {
           label: "Cellular Thermal & Energy Insulation",
@@ -853,18 +853,18 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab weather screen",
       ],
       canonical: "https://solutionsahab.com/automatic-weather-screen",
-      ogImage: ASSETS.PRODUCTS.WEATHER_SCREENS,
+      ogImage: ASSETS.HERO_IMAGE_HOME_WEATHER_SCREEN,
     },
     structuredData: {
       productName: "Motorized Automatic Weather Screens & Outdoor Zip Blinds",
       description:
         "Heavy-duty motorized outdoor zip screens, wind-resistant balcony weather blinds, and solar shading systems across Delhi NCR.",
-      image: ASSETS.PRODUCTS.WEATHER_SCREENS,
+      image: ASSETS.HERO_IMAGE_HOME_WEATHER_SCREEN,
       material: "Architectural Aluminum & PVC-Coated Polyester Technical Solar Screen",
     },
     hero: {
       productName: "Automatic Weather Screens",
-      brandTag: "Solution Sahab · Delhi NCR",
+      brandTag: "Solution Sahab | Delhi NCR",
       tagline:
         "Motorized outdoor zip screens and high-wind weather protection blinds. Shield balconies, pergolas, and outdoor patios from driving monsoon rain, blistering solar heat, and heavy Delhi dust storms at the touch of a button.",
       badges: [
@@ -873,7 +873,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Blocks 90% Heat",
         "5-Year Guarantee",
       ],
-      heroImage: ASSETS.PRODUCTS.WEATHER_SCREENS,
+      heroImage: ASSETS.HERO_IMAGE_HOME_WEATHER_SCREEN,
       heroImageAlt: "Automatic Weather Screen Installation by Solution Sahab",
       breadcrumbName: "Automatic Weather Screens",
       bookingTargetId: "#booking-form",
@@ -1046,18 +1046,18 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab skylights",
       ],
       canonical: "https://solutionsahab.com/skylight",
-      ogImage: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
+      ogImage: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
     },
     structuredData: {
       productName: "Architectural Glass Skylights & Terrace Roof Glazing",
       description:
         "Custom laminated safety glass roof skylights, stairwell glass domes, and terrace roof glazing systems across Delhi NCR.",
-      image: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
+      image: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
       material: "13.52mm Laminated Toughened Safety Glass & Jindal T6 Aluminum",
     },
     hero: {
       productName: "Architectural Glass Skylights",
-      brandTag: "Solution Sahab · Delhi NCR",
+      brandTag: "Solution Sahab | Delhi NCR",
       tagline:
         "Custom engineered laminated safety glass roof skylights and stairwell glazing. Flood internal duplex cores, staircases, and living areas with natural daylight with 100% monsoon leak-proof reliability and Low-E solar heat control.",
       badges: [
@@ -1066,7 +1066,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "100% Leak-Proof EPDM",
         "5-Year Guarantee",
       ],
-      heroImage: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
+      heroImage: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
       heroImageAlt: "Architectural Glass Skylight Installation by Solution Sahab",
       breadcrumbName: "Glass Skylights",
       bookingTargetId: "#booking-form",
@@ -1250,7 +1250,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     },
     hero: {
       productName: "Ceiling Cloth Hanger",
-      brandTag: "Solution Sahab · Delhi NCR",
+      brandTag: "Solution Sahab | Delhi NCR",
       tagline:
         "Stainless steel 304 ceiling cloth drying hangers and pulley racks for apartment balconies and utility areas. Hoist wet laundry effortlessly to the ceiling, reclaim 100% of your floor space, and dry clothes faster in natural warm air breezes.",
       badges: [

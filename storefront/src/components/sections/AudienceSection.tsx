@@ -21,7 +21,7 @@ const AUDIENCES: AudienceRow[] = [
     tag: "Apartments & Villas",
     title: "Homeowners & High-Rise Residents",
     description:
-      "Balcony fall protection for children and pets plus smooth pleated insect screens—approved by RWAs across Gurgaon, Noida, and Delhi.",
+      "Balcony fall protection for children and pets plus smooth pleated insect screens, approved by RWAs across Gurgaon, Noida, and Delhi.",
     imageUrl: ASSETS.PRODUCTS.INVISIBLE_GRILLS,
     imageAlt: "High-rise residential balcony fitted with invisible safety grills",
     ctaText: "Book Home Measurement",
@@ -104,7 +104,7 @@ export function AudienceSection() {
                   href={item.ctaHref}
                   variant="outline"
                   size="sm"
-                  icon={item.isExternalPhone ? "call" : "arrow_forward"}
+                  icon={item.isExternalPhone ? "call" : undefined}
                   className="w-full mt-auto"
                 >
                   {item.ctaText}

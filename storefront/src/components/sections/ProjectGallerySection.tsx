@@ -76,7 +76,7 @@ export function ProjectGallerySection() {
             href="/gallery"
             className="shrink-0 text-xs font-gilroy font-extrabold uppercase tracking-wider text-neutral-950 underline underline-offset-4 hover:opacity-70"
           >
-            View Full Gallery →
+            View Full Gallery
           </Link>
         </div>
 
@@ -101,7 +101,7 @@ export function ProjectGallerySection() {
                 {item.title}
               </h3>
               <p className="text-xs text-neutral-500 m-0 mt-1">
-                {item.system} · {item.location}
+                {item.system}, {item.location}
               </p>
             </div>
           ))}

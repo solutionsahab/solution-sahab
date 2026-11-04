@@ -10,7 +10,7 @@ import { GALLERY_IMAGES, INSTAGRAM_URL } from "@/lib/info-pages";
 import { PRODUCT_LINKS } from "@/lib/site-links";
 
 const DESCRIPTION =
-  "Installation photos from Solution Sahab — Gurgaon high-rise balconies, Noida villa screens, exhibitions and factory quality control.";
+  "Installation photos from Solution Sahab: Gurgaon high-rise balconies, Noida villa screens, exhibitions and factory quality control.";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/gallery",

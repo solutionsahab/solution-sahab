@@ -38,9 +38,9 @@ export interface InfoPageContent {
 export const WHO_WE_ARE: InfoPageContent = {
   path: "/who-we-are",
   eyebrow: "About Us / Who We Are",
-  title: "Solution Sahab — Our Story & Values",
+  title: "Solution Sahab | Our Story & Values",
   description:
-    "Learn about Solution Sahab — our story, mission and values. We specialise in invisible grills, pleated mesh and home safety solutions in Delhi NCR.",
+    "Learn about Solution Sahab: our story, mission and values. We specialise in invisible grills, pleated mesh and home safety solutions in Delhi NCR.",
   keywords: [
     "About Solution Sahab",
     "Who We Are",
@@ -55,7 +55,7 @@ export const WHO_WE_ARE: InfoPageContent = {
       kind: "prose",
       id: "our-story",
       paragraphs: [
-        "At Solution Sahab, we don't just manufacture products—we solve real, everyday safety and design challenges for homes, businesses, and large commercial spaces across India.",
+        "At Solution Sahab, we don't just manufacture products. We solve real, everyday safety and design challenges for homes, businesses, and large commercial spaces across India.",
         "We are a leading manufacturer and solution provider of Invisible Grills and Pleated Mesh Systems, trusted for our engineering precision, clean aesthetics, and long-term durability. From high-rise balconies and staircases to windows, partitions, and large openings, our products are designed to deliver maximum safety without blocking light, air, or views.",
       ],
     },
@@ -123,7 +123,7 @@ export const WHO_WE_ARE: InfoPageContent = {
       kind: "prose",
       id: "closing",
       paragraphs: [
-        "Solution Sahab is built for those who value safety, design, and dependable performance—today and in the future.",
+        "Solution Sahab is built for those who value safety, design, and dependable performance, today and in the future.",
         "Contact Us to learn more about our products, dealership program, or B2B collaborations.",
       ],
     },

@@ -49,7 +49,7 @@ export function BookingSection({
             </div>
 
             <div className="pt-4 border-t border-neutral-200 text-xs text-neutral-500 font-sans">
-              Serving Gurgaon · Noida · Greater Noida · Delhi · Faridabad · Ghaziabad
+              Serving Gurgaon, Noida, Greater Noida, Delhi, Faridabad and Ghaziabad
             </div>
           </div>
 
@@ -184,7 +184,6 @@ export function BookingSection({
                   <Button
                     type="submit"
                     size="lg"
-                    icon="arrow_forward"
                     disabled={status === "submitting"}
                   >
                     {status === "submitting"

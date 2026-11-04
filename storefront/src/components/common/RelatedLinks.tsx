@@ -63,12 +63,6 @@ export function RelatedLinks({
                   </span>
                 )}
               </div>
-              <span
-                className="material-symbols-outlined text-[20px] text-primary shrink-0 mt-1 transition-transform group-hover:translate-x-1"
-                aria-hidden="true"
-              >
-                arrow_forward
-              </span>
             </Link>
           ))}
         </div>

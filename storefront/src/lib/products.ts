@@ -209,7 +209,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         id: "why-honeycomb-mesh",
         title: "Why Choose Honeycomb Mesh?",
         paragraphs: [
-          "Honeycomb Mesh is a smart and stylish window solution designed to enhance comfort, privacy, and energy efficiency in any space. Its unique honeycomb structure traps air to provide natural insulation—keeping rooms cooler in summer and warmer in winter—while also reducing outside noise for a peaceful environment. With sleek minimal design, smooth operation, and a range of light-control options from blackout to soft-filtering, Honeycomb Mesh offers the perfect balance of elegance and functionality. It maintains complete privacy without blocking natural light and is available in multiple shades and textures to complement modern interiors. Durable, long-lasting, and easy to maintain, it’s an ideal upgrade for homes, offices, and premium living spaces.",
+          "Honeycomb Mesh is a smart and stylish window solution designed to enhance comfort, privacy, and energy efficiency in any space. Its unique honeycomb structure traps air to provide natural insulation, keeping rooms cooler in summer and warmer in winter, while also reducing outside noise for a peaceful environment. With sleek minimal design, smooth operation, and a range of light-control options from blackout to soft-filtering, Honeycomb Mesh offers the perfect balance of elegance and functionality. It maintains complete privacy without blocking natural light and is available in multiple shades and textures to complement modern interiors. Durable, long-lasting, and easy to maintain, it’s an ideal upgrade for homes, offices, and premium living spaces.",
         ],
       },
       {
@@ -458,7 +458,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     },
     hero: {
       intro:
-        "Outdoor spaces are no longer just add-ons to a building—they are extensions of how we live, work, and relax. But changing weather conditions often make balconies, terraces, pergolas, and open areas uncomfortable or unusable. An Automatic Weather Screen is a motorized, high-performance screening system designed to protect outdoor and semi-outdoor spaces from sunlight, heat, wind, rain, dust, and insects, while still allowing airflow and maintaining openness. It transforms exposed areas into comfortable, usable environments throughout the year.",
+        "Outdoor spaces are no longer just add-ons to a building; they are extensions of how we live, work, and relax. But changing weather conditions often make balconies, terraces, pergolas, and open areas uncomfortable or unusable. An Automatic Weather Screen is a motorized, high-performance screening system designed to protect outdoor and semi-outdoor spaces from sunlight, heat, wind, rain, dust, and insects, while still allowing airflow and maintaining openness. It transforms exposed areas into comfortable, usable environments throughout the year.",
       imageUrl: ASSETS.PRODUCTS.WEATHER_SCREENS,
       imageAlt:
         "Motorised zip weather screen enclosing an outdoor terrace in Delhi",
@@ -470,7 +470,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         title: "What Is an Automatic Weather Screen?",
         paragraphs: [
           "An Automatic Weather Screen is a technologically advanced shading and enclosure system that uses a motor-driven mechanism to smoothly raise or lower a specially engineered screen. Unlike traditional curtains, blinds, or temporary coverings, this system is designed specifically for outdoor durability and weather resistance.",
-          "The screen fabric is guided through side channels to ensure stability, clean movement, and resistance against strong winds. With the press of a button, your space adapts instantly to weather conditions—open when you want fresh air and views, closed when you need protection.",
+          "The screen fabric is guided through side channels to ensure stability, clean movement, and resistance against strong winds. With the press of a button, your space adapts instantly to weather conditions: open when you want fresh air and views, closed when you need protection.",
         ],
       },
       {
@@ -572,7 +572,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         id: "long-term-performance",
         title: "Designed for Long-Term Performance",
         summary:
-          "An Automatic Weather Screen is not a temporary solution—it is a long-term architectural addition. The materials used are selected to ensure:",
+          "An Automatic Weather Screen is not a temporary solution; it is a long-term architectural addition. The materials used are selected to ensure:",
         features: [
           "Resistance to UV exposure",
           "Minimal wear and tear",
@@ -586,7 +586,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         id: "indian-climate",
         title: "Ideal for Indian Climate Conditions",
         summary:
-          "Weather in India varies drastically—from extreme heat and dust to heavy monsoons and strong winds. Automatic Weather Screens are designed keeping these challenges in mind. They help:",
+          "Weather in India varies drastically, from extreme heat and dust to heavy monsoons and strong winds. Automatic Weather Screens are designed keeping these challenges in mind. They help:",
         features: [
           "Reduce heat during peak summers",
           "Protect against monsoon winds and rain",
@@ -600,7 +600,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         id: "smart-investment",
         title: "A Smart Investment for Modern Living",
         paragraphs: [
-          "Outdoor space is valuable. An Automatic Weather Screen helps you make the most of it—whether for relaxation, social gatherings, business use, or everyday comfort. It turns weather from a limitation into something you control.",
+          "Outdoor space is valuable. An Automatic Weather Screen helps you make the most of it, whether for relaxation, social gatherings, business use, or everyday comfort. It turns weather from a limitation into something you control.",
           "Instead of adapting your lifestyle to the weather, the space adapts to you.",
         ],
         videoId: "aAScB3LcqBg",

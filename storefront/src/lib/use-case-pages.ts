@@ -42,18 +42,18 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "child safety grills for schools",
       ],
       canonical: "https://solutionsahab.com/invisible-grills-for-schools",
-      ogImage: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      ogImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
     },
     structuredData: {
       productName: "Invisible Grills for Schools",
       description:
         "Fall-protection invisible grills for school classrooms, corridors, staircases and terraces, using tensioned 316-grade stainless steel cables that keep spaces bright and ventilated across Delhi NCR.",
-      image: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      image: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
       material: "AISI 316 Marine Grade Stainless Steel Wire",
     },
     hero: {
       productName: "Invisible Grills for Schools",
-      brandTag: "Solution Sahab · Schools & Campuses",
+      brandTag: "Solution Sahab | Schools & Campuses",
       tagline:
         "Keep students safe on every upper floor. Our 316 marine-grade stainless steel cable grills secure classroom windows, corridors, staircases and terraces while classrooms stay bright, airy and open.",
       badges: [
@@ -62,7 +62,7 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "Emergency Cut-Out",
         "5-Year Rust Warranty",
       ],
-      heroImage: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      heroImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
       heroImageAlt: "Invisible grills protecting an open school corridor",
       breadcrumbName: "Schools",
       parentCrumb: USE_CASE_PARENT,
@@ -226,18 +226,18 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "invisible grills for healthcare buildings",
       ],
       canonical: "https://solutionsahab.com/invisible-grills-for-hospitals",
-      ogImage: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      ogImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
     },
     structuredData: {
       productName: "Invisible Grills for Hospitals",
       description:
         "Fall-prevention invisible grills for hospital patient rooms, wards, stairwells and atriums, using tensioned 316-grade stainless steel cables that keep spaces bright and ventilated across Delhi NCR.",
-      image: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      image: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
       material: "AISI 316 Marine Grade Stainless Steel Wire",
     },
     hero: {
       productName: "Invisible Grills for Hospitals",
-      brandTag: "Solution Sahab · Hospitals & Healthcare",
+      brandTag: "Solution Sahab | Hospitals & Healthcare",
       tagline:
         "Prevent falls from windows, wards and stairwells without making patients feel confined. Our 316 marine-grade stainless steel cable grills keep healing spaces safe, bright and well ventilated.",
       badges: [
@@ -246,7 +246,7 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "Emergency Cut-Out",
         "5-Year Rust Warranty",
       ],
-      heroImage: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
+      heroImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
       heroImageAlt: "Invisible grills on a hospital building opening",
       breadcrumbName: "Hospitals",
       parentCrumb: USE_CASE_PARENT,
