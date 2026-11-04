@@ -67,6 +67,11 @@ export function BookingSection({
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-gilroy text-neutral-950 m-0">
                   Thank you, {formData.fullName || "Customer"}.
                 </h3>
+                <p className="text-sm sm:text-base text-neutral-950 mt-3 mb-0">
+                  Mobile: {formData.phone}
+                  <br />
+                  Address: {formData.address}
+                </p>
                 <p className="text-sm sm:text-base text-neutral-600 mt-3 mb-8 max-w-md leading-relaxed">
                   Our Delhi NCR coordinator will contact you shortly to confirm your measurement schedule.
                 </p>
