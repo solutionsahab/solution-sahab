@@ -12,6 +12,9 @@ export const ASSETS = {
   // Home hero slides only; product pages and cards keep the PRODUCTS.* images
   HERO_IMAGE_HOME_PLEATED_MESH: "/images/hero/hero-pleated-mesh.jpg",
   HERO_IMAGE_HOME_HONEYCOMB: "/images/hero/hero-honeycomb-partition.jpg",
+  HERO_IMAGE_HOME_ALUMINUM_MESH: "/images/hero/hero-aluminum-security-mesh.webp",
+  HERO_IMAGE_HOME_WEATHER_SCREEN: "/images/hero/hero-weather-screen.webp",
+  HERO_IMAGE_HOME_SKYLIGHT: "/images/hero/hero-skylight.webp",
 
   // Product Catalog Images
   PRODUCTS: {
