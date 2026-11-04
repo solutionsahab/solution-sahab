@@ -55,8 +55,8 @@ export async function insertLead(lead: CrmLead): Promise<CrmResult> {
     apikey: apiKey,
     formname: "Leads",
     operation: "insertRecords",
-    // "false" so a repeat number never overwrites an existing lead's name, address or stage.
-    overwrite: "false",
+    // Must stay "true": with "false" Cratio rejects a repeat mobile number and the enquiry is lost.
+    overwrite: "true",
   }).toString();
 
   const res = await fetch(url, {
