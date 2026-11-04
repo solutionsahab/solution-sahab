@@ -6,43 +6,44 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { ASSETS } from "@/lib/constants";
 
+// Each photo has its product name and features printed on it, so alt carries that text too
 const SLIDES = [
   {
     name: "Invisible Safety Grills",
     // Phone/tablet crop: show the right side so the printed info panel reads
     crop: "object-[100%_50%]",
     image: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
-    alt: "Balcony fitted with thin vertical invisible grill cables",
+    alt: "Invisible Safety Grills on a balcony with kids and a dog: child & pet safe, strong & durable, clear open view, fresh air & light, sleek modern look",
   },
   {
     name: "Pleated Mosquito Mesh",
     crop: "object-[100%_50%]",
     image: ASSETS.HERO_IMAGE_HOME_PLEATED_MESH,
-    alt: "Family in a living room with pleated mosquito mesh across wide sliding balcony doors",
+    alt: "Pleated Mosquito Mesh on sliding balcony doors in a family living room: fresh air in, mosquitoes out, unobstructed view, smooth & space-saving",
   },
   {
     name: "Aluminum Security Mesh",
     crop: "object-[100%_50%]",
     image: ASSETS.HERO_IMAGE_HOME_ALUMINUM_MESH,
-    alt: "Boy and dog in a living room beside black aluminium security mesh doors",
+    alt: "Aluminium Security Mesh doors in a living room with a boy and his dog: strong & durable, keeps mosquitoes out, child & pet safe, ventilated & secure",
   },
   {
     name: "Honeycomb Partitions",
     crop: "object-[100%_50%]",
     image: ASSETS.HERO_IMAGE_HOME_HONEYCOMB,
-    alt: "Family in a living room beside a full-height honeycomb partition",
+    alt: "Honeycomb Partition in a family living room: better AC retention, noise reduction, privacy on demand, sleek & space-saving",
   },
   {
     name: "Motorized Weather Screens",
     crop: "object-[100%_50%]",
     image: ASSETS.HERO_IMAGE_HOME_WEATHER_SCREEN,
-    alt: "Family watching the sunset through a motorized weather screen on their balcony",
+    alt: "Motorized Weather Screen on a family's balcony at sunset: motorized & remote operated, weather & UV protection, blocks heat, wind & dust, privacy with ventilation, sleek modern look",
   },
   {
     name: "Skylights",
     crop: "object-[100%_50%]",
     image: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
-    alt: "Family relaxing under a large skylight fitted with a motorized honeycomb blind",
+    alt: "Motorized Skylight Blinds & Honeycomb Blinds under a large skylight: motorized remote control, insulation for a cooler space, blocks heat & harmful UV, reduces outside noise, sleek modern aesthetic",
   },
 ];
 
@@ -113,7 +114,9 @@ export function HeroSection() {
               className={`w-full h-full object-cover ${item.crop} lg:object-contain lg:object-center`}
               src={item.image}
               fill
-              priority={index === 0}
+              // First slide is the page's largest visible image (LCP): fetch it first
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
               // Below lg the tall box draws the 2:1 photo at up to ~3.5x the screen width
               sizes="(max-width: 1023px) 350vw, 100vw"
               quality={90}
