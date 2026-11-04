@@ -37,32 +37,26 @@ export default function ContactUsPage() {
       />
 
       <section
-        className="w-full bg-white py-14 sm:py-20 scroll-mt-28"
+        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
         aria-label="Contact details and enquiry form"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            <div className="lg:col-span-6 flex flex-col gap-6">
-              <div className="border border-ink/10 bg-white p-6">
-                <h2 className="font-headline-md text-headline-md text-ink m-0 flex items-center gap-2">
-                  <span
-                    className="material-symbols-outlined text-[22px] text-primary"
-                    aria-hidden="true"
-                  >
-                    call
-                  </span>
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
+            <div className="lg:col-span-6 flex flex-col gap-4">
+              <div className="border border-neutral-300 bg-white p-5">
+                <h2 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
                   Phone
                 </h2>
-                <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 list-none p-0 m-0">
+                <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 list-none p-0 m-0">
                   {CONTACT_DATA.phones.map((phone) => (
                     <li key={phone.raw}>
                       <Link
                         href={`tel:${phone.raw}`}
-                        className="font-label-md text-label-md font-bold text-secondary hover:underline flex items-center gap-2"
+                        className="text-sm font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70 inline-flex items-center gap-2"
                       >
                         {phone.label}
                         {phone.landline && (
-                          <span className="font-body-sm text-body-sm font-normal text-ink-soft">
+                          <span className="text-xs font-normal text-neutral-500">
                             (Landline)
                           </span>
                         )}
@@ -71,52 +65,32 @@ export default function ContactUsPage() {
                   ))}
                 </ul>
 
-                <div className="mt-6 pt-5 border-t border-ink/10">
-                  <h3 className="font-label-md text-label-md uppercase tracking-wider text-ink-soft m-0 flex items-center gap-2">
-                    <span
-                      className="material-symbols-outlined text-[18px] text-primary"
-                      aria-hidden="true"
-                    >
-                      mail
-                    </span>
+                <div className="mt-4 pt-4 border-t border-neutral-300">
+                  <h3 className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] m-0">
                     Email
                   </h3>
                   <Link
                     href={`mailto:${CONTACT_DATA.email}`}
-                    className="mt-2 inline-block font-label-md text-label-md font-bold text-secondary hover:underline"
+                    className="mt-1.5 inline-block text-sm font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
                   >
                     {CONTACT_DATA.email}
                   </Link>
                 </div>
               </div>
 
-              <div className="border border-ink/10 bg-white p-6">
-                <h2 className="font-headline-md text-headline-md text-ink m-0 flex items-center gap-2">
-                  <span
-                    className="material-symbols-outlined text-[22px] text-primary"
-                    aria-hidden="true"
-                  >
-                    location_on
-                  </span>
+              <div className="border border-neutral-300 bg-white p-5">
+                <h2 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
                   Visit Us
                 </h2>
-                <ul className="mt-4 flex flex-col gap-4 list-none p-0 m-0">
+                <ul className="mt-3 flex flex-col gap-3 list-none p-0 m-0">
                   {CONTACT_DATA.locations.map((location) => (
-                    <li key={location.label} className="flex items-start gap-3">
-                      <span
-                        className="material-symbols-outlined text-[20px] text-secondary shrink-0 mt-0.5"
-                        aria-hidden="true"
-                      >
-                        apartment
-                      </span>
-                      <div>
-                        <p className="font-label-md text-label-md font-bold text-ink m-0">
-                          {location.label}
-                        </p>
-                        <p className="font-body-sm text-body-sm text-ink-soft leading-relaxed m-0 mt-1">
-                          {location.address}
-                        </p>
-                      </div>
+                    <li key={location.label}>
+                      <p className="text-sm font-semibold text-neutral-950 m-0">
+                        {location.label}
+                      </p>
+                      <p className="text-sm text-neutral-600 leading-relaxed m-0 mt-0.5">
+                        {location.address}
+                      </p>
                     </li>
                   ))}
                 </ul>
@@ -124,22 +98,19 @@ export default function ContactUsPage() {
                   href={CONTACT_INFO.GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-1.5 min-h-11 font-label-md text-label-md font-semibold text-secondary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+                  className="mt-2 inline-flex items-center min-h-11 text-sm font-semibold text-[#1B4D8E] underline underline-offset-4 hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
                 >
-                  <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
-                    map
-                  </span>
                   View on Google Maps &amp; reviews
                 </a>
               </div>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="border border-ink/10 bg-white p-6 sm:p-8 shadow-sm">
-                <h2 className="font-headline-md text-headline-md text-ink m-0">
+              <div className="border border-neutral-300 bg-white p-5 sm:p-6">
+                <h2 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
                   Send Us Your Enquiry
                 </h2>
-                <p className="font-body-md text-body-md text-ink-soft mt-2 mb-6">
+                <p className="text-sm text-neutral-600 leading-relaxed mt-1 mb-4">
                   Share your requirement and our team will call you back to
                   arrange a measurement.
                 </p>
@@ -151,36 +122,37 @@ export default function ContactUsPage() {
       </section>
 
       <section
-        className="w-full bg-paper py-14 sm:py-20 scroll-mt-28"
+        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
         aria-labelledby="partners-heading"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="max-w-3xl">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="max-w-3xl mb-6">
             <h2
               id="partners-heading"
-              className="font-headline-xl text-headline-xl text-ink m-0"
+              className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
             >
               Our Partners
             </h2>
-            <p className="font-body-md text-body-md text-ink-soft mt-3 mb-0">
+            <p className="text-sm text-neutral-600 leading-relaxed mt-2 mb-0">
               Regional partners who stock and install Solution Sahab systems in
               their city.
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, desktop shows all 4 */}
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {CONTACT_DATA.partners.map((partner) => (
               <div
                 key={partner.city}
-                className="border border-ink/10 bg-white p-5 flex flex-col gap-2"
+                className="shrink-0 snap-start w-[80%] sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-3rem)/4)] border border-neutral-300 bg-white p-4 flex flex-col gap-1.5"
               >
-                <span className="font-caption-caps text-caption-caps uppercase tracking-widest text-secondary">
+                <span className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E]">
                   {partner.city}
                 </span>
-                <span className="font-headline-sm text-headline-sm text-ink">
+                <span className="text-base font-extrabold font-gilroy text-neutral-950 tracking-tight">
                   {partner.name}
                 </span>
-                <span className="font-body-sm text-body-sm text-ink-soft leading-relaxed">
+                <span className="text-sm text-neutral-600 leading-relaxed">
                   {partner.address}
                 </span>
               </div>

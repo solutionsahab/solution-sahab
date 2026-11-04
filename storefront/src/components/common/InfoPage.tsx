@@ -12,7 +12,7 @@ export function InfoPage({ children }: InfoPageProps) {
   return (
     <>
       <Header />
-      <main id="main-content" className="w-full pt-[87px] sm:pt-[108px] bg-surface min-h-screen flex flex-col">
+      <main id="main-content" className="w-full pt-[87px] sm:pt-[108px] bg-white min-h-screen flex flex-col">
         {children}
       </main>
       <FloatingWhatsApp />

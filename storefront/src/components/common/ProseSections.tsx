@@ -26,9 +26,9 @@ function SectionShell({
     <section
       id={id}
       aria-label={label || id}
-      className={`w-full scroll-mt-28 py-8 sm:py-12 ${sectionTone(index)}`}
+      className={`w-full scroll-mt-28 py-6 sm:py-8 ${sectionTone(index)}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">{children}</div>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">{children}</div>
     </section>
   );
 }
@@ -36,7 +36,7 @@ function SectionShell({
 function Heading({ title }: { title?: string }) {
   if (!title) return null;
   return (
-    <h2 className="font-display-serif text-3xl text-ink leading-tight mb-5">
+    <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 mb-4">
       {title}
     </h2>
   );
@@ -44,7 +44,7 @@ function Heading({ title }: { title?: string }) {
 
 function Paragraph({ text }: { text: string }) {
   return (
-    <p className="font-body-md text-body-md text-ink-soft leading-relaxed m-0">
+    <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0">
       {text}
     </p>
   );
@@ -63,9 +63,9 @@ export function ProseSections({ sections }: ProseSectionsProps) {
           label={section.title}
         >
           {section.kind === "prose" && (
-            <div className="max-w-4xl mx-auto lg:mx-0">
+            <div className="max-w-3xl">
               <Heading title={section.title} />
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3">
                 {section.paragraphs.map((paragraph) => (
                   <Paragraph key={paragraph} text={paragraph} />
                 ))}
@@ -74,31 +74,26 @@ export function ProseSections({ sections }: ProseSectionsProps) {
           )}
 
           {section.kind === "list" && (
-            <div className="max-w-4xl mx-auto lg:mx-0">
+            <div className="max-w-3xl">
               <Heading title={section.title} />
               {section.intro && (
-                <p className="font-body-md text-body-md text-ink-soft leading-relaxed mb-5">
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0 mb-4">
                   {section.intro}
                 </p>
               )}
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 list-none m-0 p-0">
+              {/* Plain text items with a thin blue rule instead of tick icons */}
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 list-none m-0 p-0">
                 {section.items.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2.5 font-body-md text-body-md text-ink"
+                    className="border-l-2 border-[#1B4D8E] pl-3 text-sm sm:text-base text-neutral-800 leading-snug"
                   >
-                    <span
-                      className="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5"
-                      aria-hidden="true"
-                    >
-                      done
-                    </span>
-                    <span>{item}</span>
+                    {item}
                   </li>
                 ))}
               </ul>
               {section.after && section.after.length > 0 && (
-                <div className="flex flex-col gap-4 mt-6">
+                <div className="flex flex-col gap-3 mt-4">
                   {section.after.map((paragraph) => (
                     <Paragraph key={paragraph} text={paragraph} />
                   ))}
@@ -111,30 +106,24 @@ export function ProseSections({ sections }: ProseSectionsProps) {
             <div>
               <Heading title={section.title} />
               {section.intro && (
-                <p className="font-body-md text-body-md text-ink-soft leading-relaxed mb-5 max-w-4xl">
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0 mb-4 max-w-3xl">
                   {section.intro}
                 </p>
               )}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+              {/* Short one-line points: a tight grid shows all of them, a carousel would hide some */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {section.items.map((item) => (
                   <div
                     key={item.title}
-                    className="border border-ink/10 bg-white p-5 flex items-start gap-3.5"
+                    className="border-l-2 border-[#1B4D8E] bg-neutral-50 px-4 py-3"
                   >
-                    <span className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                      <span
-                        className="material-symbols-outlined text-[20px]"
-                        aria-hidden="true"
-                      >
-                        {item.icon || "done"}
-                      </span>
-                    </span>
+                    {/* Icons left out on purpose: the "verified" glyph reads as a tick mark */}
                     <div>
-                      <p className="font-label-md text-label-md font-semibold text-ink m-0">
+                      <p className="text-sm sm:text-base font-semibold text-neutral-950 leading-snug m-0">
                         {item.title}
                       </p>
                       {item.text && (
-                        <p className="font-body-sm text-body-sm text-ink-soft mt-1 mb-0">
+                        <p className="text-sm text-neutral-600 mt-1 mb-0">
                           {item.text}
                         </p>
                       )}
