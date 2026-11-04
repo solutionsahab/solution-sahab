@@ -75,6 +75,7 @@ export default function CeilingClothHangerProductPage() {
         />
         <BookingSection
           leadSource={config.leadSource}
+          product="Ceiling Cloth Hanger"
           title={config.bookingTitle}
           description={config.bookingDescription}
         />

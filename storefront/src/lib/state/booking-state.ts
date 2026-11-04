@@ -5,6 +5,7 @@ export interface BookingFormData {
   fullName: string;
   phone: string;
   address: string;
+  product: string;
 }
 
 export type BookingStatus = "idle" | "submitting" | "success" | "error";
@@ -20,6 +21,7 @@ export const initialBookingFormData: BookingFormData = {
   fullName: "",
   phone: "",
   address: "",
+  product: "",
 };
 
 export const initialBookingState: BookingState = {
@@ -95,12 +97,12 @@ export function submitSuccessState(state: BookingState): BookingState {
   };
 }
 
-export function resetBookingState(): BookingState {
-  return initialBookingState;
-}
-
-export function useBookingForm(defaultLeadSource: string = "Homepage Consultation") {
-  const [state, setState] = useState<BookingState>(initialBookingState);
+export function useBookingForm(defaultLeadSource: string = "Homepage Consultation", defaultProduct = "") {
+  const fresh = useCallback(
+    (): BookingState => ({ ...initialBookingState, data: { ...initialBookingFormData, product: defaultProduct } }),
+    [defaultProduct]
+  );
+  const [state, setState] = useState<BookingState>(fresh);
 
   const updateField = useCallback(
     (field: keyof BookingFormData, value: string) => {
@@ -124,6 +126,7 @@ export function useBookingForm(defaultLeadSource: string = "Homepage Consultatio
         phone: state.data.phone,
         address: state.data.address,
         leadSource: defaultLeadSource,
+        product: state.data.product,
       });
 
       setState((prev) =>
@@ -136,8 +139,8 @@ export function useBookingForm(defaultLeadSource: string = "Homepage Consultatio
   );
 
   const resetForm = useCallback(() => {
-    setState(resetBookingState());
-  }, []);
+    setState(fresh());
+  }, [fresh]);
 
   return {
     formData: state.data,

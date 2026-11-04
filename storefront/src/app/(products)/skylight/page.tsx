@@ -75,6 +75,7 @@ export default function SkylightProductPage() {
         />
         <BookingSection
           leadSource={config.leadSource}
+          product="Skylight"
           title={config.bookingTitle}
           description={config.bookingDescription}
         />

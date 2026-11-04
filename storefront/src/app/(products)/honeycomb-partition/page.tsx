@@ -75,6 +75,7 @@ export default function HoneycombPartitionProductPage() {
         />
         <BookingSection
           leadSource={config.leadSource}
+          product="Honeycomb Partition"
           title={config.bookingTitle}
           description={config.bookingDescription}
         />

@@ -6,6 +6,7 @@ import { ThankYouMark } from "@/components/common/ThankYouMark";
 import Link from "next/link";
 import { useBookingForm } from "@/lib/state/booking-state";
 import { CONTACT_INFO } from "@/lib/constants";
+import { PRODUCT_OPTIONS } from "@/lib/leads";
 
 const INPUT_CLASS =
   "w-full px-3 py-2.5 min-h-11 bg-white text-neutral-950 text-base border border-neutral-300 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#1B4D8E]";
@@ -27,6 +28,12 @@ export function ContactForm() {
           Mobile: {formData.phone}
           <br />
           Address: {formData.address}
+          {formData.product && (
+            <>
+              <br />
+              Product: {formData.product}
+            </>
+          )}
         </p>
         <p className="text-sm text-neutral-800 leading-relaxed max-w-md m-0">
           Our team will call you shortly to discuss your requirement
@@ -88,6 +95,27 @@ export function ContactForm() {
           onChange={(e) => updateField("phone", e.target.value)}
         />
         {errors.phone && <span className="text-red-600 text-xs">{errors.phone}</span>}
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <label
+          className="text-sm font-semibold text-neutral-950"
+          htmlFor="contact-product"
+        >
+          Product
+        </label>
+        <select
+          id="contact-product"
+          name="product"
+          className={INPUT_CLASS}
+          value={formData.product}
+          onChange={(e) => updateField("product", e.target.value)}
+        >
+          <option value="">Select a product (optional)</option>
+          {PRODUCT_OPTIONS.map((p) => (
+            <option key={p} value={p}>{p}</option>
+          ))}
+        </select>
       </div>
 
       <div className="flex flex-col gap-1">

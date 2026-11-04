@@ -1,7 +1,7 @@
 // File: src/app/api/leads/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { insertLead } from "@/lib/crm";
-import { normalizeMobile } from "@/lib/leads";
+import { normalizeMobile, PRODUCT_OPTIONS } from "@/lib/leads";
 
 const MAX_FIELD_LENGTH = 300;
 const text = (value: unknown) =>
@@ -26,6 +26,8 @@ export async function POST(req: NextRequest) {
       phone,
       address: text(body.address),
       leadSource: text(body.leadSource),
+      // Only known products reach the CRM; anything else is dropped, not rejected.
+      product: (PRODUCT_OPTIONS as readonly string[]).includes(text(body.product)) ? text(body.product) : "",
     });
     if (!result.ok) {
       return fail("We couldn't save your enquiry right now. Please call us directly.", 502);

@@ -90,6 +90,7 @@ export default function InvisibleGrillsProductPage() {
         />
         <BookingSection
           leadSource={config.leadSource}
+          product="Invisible Grills"
           title={config.bookingTitle}
           description={config.bookingDescription}
         />

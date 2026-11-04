@@ -75,6 +75,7 @@ export default function PleatedMeshProductPage() {
         />
         <BookingSection
           leadSource={config.leadSource}
+          product="Pleated Mesh"
           title={config.bookingTitle}
           description={config.bookingDescription}
         />
