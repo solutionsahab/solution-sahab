@@ -128,8 +128,8 @@ export function HeroSection() {
         Invisible Grills, Pleated Mesh &amp; Window Solutions in Delhi NCR
       </h1>
 
-      {/* CTA centred just above the dots */}
-      <div className="absolute z-30 left-1/2 -translate-x-1/2 bottom-12 lg:bottom-14">
+      {/* CTA centred at the bottom */}
+      <div className="absolute z-30 left-1/2 -translate-x-1/2 bottom-6">
         <Button
           href="#quick-booking"
           variant="primary"
@@ -140,8 +140,8 @@ export function HeroSection() {
         </Button>
       </div>
 
-      {/* Slide dots, bottom centre of the hero (swipe works too) */}
-      <div className="absolute z-30 bottom-3 lg:bottom-6 left-1/2 -translate-x-1/2 flex items-center">
+      {/* Slide dots, vertical on the right edge, centred top to bottom (swipe works too) */}
+      <div className="absolute z-30 right-1.5 lg:right-6 top-1/2 -translate-y-1/2 flex flex-col items-center">
         {SLIDES.map((item, index) => (
           <button
             key={item.name}
@@ -152,7 +152,7 @@ export function HeroSection() {
             className="w-6 h-6 flex items-center justify-center"
           >
             <span
-              className={`block h-2 rounded-full shadow-[0_0_3px_rgb(0_0_0/0.5)] transition-all duration-300 ${index === active ? "w-5 bg-white" : "w-2 bg-white/50"
+              className={`block w-2 rounded-full shadow-[0_0_3px_rgb(0_0_0/0.5)] transition-all duration-300 ${index === active ? "h-5 bg-white" : "h-2 bg-white/50"
                 }`}
             />
           </button>
