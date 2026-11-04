@@ -28,6 +28,13 @@ export function ContactForm() {
           Enquiry Received!
         </h3>
         <p className="font-body-md text-body-md text-ink max-w-md m-0">
+          {formData.fullName}
+          <br />
+          Mobile: {formData.phone}
+          <br />
+          Address: {formData.address}
+        </p>
+        <p className="font-body-md text-body-md text-ink max-w-md m-0">
           Thank you! Our team will call you shortly to discuss your requirement
           and arrange a site visit.
         </p>
