@@ -61,7 +61,7 @@ export function UseCasePageView({ config }: { config: UseCasePageConfig }) {
         parentCrumb={USE_CASE_PARENT}
       />
       <Header />
-      <main id="main-content" className="w-full pt-[92px] sm:pt-[116px] bg-white min-h-screen">
+      <main id="main-content" className="w-full pt-[87px] sm:pt-[108px] bg-white min-h-screen">
         <ProductHeroSection {...config.hero} />
         <ProductOverviewSection {...config.overview} />
         <ProductBenefitsSection {...config.benefits} />
