@@ -13,6 +13,8 @@ export interface ProductStructuredDataProps {
   material?: string;
   slug: string;
   faqs?: FaqItem[];
+  /** Parent page added to the breadcrumb trail, e.g. the main product page */
+  parentCrumb?: { label: string; href: string };
 }
 
 export function ProductStructuredData({
@@ -23,6 +25,7 @@ export function ProductStructuredData({
   material,
   slug,
   faqs,
+  parentCrumb,
 }: ProductStructuredDataProps) {
   const productUrl = `https://solutionsahab.com/${slug.replace(/^\//, "")}`;
 
@@ -59,29 +62,23 @@ export function ProductStructuredData({
     },
   };
 
+  const crumbs = [
+    { name: "Home", item: "https://solutionsahab.com" },
+    { name: "Products", item: "https://solutionsahab.com/#products-showcase" },
+    ...(parentCrumb
+      ? [{ name: parentCrumb.label, item: `https://solutionsahab.com${parentCrumb.href}` }]
+      : []),
+    { name: productName, item: productUrl },
+  ];
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://solutionsahab.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Products",
-        item: "https://solutionsahab.com/#products-showcase",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: productName,
-        item: productUrl,
-      },
-    ],
+    itemListElement: crumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      ...crumb,
+    })),
   };
 
   const faqSchema =

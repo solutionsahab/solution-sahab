@@ -37,7 +37,7 @@ export interface ProductPageConfig {
   bookingDescription?: string;
 }
 
-const COMMON_TRUST_PILLARS = [
+export const COMMON_TRUST_PILLARS = [
   {
     title: "Superior Material Quality",
     desc: "We exclusively use genuine architectural grade metals, heavy-gauge 6063-T6 aluminum extrusion tracks, and high-tensile components tested to international benchmarks.",

@@ -6,3 +6,4 @@ export * from "./ProductTechnicalSpecs";
 export * from "./ProductTrustPillars";
 export * from "./ProductApplicationsSection";
 export * from "./ProductStructuredData";
+export * from "./ProductUseCaseLinks";

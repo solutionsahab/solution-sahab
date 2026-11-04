@@ -16,8 +16,8 @@ const SLIDES = [
   {
     name: "Pleated Mosquito Mesh",
     tagline: "Glides shut on insects, open for fresh air",
-    image: ASSETS.PRODUCTS.PLEATED_MOSQUITO_MESH,
-    alt: "Pleated mosquito mesh screen across a balcony door",
+    image: ASSETS.HERO_IMAGE_HOME_PLEATED_MESH,
+    alt: "Family in a living room with pleated mosquito mesh across wide sliding balcony doors",
   },
   {
     name: "Aluminum Security Mesh",
@@ -28,8 +28,8 @@ const SLIDES = [
   {
     name: "Honeycomb Partitions",
     tagline: "Acoustic and thermal movable dividers",
-    image: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
-    alt: "Honeycomb screen partition filtering daylight",
+    image: ASSETS.HERO_IMAGE_HOME_HONEYCOMB,
+    alt: "Family in a living room beside a full-height honeycomb partition",
   },
   {
     name: "Motorized Weather Screens",
@@ -97,13 +97,14 @@ export function HeroSection() {
               fill
               priority={index === 0}
               sizes="100vw"
+              quality={90}
             />
           </div>
         ))}
 
-        {/* Bottom Scrim Gradient for Text Readability (Keeps top 65% of image 100% clear) */}
+        {/* Bottom Scrim Gradient for Text Readability (only the bottom strip; top 55% of image untouched) */}
         <div
-          className="absolute inset-0 z-20 bg-gradient-to-t from-black/85 via-black/35 to-transparent"
+          className="absolute inset-0 z-20 bg-gradient-to-t from-black/70 from-0% via-black/25 via-25% to-transparent to-45%"
           aria-hidden="true"
         />
       </div>
@@ -112,7 +113,7 @@ export function HeroSection() {
       <div className="relative z-30 h-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-col justify-end pb-8 sm:pb-12">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6">
           {/* Left: Slide Counter + Product Name + Short Tagline */}
-          <div className="max-w-2xl">
+          <div className="max-w-2xl [text-shadow:0_2px_12px_rgb(0_0_0/0.55)]">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-gilroy text-white tracking-tight leading-[1.08] m-0">
               {slide.name}
             </h1>

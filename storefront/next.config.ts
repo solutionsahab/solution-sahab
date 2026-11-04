@@ -12,6 +12,17 @@ const nextConfig: NextConfig = {
         destination: "/honeycomb-mesh-installation-delhi",
         permanent: true,
       },
+      // Building-type pages moved from /invisible-grills/<type> to /invisible-grills-for-<type>.
+      {
+        source: "/invisible-grills/schools",
+        destination: "/invisible-grills-for-schools",
+        permanent: true,
+      },
+      {
+        source: "/invisible-grills/hospitals",
+        destination: "/invisible-grills-for-hospitals",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
@@ -36,6 +47,8 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    // 90 is used by the full-width home hero so large photos stay sharp.
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: "https",

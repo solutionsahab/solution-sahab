@@ -14,6 +14,8 @@ export interface ProductHeroSectionProps {
   heroImage: string;
   heroImageAlt: string;
   breadcrumbName?: string;
+  /** Linked crumb shown before the current page, e.g. the parent product */
+  parentCrumb?: { label: string; href: string };
   bookingTargetId?: string;
 }
 
@@ -25,6 +27,7 @@ export function ProductHeroSection({
   heroImage,
   heroImageAlt,
   breadcrumbName,
+  parentCrumb,
   bookingTargetId = "#booking-form",
 }: ProductHeroSectionProps) {
   return (
@@ -38,6 +41,14 @@ export function ProductHeroSection({
           <span aria-hidden="true">/</span>
           <span className="text-neutral-400">Products</span>
           <span aria-hidden="true">/</span>
+          {parentCrumb && (
+            <>
+              <Link href={parentCrumb.href} className="hover:text-blue-600 transition-colors">
+                {parentCrumb.label}
+              </Link>
+              <span aria-hidden="true">/</span>
+            </>
+          )}
           <span className="text-neutral-900 font-medium">{breadcrumbName || productName}</span>
         </nav>
 
