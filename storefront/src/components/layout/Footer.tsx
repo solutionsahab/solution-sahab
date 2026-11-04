@@ -135,6 +135,11 @@ export function Footer() {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/razorpaymesolutionsahab8809">
+                  Pay Online
+                </Link>
+              </li>
             </ul>
           </div>
 

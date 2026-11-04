@@ -284,6 +284,12 @@ export function Header() {
             >
               Contact Us
             </Link>
+            <Link
+              className="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 font-semibold"
+              href="/razorpaymesolutionsahab8809"
+            >
+              Pay Online
+            </Link>
           </nav>
 
           {/* Desktop & Mobile Actions */}
@@ -509,6 +515,13 @@ export function Header() {
                 onClick={closeMobileMenu}
               >
                 Frequently Asked Questions
+              </Link>
+              <Link
+                href="/razorpaymesolutionsahab8809"
+                className="font-label-md text-label-md font-semibold text-on-surface hover:text-primary py-1.5"
+                onClick={closeMobileMenu}
+              >
+                Pay Online
               </Link>
 
               <div className="pt-3 flex flex-col gap-2.5 border-t border-slate-100">

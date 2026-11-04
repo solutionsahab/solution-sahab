@@ -5,6 +5,7 @@ import React from "react";
 import { useBookingForm } from "@/lib/state/booking-state";
 import { CONTACT_INFO } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
+import { ThankYouMark } from "@/components/common/ThankYouMark";
 
 export interface BookingSectionProps {
   leadSource?: string;
@@ -61,11 +62,12 @@ export function BookingSection({
                 id="booking-success"
                 role="alert"
               >
+                <ThankYouMark className="mb-5" />
                 <p className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] m-0 mb-2">
                   Request Confirmed
                 </p>
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-gilroy text-neutral-950 m-0">
-                  Thank you, {formData.fullName || "Customer"}.
+                  Thank you for choosing us{formData.fullName ? `, ${formData.fullName}` : ""}.
                 </h3>
                 <p className="text-sm sm:text-base text-neutral-950 mt-3 mb-0">
                   Mobile: {formData.phone}
