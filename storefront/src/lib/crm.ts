@@ -55,7 +55,8 @@ export async function insertLead(lead: CrmLead): Promise<CrmResult> {
     apikey: apiKey,
     formname: "Leads",
     operation: "insertRecords",
-    overwrite: "true",
+    // "false" so a repeat number never overwrites an existing lead's name, address or stage.
+    overwrite: "false",
   }).toString();
 
   const res = await fetch(url, {
