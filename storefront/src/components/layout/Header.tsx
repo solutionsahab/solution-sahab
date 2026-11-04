@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { useNavState } from "@/lib/state/nav-state";
 import { ASSETS, CONTACT_INFO } from "@/lib/constants";
+import { INVISIBLE_GRILL_USE_CASE_LINKS as USE_CASE_NAV } from "@/lib/site-links";
 
 export function Header() {
   const {
@@ -111,6 +112,19 @@ export function Header() {
                     Invisible Grills
                   </div>
                 </Link>
+                {USE_CASE_NAV.map((item) => (
+                  <Link
+                    key={item.href}
+                    className="py-1.5 pl-6 pr-2.5 rounded-lg hover:bg-surface-container-low transition-colors block text-sm text-slate-600"
+                    href={item.href}
+                    onClick={() => {
+                      closeMobileMenu();
+                      closeDropdown();
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
                 <Link
                   className="p-2.5 rounded-lg hover:bg-surface-container-low transition-colors block"
                   href="/pleated-mesh"
@@ -341,6 +355,16 @@ export function Header() {
                   >
                     Invisible Grills
                   </Link>
+                  {USE_CASE_NAV.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="font-body-md text-sm text-slate-600 hover:text-primary py-1 pl-4"
+                      onClick={closeMobileMenu}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                   <Link
                     href="/pleated-mesh"
                     className="font-body-md text-slate-700 hover:text-primary py-1"

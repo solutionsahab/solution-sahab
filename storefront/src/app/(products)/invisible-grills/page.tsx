@@ -12,11 +12,20 @@ import {
   ProductTrustPillars,
   ProductApplicationsSection,
   ProductStructuredData,
-
+  ProductUseCaseLinks,
 } from "@/components/product/common";
 import { PRODUCT_CONFIGS } from "@/lib/product-page-configs";
+import { USE_CASE_PAGES } from "@/lib/use-case-pages";
 
 const config = PRODUCT_CONFIGS["invisible-grills"];
+
+const useCaseLinks = Object.values(USE_CASE_PAGES).map((page) => ({
+  title: page.navLabel,
+  desc: page.card.desc,
+  href: `/${page.slug}`,
+  imageUrl: page.card.imageUrl,
+  alt: page.card.alt,
+}));
 
 export const metadata: Metadata = {
   title: config.metadata.title,
@@ -69,6 +78,11 @@ export default function InvisibleGrillsProductPage() {
         {/* <ProductTechnicalSpecs {...config.specs} /> */}
         {config.trustPillars && <ProductTrustPillars {...config.trustPillars} />}
         <ProductApplicationsSection {...config.applications} />
+        <ProductUseCaseLinks
+          title="Invisible Grills for Every Building"
+          subtitle="Schools and hospitals have their own safety needs. See how we plan installations for each."
+          items={useCaseLinks}
+        />
         <FaqSection
           items={config.faqs}
           title="Common Questions"

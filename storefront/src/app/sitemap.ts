@@ -1,6 +1,7 @@
 // File: src/app/sitemap.ts
 import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blog";
+import { USE_CASE_PAGES } from "@/lib/use-case-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://solutionsahab.com";
@@ -100,5 +101,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPosts];
+  const useCasePages: MetadataRoute.Sitemap = Object.values(USE_CASE_PAGES).map((page) => ({
+    url: `${baseUrl}/${page.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticPages, ...useCasePages, ...blogPosts];
 }

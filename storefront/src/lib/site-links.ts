@@ -49,3 +49,13 @@ export const PRODUCT_LINKS: RelatedLink[] = [
       "Space-saving aluminium pulley ceiling cloth drying systems for utility balconies.",
   },
 ];
+
+/**
+ * Invisible grill pages per building type. Header is a client component, so it
+ * reads this short list instead of the full page content in use-case-pages.ts.
+ * Keep in sync with USE_CASE_PAGES.
+ */
+export const INVISIBLE_GRILL_USE_CASE_LINKS = [
+  { label: "For Schools", href: "/invisible-grills-for-schools" },
+  { label: "For Hospitals", href: "/invisible-grills-for-hospitals" },
+];
