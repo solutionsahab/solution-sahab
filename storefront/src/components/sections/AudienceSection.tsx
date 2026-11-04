@@ -21,7 +21,7 @@ const AUDIENCES: AudienceRow[] = [
     tag: "Apartments & Villas",
     title: "Homeowners & High-Rise Residents",
     description:
-      "Balcony fall protection for children and pets plus smooth pleated insect screens—approved by RWAs across Gurgaon, Noida, and Delhi.",
+      "Balcony fall protection for children and pets plus smooth pleated insect screens, approved by RWAs across Gurgaon, Noida, and Delhi.",
     imageUrl: ASSETS.PRODUCTS.INVISIBLE_GRILLS,
     imageAlt: "High-rise residential balcony fitted with invisible safety grills",
     ctaText: "Book Home Measurement",
@@ -56,67 +56,56 @@ const AUDIENCES: AudienceRow[] = [
 export function AudienceSection() {
   return (
     <section
-      className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
+      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
       id="audience-solutions"
       aria-labelledby="audience-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        {/* Minimal Section Header */}
-        <div className="pb-8 border-b border-neutral-300">
-          <h2
-            id="audience-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-950 tracking-tight m-0"
-          >
-            Built for Homes, Commercial Spaces &amp; Architects
-          </h2>
-        </div>
+        <h2
+          id="audience-heading"
+          className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 mb-6"
+        >
+          Built for Homes, Commercial Spaces &amp; Architects
+        </h2>
 
-        {/* Horizontal Architectural Rows with Dedicated Image Space */}
-        <div className="divide-y divide-neutral-300 border-b border-neutral-300">
+        {/* One-row swipe carousel of cards (CSS scroll-snap): phones peek the next card, tablets show 2, desktop fits 3 */}
+        <div className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {AUDIENCES.map((item) => (
             <div
               key={item.index}
-              className="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center"
+              className="flex flex-col shrink-0 snap-start w-[85%] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] border border-neutral-300 bg-white"
             >
-              {/* Left 4 Columns: Sharp Architectural Image Frame */}
-              <div className="lg:col-span-4 w-full">
-                <div className="relative h-56 sm:h-64 lg:h-52 w-full overflow-hidden bg-neutral-200 border border-neutral-300">
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.imageAlt}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="relative h-40 w-full overflow-hidden bg-neutral-200">
+                <Image
+                  src={item.imageUrl}
+                  alt={item.imageAlt}
+                  fill
+                  sizes="(max-width: 640px) 85vw, (max-width: 1023px) 50vw, 33vw"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
-              {/* Middle 5 Columns: Tag + Title + Description + Specs */}
-              <div className="lg:col-span-5">
-                <div className="flex items-center gap-2 text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] mb-1.5">
+              <div className="flex flex-col flex-1 p-4">
+                <div className="flex items-center gap-2 text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] mb-1">
                   <span>{item.tag}</span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-2.5">
+                <h3 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-1.5">
                   {item.title}
                 </h3>
 
-                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0 mb-4">
+                <p className="text-sm text-neutral-600 leading-relaxed m-0 mb-4">
                   {item.description}
                 </p>
 
-                
-              </div>
-
-              {/* Right 3 Columns: Direct Action CTA */}
-              <div className="lg:col-span-3 flex lg:justify-end">
+                {/* mt-auto lines the buttons up across cards of different text length */}
                 <Button
                   href={item.ctaHref}
                   variant="outline"
-                  size="md"
-                  icon={item.isExternalPhone ? "call" : "arrow_forward"}
-                  className="w-full sm:w-auto"
+                  size="sm"
+                  icon={item.isExternalPhone ? "call" : undefined}
+                  className="w-full mt-auto"
                 >
                   {item.ctaText}
                 </Button>

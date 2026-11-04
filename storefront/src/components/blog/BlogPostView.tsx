@@ -197,9 +197,6 @@ export function BlogPostView({ post }: BlogPostViewProps) {
                 className="mt-6 inline-flex items-center gap-2 h-11 px-5 bg-ink text-white font-label-md text-label-md font-bold hover:bg-primary transition-colors"
               >
                 View {relatedProduct.name}
-                <span className="material-symbols-outlined text-[18px]" aria-hidden="true">
-                  arrow_forward
-                </span>
               </Link>
             </div>
           </div>
@@ -269,7 +266,6 @@ export function BlogPostView({ post }: BlogPostViewProps) {
                   href="/contact-us"
                   variant="primary"
                   size="md"
-                  icon="arrow_forward"
                 >
                   Contact us
                 </Button>

@@ -31,7 +31,7 @@ export function BookingSection({
 
   return (
     <section
-      className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
+      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
       id={id}
       aria-labelledby="booking-heading"
     >
@@ -49,7 +49,7 @@ export function BookingSection({
             </div>
 
             <div className="pt-4 border-t border-neutral-200 text-xs text-neutral-500 font-sans">
-              Serving Gurgaon · Noida · Greater Noida · Delhi · Faridabad · Ghaziabad
+              Serving Gurgaon, Noida, Greater Noida, Delhi, Faridabad and Ghaziabad
             </div>
           </div>
 
@@ -184,7 +184,6 @@ export function BookingSection({
                   <Button
                     type="submit"
                     size="lg"
-                    icon="arrow_forward"
                     disabled={status === "submitting"}
                   >
                     {status === "submitting"

@@ -40,7 +40,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 font-caption-caps text-[10px] sm:text-caption-caps tracking-wider uppercase">
           <span>Site visit across Delhi NCR</span>
           <span className="opacity-40" aria-hidden="true">
-            •
+            |
           </span>
           <Link
             className="py-1.5 -my-1.5 text-primary-fixed hover:underline flex items-center gap-1 font-bold whitespace-nowrap"

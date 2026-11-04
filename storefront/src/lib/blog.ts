@@ -1,6 +1,6 @@
 // File: src/lib/blog.ts
 // Blog posts verified from https://solutionsahab.com (live Article JSON-LD + card copy).
-// Body sections are written from facts already published on Solution Sahab product pages —
+// Body sections are written from facts already published on Solution Sahab product pages:
 // no specs, prices or claims have been added that do not appear on the site.
 import { PRODUCT_DETAILS } from "@/lib/products";
 import { ASSETS } from "@/lib/constants";
@@ -923,7 +923,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Why rooftops in Delhi NCR need invisible grills",
         paragraphs: [
-          "Rooftops and terraces in Delhi NCR — whether on a builder floor, villa, apartment terrace or commercial rooftop — are open to the sky but often lack the safety barriers required for families with children, pets, or concerns about monkeys and pigeons.",
+          "Rooftops and terraces in Delhi NCR, whether on a builder floor, villa, apartment terrace or commercial rooftop, are open to the sky but often lack the safety barriers required for families with children, pets, or concerns about monkeys and pigeons.",
           "A conventional welded grill blocks the open-air feel and skyline views that make a rooftop special. An [invisible grill](/invisible-grills) uses 316 marine-grade stainless steel cables (2.5 mm or 3.0 mm diameter) tensioned between powder-coated 6063-T6 aluminium profiles, so the view stays open while the space becomes safe for children, pets and everyday use.",
         ],
       },
@@ -1438,7 +1438,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "Are invisible grills rust-proof?",
         paragraphs: [
           "Invisible grills have become an essential safety feature for modern homes, high-rise apartments and commercial buildings. They provide uncompromised security without blocking your view, making them a popular choice over traditional iron grills. The common concern among homeowners is whether invisible grills rust over time, since rust can weaken the strength of a grill and affect both durability and safety.",
-          "Yes — invisible grills are highly resistant to rust and corrosion because of their stainless steel (SS316 grade) construction. Unlike iron grills that rust when exposed to moisture, oxygen and air pollution, invisible grills are engineered to remain corrosion- for years, even in harsh weather conditions.",
+          "Yes, invisible grills are highly resistant to rust and corrosion because of their stainless steel (SS316 grade) construction. Unlike iron grills that rust when exposed to moisture, oxygen and air pollution, invisible grills are engineered to remain corrosion- for years, even in harsh weather conditions.",
         ],
       },
       {
@@ -1536,13 +1536,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Pleated mesh vs metal grilles and glass",
         paragraphs: [
-          "Pleated mesh offers the best balance of airflow, insect protection and visibility: excellent airflow with insect protection, a clear and open view, and a retractable fit — while metal grilles block ventilation and views, and glass windows give no airflow at all.",
+          "Pleated mesh offers the best balance of airflow, insect protection and visibility: excellent airflow with insect protection, a clear and open view, and a retractable fit, while metal grilles block ventilation and views, and glass windows give no airflow at all.",
         ],
       },
       {
         heading: "Get breathable, insect-free pleated mesh",
         paragraphs: [
-          "Pleated mesh allows fresh air to circulate ly, keeps mosquitoes and insects out, reduces indoor heat by improving ventilation, and is easy to operate and maintain — perfect for doors, windows and balconies. Call Solution Sahab at 99711 43143 or send a photo through the [contact page](/contact-us) for expert [pleated mesh](/pleated-mesh) installation.",
+          "Pleated mesh allows fresh air to circulate ly, keeps mosquitoes and insects out, reduces indoor heat by improving ventilation, and is easy to operate and maintain, perfect for doors, windows and balconies. Call Solution Sahab at 99711 43143 or send a photo through the [contact page](/contact-us) for expert [pleated mesh](/pleated-mesh) installation.",
         ],
       },
     ],
@@ -1572,9 +1572,9 @@ export const BLOG_POSTS: BlogPost[] = [
           "One of the biggest risks in high-rise apartments is falling from balconies or windows, especially for children and pets. [Invisible grills](/invisible-grills) provide safety without obstructing the view: high-tensile SS316 stainless steel, rust-proof and weather-resistant, with an open, modern look.",
         ],
         items: [
-          "Balconies — prevents accidental falls",
-          "Windows — ensures child and pet safety",
-          "Staircases — adds security without blocking views",
+          "Balconies: prevents accidental falls",
+          "Windows: ensures child and pet safety",
+          "Staircases: adds security without blocking views",
         ],
       },
       {
@@ -1587,7 +1587,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Keep a fire extinguisher in accessible areas like the kitchen",
           "Know emergency exits and practise evacuation drills",
           "Avoid overloading electrical outlets to prevent short circuits",
-          "Always check that emergency staircases are not blocked — never use elevators in a fire",
+          "Always check that emergency staircases are not blocked; never use elevators in a fire",
         ],
       },
       {
@@ -1635,7 +1635,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "A sleek alternative to traditional iron grills",
         paragraphs: [
           "Invisible grills are a revolutionary solution that provides safety without obstructing your view. These durable and nearly transparent grills have become a popular choice for homes, apartments and commercial spaces.",
-          "They are high-tensile stainless steel cables coated with a protective layer, usually nylon, to enhance durability and prevent rust — safety without compromising aesthetics, and a popular choice for modern architecture.",
+          "They are high-tensile stainless steel cables coated with a protective layer, usually nylon, to enhance durability and prevent rust: safety without compromising aesthetics, and a popular choice for modern architecture.",
         ],
         items: [
           "**Stainless Steel (316 Grade):** rust-resistant and strong",
@@ -1646,7 +1646,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Benefits of invisible grills",
         paragraphs: [
-          "Unlike traditional grills that block the view, invisible grills offer a seamless, open look while ensuring safety — ideal for balconies, windows and high-rise apartments.",
+          "Unlike traditional grills that block the view, invisible grills offer a seamless, open look while ensuring safety, ideal for balconies, windows and high-rise apartments.",
         ],
         items: [
           "**Unobstructed views and modern look:** seamless, open appearance while ensuring safety",
@@ -1709,13 +1709,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Why Paschim Vihar homes choose pleated mesh",
         paragraphs: [
-          "Paschim Vihar is one of Delhi's most vibrant and well-planned residential areas, known for its apartments, builder floors and independent houses. With greenery, gardens and parks also come mosquitoes and flies — and if you are tired of temporary mosquito nets or chemical repellents, [pleated mesh](/pleated-mesh) by Solution Sahab is the long-term, elegant solution.",
+          "Paschim Vihar is one of Delhi's most vibrant and well-planned residential areas, known for its apartments, builder floors and independent houses. With greenery, gardens and parks also come mosquitoes and flies, and if you are tired of temporary mosquito nets or chemical repellents, [pleated mesh](/pleated-mesh) by Solution Sahab is the long-term, elegant solution.",
         ],
       },
       {
         heading: "What is a pleated mesh",
         paragraphs: [
-          "A pleated mesh is a retractable mosquito screen system that uses a foldable mesh — usually polyester or fiberglass — mounted on a sliding track. It blends with modern and traditional window or door designs. Instead of flapping open like traditional mosquito nets, the mesh moves horizontally in a sleek pleated form, giving a neat and sophisticated look.",
+          "A pleated mesh is a retractable mosquito screen system that uses a foldable mesh (usually polyester or fiberglass) mounted on a sliding track. It blends with modern and traditional window or door designs. Instead of flapping open like traditional mosquito nets, the mesh moves horizontally in a sleek pleated form, giving a neat and sophisticated look.",
         ],
       },
       {
@@ -1747,7 +1747,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Contact Solution Sahab in Paschim Vihar",
         paragraphs: [
-          "100% Made in India, more than 10 years of experience, competitive pricing with a site visit, customised to your space, trusted by hundreds of Paschim Vihar families. Available in Paschim Vihar and nearby Punjabi Bagh, Peeragarhi, Janakpuri and Rohini — call 99711 43143 or send a photo through the [contact page](/contact-us) for [pleated mesh](/pleated-mesh) installation.",
+          "100% Made in India, more than 10 years of experience, competitive pricing with a site visit, customised to your space, trusted by hundreds of Paschim Vihar families. Available in Paschim Vihar and nearby Punjabi Bagh, Peeragarhi, Janakpuri and Rohini. Call 99711 43143 or send a photo through the [contact page](/contact-us) for [pleated mesh](/pleated-mesh) installation.",
         ],
       },
     ],
@@ -1800,7 +1800,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Enhanced ventilation with pest protection, space-saving folding that occupies minimal space when not in use, stylish appearance, eco-friendly reduction of chemical repellents, and low maintenance for a long-term investment.",
           "The pleated mesh runs on tracks and frames that fold it neatly when opened, with a smooth sliding mechanism and sturdy construction that prevents sagging. Frame colours, mesh materials and sizes can be customised, with extras like double-sided handles or magnetic seals. Dust regularly with a soft cloth or vacuum, avoid harsh chemicals, and lubricate tracks occasionally for smooth operation.",
-          "Solution Sahab offers high-quality [pleated mesh](/pleated-mesh) systems with seamless installation and after-sales support — call 99711 43143 or use the [contact page](/contact-us).",
+          "Solution Sahab offers high-quality [pleated mesh](/pleated-mesh) systems with seamless installation and after-sales support. Call 99711 43143 or use the [contact page](/contact-us).",
         ],
       },
     ],
@@ -1821,7 +1821,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Modern safety with uninterrupted views in Dehradun",
         paragraphs: [
-          "Dehradun, known for its serene hills, pleasant weather and fast-growing urban lifestyle, is seeing rising demand for home solutions that combine safety, comfort and design. [Barrier-free mesh](/pleated-mesh) by Solution Sahab gives balconies, windows and patios unobstructed views, insect protection and enhanced safety — perfect for homes in Dehradun.",
+          "Dehradun, known for its serene hills, pleasant weather and fast-growing urban lifestyle, is seeing rising demand for home solutions that combine safety, comfort and design. [Barrier-free mesh](/pleated-mesh) by Solution Sahab gives balconies, windows and patios unobstructed views, insect protection and enhanced safety, perfect for homes in Dehradun.",
         ],
       },
       {
@@ -1847,7 +1847,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "Applications and trusted installation",
         paragraphs: [
           "Balconies as safe, stylish relaxation spaces; windows that keep dust and insects away while letting in natural air; patios and terraces for evening tea without mosquitoes; French doors and sliding frames with smooth modern integration.",
-          "Solution Sahab brings 159+ happy customers across North India, an expert installation team for perfect finishing, and trusted quality with genuine pricing. Upgrade with barrier-free mesh — call 99711 43143 or send a photo through the [contact page](/contact-us).",
+          "Solution Sahab brings 159+ happy customers across North India, an expert installation team for perfect finishing, and trusted quality with genuine pricing. Upgrade with barrier-free mesh. Call 99711 43143 or send a photo through the [contact page](/contact-us).",
         ],
       },
     ],
@@ -1868,26 +1868,26 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Why balcony security matters",
         paragraphs: [
-          "Balconies offer fresh air and a connection to the outdoors, but also safety risks — from accidental falls to break-ins or nuisance caused by monkeys. For families with children or elderly members, balcony safety is essential. [Invisible grills](/invisible-grills) address safety, security and animal intrusion without compromising aesthetics.",
-          "They are thin, high-tensile stainless steel cables installed across windows and balconies at intervals that prevent intrusion, accidents or animal access, while staying virtually invisible from a distance — unlike bulky traditional iron grills that obstruct views.",
+          "Balconies offer fresh air and a connection to the outdoors, but also safety risks, from accidental falls to break-ins or nuisance caused by monkeys. For families with children or elderly members, balcony safety is essential. [Invisible grills](/invisible-grills) address safety, security and animal intrusion without compromising aesthetics.",
+          "They are thin, high-tensile stainless steel cables installed across windows and balconies at intervals that prevent intrusion, accidents or animal access, while staying virtually invisible from a distance, unlike bulky traditional iron grills that obstruct views.",
         ],
       },
       {
         heading: "Safety from theft: a hidden guardian",
         paragraphs: [
-          "Invisible grills may look delicate, but marine-grade SS316 cables resist cutting attempts, making it extremely difficult for thieves to enter through the balcony. Many homeowners turn to them after break-ins in their neighbourhood — burglars are less likely to target a property with this visible deterrent and the extra effort needed to bypass it.",
+          "Invisible grills may look delicate, but marine-grade SS316 cables resist cutting attempts, making it extremely difficult for thieves to enter through the balcony. Many homeowners turn to them after break-ins in their neighbourhood; burglars are less likely to target a property with this visible deterrent and the extra effort needed to bypass it.",
         ],
       },
       {
         heading: "Protection from monkeys: a humane barrier",
         paragraphs: [
-          "In many urban and semi-urban areas, monkey intrusions bring damage, stolen food and risks to residents. Invisible grills create a physical barrier that monkeys cannot grip, climb or bypass — smooth, tightly spaced stainless steel wires give them no leverage, keeping them out while maintaining your view.",
+          "In many urban and semi-urban areas, monkey intrusions bring damage, stolen food and risks to residents. Invisible grills create a physical barrier that monkeys cannot grip, climb or bypass: smooth, tightly spaced stainless steel wires give them no leverage, keeping them out while maintaining your view.",
         ],
       },
       {
         heading: "Child safety, value and looks",
         paragraphs: [
-          "For families, invisible grills stop children leaning over railings or slipping through gaps — peace of mind that lets kids enjoy the balcony safely, which is why daycare centres, schools and family homes treat them as essential.",
+          "For families, invisible grills stop children leaning over railings or slipping through gaps: peace of mind that lets kids enjoy the balcony safely, which is why daycare centres, schools and family homes treat them as essential.",
           "The cost is minimal compared with losses from an intrusion or the toll of an accident, and the added safety profile strengthens property value with long lifespan and low maintenance.",
           "The sleek, minimal look blends with any architectural style, allows natural light and air circulation, and needs minimal upkeep since stainless steel wires resist rust and weather damage. Reach Solution Sahab at 99711 43143 or through the [contact page](/contact-us) to book a consultation.",
         ],
@@ -1910,7 +1910,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "What is pleated mesh",
         paragraphs: [
-          "Tired of mosquitoes invading while you still want fresh air? Pleated mesh is a foldable, retractable insect screen for windows, doors and balconies — high-quality polyester or fiberglass mesh in a pleated design for a compact, stylish look, with smooth sliding operation plus dust and insect resistance. Unlike fixed screens, it does not obstruct views and retracts when not in use.",
+          "Tired of mosquitoes invading while you still want fresh air? Pleated mesh is a foldable, retractable insect screen for windows, doors and balconies: high-quality polyester or fiberglass mesh in a pleated design for a compact, stylish look, with smooth sliding operation plus dust and insect resistance. Unlike fixed screens, it does not obstruct views and retracts when not in use.",
         ],
       },
       {
@@ -1923,14 +1923,14 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "Where to install and how it compares",
         paragraphs: [
           "Windows for fresh air without insects; balcony doors for an open-air feel without mosquitoes; French and sliding doors with stylish protection; offices and commercial spaces with elegant functionality.",
-          "Against traditional mosquito nets — bulky, fixed, airflow-blocking, damage-prone and unattractive — [pleated mesh](/pleated-mesh) is modern, retractable, ventilating, easy to clean and decor-enhancing.",
+          "Against traditional mosquito nets (bulky, fixed, airflow-blocking, damage-prone and unattractive), [pleated mesh](/pleated-mesh) is modern, retractable, ventilating, easy to clean and decor-enhancing.",
         ],
       },
       {
         heading: "Maintenance and Solution Sahab installation",
         paragraphs: [
           "Dust regularly with a soft cloth or vacuum, wipe with mild soap and water, avoid sharp objects, and check the sliding mechanism periodically. Pleated mesh suits sliding doors, French doors and large balcony openings without blocking airflow, and lasts long with simple care.",
-          "Solution Sahab offers premium-grade materials, expert affordable installation, customised home, office and commercial solutions, and professional consultation — call 99711 43143 or use the [contact page](/contact-us) for a consultation.",
+          "Solution Sahab offers premium-grade materials, expert affordable installation, customised home, office and commercial solutions, and professional consultation. Call 99711 43143 or use the [contact page](/contact-us) for a consultation.",
         ],
       },
     ],
@@ -1951,7 +1951,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "What is the Duet System",
         paragraphs: [
-          "Modern homes need ventilation, protection and aesthetics together. The Duet System of pleated mesh and honeycomb screens is a retractable solution for balcony doors, windows and large openings — pleated mesh that expands and contracts seamlessly, plus a sturdy, lightweight honeycomb structure for strength and insulation.",
+          "Modern homes need ventilation, protection and aesthetics together. The Duet System of pleated mesh and honeycomb screens is a retractable solution for balcony doors, windows and large openings: pleated mesh that expands and contracts seamlessly, plus a sturdy, lightweight honeycomb structure for strength and insulation.",
         ],
       },
       {
@@ -1966,9 +1966,9 @@ export const BLOG_POSTS: BlogPost[] = [
           "Unrestricted airflow with natural light; honeycomb insulation that steadies indoor temperatures and trims heating and cooling costs; pest and dust protection for cleaner, healthier living; colours and finishes for modern, contemporary and traditional designs; and premium materials for long-lasting performance.",
         ],
         items: [
-          "Balcony doors — sliding, bi-fold and French doors with uninterrupted views",
-          "Windows — casement, awning and sliding windows with less dust and better circulation",
-          "Large openings and patios — customisable spans with consistent aesthetics",
+          "Balcony doors: sliding, bi-fold and French doors with uninterrupted views",
+          "Windows: casement, awning and sliding windows with less dust and better circulation",
+          "Large openings and patios: customisable spans with consistent aesthetics",
         ],
       },
       {
@@ -1996,7 +1996,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Balcony safety on Sohna Road",
         paragraphs: [
-          "Sohna Road's residential towers and builder floors put the balcony at the centre of daily life — and leave it exposed. Open railings risk children and pets, while upper floors invite birds and monkeys.",
+          "Sohna Road's residential towers and builder floors put the balcony at the centre of daily life, and leave it exposed. Open railings risk children and pets, while upper floors invite birds and monkeys.",
           "An [invisible grill](/invisible-grills) closes that risk without a welded iron cage on the facade. Our teams cover the Sohna Road corridor alongside Golf Course Road and the DLF phases, with a measurement before you commit.",
         ],
       },
@@ -2036,13 +2036,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Premium honeycomb partitions across Delhi NCR",
         paragraphs: [
-          "Solution Sahab provides premium honeycomb partitions for homes, offices, clinics, rooms, balconies and commercial spaces across Delhi NCR. The honeycomb structure traps air for natural insulation — cooler in summer, warmer in winter — while cutting outside noise and controlling light from blackout to soft-filtering.",
+          "Solution Sahab provides premium honeycomb partitions for homes, offices, clinics, rooms, balconies and commercial spaces across Delhi NCR. The honeycomb structure traps air for natural insulation (cooler in summer, warmer in winter) while cutting outside noise and controlling light from blackout to soft-filtering.",
         ],
       },
       {
         heading: "Why honeycomb suits homes and offices",
         paragraphs: [
-          "Elegant design for any decor, energy efficiency through insulation that trims bills, easy operation, durable premium construction, and complete privacy without blocking natural light — in multiple shades and textures for modern interiors.",
+          "Elegant design for any decor, energy efficiency through insulation that trims bills, easy operation, durable premium construction, and complete privacy without blocking natural light, in multiple shades and textures for modern interiors.",
         ],
         items: [
           "Homes, offices, hotels and clinics",
@@ -2074,13 +2074,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Honeycomb in a King Court gaming room",
         paragraphs: [
-          "Solution Sahab installed a honeycomb system in the gaming room at King Court, GK-2 — designed for luxury homes in South Delhi. The installation adds privacy, acoustic balance and energy efficiency, a perfect upgrade for modern interiors where a media or gaming room needs controlled light and sound without heavy curtains or fixed partitions.",
+          "Solution Sahab installed a honeycomb system in the gaming room at King Court, GK-2, designed for luxury homes in South Delhi. The installation adds privacy, acoustic balance and energy efficiency, a perfect upgrade for modern interiors where a media or gaming room needs controlled light and sound without heavy curtains or fixed partitions.",
         ],
       },
       {
         heading: "Why honeycomb suits gaming and media rooms",
         paragraphs: [
-          "The honeycomb structure traps air for natural insulation, steadies room temperature, softens outside noise, and offers light control from blackout to soft-filtering — so screens stay glare-free while the room stays comfortable. The sleek, minimal design runs smoothly and comes in shades and textures that complement premium interiors.",
+          "The honeycomb structure traps air for natural insulation, steadies room temperature, softens outside noise, and offers light control from blackout to soft-filtering, so screens stay glare-free while the room stays comfortable. The sleek, minimal design runs smoothly and comes in shades and textures that complement premium interiors.",
         ],
         items: [
           "Privacy without blocking natural light",
@@ -2113,7 +2113,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Strong, stylish protection for Delhi NCR homes",
         paragraphs: [
-          "Solution Sahab installs premium aluminium security grills, mesh doors, balcony barriers and safety gates across Delhi NCR. The aluminium security pleated mesh is an advanced protective screen: high-quality aluminium for durability and corrosion resistance, with a pleated design for smooth operation — security from insects, dust and intruders without losing ventilation or looks.",
+          "Solution Sahab installs premium aluminium security grills, mesh doors, balcony barriers and safety gates across Delhi NCR. The aluminium security pleated mesh is an advanced protective screen: high-quality aluminium for durability and corrosion resistance, with a pleated design for smooth operation, security from insects, dust and intruders without losing ventilation or looks.",
         ],
       },
       {
@@ -2151,7 +2151,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Strong, stylish honeycomb mesh in Delhi NCR",
         paragraphs: [
-          "Solution Sahab installs honeycomb mesh in Delhi NCR for balconies and windows — a smart, stylish solution for comfort, privacy and energy efficiency. The honeycomb structure traps air for natural insulation, cuts outside noise, and controls light while keeping rooms bright.",
+          "Solution Sahab installs honeycomb mesh in Delhi NCR for balconies and windows: a smart, stylish solution for comfort, privacy and energy efficiency. The honeycomb structure traps air for natural insulation, cuts outside noise, and controls light while keeping rooms bright.",
         ],
       },
       {
@@ -2189,7 +2189,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Honeycomb mesh for modern offices",
         paragraphs: [
-          "Solution Sahab is a leading honeycomb mesh provider for modern office spaces in New Delhi. The honeycomb structure gives meeting rooms, cabins and work halls privacy with light control, natural insulation for steadier temperatures, and noise reduction — all in a sleek, minimal system that suits corporate interiors.",
+          "Solution Sahab is a leading honeycomb mesh provider for modern office spaces in New Delhi. The honeycomb structure gives meeting rooms, cabins and work halls privacy with light control, natural insulation for steadier temperatures, and noise reduction, all in a sleek, minimal system that suits corporate interiors.",
         ],
       },
       {
@@ -2227,7 +2227,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Rooftop safety for Vrindavan and Mathura homes",
         paragraphs: [
-          "Rooftops in Vrindavan and Mathura double as daily living space — and with children, pets and frequent monkey movement, an open parapet is a real risk. [Invisible grills](/invisible-grills) give child-safe, monkey-proof protection without closing up the terrace: 316 marine-grade stainless steel cables (2.5 mm or 3.0 mm) tensioned in powder-coated 6063-T6 aluminium frames.",
+          "Rooftops in Vrindavan and Mathura double as daily living space, and with children, pets and frequent monkey movement, an open parapet is a real risk. [Invisible grills](/invisible-grills) give child-safe, monkey-proof protection without closing up the terrace: 316 marine-grade stainless steel cables (2.5 mm or 3.0 mm) tensioned in powder-coated 6063-T6 aluminium frames.",
         ],
       },
       {
@@ -2254,14 +2254,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Balcony protection for Gohana families",
         paragraphs: [
-          "Families in Gohana want balcony safety that does not turn the home into a cage. Solution Sahab's [invisible grill](/invisible-grills) protects children and pets with sleek, strong, rust-proof cables — 316 marine-grade stainless steel that keeps the view, light and air while closing the fall risk.",
+          "Families in Gohana want balcony safety that does not turn the home into a cage. Solution Sahab's [invisible grill](/invisible-grills) protects children and pets with sleek, strong, rust-proof cables: 316 marine-grade stainless steel that keeps the view, light and air while closing the fall risk.",
         ],
       },
       {
         heading: "Specification and booking",
         paragraphs: [
           "More than 400 kgf tensile capacity per run with NABL-certified verification, 50 mm (2-inch) pitch for homes with young children and pets, 6063-T6 aluminium frames in Charcoal, White, Bronze or Silver, Hilti or Fischer stainless anchoring, and a signed 5-Year Anti-Rust Warranty.",
-          "Send a balcony photo through the [contact page](/contact-us) or call 99711 43143 — an engineer will measure, and [pleated mesh](/pleated-mesh) can be added for insect protection.",
+          "Send a balcony photo through the [contact page](/contact-us) or call 99711 43143. An engineer will measure, and [pleated mesh](/pleated-mesh) can be added for insect protection.",
         ],
       },
     ],
@@ -2310,8 +2310,8 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "From niche upgrade to mainstream safety essential",
         paragraphs: [
-          "Over the last few years, invisible grills have moved from a niche architectural upgrade to a mainstream safety essential in modern Indian homes — particularly the high-rise apartments that define the Delhi-NCR skyline. Homeowners love the rare balance of uncompromised safety with sleek aesthetics: natural daylight, city vistas, and no heavy visual clutter from iron bars.",
-          "First-time buyers still ask the right questions: what are these near-transparent barriers made of, how much strength do slender stainless-steel cables offer, can they frustrate monkeys, protect toddlers, and deter intruders — and what about durability, corrosion, maintenance, installation time and price?",
+          "Over the last few years, invisible grills have moved from a niche architectural upgrade to a mainstream safety essential in modern Indian homes, particularly the high-rise apartments that define the Delhi-NCR skyline. Homeowners love the rare balance of uncompromised safety with sleek aesthetics: natural daylight, city vistas, and no heavy visual clutter from iron bars.",
+          "First-time buyers still ask the right questions: what are these near-transparent barriers made of, how much strength do slender stainless-steel cables offer, can they frustrate monkeys, protect toddlers, and deter intruders, and what about durability, corrosion, maintenance, installation time and price?",
         ],
       },
       {
@@ -2324,7 +2324,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Installation and booking",
         paragraphs: [
-          "Certified technicians survey promptly with Leica laser meters, CNC-cut profiles at our Nilothi facility, tension cables to a 110 Nm load, and close with pull-tests, cutter shears and the warranty card. Read the full [invisible grills](/invisible-grills) guide, or send photos through the [contact page](/contact-us) — call 99711 43143 for a measurement.",
+          "Certified technicians survey promptly with Leica laser meters, CNC-cut profiles at our Nilothi facility, tension cables to a 110 Nm load, and close with pull-tests, cutter shears and the warranty card. Read the full [invisible grills](/invisible-grills) guide, or send photos through the [contact page](/contact-us). Call 99711 43143 for a measurement.",
         ],
       },
     ],
@@ -2345,7 +2345,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Premium honeycomb mesh in Sonipat",
         paragraphs: [
-          "Solution Sahab offers stylish, durable, custom-designed honeycomb mesh for homes, offices and commercial spaces in Sonipat, Haryana. The honeycomb structure gives privacy, natural insulation and noise reduction with light control — elegant, long-lasting and easy to maintain.",
+          "Solution Sahab offers stylish, durable, custom-designed honeycomb mesh for homes, offices and commercial spaces in Sonipat, Haryana. The honeycomb structure gives privacy, natural insulation and noise reduction with light control, elegant, long-lasting and easy to maintain.",
         ],
       },
       {
@@ -2373,14 +2373,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Balcony safety with a view in Gaur Saundaryam",
         paragraphs: [
-          "Gaur Saundaryam's towers put the skyline at the centre of home life — and leave balconies exposed. Solution Sahab's [invisible grills](/invisible-grills) protect the family while keeping the view: 316 marine-grade stainless steel cables tensioned in powder-coated 6063-T6 aluminium frames, barely visible from inside the flat.",
+          "Gaur Saundaryam's towers put the skyline at the centre of home life, and leave balconies exposed. Solution Sahab's [invisible grills](/invisible-grills) protect the family while keeping the view: 316 marine-grade stainless steel cables tensioned in powder-coated 6063-T6 aluminium frames, barely visible from inside the flat.",
         ],
       },
       {
         heading: "Specification and booking in Noida Extension",
         paragraphs: [
           "More than 400 kgf tensile capacity per run with NABL-certified verification; 50 mm (2-inch) pitch for homes with young children, cats and birds; Hilti or Fischer stainless anchoring at 200 mm centres; under 15 mm deflection under 120 kg; and a signed 5-Year Anti-Rust Warranty with 15-second emergency wire cutting.",
-          "Our teams cover Noida Extension, the Expressway and Sector 150 with a measurement. Call 99711 43143 or send balcony photos through the [contact page](/contact-us) — [pleated mesh](/pleated-mesh) can be added on the same visit.",
+          "Our teams cover Noida Extension, the Expressway and Sector 150 with a measurement. Call 99711 43143 or send balcony photos through the [contact page](/contact-us); [pleated mesh](/pleated-mesh) can be added on the same visit.",
         ],
       },
     ],
@@ -2401,7 +2401,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Modern safety with style in Mayur Vihar",
         paragraphs: [
-          "Mayur Vihar's apartments, builder floors and independent houses all share the same need: balcony and window safety that keeps style, strength and durability together. Solution Sahab's [invisible grills](/invisible-grills) do exactly that — 316 marine-grade stainless steel cables in 6063-T6 aluminium frames, with open views, daylight and airflow intact.",
+          "Mayur Vihar's apartments, builder floors and independent houses all share the same need: balcony and window safety that keeps style, strength and durability together. Solution Sahab's [invisible grills](/invisible-grills) do exactly that: 316 marine-grade stainless steel cables in 6063-T6 aluminium frames, with open views, daylight and airflow intact.",
         ],
       },
       {
@@ -2429,21 +2429,21 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "What are invisible grills",
         paragraphs: [
-          "Invisible grills are the modern solution for homeowners who prioritise safety without compromising aesthetics. Sleek and minimalist, they blend with contemporary architecture while giving robust security and unobstructed views — for both residential and commercial properties.",
-          "Beyond looks, they are durable, need minimal maintenance, and protect against accidental falls or break-ins — a must-have safety feature for high-rise apartments and commercial buildings.",
+          "Invisible grills are the modern solution for homeowners who prioritise safety without compromising aesthetics. Sleek and minimalist, they blend with contemporary architecture while giving robust security and unobstructed views, for both residential and commercial properties.",
+          "Beyond looks, they are durable, need minimal maintenance, and protect against accidental falls or break-ins, a must-have safety feature for high-rise apartments and commercial buildings.",
         ],
       },
       {
         heading: "Why choose invisible grills in Noida",
         paragraphs: [
-          "High-tensile stainless steel wires withstand significant force — ideal for families with children or pets. Unlike traditional grills they preserve panoramic views, complement contemporary architecture with customisable options, and resist corrosion indoors and outdoors.",
+          "High-tensile stainless steel wires withstand significant force, ideal for families with children or pets. Unlike traditional grills they preserve panoramic views, complement contemporary architecture with customisable options, and resist corrosion indoors and outdoors.",
         ],
       },
       {
         heading: "Solution Sahab specification and installation",
         paragraphs: [
           "High-grade aluminium alloy and stainless steel to international standards for tensile strength; ISO-9001:2015 laboratory tested for strength, durability and environmental resistance; tamper-proof, heat-resistant wires for homes with children and pets; custom sizes with hassle-free expert installation; and rust-free, low-maintenance materials.",
-          "We install on balconies, windows, staircases, terraces, fences and partitions across Noida. Call 99711 43143 or use the [contact page](/contact-us) — full details are on the [invisible grills](/invisible-grills) page.",
+          "We install on balconies, windows, staircases, terraces, fences and partitions across Noida. Call 99711 43143 or use the [contact page](/contact-us). Full details are on the [invisible grills](/invisible-grills) page.",
         ],
       },
     ],
@@ -2464,21 +2464,21 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "What are invisible grills",
         paragraphs: [
-          "Invisible grills are the modern solution for homeowners who prioritise safety without compromising aesthetics. Sleek and minimalist, they blend with contemporary architecture while giving robust security and unobstructed views — for both residential and commercial properties in Gurugram.",
-          "Beyond looks, they are durable, need minimal maintenance, and protect against accidental falls or break-ins — a must-have safety feature for high-rise apartments and commercial buildings.",
+          "Invisible grills are the modern solution for homeowners who prioritise safety without compromising aesthetics. Sleek and minimalist, they blend with contemporary architecture while giving robust security and unobstructed views, for both residential and commercial properties in Gurugram.",
+          "Beyond looks, they are durable, need minimal maintenance, and protect against accidental falls or break-ins, a must-have safety feature for high-rise apartments and commercial buildings.",
         ],
       },
       {
         heading: "Why choose invisible grills in Gurugram",
         paragraphs: [
-          "High-tensile stainless steel wires withstand significant force — ideal for families with children or pets. Unlike traditional grills they preserve panoramic views, complement contemporary architecture with customisable options, and resist corrosion indoors and outdoors.",
+          "High-tensile stainless steel wires withstand significant force, ideal for families with children or pets. Unlike traditional grills they preserve panoramic views, complement contemporary architecture with customisable options, and resist corrosion indoors and outdoors.",
         ],
       },
       {
         heading: "Solution Sahab specification and installation",
         paragraphs: [
           "High-grade aluminium alloy and stainless steel to international standards for tensile strength; ISO-9001:2015 laboratory tested for strength, durability and environmental resistance; tamper-proof, heat-resistant wires for homes with children and pets; custom sizes with hassle-free expert installation; and rust-free, low-maintenance materials.",
-          "We install on balconies, windows, staircases, terraces, fences and partitions across Gurgaon, including DLF phases, Golf Course Road and Sohna Road. Call 99711 43143 or use the [contact page](/contact-us) — full details are on the [invisible grills](/invisible-grills) page.",
+          "We install on balconies, windows, staircases, terraces, fences and partitions across Gurgaon, including DLF phases, Golf Course Road and Sohna Road. Call 99711 43143 or use the [contact page](/contact-us). Full details are on the [invisible grills](/invisible-grills) page.",
         ],
       },
     ],
@@ -2499,20 +2499,20 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Safety and style for Delhi homes",
         paragraphs: [
-          "Whether you live in a high-rise apartment or manage a commercial space, invisible grills offer ideal safety without compromising style. Sleek and minimalist, they blend with contemporary interiors and exteriors — perfect for balconies, windows and open spaces — while staying durable and rust-resistant through Delhi's varying weather.",
+          "Whether you live in a high-rise apartment or manage a commercial space, invisible grills offer ideal safety without compromising style. Sleek and minimalist, they blend with contemporary interiors and exteriors, perfect for balconies, windows and open spaces, while staying durable and rust-resistant through Delhi's varying weather.",
         ],
       },
       {
         heading: "Why Delhi chooses invisible grills",
         paragraphs: [
-          "Enhanced safety from high-tensile stainless steel wires that withstand heavy impact — ideal for families with kids or pets. Unobstructed panoramic views unlike bulky traditional grills — perfect for high-rises and luxury homes. Corrosion and weather resistance for long-lasting indoor and outdoor performance.",
+          "Enhanced safety from high-tensile stainless steel wires that withstand heavy impact, ideal for families with kids or pets. Unobstructed panoramic views unlike bulky traditional grills, perfect for high-rises and luxury homes. Corrosion and weather resistance for long-lasting indoor and outdoor performance.",
           "Solution Sahab grills use high-grade stainless steel and aluminium alloy to international safety standards, tested and certified by ISO 9001:2015-approved laboratories, with tamper-proof, heat-resistant wires, unobstructed views, tailor-made hassle-free installation, and minimal upkeep.",
         ],
       },
       {
         heading: "Where we install in Delhi",
         paragraphs: [
-          "Balconies, windows, staircases, terraces, fences and partitions — safety without blocking the view, with natural light throughout. Call 99711 43143 or use the [contact page](/contact-us) — full details are on the [invisible grills](/invisible-grills) page.",
+          "Balconies, windows, staircases, terraces, fences and partitions: safety without blocking the view, with natural light throughout. Call 99711 43143 or use the [contact page](/contact-us). Full details are on the [invisible grills](/invisible-grills) page.",
         ],
       },
     ],
@@ -2533,14 +2533,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "What is pleated mesh",
         paragraphs: [
-          "Pleated mesh is an innovative insect screen widely used across Delhi NCR for protection against insects while letting fresh air circulate. Unlike flat screens, it folds and unfolds in a zigzag that stays taut and functional — enhancing looks while keeping the mesh working over time.",
+          "Pleated mesh is an innovative insect screen widely used across Delhi NCR for protection against insects while letting fresh air circulate. Unlike flat screens, it folds and unfolds in a zigzag that stays taut and functional, enhancing looks while keeping the mesh working over time.",
           "Our Pleated Mesh Prime Series pairs PVC coated mesh with a Jindal T6 6063 grade frame and A-grade components, for windows, balconies and doors in urban homes and offices across Noida.",
         ],
       },
       {
         heading: "Roller mesh and barrier-free mesh",
         paragraphs: [
-          "Roller mesh glides into a discreet housing when not in use — durable, weather-resistant and space-saving for compact urban spaces. Barrier-free mesh has no tripping hazards with seamless entry and exit, durable material and customisable sizes — for patios, balconies, high-traffic homes, offices and healthcare facilities.",
+          "Roller mesh glides into a discreet housing when not in use, durable, weather-resistant and space-saving for compact urban spaces. Barrier-free mesh has no tripping hazards with seamless entry and exit, durable material and customisable sizes, for patios, balconies, high-traffic homes, offices and healthcare facilities.",
           "Call 99711 43143 or send photos through the [contact page](/contact-us) for [pleated mesh](/pleated-mesh) installation in Noida.",
         ],
       },
@@ -2562,14 +2562,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "What is pleated mesh",
         paragraphs: [
-          "Pleated mesh is an innovative insect screen widely used across Delhi NCR for protection against insects while letting fresh air circulate. Unlike flat screens, it folds and unfolds in a zigzag that stays taut and functional — enhancing looks while keeping the mesh working over time.",
+          "Pleated mesh is an innovative insect screen widely used across Delhi NCR for protection against insects while letting fresh air circulate. Unlike flat screens, it folds and unfolds in a zigzag that stays taut and functional, enhancing looks while keeping the mesh working over time.",
           "Our Pleated Mesh Prime Series pairs PVC coated mesh with a Jindal T6 6063 grade frame and A-grade components, for windows, balconies and doors in urban homes and offices across Gurugram.",
         ],
       },
       {
         heading: "Roller mesh and barrier-free mesh",
         paragraphs: [
-          "Roller mesh glides into a discreet housing when not in use — durable, weather-resistant and space-saving for compact urban spaces. Barrier-free mesh has no tripping hazards with seamless entry and exit, durable material and customisable sizes — for patios, balconies, high-traffic homes, offices and healthcare facilities.",
+          "Roller mesh glides into a discreet housing when not in use, durable, weather-resistant and space-saving for compact urban spaces. Barrier-free mesh has no tripping hazards with seamless entry and exit, durable material and customisable sizes, for patios, balconies, high-traffic homes, offices and healthcare facilities.",
           "Call 99711 43143 or send photos through the [contact page](/contact-us) for [pleated mesh](/pleated-mesh) installation in Gurugram.",
         ],
       },

@@ -24,22 +24,22 @@ export default function HomePage() {
           {/* 1. Hero with areas strip */}
           <HeroSection />
 
-          {/* 2. Customer video reviews */}
-          <TestimonialsSection />
-
-          {/* 3. Product catalog */}
+          {/* 2. Product catalog: what we do */}
           <ProductCatalogSection />
 
-          {/* 4. Who we fit for */}
+          {/* 3. Who we fit for: is it for me */}
           <AudienceSection />
 
-          {/* 5. Process ink band with warranty */}
-          <ProcessSection />
-
-          {/* 6. Recent work strip */}
+          {/* 4. Recent work: proof */}
           <ProjectGallerySection />
 
-          {/* 7. FAQs */}
+          {/* 5. Customer video reviews: trust */}
+          <TestimonialsSection />
+
+          {/* 6. How it works: low effort */}
+          <ProcessSection />
+
+          {/* 7. FAQs: objections, right before the ask */}
           <FaqSection />
 
           {/* 8. Booking form */}

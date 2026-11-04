@@ -1,6 +1,4 @@
 import React from "react";
-import { Button } from "@/components/ui/Button";
-import { CONTACT_INFO } from "@/lib/constants";
 
 const STEPS = [
   {
@@ -26,52 +24,39 @@ const STEPS = [
 export function ProcessSection() {
   return (
     <section
-      className="w-full py-16 sm:py-20  border-b border-neutral-300 scroll-mt-28"
+      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
       id="how-it-works"
       aria-labelledby="process-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        {/* Simple Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 border-b border-neutral-300">
-          <div>
-            <h2
-              id="process-heading"
-              className="text-3xl sm:text-4xl font-semibold text-neutral-950 tracking-tight m-0"
-            >
-              How It Works
-            </h2>
-          </div>
+        <h2
+          id="process-heading"
+          className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 mb-6"
+        >
+          How It Works
+        </h2>
 
-          <div className="flex items-center gap-3">
-            <Button href="#quick-booking" variant="primary" size="md">
-              Book Site Visit
-            </Button>
-            <Button
-              href={CONTACT_INFO.WHATSAPP_URL}
-              variant="outline"
-              size="md"
-            >
-              WhatsApp Us
-            </Button>
-          </div>
-        </div>
-
-        {/* 3 Simple Steps in a Clean Light Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-300 border-b border-neutral-300">
-          {STEPS.map((step) => (
-            <div key={step.number} className="py-8 md:px-8 first:md:pl-0 last:md:pr-0">
-              <span className="block text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] mb-3">
-                Step {step.number}
+        {/* 3 compact numbered steps: a row on desktop, stacked on phones */}
+        <ol className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 list-none m-0 p-0">
+          {STEPS.map((step, index) => (
+            <li key={step.number} className="flex gap-3">
+              <span
+                className="shrink-0 w-8 h-8 rounded-full bg-[#1B4D8E] text-white text-sm font-gilroy font-extrabold flex items-center justify-center"
+                aria-hidden="true"
+              >
+                {index + 1}
               </span>
-              <h3 className="text-xl sm:text-2xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-2">
-                {step.title}
-              </h3>
-              <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0">
-                {step.description}
-              </p>
-            </div>
+              <div>
+                <h3 className="text-base sm:text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-1 leading-8">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-neutral-600 leading-relaxed m-0">
+                  {step.description}
+                </p>
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

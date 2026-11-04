@@ -59,8 +59,7 @@ export function ProductOverviewSection({
 
             <div className="space-y-3 text-sm text-neutral-800 font-body">
               {bullets.map((b) => (
-                <div key={b.label} className="flex items-start gap-2.5">
-                  <span className="text-blue-600 font-bold mt-0.5">✓</span>
+                <div key={b.label}>
                   <span>
                     <strong>{b.label}:</strong> {b.text}
                   </span>

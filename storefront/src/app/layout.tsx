@@ -129,7 +129,7 @@ export default function RootLayout({
         {/* shortcut: only these icons are downloaded (~5 KB vs 1.1 MB); add any new icon name here (alphabetical) or it renders as text. */}
         {/* eslint-disable-next-line @next/next/no-page-custom-font, @next/next/google-font-display -- root layout loads it on every page; "block" stops icon names flashing as text */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle,apartment,arrow_forward,arrow_outward,article,calendar_month,calendar_today,call,chat,chevron_left,chevron_right,close,design_services,done,expand_more,factory,handshake,lightbulb,location_on,mail,map,menu,payments,photo_camera,play_arrow,schedule,send,task_alt,verified&display=block"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle,apartment,article,calendar_month,calendar_today,call,chat,chevron_left,chevron_right,close,design_services,done,expand_more,factory,handshake,lightbulb,location_on,mail,map,menu,payments,photo_camera,play_arrow,schedule,send,task_alt,verified&display=block"
           rel="stylesheet"
         />
       </head>

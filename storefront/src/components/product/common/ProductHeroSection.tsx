@@ -21,7 +21,7 @@ export interface ProductHeroSectionProps {
 
 export function ProductHeroSection({
   productName,
-  brandTag = "Solution Sahab · Delhi NCR",
+  brandTag = "Solution Sahab | Delhi NCR",
   tagline,
   badges,
   heroImage,
@@ -74,7 +74,7 @@ export function ProductHeroSection({
                   key={badge}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 text-neutral-800 text-xs font-medium border border-neutral-200"
                 >
-                  <span className="text-blue-600 font-bold">✓</span> {badge}
+                  {badge}
                 </span>
               ))}
             </div>
@@ -97,7 +97,8 @@ export function ProductHeroSection({
             <div className="relative border border-neutral-200 bg-neutral-100 overflow-hidden aspect-[4/3] sm:aspect-[4/3] lg:aspect-[4/5] w-full shadow-sm">
               <Image
                 alt={heroImageAlt}
-                className="w-full h-full object-cover"
+                // hero-* images have their info panel on the right: show that side in this tall box
+                className={`w-full h-full object-cover ${heroImage.startsWith("/images/hero/") ? "object-right" : ""}`}
                 src={heroImage}
                 width={800}
                 height={1000}
