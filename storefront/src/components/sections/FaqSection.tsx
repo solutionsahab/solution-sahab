@@ -65,7 +65,7 @@ export function FaqSection({
 
   return (
     <section
-      className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
+      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
       id={id}
       aria-labelledby={`${id}-heading`}
     >
@@ -87,12 +87,12 @@ export function FaqSection({
         />
       )}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
           {/* Left 4 Columns: Title + Direct Call */}
           <div className="lg:col-span-4 lg:sticky lg:top-28">
             <h2
               id={`${id}-heading`}
-              className="text-3xl sm:text-4xl font-semibold text-neutral-950 tracking-tight m-0"
+              className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
             >
               {title}
             </h2>

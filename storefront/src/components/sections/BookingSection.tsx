@@ -31,7 +31,7 @@ export function BookingSection({
 
   return (
     <section
-      className="w-full py-16 sm:py-24 border-b border-neutral-300 scroll-mt-28"
+      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
       id={id}
       aria-labelledby="booking-heading"
     >

@@ -24,17 +24,16 @@ const VIDEOS = [
 export function TestimonialsSection() {
   return (
     <section
-      className="w-full py-14 sm:py-20 border-b border-neutral-300 scroll-mt-28"
+      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
       id="customer-videos"
       aria-labelledby="customer-videos-heading"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        {/* Minimal Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="flex items-end justify-between gap-4 mb-6">
           <div>
             <h2
               id="customer-videos-heading"
-              className="text-2xl sm:text-4xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0"
+              className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
             >
               Customer Feedback
             </h2>
@@ -47,16 +46,19 @@ export function TestimonialsSection() {
             href="https://www.youtube.com/@solutionsahab"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-mono uppercase tracking-wider text-neutral-900 underline underline-offset-4 hover:opacity-70 shrink-0"
+            className="shrink-0 text-xs font-gilroy font-extrabold uppercase tracking-wider text-neutral-950 underline underline-offset-4 hover:opacity-70"
           >
             All Videos on YouTube →
           </Link>
         </div>
 
-        {/* Clean 2-Video Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 pt-8">
+        {/* One-row swipe carousel (CSS scroll-snap): phones peek the next video, desktop shows 4 per row */}
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {VIDEOS.map((video) => (
-            <div key={video.videoId} className="flex flex-col">
+            <div
+              key={video.videoId}
+              className="flex flex-col shrink-0 snap-start w-[80%] sm:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)]"
+            >
               <div className="w-full bg-neutral-950 overflow-hidden">
                 <VideoEmbed
                   orientation="vertical"
