@@ -10,12 +10,12 @@ export const ASSETS = {
   HERO_IMAGE_HOME: "/images/hero/hero-home.jpg",
   HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS: "/images/products/invisible-grills-balcony.jpg",
   // Home hero slides only; product pages and cards keep the PRODUCTS.* images
-  HERO_IMAGE_HOME_INVISIBLE_GRILLS: "/images/hero/hero-invisible-grills-v2.webp",
-  HERO_IMAGE_HOME_PLEATED_MESH: "/images/hero/hero-pleated-mesh-v2.webp",
-  HERO_IMAGE_HOME_HONEYCOMB: "/images/hero/hero-honeycomb-partition-v2.webp",
-  HERO_IMAGE_HOME_ALUMINUM_MESH: "/images/hero/hero-aluminum-security-mesh-v2.webp",
-  HERO_IMAGE_HOME_WEATHER_SCREEN: "/images/hero/hero-weather-screen-v2.webp",
-  HERO_IMAGE_HOME_SKYLIGHT: "/images/hero/hero-skylight-v2.webp",
+  HERO_IMAGE_HOME_INVISIBLE_GRILLS: "/images/hero/hero-invisible-grills-v3.webp",
+  HERO_IMAGE_HOME_PLEATED_MESH: "/images/hero/hero-pleated-mesh-v3.webp",
+  HERO_IMAGE_HOME_HONEYCOMB: "/images/hero/hero-honeycomb-partition-v3.webp",
+  HERO_IMAGE_HOME_ALUMINUM_MESH: "/images/hero/hero-aluminum-security-mesh-v3.webp",
+  HERO_IMAGE_HOME_WEATHER_SCREEN: "/images/hero/hero-weather-screen-v3.webp",
+  HERO_IMAGE_HOME_SKYLIGHT: "/images/hero/hero-skylight-v3.webp",
 
   // Product Catalog Images
   PRODUCTS: {
