@@ -39,11 +39,11 @@ export function ProductTrustPillars({
   showCertificates = true,
 }: ProductTrustPillarsProps) {
   return (
-    <section className="w-full bg-neutral-50/70 py-14 sm:py-20 border-b border-neutral-200">
+    <section className="w-full bg-neutral-50/70 py-10 sm:py-12 border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="max-w-3xl mb-10 sm:mb-14">
-          <h2 className="text-2xl sm:text-4xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0 mb-3">
+        <div className="max-w-3xl mb-6">
+          <h2 className="text-2xl sm:text-3xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0 mb-2">
             {title}
           </h2>
           <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-body m-0">
@@ -53,13 +53,13 @@ export function ProductTrustPillars({
 
         {/* 6 Feature Cards */}
         {pillars && pillars.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {pillars.map((p) => (
               <div
                 key={p.title}
-                className="bg-white border border-neutral-200 p-6 flex flex-col justify-start"
+                className="bg-white border border-neutral-200 p-4 sm:p-5 flex flex-col justify-start"
               >
-                <h3 className="text-base sm:text-lg font-gilroy font-bold text-neutral-950 mb-2">
+                <h3 className="text-base font-gilroy font-bold text-neutral-950 mb-1">
                   {p.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-body m-0">
@@ -72,16 +72,17 @@ export function ProductTrustPillars({
 
         {/* Real Certification Proof Cards */}
         {showCertificates && (
-          <div className="border border-neutral-200 bg-white p-6 sm:p-8">
-            <div className="mb-6">
-              <h3 className="text-lg sm:text-xl font-gilroy font-bold text-neutral-950 m-0">
+          <div className="border border-neutral-200 bg-white p-4 sm:p-6">
+            <div className="mb-4">
+              <h3 className="text-base sm:text-lg font-gilroy font-bold text-neutral-950 m-0">
                 Verified Laboratory Testing &amp; ISO-9001:2015 Approved
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {/* Phones swipe through the certificates; wider screens show all 3 */}
+            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-3 sm:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {DEFAULT_CERTIFICATES.map((cert) => (
-                <div key={cert.title} className="border border-neutral-200 bg-neutral-50 p-3">
+                <div key={cert.title} className="shrink-0 snap-start w-[60%] sm:w-auto border border-neutral-200 bg-neutral-50 p-3">
                   <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200 border border-neutral-200 mb-2">
                     <Image
                       alt={cert.alt}

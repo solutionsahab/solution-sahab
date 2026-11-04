@@ -31,10 +31,10 @@ export function ProductHeroSection({
   bookingTargetId = "#booking-form",
 }: ProductHeroSectionProps) {
   return (
-    <section className="w-full bg-white pt-6 sm:pt-10 pb-10 sm:pb-14 border-b border-neutral-200">
+    <section className="w-full bg-white pt-5 sm:pt-6 pb-10 sm:pb-12 border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Simple Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-neutral-500 font-sans">
+        <nav aria-label="Breadcrumb" className="mb-4 flex items-center gap-2 text-xs text-neutral-500 font-sans">
           <Link href="/" className="hover:text-blue-600 transition-colors">
             Home
           </Link>
@@ -52,23 +52,23 @@ export function ProductHeroSection({
           <span className="text-neutral-900 font-medium">{breadcrumbName || productName}</span>
         </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           {/* Left: Brand Name, Product Name & Core Info (7 cols) */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <span className="text-xs font-semibold tracking-wider uppercase text-blue-600 mb-2">
               {brandTag}
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-gilroy font-extrabold text-neutral-950 tracking-tight leading-[1.08] m-0 mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-gilroy font-extrabold text-neutral-950 tracking-tight leading-[1.08] m-0 mb-3">
               {productName}
             </h1>
 
-            <p className="text-base sm:text-lg text-neutral-700 leading-relaxed max-w-2xl font-body m-0 mb-6">
+            <p className="text-base text-neutral-700 leading-relaxed max-w-2xl font-body m-0 mb-5">
               {tagline}
             </p>
 
             {/* Clean Key Badges */}
-            <div className="flex flex-wrap gap-2.5 mb-8">
+            <div className="flex flex-wrap gap-2 mb-6">
               {badges.map((badge) => (
                 <span
                   key={badge}
@@ -94,7 +94,7 @@ export function ProductHeroSection({
 
           {/* Right: High-Res Installation Image (5 cols) */}
           <div className="lg:col-span-5">
-            <div className="relative border border-neutral-200 bg-neutral-100 overflow-hidden aspect-[4/3] sm:aspect-[4/3] lg:aspect-[4/5] w-full shadow-sm">
+            <div className="relative border border-neutral-200 bg-neutral-100 overflow-hidden aspect-[4/3] w-full shadow-sm">
               <Image
                 alt={heroImageAlt}
                 // hero-* images have their info panel on the right: show that side in this tall box
