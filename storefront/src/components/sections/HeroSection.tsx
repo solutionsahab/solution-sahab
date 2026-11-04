@@ -106,9 +106,9 @@ export function HeroSection() {
             key={item.name}
             aria-hidden={index !== active}
             className={`absolute inset-0 transition-opacity duration-1000 ease-out ${index === active
-              ? "opacity-100 z-10 scale-100"
-              : "opacity-0 z-0 scale-105 pointer-events-none"
-              } transition-transform duration-[6000ms]`}
+              ? "opacity-100 z-10"
+              : "opacity-0 z-0 pointer-events-none"
+              }`}
           >
             <Image
               alt={item.alt}
@@ -116,7 +116,8 @@ export function HeroSection() {
               src={item.image}
               fill
               priority={index === 0}
-              sizes="100vw"
+              // Below lg the photo is cropped to ~2.5x the screen width (2:1 image in a 4:5 box)
+              sizes="(max-width: 1023px) 250vw, 100vw"
               quality={90}
             />
           </div>
@@ -129,9 +130,6 @@ export function HeroSection() {
           {/* Title box: Product Name + Short Tagline, CTA in its bottom-right corner */}
           <div className={`w-full lg:w-auto flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-8 px-3 py-2.5 lg:px-5 lg:py-4 ${GLASS_PANEL}`}>
             <div className="max-w-2xl">
-              <p className="text-[10px] sm:text-xs font-gilroy font-extrabold uppercase tracking-widest text-ink m-0 mb-1 sm:mb-2">
-                0{active + 1} / 0{SLIDES.length}
-              </p>
               <h1 className="text-xl sm:text-3xl lg:text-5xl font-extrabold font-gilroy text-ink tracking-tight leading-[1.08] m-0">
                 {slide.name}
               </h1>
