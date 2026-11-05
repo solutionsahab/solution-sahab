@@ -34,11 +34,11 @@ export default function OurTeamPage() {
       />
 
       <section
-        className="w-full bg-white py-14 sm:py-20 scroll-mt-28"
+        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
         aria-label="Solution Sahab team photos"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <ImageGrid images={TEAM_IMAGES} ratio="square" columns={4} />
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <ImageGrid images={TEAM_IMAGES} ratio="square" carousel />
         </div>
       </section>
 

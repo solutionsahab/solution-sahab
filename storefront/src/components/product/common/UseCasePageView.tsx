@@ -74,6 +74,7 @@ export function UseCasePageView({ config }: { config: UseCasePageConfig }) {
         />
         <BookingSection
           leadSource={config.leadSource}
+          product="Invisible Grills"
           title={config.bookingTitle}
           description={config.bookingDescription}
         />

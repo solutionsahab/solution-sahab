@@ -75,6 +75,7 @@ export default function AutomaticWeatherScreenProductPage() {
         />
         <BookingSection
           leadSource={config.leadSource}
+          product="Automatic Weather Screen"
           title={config.bookingTitle}
           description={config.bookingDescription}
         />

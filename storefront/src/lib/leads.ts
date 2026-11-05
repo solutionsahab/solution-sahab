@@ -6,7 +6,20 @@ export interface LeadInput {
   phone: string;
   address: string;
   leadSource?: string;
+  product?: string;
 }
+
+// Product choices on the enquiry forms; the chosen one goes to Cratio's "Product" field.
+export const PRODUCT_OPTIONS = [
+  "Invisible Grills",
+  "Pleated Mesh",
+  "Honeycomb Partition",
+  "Aluminum Mesh & Partition",
+  "Automatic Weather Screen",
+  "Skylight",
+  "Ceiling Cloth Hanger",
+  "Other",
+] as const;
 
 export type LeadResult = { ok: true } | { ok: false; error: string };
 

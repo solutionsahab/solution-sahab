@@ -14,6 +14,8 @@ interface ImageGridProps {
   ratio?: "square" | "landscape";
   columns?: 2 | 3 | 4;
   sizes?: string;
+  /** One-row swipe carousel (CSS scroll-snap) instead of a grid, so long sets stay short on phones */
+  carousel?: boolean;
 }
 
 const COLUMN_CLASS: Record<number, string> = {
@@ -26,16 +28,28 @@ export function ImageGrid({
   images,
   ratio = "landscape",
   columns = 4,
-  sizes = "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw",
+  sizes,
+  carousel = false,
 }: ImageGridProps) {
   return (
     <div
-      className={`grid gap-3 sm:gap-4 ${COLUMN_CLASS[columns]}`}
+      className={
+        carousel
+          ? "flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          : `grid gap-3 sm:gap-4 ${COLUMN_CLASS[columns]}`
+      }
     >
       {images.map((image) => (
-        <figure key={`${image.src}-${image.alt}`} className="m-0 group">
+        <figure
+          key={`${image.src}-${image.alt}`}
+          className={`m-0 ${
+            carousel
+              ? "shrink-0 snap-start w-[80%] sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-3rem)/4)]"
+              : ""
+          }`}
+        >
           <div
-            className={`relative w-full overflow-hidden border border-ink/10 bg-paper-deep ${
+            className={`relative w-full overflow-hidden bg-neutral-200 ${
               ratio === "square" ? "aspect-square" : "aspect-[4/3]"
             }`}
           >
@@ -43,13 +57,18 @@ export function ImageGrid({
               src={image.src}
               alt={image.alt}
               fill
-              sizes={sizes}
+              sizes={
+                sizes ??
+                (carousel
+                  ? "(max-width: 640px) 80vw, (max-width: 1023px) 50vw, 25vw"
+                  : "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw")
+              }
               className="object-cover"
               loading="lazy"
             />
           </div>
           {image.caption && (
-            <figcaption className="mt-2 font-label-sm text-label-sm font-semibold text-ink-soft">
+            <figcaption className="mt-2 text-sm font-semibold text-neutral-950 leading-snug">
               {image.caption}
             </figcaption>
           )}

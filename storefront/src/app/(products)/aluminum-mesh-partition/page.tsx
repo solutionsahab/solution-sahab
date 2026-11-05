@@ -75,6 +75,7 @@ export default function AluminumMeshPartitionProductPage() {
         />
         <BookingSection
           leadSource={config.leadSource}
+          product="Aluminum Mesh & Partition"
           title={config.bookingTitle}
           description={config.bookingDescription}
         />

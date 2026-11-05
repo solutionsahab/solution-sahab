@@ -11,6 +11,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   size?: ButtonSize;
   href?: string;
   external?: boolean;
+  /** Open an http link in the same tab (some in-app browsers block new tabs) */
+  sameTab?: boolean;
   icon?: string | React.ReactNode;
   iconPosition?: "left" | "right";
   fullWidth?: boolean;
@@ -25,6 +27,7 @@ export function Button({
   size = "md",
   href,
   external = false,
+  sameTab = false,
   icon,
   iconPosition,
   fullWidth = false,
@@ -119,7 +122,7 @@ export function Button({
 
   // 1. External link or tel: / mailto:
   if (href && (external || href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:"))) {
-    const isBlank = external || href.startsWith("http");
+    const isBlank = !sameTab && (external || href.startsWith("http"));
     return (
       <a
         href={isDisabled ? undefined : href}

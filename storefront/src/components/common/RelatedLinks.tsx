@@ -31,38 +31,37 @@ export function RelatedLinks({
 
   return (
     <section
-      className={`w-full py-8 sm:py-12 scroll-mt-28 ${TONE_CLASS[tone]}`}
+      className={`w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28 ${TONE_CLASS[tone]}`}
       aria-label={title}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="max-w-3xl">
-          <h2 className="font-headline-xl text-headline-xl text-ink leading-tight m-0">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="max-w-3xl mb-6">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0">
             {title}
           </h2>
           {intro && (
-            <p className="font-body-md text-body-md text-ink-soft leading-relaxed mt-3 mb-0">
+            <p className="text-sm sm:text-base text-neutral-600 leading-relaxed mt-2 mb-0">
               {intro}
             </p>
           )}
         </div>
 
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, desktop shows 4 */}
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="group flex items-start justify-between gap-4 border border-ink/10 bg-white p-5 transition-all hover:border-primary/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+              className="group shrink-0 snap-start w-[80%] sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-3rem)/4)] block border border-neutral-200 bg-white p-4 transition-colors hover:border-neutral-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
             >
-              <div className="min-w-0">
-                <span className="font-headline-sm text-headline-sm text-ink block group-hover:text-primary transition-colors">
-                  {link.label}
+              <span className="text-base font-extrabold font-gilroy text-neutral-950 tracking-tight block group-hover:text-[#1B4D8E] transition-colors">
+                {link.label}
+              </span>
+              {link.description && (
+                <span className="text-sm text-neutral-600 leading-relaxed block mt-1">
+                  {link.description}
                 </span>
-                {link.description && (
-                  <span className="font-body-sm text-body-sm text-ink-soft leading-relaxed block mt-1.5">
-                    {link.description}
-                  </span>
-                )}
-              </div>
+              )}
             </Link>
           ))}
         </div>

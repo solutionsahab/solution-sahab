@@ -380,3 +380,17 @@ button:disabled,
   background-color: var(--color-paper-deep);
   border: none;
 }
+
+/* Thank-you logo mark: logo rises in, brand line draws under it, then glows softly */
+@keyframes thanks-rise {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes thanks-line {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes thanks-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

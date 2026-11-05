@@ -19,12 +19,12 @@ export default function Error({
   return (
     <main
       id="main-content"
-      className="flex-1 flex flex-col items-center justify-center text-center gap-4 px-4 py-24"
+      className="flex-1 flex flex-col items-center justify-center text-center gap-4 px-5 py-16 sm:py-20 bg-white"
     >
-      <h1 className="font-display-serif text-3xl sm:text-4xl text-ink m-0">
+      <h1 className="text-3xl sm:text-4xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0">
         Something went wrong
       </h1>
-      <p className="font-body-lg text-body-lg text-ink-soft max-w-md m-0">
+      <p className="text-base text-neutral-700 leading-relaxed max-w-md m-0">
         This page didn&apos;t load properly. Please try again, or call us on{" "}
         <a href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`} className="underline font-semibold">
           {CONTACT_INFO.PHONE_PRIMARY}

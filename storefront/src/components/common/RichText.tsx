@@ -22,7 +22,7 @@ export function renderRichText(text: string): React.ReactNode[] {
 
     if (match[1] !== undefined) {
       nodes.push(
-        <strong key={`b-${key++}`} className="font-bold text-on-surface">
+        <strong key={`b-${key++}`} className="font-semibold text-neutral-950">
           {match[1]}
         </strong>
       );
@@ -31,7 +31,7 @@ export function renderRichText(text: string): React.ReactNode[] {
         <Link
           key={`rt-${key++}`}
           href={match[3]}
-          className="text-secondary font-semibold hover:underline"
+          className="text-[#1B4D8E] font-semibold underline underline-offset-2 hover:opacity-70"
         >
           {match[2]}
         </Link>

@@ -139,20 +139,20 @@ export default async function BlogListPage({ params }: BlogListProps) {
       />
 
       <section
-        className="w-full bg-white py-10 sm:py-14 scroll-mt-28"
+        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
         aria-label="Blog posts"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="flex flex-wrap gap-2 mb-8" role="navigation" aria-label="Categories">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="flex flex-wrap gap-2 mb-6" role="navigation" aria-label="Categories">
             {["All", ...getCategories()].map((cat) => (
               <Link
                 key={cat}
                 href={pageHref(1, cat)}
                 aria-current={activeCat === cat ? "page" : undefined}
-                className={`px-4 py-2 font-label-md text-label-md font-semibold transition-colors ${
+                className={`px-3 py-1.5 text-sm font-semibold transition-colors ${
                   activeCat === cat
-                    ? "bg-ink text-white"
-                    : "bg-paper-deep text-ink hover:bg-ink/10"
+                    ? "bg-neutral-950 text-white"
+                    : "bg-neutral-100 text-neutral-950 hover:bg-neutral-200"
                 }`}
               >
                 {cat}
@@ -163,24 +163,24 @@ export default async function BlogListPage({ params }: BlogListProps) {
           {showFeatured && featured && (
             <Link
               href={`/${featured.slug}`}
-              className="group grid grid-cols-1 lg:grid-cols-2 gap-0 mb-8 overflow-hidden border border-ink/15 bg-paper focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+              className="group grid grid-cols-1 lg:grid-cols-2 mb-5 overflow-hidden border border-neutral-200 bg-white transition-colors hover:border-neutral-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
             >
-              <div className="p-6 sm:p-10 flex flex-col justify-center gap-4">
-                <span className="kicker text-primary">Latest</span>
-                <h2 className="font-display-serif text-3xl sm:text-4xl text-ink m-0 leading-tight group-hover:text-primary transition-colors">
+              <div className="p-5 sm:p-8 flex flex-col justify-center gap-3">
+                <span className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E]">Latest</span>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 leading-tight group-hover:text-[#1B4D8E] transition-colors">
                   {featured.title}
                 </h2>
-                <p className="font-body-md text-body-md text-ink-soft leading-relaxed m-0 line-clamp-3">
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0 line-clamp-3">
                   {featured.description}
                 </p>
                 <time
                   dateTime={featured.datePublished}
-                  className="font-label-sm text-label-sm font-semibold text-secondary"
+                  className="text-xs font-semibold text-neutral-700"
                 >
                   {featured.dateLabel}
                 </time>
               </div>
-              <div className="relative w-full min-h-64 lg:min-h-full overflow-hidden bg-paper-deep">
+              <div className="relative w-full h-56 sm:h-64 lg:h-auto lg:min-h-64 overflow-hidden bg-neutral-200">
                 {featured.image && (
                   <Image
                     src={featured.image.src}
@@ -194,7 +194,7 @@ export default async function BlogListPage({ params }: BlogListProps) {
             </Link>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {gridPosts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}
@@ -202,24 +202,24 @@ export default async function BlogListPage({ params }: BlogListProps) {
 
           {pageCount > 1 && (
             <nav
-              className="mt-10 flex items-center justify-center gap-3"
+              className="mt-8 flex items-center justify-center gap-3"
               aria-label="Blog pages"
             >
               {page > 1 && (
                 <Link
                   href={pageHref(page - 1, activeCat)}
-                  className="px-5 py-2.5 border border-ink/15 font-label-md text-label-md font-bold text-ink hover:bg-paper-deep transition-colors"
+                  className="px-4 py-2 border border-neutral-300 text-sm font-semibold text-neutral-950 hover:bg-neutral-100 transition-colors"
                 >
                   Newer
                 </Link>
               )}
-              <span className="font-label-md text-label-md text-ink-soft">
+              <span className="text-sm text-neutral-600">
                 Page {page} of {pageCount}
               </span>
               {page < pageCount && (
                 <Link
                   href={pageHref(page + 1, activeCat)}
-                  className="px-5 py-2.5 border border-ink/15 font-label-md text-label-md font-bold text-ink hover:bg-paper-deep transition-colors"
+                  className="px-4 py-2 border border-neutral-300 text-sm font-semibold text-neutral-950 hover:bg-neutral-100 transition-colors"
                 >
                   Older
                 </Link>

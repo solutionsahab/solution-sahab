@@ -5,9 +5,13 @@ import React from "react";
 import { useBookingForm } from "@/lib/state/booking-state";
 import { CONTACT_INFO } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
+import { ThankYouMark } from "@/components/common/ThankYouMark";
+import { PRODUCT_OPTIONS } from "@/lib/leads";
 
 export interface BookingSectionProps {
   leadSource?: string;
+  /** Preselected product on a product page; the visitor can still change it */
+  product?: string;
   title?: string;
   description?: string;
   id?: string;
@@ -15,6 +19,7 @@ export interface BookingSectionProps {
 
 export function BookingSection({
   leadSource = "Homepage Consultation",
+  product = "",
   title = "Schedule a Site Measurement",
   description = "Our technician visits with physical material swatches and samples, measures your doors, windows, or balconies with a precision laser meter, and quotes on the spot.",
   id = "quick-booking",
@@ -27,7 +32,7 @@ export function BookingSection({
     updateField,
     handleSubmit,
     resetForm,
-  } = useBookingForm(leadSource);
+  } = useBookingForm(leadSource, product);
 
   return (
     <section
@@ -61,16 +66,23 @@ export function BookingSection({
                 id="booking-success"
                 role="alert"
               >
+                <ThankYouMark className="mb-5" />
                 <p className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] m-0 mb-2">
                   Request Confirmed
                 </p>
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-gilroy text-neutral-950 m-0">
-                  Thank you, {formData.fullName || "Customer"}.
+                  Thank you for choosing us{formData.fullName ? `, ${formData.fullName}` : ""}.
                 </h3>
                 <p className="text-sm sm:text-base text-neutral-950 mt-3 mb-0">
                   Mobile: {formData.phone}
                   <br />
                   Address: {formData.address}
+                  {formData.product && (
+                    <>
+                      <br />
+                      Product: {formData.product}
+                    </>
+                  )}
                 </p>
                 <p className="text-sm sm:text-base text-neutral-600 mt-3 mb-8 max-w-md leading-relaxed">
                   Our Delhi NCR coordinator will contact you shortly to confirm your measurement schedule.
@@ -152,6 +164,26 @@ export function BookingSection({
                       </p>
                     )}
                   </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="booking-product"
+                    className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
+                  >
+                    Product
+                  </label>
+                  <select
+                    id="booking-product"
+                    value={formData.product}
+                    onChange={(e) => updateField("product", e.target.value)}
+                    className="w-full h-12 px-4 bg-[#F7F6F2] border border-neutral-300 focus:border-neutral-950 text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
+                  >
+                    <option value="">Select a product (optional)</option>
+                    {PRODUCT_OPTIONS.map((p) => (
+                      <option key={p} value={p}>{p}</option>
+                    ))}
+                  </select>
                 </div>
 
                 <div>

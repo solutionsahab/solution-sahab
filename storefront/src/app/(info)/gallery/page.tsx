@@ -36,28 +36,28 @@ export default function GalleryPage() {
       />
 
       <section
-        className="w-full bg-white py-14 sm:py-20 scroll-mt-28"
+        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
         aria-label="Solution Sahab project photos"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <ImageGrid images={GALLERY_IMAGES} ratio="landscape" columns={4} />
         </div>
       </section>
 
       <section
-        className="w-full bg-paper py-14 sm:py-16"
+        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300"
         aria-labelledby="follow-heading"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="border border-ink/10 bg-white p-6 sm:p-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="border border-neutral-300 bg-white p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="max-w-2xl">
               <h2
                 id="follow-heading"
-                className="font-headline-xl text-headline-xl text-ink m-0"
+                className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
               >
                 Follow us
               </h2>
-              <p className="font-body-md text-body-md text-ink-soft leading-relaxed mt-3 mb-0">
+              <p className="text-sm text-neutral-600 leading-relaxed mt-2 mb-0">
                 More installation photos and project updates are shared on our
                 Instagram profile.
               </p>

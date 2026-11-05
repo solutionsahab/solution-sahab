@@ -2,12 +2,14 @@
 
 // File: src/components/common/ContactForm.tsx
 import { Button } from "@/components/ui/Button";
+import { ThankYouMark } from "@/components/common/ThankYouMark";
 import Link from "next/link";
 import { useBookingForm } from "@/lib/state/booking-state";
 import { CONTACT_INFO } from "@/lib/constants";
+import { PRODUCT_OPTIONS } from "@/lib/leads";
 
 const INPUT_CLASS =
-  "w-full px-3.5 py-3 min-h-11 bg-paper text-ink font-body-md text-body-md border border-ink/10 focus:outline-none focus:ring-2 focus:ring-secondary";
+  "w-full px-3 py-2.5 min-h-11 bg-white text-neutral-950 text-base border border-neutral-300 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#1B4D8E]";
 
 export function ContactForm() {
   const { formData, status, errors, updateField, handleSubmit, resetForm } =
@@ -15,27 +17,26 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="p-6 bg-paper-deep text-primary font-label-md text-label-md flex flex-col items-center text-center gap-4 border border-primary/20">
-        <div className="w-14 h-14 rounded-full bg-blue-100 text-primary flex items-center justify-center">
-          <span
-            className="material-symbols-outlined text-[32px]"
-            aria-hidden="true"
-          >
-            task_alt
-          </span>
-        </div>
-        <h3 className="font-headline-sm text-headline-sm font-bold text-ink m-0">
-          Enquiry Received!
+      <div className="p-5 bg-neutral-50 flex flex-col items-center text-center gap-3 border border-neutral-300">
+        <ThankYouMark className="mb-1" />
+        <h3 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
+          Thank you for choosing us
         </h3>
-        <p className="font-body-md text-body-md text-ink max-w-md m-0">
+        <p className="text-sm text-neutral-800 leading-relaxed max-w-md m-0">
           {formData.fullName}
           <br />
           Mobile: {formData.phone}
           <br />
           Address: {formData.address}
+          {formData.product && (
+            <>
+              <br />
+              Product: {formData.product}
+            </>
+          )}
         </p>
-        <p className="font-body-md text-body-md text-ink max-w-md m-0">
-          Thank you! Our team will call you shortly to discuss your requirement
+        <p className="text-sm text-neutral-800 leading-relaxed max-w-md m-0">
+          Our team will call you shortly to discuss your requirement
           and arrange a site visit.
         </p>
         <Button
@@ -52,10 +53,10 @@ export function ContactForm() {
   }
 
   return (
-    <form className="flex flex-col gap-4 sm:gap-5" onSubmit={handleSubmit} noValidate>
-      <div className="flex flex-col gap-1.5">
+    <form className="flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
+      <div className="flex flex-col gap-1">
         <label
-          className="font-label-sm text-label-sm font-bold text-ink"
+          className="text-sm font-semibold text-neutral-950"
           htmlFor="contact-name"
         >
           Name *
@@ -74,9 +75,9 @@ export function ContactForm() {
         {errors.fullName && <span className="text-red-600 text-xs">{errors.fullName}</span>}
       </div>
 
-      <div className="flex flex-col gap-1.5">
+      <div className="flex flex-col gap-1">
         <label
-          className="font-label-sm text-label-sm font-bold text-ink"
+          className="text-sm font-semibold text-neutral-950"
           htmlFor="contact-phone"
         >
           Phone number *
@@ -96,9 +97,30 @@ export function ContactForm() {
         {errors.phone && <span className="text-red-600 text-xs">{errors.phone}</span>}
       </div>
 
-      <div className="flex flex-col gap-1.5">
+      <div className="flex flex-col gap-1">
         <label
-          className="font-label-sm text-label-sm font-bold text-ink"
+          className="text-sm font-semibold text-neutral-950"
+          htmlFor="contact-product"
+        >
+          Product
+        </label>
+        <select
+          id="contact-product"
+          name="product"
+          className={INPUT_CLASS}
+          value={formData.product}
+          onChange={(e) => updateField("product", e.target.value)}
+        >
+          <option value="">Select a product (optional)</option>
+          {PRODUCT_OPTIONS.map((p) => (
+            <option key={p} value={p}>{p}</option>
+          ))}
+        </select>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <label
+          className="text-sm font-semibold text-neutral-950"
           htmlFor="contact-address"
         >
           Address *
@@ -120,7 +142,6 @@ export function ContactForm() {
           <span className="text-red-600 text-xs">{errors.address}</span>
         )}
       </div>
-
 
       <Button
         type="submit"
