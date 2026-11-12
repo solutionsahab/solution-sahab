@@ -62,7 +62,6 @@ export function StructuredData() {
       CONTACT_INFO.PHONE_ALT_1,
       CONTACT_INFO.PHONE_ALT_2,
       CONTACT_INFO.PHONE_ALT_3,
-      CONTACT_INFO.PHONE_ALT_4,
     ].map((telephone) => ({
       "@type": "ContactPoint",
       telephone,
