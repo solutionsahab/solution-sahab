@@ -1,3 +1,4 @@
+// File: storefront/src/lib/crm.test.ts
 // Run with: npm test
 import { test } from "node:test";
 import assert from "node:assert/strict";
@@ -23,18 +24,20 @@ test("sends the chosen product in Cratio's Product field", async () => {
   assert.deepEqual(await insertLead({ name: "A", phone: "9971143143", address: "x", product: "Skylight" }), { ok: true });
   assert.equal(sent.length, 1);
   assert.equal(sent[0].Product, "Skylight");
+  assert.equal(sent[0].Catagory, "");
 });
 
-test("saves the lead without Product when Cratio refuses the product value", async () => {
+test("saves the lead without Product and Catagory when Cratio refuses them", async () => {
   const sent = fakeCratio([{ status: "error" }, { status: "success" }]);
   assert.deepEqual(await insertLead({ name: "A", phone: "9971143143", address: "x", product: "Other" }), { ok: true });
   assert.equal(sent.length, 2);
   assert.equal("Product" in sent[1], false);
+  assert.equal("Catagory" in sent[1], false);
 });
 
-test("no product: no Product field and no retry", async () => {
-  const sent = fakeCratio([{ status: "error" }]);
+test("no product: no Product field; fails only after the retry fails", async () => {
+  const sent = fakeCratio([{ status: "error" }, { status: "error" }]);
   assert.deepEqual(await insertLead({ name: "A", phone: "9971143143", address: "x" }), { ok: false });
-  assert.equal(sent.length, 1);
+  assert.equal(sent.length, 2);
   assert.equal("Product" in sent[0], false);
 });

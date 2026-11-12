@@ -35,6 +35,8 @@ export async function insertLead(lead: CrmLead): Promise<CrmResult> {
     "Created By": createdBy,
     "Assigned To": assignedTo,
     ...(lead.product ? { Product: lead.product } : {}),
+    // Sent empty so Cratio doesn't fill its default ("Invisible Grill"); spelled as in Cratio.
+    Catagory: "",
   };
 
   if (!apiKey) {
@@ -62,13 +64,10 @@ export async function insertLead(lead: CrmLead): Promise<CrmResult> {
   }).toString();
 
   if (await send(url, record)) return { ok: true };
-  // If Cratio refuses the Product value (e.g. not in its picklist), save the lead without it rather than lose it.
-  if (record.Product) {
-    const { Product, ...withoutProduct } = record;
-    console.error("[CRM] Retrying without Product:", Product);
-    if (await send(url, withoutProduct)) return { ok: true };
-  }
-  return { ok: false };
+  // If Cratio refuses Product or the empty Catagory, save the lead without them rather than lose it.
+  const { Product, Catagory, ...core } = record;
+  console.error("[CRM] Retrying without Product/Catagory:", Product, Catagory);
+  return { ok: await send(url, core) };
 }
 
 async function send(url: URL, record: Record<string, string | undefined>): Promise<boolean> {
