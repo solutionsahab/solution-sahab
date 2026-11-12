@@ -2,6 +2,36 @@
 import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blog";
 import { USE_CASE_PAGES } from "@/lib/use-case-pages";
+import { CITY_PAGES } from "@/lib/city-pages";
+import { PRODUCT_CONFIGS, type ProductPageConfig } from "@/lib/product-page-configs";
+
+const productImages = (c: ProductPageConfig) => [
+  c.hero.heroImage,
+  c.benefits.image,
+  ...c.applications.areas.map((a) => a.imageUrl),
+];
+
+// Google ties each photo to one page, so a photo is listed only under the first page that uses it:
+// products, then use-case pages, then city pages, then blog posts. A new city photo lands on its city page.
+function imageOwners(baseUrl: string): Map<string, string[]> {
+  const pages: [string, (string | undefined)[]][] = [
+    ...Object.values(PRODUCT_CONFIGS).map((c) => [c.metadata.canonical, productImages(c)] as [string, string[]]),
+    ...Object.values(USE_CASE_PAGES).map((c) => [c.metadata.canonical, productImages(c)] as [string, string[]]),
+    ...Object.values(CITY_PAGES).map((c) => [c.metadata.canonical, productImages(c)] as [string, string[]]),
+    ...BLOG_POSTS.map((p): [string, (string | undefined)[]] => [
+      `${baseUrl}/${p.slug}`,
+      [p.image?.src, ...(p.images ?? []).map((i) => i.src)],
+    ]),
+  ];
+  const claimed = new Set<string>();
+  const owners = new Map<string, string[]>();
+  for (const [url, srcs] of pages) {
+    const own = srcs.filter((s): s is string => !!s && !claimed.has(s));
+    own.forEach((s) => claimed.add(s));
+    if (own.length) owners.set(url, [...new Set(own)].map((s) => (s.startsWith("http") ? s : `${baseUrl}${s}`)));
+  }
+  return owners;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://solutionsahab.com";
@@ -108,5 +138,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...useCasePages, ...blogPosts];
+  // City landing pages are not linked from the site, so the sitemap is how Google finds them.
+  const cityPages: MetadataRoute.Sitemap = Object.values(CITY_PAGES).map((page) => ({
+    url: page.metadata.canonical,
+    lastModified: currentDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  const owners = imageOwners(baseUrl);
+  return [...staticPages, ...useCasePages, ...cityPages, ...blogPosts].map((entry) => {
+    const images = owners.get(entry.url);
+    return images ? { ...entry, images } : entry;
+  });
 }
