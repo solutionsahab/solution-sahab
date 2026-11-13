@@ -1,6 +1,9 @@
-// File: src/components/product/common/UseCasePageView.tsx
-// Shared layout for the /invisible-grills-for-<building> pages.
+// File: src/components/product/common/ProductPageView.tsx
+// Shared layout and metadata for every product page: /<product>, /invisible-grills-for-<building>
+// and the /<product>/<city> landing pages. Each page's differences live in its config.
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/common/FloatingWhatsApp";
@@ -12,9 +15,10 @@ import { ProductBenefitsSection } from "./ProductBenefitsSection";
 import { ProductTrustPillars } from "./ProductTrustPillars";
 import { ProductApplicationsSection } from "./ProductApplicationsSection";
 import { ProductStructuredData } from "./ProductStructuredData";
-import { USE_CASE_PARENT, type UseCasePageConfig } from "@/lib/use-case-pages";
+import type { ProductPageConfig } from "@/lib/product-page-configs";
+import { CITY_KEYS, CITY_PAGES } from "@/lib/city-pages";
 
-export function buildUseCaseMetadata(config: UseCasePageConfig): Metadata {
+export function buildProductMetadata(config: ProductPageConfig): Metadata {
   return {
     title: config.metadata.title,
     description: config.metadata.description,
@@ -47,34 +51,33 @@ export function buildUseCaseMetadata(config: UseCasePageConfig): Metadata {
   };
 }
 
-export function UseCasePageView({ config }: { config: UseCasePageConfig }) {
+/** children: extra sections shown between applications and the FAQ */
+export function ProductPageView({ config, children }: { config: ProductPageConfig; children?: ReactNode }) {
   return (
     <>
       <ProductStructuredData
         productName={config.structuredData.productName}
-        serviceName="Invisible Grills"
+        serviceName={config.serviceName ?? config.hero.productName}
         description={config.structuredData.description}
         image={config.structuredData.image}
         material={config.structuredData.material}
         slug={config.slug}
         faqs={config.faqs}
-        parentCrumb={USE_CASE_PARENT}
+        parentCrumb={config.hero.parentCrumb}
+        areaServed={config.areaServed}
       />
-      <Header />
+      <Header serviceArea={config.areaServed?.[0]} />
       <main id="main-content" className="w-full pt-[87px] sm:pt-[108px] bg-white min-h-screen">
         <ProductHeroSection {...config.hero} />
         <ProductOverviewSection {...config.overview} />
         <ProductBenefitsSection {...config.benefits} />
         {config.trustPillars && <ProductTrustPillars {...config.trustPillars} />}
         <ProductApplicationsSection {...config.applications} />
-        <FaqSection
-          items={config.faqs}
-          title="Common Questions"
-          description="Clear answers on safety, evacuation, installation and warranty across Delhi NCR."
-        />
+        {children}
+        <FaqSection items={config.faqs} title="Common Questions" description={config.faqDescription} />
         <BookingSection
           leadSource={config.leadSource}
-          product="Invisible Grills"
+          product={config.formProduct}
           title={config.bookingTitle}
           description={config.bookingDescription}
         />
@@ -84,4 +87,25 @@ export function UseCasePageView({ config }: { config: UseCasePageConfig }) {
       <Footer />
     </>
   );
+}
+
+interface CityRouteProps {
+  params: Promise<{ city: string }>;
+}
+
+/** Route exports for /<product>/[city]. Each route file still declares dynamicParams itself. */
+export function cityRoute(product: string) {
+  const find = async ({ params }: CityRouteProps) => CITY_PAGES[`${product}/${(await params).city}`];
+  return {
+    generateStaticParams: () => CITY_KEYS.map((city) => ({ city })),
+    generateMetadata: async (props: CityRouteProps): Promise<Metadata> => {
+      const config = await find(props);
+      return config ? buildProductMetadata(config) : {};
+    },
+    Page: async function CityPage(props: CityRouteProps) {
+      const config = await find(props);
+      if (!config) notFound();
+      return <ProductPageView config={config} />;
+    },
+  };
 }

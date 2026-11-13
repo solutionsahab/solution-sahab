@@ -9,7 +9,8 @@ import { useNavState } from "@/lib/state/nav-state";
 import { ASSETS, CONTACT_INFO } from "@/lib/constants";
 import { INVISIBLE_GRILL_USE_CASE_LINKS as USE_CASE_NAV } from "@/lib/site-links";
 
-export function Header() {
+/** serviceArea: shown in the top bar; city landing pages pass their city */
+export function Header({ serviceArea = "Delhi NCR" }: { serviceArea?: string }) {
   const {
     isMobileMenuOpen,
     openDropdown,
@@ -38,7 +39,7 @@ export function Header() {
       {/* Top Notification Bar */}
       <div className="bg-inverse-surface text-inverse-on-surface py-1 sm:py-1.5 px-3 sm:px-4 text-center border-b border-inverse-surface/10 shadow-[0_1px_4px_rgba(0,0,0,0.05)]">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 font-caption-caps text-[10px] sm:text-caption-caps tracking-wider uppercase">
-          <span>Site visit across Delhi NCR</span>
+          <span>Site visit across {serviceArea}</span>
           <span className="opacity-40" aria-hidden="true">
             |
           </span>

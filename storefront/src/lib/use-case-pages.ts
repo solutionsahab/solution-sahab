@@ -20,11 +20,17 @@ export const USE_CASE_PARENT = {
   href: "/invisible-grills",
 };
 
+const USE_CASE_FAQ_DESCRIPTION =
+  "Clear answers on safety, evacuation, installation and warranty across Delhi NCR.";
+
 export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
   schools: {
     slug: "invisible-grills-for-schools",
     navLabel: "For Schools",
     leadSource: "Invisible Grills - Schools Page",
+    formProduct: "Invisible Grills",
+    serviceName: "Invisible Grills",
+    faqDescription: USE_CASE_FAQ_DESCRIPTION,
     card: {
       desc: "Fall protection for classroom windows, corridors, staircases and terraces, without making the campus look like a cage.",
       imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
@@ -209,6 +215,9 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
     slug: "invisible-grills-for-hospitals",
     navLabel: "For Hospitals",
     leadSource: "Invisible Grills - Hospitals Page",
+    formProduct: "Invisible Grills",
+    serviceName: "Invisible Grills",
+    faqDescription: USE_CASE_FAQ_DESCRIPTION,
     card: {
       desc: "Discreet fall prevention for patient-room windows, wards, stairwells and atriums that keeps healing spaces bright and calm.",
       imageUrl: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,

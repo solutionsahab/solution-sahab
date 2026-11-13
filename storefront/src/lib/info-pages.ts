@@ -287,10 +287,9 @@ export interface ContactPhone {
 export const CONTACT_DATA = {
   phones: [
     { label: "+91 9971-143-143", raw: "+919971143143", primary: true },
-    { label: "+91 9311-559-977", raw: "+919311559977" },
-    { label: "+91 9953-500-964", raw: "+919953500964" },
+    { label: "+91 9999-277-255", raw: "+919999277255" },
     { label: "+91 9990-381-116", raw: "+919990381116" },
-    { label: "011-44764933", raw: "01144764933", landline: true },
+    { label: "+91 9311-559-977", raw: "+919311559977" },
   ] as ContactPhone[],
   email: "solutionsahab@gmail.com",
   locations: [

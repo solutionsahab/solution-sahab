@@ -15,6 +15,8 @@ export interface ProductStructuredDataProps {
   faqs?: FaqItem[];
   /** Parent page added to the breadcrumb trail, e.g. the main product page */
   parentCrumb?: { label: string; href: string };
+  /** Cities in areaServed; defaults to the Delhi NCR list */
+  areaServed?: readonly string[];
 }
 
 export function ProductStructuredData({
@@ -26,6 +28,7 @@ export function ProductStructuredData({
   slug,
   faqs,
   parentCrumb,
+  areaServed = CONTACT_INFO.SERVED_CITIES,
 }: ProductStructuredDataProps) {
   const productUrl = `https://solutionsahab.com/${slug.replace(/^\//, "")}`;
 
@@ -47,7 +50,7 @@ export function ProductStructuredData({
       url: "https://solutionsahab.com",
       telephone: CONTACT_INFO.PHONE_PRIMARY,
     },
-    areaServed: CONTACT_INFO.SERVED_CITIES.map((city: string) => ({
+    areaServed: areaServed.map((city) => ({
       "@type": "City",
       name: city,
     })),

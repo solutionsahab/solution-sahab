@@ -13,6 +13,13 @@ import {
 export interface ProductPageConfig {
   slug: string;
   leadSource: string;
+  /** Product preselected on the booking form, from PRODUCT_OPTIONS; sent to Cratio */
+  formProduct: string;
+  faqDescription: string;
+  /** serviceType in structured data; defaults to hero.productName */
+  serviceName?: string;
+  /** Cities in structured data areaServed; defaults to the Delhi NCR list */
+  areaServed?: string[];
   metadata: {
     title: string;
     description: string;
@@ -68,6 +75,8 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
   "invisible-grills": {
     slug: "invisible-grills",
     leadSource: "Invisible Grills Product Page",
+    formProduct: "Invisible Grills",
+    faqDescription: "Clear answers on safety, RWA approval, warranty, and installation across Delhi NCR.",
     metadata: {
       title: "Invisible Grills Installation in Delhi – Solution Sahab",
       description:
@@ -261,6 +270,8 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
   "pleated-mesh": {
     slug: "pleated-mesh",
     leadSource: "Pleated Mosquito Mesh Product Page",
+    formProduct: "Pleated Mesh",
+    faqDescription: "Clear answers on pleated mosquito mesh materials, durability, daily cleaning, and installation.",
     metadata: {
       title: "Pleated Mosquito Mesh in Delhi NCR – Solution Sahab",
       description:
@@ -454,6 +465,8 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
   "aluminum-mesh-partition": {
     slug: "aluminum-mesh-partition",
     leadSource: "Aluminum Security Mesh Product Page",
+    formProduct: "Aluminum Mesh & Partition",
+    faqDescription: "Clear answers on aluminum security mesh strength, lock hardware, and installation.",
     metadata: {
       title: "Aluminum Security Mesh in Delhi NCR – Solution Sahab",
       description:
@@ -569,13 +582,14 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Guarantee" },
     //   ],
     // },
-    trustPillars: {
-      title: "Why Choose Solution Sahab for Aluminum Mesh?",
-      subtitle:
-        "Heavy-duty materials, precision CNC manufacturing, and professional in-house installation across Delhi NCR.",
-      pillars: COMMON_TRUST_PILLARS,
-      showCertificates: true,
-    },
+    // Hidden on the page, like the other products' pillars.
+    // trustPillars: {
+    //   title: "Why Choose Solution Sahab for Aluminum Mesh?",
+    //   subtitle:
+    //     "Heavy-duty materials, precision CNC manufacturing, and professional in-house installation across Delhi NCR.",
+    //   pillars: COMMON_TRUST_PILLARS,
+    //   showCertificates: true,
+    // },
     applications: {
       title: "Where Can You Install Aluminum Mesh & Partitions?",
       subtitle:
@@ -647,6 +661,8 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
   "honeycomb-partition": {
     slug: "honeycomb-partition",
     leadSource: "Honeycomb Partition Product Page",
+    formProduct: "Honeycomb Partition",
+    faqDescription: "Clear answers on honeycomb cellular insulation, light control, the Duet 2-in-1 system, and maintenance.",
     metadata: {
       title: "Honeycomb Partition & Blinds in Delhi NCR – Solution Sahab",
       description:
@@ -840,6 +856,8 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
   "automatic-weather-screen": {
     slug: "automatic-weather-screen",
     leadSource: "Automatic Weather Screen Product Page",
+    formProduct: "Automatic Weather Screen",
+    faqDescription: "Clear answers on automatic weather screen wind ratings, motor controls, solar heat protection, and installation.",
     metadata: {
       title: "Weather Screens & Zip Blinds in Delhi NCR – Solution Sahab",
       description:
@@ -1033,6 +1051,8 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
   "skylight": {
     slug: "skylight",
     leadSource: "Architectural Glass Skylight Product Page",
+    formProduct: "Skylight",
+    faqDescription: "Clear answers on glass skylight thermal insulation, leak-proof waterproofing, safety glass strength, and maintenance.",
     metadata: {
       title: "Glass Skylight Installation in Delhi NCR – Solution Sahab",
       description:
@@ -1226,6 +1246,8 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
   "ceiling-cloth-hanger": {
     slug: "ceiling-cloth-hanger",
     leadSource: "Ceiling Cloth Hanger Product Page",
+    formProduct: "Ceiling Cloth Hanger",
+    faqDescription: "Clear answers on ceiling drying hanger load capacity, SS-304 rust resistance, pulley glide, and installation.",
     metadata: {
       title: "Ceiling Cloth Hanger in Delhi NCR – Solution Sahab",
       description:
