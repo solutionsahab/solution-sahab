@@ -40,7 +40,7 @@ export const PRODUCT_LINKS: RelatedLink[] = [
     label: "Skylight",
     href: "/skylight",
     description:
-      "Precision architectural glass skylights for stairwells and luxury residential volumes.",
+      "Precision glass skylights for stairwells and luxury residential volumes.",
   },
   {
     label: "Ceiling Cloth Hanger",

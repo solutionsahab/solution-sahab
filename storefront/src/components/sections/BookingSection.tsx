@@ -108,6 +108,9 @@ export function BookingSection({
               <form
                 className="space-y-6"
                 id="booking-form"
+                // WebMCP: in-browser AI agents can fill this form; no auto-submit, the visitor still clicks the button.
+                toolname="book_site_visit"
+                tooldescription="Request a free site measurement visit from Solution Sahab. Needs the visitor's name, 10-digit Indian mobile number and full address; product is optional."
                 onSubmit={handleSubmit}
                 noValidate
               >
@@ -121,6 +124,7 @@ export function BookingSection({
                     </label>
                     <input
                       id="full-name"
+                      name="fullName"
                       type="text"
                       required
                       placeholder="Your full name"
@@ -147,6 +151,7 @@ export function BookingSection({
                     </label>
                     <input
                       id="phone-number"
+                      name="phone"
                       type="tel"
                       inputMode="tel"
                       required
@@ -175,6 +180,7 @@ export function BookingSection({
                   </label>
                   <select
                     id="booking-product"
+                    name="product"
                     value={formData.product}
                     onChange={(e) => updateField("product", e.target.value)}
                     className="w-full h-12 px-4 bg-[#F7F6F2] border border-neutral-300 focus:border-neutral-950 text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
@@ -195,6 +201,7 @@ export function BookingSection({
                   </label>
                   <textarea
                     id="booking-address"
+                    name="address"
                     required
                     rows={3}
                     placeholder="House / flat no., building or society name, street, area, city"

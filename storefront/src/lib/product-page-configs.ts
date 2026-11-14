@@ -189,7 +189,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     //     { label: "Cable Pitch Options", val: "50 mm (2\") Child-Safe / 75 mm (3\") Standard" },
     //     { label: "Substrate Anchoring", val: "Hilti / Fischer Stainless Mechanical Expansion Bolts" },
     //     { label: "Emergency Evacuation", val: "Cuts with wire shears in under 15 seconds" },
-    //     { label: "Written Warranty", val: "5-Year Guarantee" },
+    //     { label: "Written Warranty", val: "5-Year Warranty" },
     //   ],
     // },
     trustPillars: {
@@ -302,8 +302,8 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       badges: [
         "Jindal T6 Aluminum",
         "Tear-Resistant Mesh",
-        "German Kevlar Cords",
-        "5-Year Guarantee",
+        "Fresh Air",
+        "5-Year Warranty",
       ],
       heroImage: ASSETS.HERO_IMAGE_HOME_PLEATED_MESH,
       heroImageAlt: "Pleated Mosquito Mesh Installation in Delhi NCR by Solution Sahab",
@@ -384,7 +384,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     //     { label: "Magnetic Latching", val: "Full-Length Neodymium Magnetic Strip" },
     //     { label: "Surface Finish", val: "AkzoNobel Pure Polyester Powder Coat (White, Charcoal, Bronze, Black)" },
     //     { label: "Wind Resistance", val: "Tested against 60 km/h high-rise balcony gusts" },
-    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Guarantee" },
+    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Warranty" },
     //   ],
     // },
     // trustPillars: {
@@ -496,9 +496,9 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Heavy-duty architectural security mesh and partitions for main entrance doors, sliding balconies, and interior dividers. Enjoy knife-shear intruder security, complete pest defense, and fresh airflow in one elegant system.",
       badges: [
         "Jindal T6 Structural Alloy",
-        "Knife-Shear Resistant",
-        "Multi-Point Deadbolt",
-        "5-Year Guarantee",
+        "Keeps Mosquitoes Out",
+        "Child & Pet Safe",
+        "5-Year Warranty",
       ],
       heroImage: ASSETS.HERO_IMAGE_HOME_ALUMINUM_MESH,
       heroImageAlt: "Aluminum Security Mesh and Partition Installation by Solution Sahab",
@@ -579,7 +579,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     //     { label: "Partition Infill Options", val: "Security Mesh, Toughened Glass, Acoustic Acrylic / Fluted Polycarbonate" },
     //     { label: "Surface Finish", val: "AkzoNobel Pure Polyester Powder Coat (Charcoal, Bronze, White, Black)" },
     //     { label: "Pest Defense", val: "100% Mosquito, Rodent, Lizard, and Flying Insect Block" },
-    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Guarantee" },
+    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Warranty" },
     //   ],
     // },
     // Hidden on the page, like the other products' pillars.
@@ -691,10 +691,10 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       tagline:
         "Retractable honeycomb cellular room dividers, thermal insulation blinds, and 2-in-1 Duet mesh systems. Subdivide living zones, block blistering summer heat, and gain instant acoustic privacy without permanent walls.",
       badges: [
-        "Cellular Air Pockets",
+        "Noise Reduction",
         "Up to 30% AC Savings",
         "2-in-1 Duet System",
-        "5-Year Guarantee",
+        "5-Year Warranty",
       ],
       heroImage: ASSETS.HERO_IMAGE_HOME_HONEYCOMB,
       heroImageAlt: "Honeycomb Partition and Blinds Installation by Solution Sahab",
@@ -775,7 +775,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     //     { label: "Internal Tension Cords", val: "High-Tensile German Kevlar Guide System" },
     //     { label: "Floor Guide Profile", val: "3 mm Ultra-Low Barrier-Free Track" },
     //     { label: "Surface Finish", val: "AkzoNobel Pure Polyester Powder Coat (Charcoal, Bronze, White, Black)" },
-    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Guarantee" },
+    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Warranty" },
     //   ],
     // },
     // trustPillars: {
@@ -886,10 +886,10 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       tagline:
         "Motorized outdoor zip screens and high-wind weather protection blinds. Shield balconies, pergolas, and outdoor patios from driving monsoon rain, blistering solar heat, and heavy Delhi dust storms at the touch of a button.",
       badges: [
-        "Somfy / Dooya Motors",
-        "80 km/h Wind Rated",
-        "Blocks 90% Heat",
-        "5-Year Guarantee",
+        "Motorized & Remote Operated",
+        "Blocks Heat, Wind & Dust",
+        "Privacy with Ventilation",
+        "5-Year Warranty",
       ],
       heroImage: ASSETS.HERO_IMAGE_HOME_WEATHER_SCREEN,
       heroImageAlt: "Automatic Weather Screen Installation by Solution Sahab",
@@ -970,7 +970,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     //     { label: "Rain & Weatherproofing", val: "Hydrophobic water-repellent surface shields against driving monsoon splatters" },
     //     { label: "Headbox Cassette", val: "Fully enclosed 100mm / 120mm architectural aluminum protective housing" },
     //     { label: "Surface Finish", val: "AkzoNobel Pure Polyester Powder Coat (Anthracite, Charcoal, Bronze, White)" },
-    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Guarantee" },
+    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Warranty" },
     //   ],
     // },
     // trustPillars: {
@@ -1050,7 +1050,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
 
   "skylight": {
     slug: "skylight",
-    leadSource: "Architectural Glass Skylight Product Page",
+    leadSource: "Glass Skylight Product Page",
     formProduct: "Skylight",
     faqDescription: "Clear answers on glass skylight thermal insulation, leak-proof waterproofing, safety glass strength, and maintenance.",
     metadata: {
@@ -1069,14 +1069,14 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       ogImage: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
     },
     structuredData: {
-      productName: "Architectural Glass Skylights & Terrace Roof Glazing",
+      productName: "Glass Skylights & Terrace Roof Glazing",
       description:
         "Custom laminated safety glass roof skylights, stairwell glass domes, and terrace roof glazing systems across Delhi NCR.",
       image: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
       material: "13.52mm Laminated Toughened Safety Glass & Jindal T6 Aluminum",
     },
     hero: {
-      productName: "Architectural Glass Skylights",
+      productName: "Glass Skylights",
       brandTag: "Solution Sahab | Delhi NCR",
       tagline:
         "Custom engineered laminated safety glass roof skylights and stairwell glazing. Flood internal duplex cores, staircases, and living areas with natural daylight with 100% monsoon leak-proof reliability and Low-E solar heat control.",
@@ -1084,17 +1084,17 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "13.52mm Laminated Glass",
         "Low-E Heat Control",
         "100% Leak-Proof EPDM",
-        "5-Year Guarantee",
+        "5-Year Warranty",
       ],
       heroImage: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
-      heroImageAlt: "Architectural Glass Skylight Installation by Solution Sahab",
+      heroImageAlt: "Glass Skylight Installation by Solution Sahab",
       breadcrumbName: "Glass Skylights",
       bookingTargetId: "#booking-form",
     },
     overview: {
-      title: "What Is an Architectural Glass Skylight?",
+      title: "What Is a Glass Skylight?",
       leadParagraph:
-        "An Architectural Glass Skylight is an engineered roof glazing system designed to flood dark residential interiors, stairwells, and central courtyards with rich, natural daylight. It turns gloomy indoor corridors into bright, uplifting living spaces without sacrificing structural thermal insulation.",
+        "A Glass Skylight is an engineered roof glazing system designed to flood dark residential interiors, stairwells, and central courtyards with rich, natural daylight. It turns gloomy indoor corridors into bright, uplifting living spaces without sacrificing structural thermal insulation.",
       secondaryParagraph:
         "Unlike cheap DIY acrylic domes that turn yellow and crack under Delhi’s blistering summer sun, Solution Sahab skylights utilize Low-E laminated toughened safety glass anchored inside heavy-gauge Jindal T6 aluminum or galvanized steel subframes with multi-lip EPDM drainage gaskets for 100% leak-proof reliability.",
       bullets: [
@@ -1123,7 +1123,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
       subtitle:
         "Corrugated sheets leak, plastic domes yellow, and uninsulated glass overheats interiors. Our architectural skylights combine safety glass with engineered monsoon drainage and thermal reflection.",
       image: ASSETS.GALLERY.GURGAON_HIGHRISE,
-      imageAlt: "Luxury home with installed architectural glass skylight",
+      imageAlt: "Luxury home with installed glass skylight",
       benefits: [
         {
           title: "Low-E Solar Heat & UV Radiation Rejection",
@@ -1165,7 +1165,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     //     { label: "Safety Standard", val: "Certified to IS 2553 (Part 1) and EN 12600 Class 1(B)1 Impact Resistance" },
     //     { label: "Ventilation Option", val: "Fixed Glazing or Motorized Linear Actuator Opening Sash (Optional)" },
     //     { label: "Surface Finish", val: "AkzoNobel Pure Polyester Powder Coat (Anthracite, Charcoal, Black, White)" },
-    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Leak-Proof Guarantee" },
+    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Leak-Proof Warranty" },
     //   ],
     // },
     // trustPillars: {
@@ -1184,7 +1184,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
           title: "Staircase Voids & Duplex Cores",
           desc: "Channels vertical cascades of natural daylight straight down multi-story villas and duplexes, eliminating gloomy dark corridors.",
           imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-          alt: "Architectural glass skylight installed above staircase void",
+          alt: "Glass skylight installed above staircase void",
         },
         {
           title: "Rooftop Terraces & Penthouses",
@@ -1279,7 +1279,6 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "SS-304 Stainless Steel",
         "30 kg Load Capacity",
         "Individual Pulley Control",
-        "5-Year Guarantee",
       ],
       heroImage: ASSETS.PRODUCTS.CEILING_CLOTH_HANGER,
       heroImageAlt: "Ceiling Cloth Hanger Installation by Solution Sahab",
@@ -1326,7 +1325,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
             "Engineered with thick-wall SS-304 pipes that easily hold heavy wet jeans, double bedsheets, and winter quilts simultaneously without sagging.",
         },
         {
-          title: "100% Rust-Proof SS-304 Guarantee",
+          title: "100% Rust-Proof SS-304 Warranty",
           description:
             "Made exclusively with genuine Grade 304 stainless steel pipes that will never rust or leave orange stains on your pristine white clothes.",
         },
@@ -1360,7 +1359,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     //     { label: "Wall Tie-Off Cleat", val: "Heavy-Duty Powder-Coated Dual Locking Tie-Down Plate" },
     //     { label: "Load Capacity", val: "5 kg per individual pipe (Total 25 kg to 30 kg wet laundry capacity)" },
     //     { label: "Mounting Anchors", val: "Rust-Resistant Stainless Steel Concrete Ceiling Expansion Bolts" },
-    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Guarantee" },
+    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Warranty" },
     //   ],
     // },
     // trustPillars: {
@@ -1412,7 +1411,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         id: 2,
         question: "Will the pipes rust or leave orange stains on wet white clothes?",
         answer:
-          "Never. We exclusively use genuine Stainless Steel 304 seamless pipes. Unlike cheaper chrome-plated iron rods that develop corrosion spots after exposure to moisture, SS-304 is 100% rust-proof and guaranteed never to stain your clothes.",
+          "Never. We exclusively use genuine Stainless Steel 304 seamless pipes. Unlike cheaper chrome-plated iron rods that develop corrosion spots after exposure to moisture, SS-304 is 100% rust-proof and will never stain your clothes.",
       },
       {
         id: 3,
