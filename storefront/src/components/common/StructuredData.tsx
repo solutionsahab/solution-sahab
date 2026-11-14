@@ -1,13 +1,14 @@
 // File: src/components/common/StructuredData.tsx
 import React from "react";
 import { ASSETS, CONTACT_INFO } from "@/lib/constants";
+import { PRODUCT_LINKS } from "@/lib/site-links";
 
 export const BUSINESS_ID = "https://solutionsahab.com/#business";
 
 export function StructuredData() {
   const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    // LocalBusiness listed too: some parsers don't map the subtype to LocalBusiness/Organization.
+    "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
     "@id": BUSINESS_ID,
     name: "Solution Sahab",
     alternateName: "Solution Sahab",
@@ -75,6 +76,35 @@ export function StructuredData() {
       CONTACT_INFO.YOUTUBE_URL,
       CONTACT_INFO.WHATSAPP_URL,
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Solution Sahab products and installation",
+      itemListElement: PRODUCT_LINKS.map((p) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: p.label,
+          description: p.description,
+          url: `https://solutionsahab.com${p.href}`,
+          provider: { "@id": BUSINESS_ID },
+        },
+      })),
+    },
+  };
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      localBusinessSchema,
+      {
+        "@type": "WebSite",
+        "@id": "https://solutionsahab.com/#website",
+        name: "Solution Sahab",
+        url: "https://solutionsahab.com",
+        inLanguage: "en-IN",
+        publisher: { "@id": BUSINESS_ID },
+      },
+    ],
   };
 
   return (
@@ -82,7 +112,7 @@ export function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
+          __html: JSON.stringify(schema),
         }}
       />
     </>
