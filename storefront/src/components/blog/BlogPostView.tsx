@@ -8,6 +8,7 @@ import { BlogCard } from "@/components/blog/BlogCard";
 import { renderRichText } from "@/components/common/RichText";
 import { SITE } from "@/lib/seo";
 import { CONTACT_INFO } from "@/lib/constants";
+import { Carousel } from "@/components/common/Carousel";
 import {
   getReadingMinutes,
   getRelatedProductLink,
@@ -279,7 +280,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
               </Link>
             </div>
             {/* One-row swipe carousel (CSS scroll-snap), same as the homepage gallery */}
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <Carousel label="Related notes" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {relatedPosts.map((related) => (
                 <div
                   key={related.slug}
@@ -288,7 +289,7 @@ export function BlogPostView({ post }: BlogPostViewProps) {
                   <BlogCard post={related} />
                 </div>
               ))}
-            </div>
+            </Carousel>
           </div>
         </section>
       )}

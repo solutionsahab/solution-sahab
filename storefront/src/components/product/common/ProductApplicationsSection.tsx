@@ -1,6 +1,7 @@
 // File: src/components/product/common/ProductApplicationsSection.tsx
 import React from "react";
 import Image from "next/image";
+import { Carousel } from "@/components/common/Carousel";
 
 export interface ApplicationAreaItem {
   title: string;
@@ -34,7 +35,7 @@ export function ProductApplicationsSection({
         </div>
 
         {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, desktop fits 4 */}
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Carousel label={title} className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {areas.map((area) => (
             <div
               key={area.title}
@@ -62,7 +63,7 @@ export function ProductApplicationsSection({
               </div>
             </div>
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );

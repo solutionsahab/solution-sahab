@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { ASSETS, CONTACT_INFO } from "@/lib/constants";
+import { Carousel } from "@/components/common/Carousel";
 
 interface AudienceRow {
   index: string;
@@ -69,7 +70,7 @@ export function AudienceSection() {
         </h2>
 
         {/* One-row swipe carousel of cards (CSS scroll-snap): phones peek the next card, tablets show 2, desktop fits 3 */}
-        <div className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Carousel label="Who we serve" className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {AUDIENCES.map((item) => (
             <div
               key={item.index}
@@ -112,7 +113,7 @@ export function AudienceSection() {
               </div>
             </div>
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );

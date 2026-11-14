@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ASSETS } from "@/lib/constants";
+import { Carousel } from "@/components/common/Carousel";
 
 interface ProjectItem {
   src: string;
@@ -79,7 +80,7 @@ export function ProjectGallerySection() {
         </div>
 
         {/* One-row swipe carousel (CSS scroll-snap): phones peek the next photo, desktop shows 4 */}
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Carousel label="Recent completed sites" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {PROJECTS.map((item) => (
             <div
               key={item.title}
@@ -103,7 +104,7 @@ export function ProjectGallerySection() {
               </p>
             </div>
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );

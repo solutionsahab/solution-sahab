@@ -9,6 +9,7 @@ import { CONTACT_DATA } from "@/lib/info-pages";
 import { CONTACT_INFO } from "@/lib/constants";
 import { PRODUCT_LINKS } from "@/lib/site-links";
 import Link from "next/link";
+import { Carousel } from "@/components/common/Carousel";
 
 const DESCRIPTION =
   "Contact Solution Sahab for invisible grills, pleated mesh and honeycomb mesh. Call +91 9971-143-143 or send your details for a site visit across Delhi NCR.";
@@ -140,7 +141,7 @@ export default function ContactUsPage() {
           </div>
 
           {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, desktop shows all 4 */}
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <Carousel label="Our partners" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {CONTACT_DATA.partners.map((partner) => (
               <div
                 key={partner.city}
@@ -157,7 +158,7 @@ export default function ContactUsPage() {
                 </span>
               </div>
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 

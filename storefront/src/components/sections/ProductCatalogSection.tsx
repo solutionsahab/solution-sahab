@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ASSETS } from "@/lib/constants";
+import { Carousel } from "@/components/common/Carousel";
 
 interface ProductItem {
   title: string;
@@ -79,7 +80,7 @@ export function ProductCatalogSection() {
         </h2>
 
         {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, wide screens show 3-4 */}
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Carousel label="Our products" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {PRODUCTS.map((product) => (
             <article
               key={product.title}
@@ -127,7 +128,7 @@ export function ProductCatalogSection() {
               </div>
             </article>
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );
