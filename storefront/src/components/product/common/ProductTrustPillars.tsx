@@ -1,6 +1,7 @@
 // File: src/components/product/common/ProductTrustPillars.tsx
 import React from "react";
 import Image from "next/image";
+import { Carousel } from "@/components/common/Carousel";
 
 export interface TrustPillarItem {
   title: string;
@@ -80,7 +81,7 @@ export function ProductTrustPillars({
             </div>
 
             {/* Phones swipe through the certificates; wider screens show all 3 */}
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-3 sm:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <Carousel label="Test certificates" className="flex gap-4 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-3 sm:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {DEFAULT_CERTIFICATES.map((cert) => (
                 <div key={cert.title} className="shrink-0 snap-start w-[60%] sm:w-auto border border-neutral-200 bg-neutral-50 p-3">
                   <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200 border border-neutral-200 mb-2">
@@ -98,7 +99,7 @@ export function ProductTrustPillars({
                   </span>
                 </div>
               ))}
-            </div>
+            </Carousel>
           </div>
         )}
       </div>

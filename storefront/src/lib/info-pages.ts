@@ -228,44 +228,139 @@ export const PRIVACY_POLICY: InfoPageContent = {
 
 export const GALLERY_IMAGES: (GridImage & { caption: string })[] = [
   {
-    src: ASSETS.GALLERY.GURGAON_HIGHRISE,
-    alt: "High Rise Apartment Balcony Invisible Grill Installation in Gurgaon Delhi NCR",
-    caption: "Gurgaon High-Rise Balcony",
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.HERO,
+    alt: "Homeowner enjoying an open balcony view through invisible grills",
+    caption: "Balcony With an Open View",
+  },
+  {
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.CURVED_BALCONY,
+    alt: "Curved high-rise balcony secured with invisible grill cables",
+    caption: "Curved High-Rise Balcony",
+  },
+  {
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.BALCONY_SUNSET,
+    alt: "Upper-floor balcony with invisible grills at sunset",
+    caption: "High-Rise Balcony at Sunset",
+  },
+  {
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.ROOFTOP_MONKEYS,
+    alt: "Rooftop invisible grill keeping monkeys outside on the parapet",
+    caption: "Rooftop Monkey Protection, Vrindavan",
+  },
+  {
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.ROOFTOP,
+    alt: "Rooftop terrace parapet fitted with invisible grill cables",
+    caption: "Rooftop Terrace",
+  },
+  {
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.FACADE,
+    alt: "Apartment balconies fitted with invisible grills, seen from outside",
+    caption: "Apartment Balconies",
+  },
+  {
+    src: ASSETS.GALLERY.PARUL_ENT_HISAR_1,
+    alt: "Building balcony fitted with invisible grills in Hisar",
+    caption: "Balcony Grills, Hisar",
+  },
+  {
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.SCHOOL_CORRIDOR,
+    alt: "School corridor secured with invisible safety grills in Vasant Kunj",
+    caption: "School Corridor, Vasant Kunj",
+  },
+  {
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.COURTYARD_VOID,
+    alt: "Open courtyard void covered with invisible grill cables",
+    caption: "Courtyard Void",
+  },
+  {
+    src: ASSETS.PHOTOS.INVISIBLE_GRILLS.CABLE_CLOSEUP,
+    alt: "Close-up of stainless steel invisible grill cables and fixing bar",
+    caption: "Grill Cables, Close Up",
+  },
+  {
+    src: ASSETS.PHOTOS.PLEATED_MESH.HERO,
+    alt: "Building front with balconies fitted with pleated mosquito mesh",
+    caption: "Pleated Mesh on Balconies",
+  },
+  {
+    src: ASSETS.PHOTOS.PLEATED_MESH.WINDOW,
+    alt: "Bronze pleated mosquito mesh on ground-floor windows",
+    caption: "Ground-Floor Windows",
   },
   {
     src: ASSETS.GALLERY.NOIDA_VILLA,
-    alt: "Pleated Mosquito Screen Slider installed in Noida Villa",
-    caption: "Noida Villa Pleated Screen",
+    alt: "Pleated mosquito mesh on a window in a Noida home",
+    caption: "Pleated Window Screen, Noida",
   },
   {
-    src: ASSETS.GALLERY.TRADE_FAIR_EXPO,
-    alt: "School corridor secured with invisible safety grills in Vasant Kunj",
-    caption: "School Safety Grill, Vasant Kunj",
+    src: ASSETS.PHOTOS.PLEATED_MESH.TERRACE,
+    alt: "Pleated mesh screen across a terrace opening at night",
+    caption: "Terrace Opening at Night",
   },
   {
-    src: ASSETS.GALLERY.FACTORY_QC,
-    alt: "Duplex stairwell void secured with tensioned cable screens",
-    caption: "Stairwell Void, Secured",
+    src: ASSETS.PHOTOS.ALUMINUM_MESH.HERO,
+    alt: "Aluminium security mesh doors opening onto a terrace",
+    caption: "Terrace Security Doors",
   },
   {
-    src: ASSETS.TYPOLOGIES.HIGH_RISE,
-    alt: "Modern penthouse balcony with curved glass balustrade outfitted with vertical stainless steel invisible safety grilles overlooking the Noida and Gurugram skyline",
-    caption: "High-Rise Balconies",
+    src: ASSETS.PHOTOS.ALUMINUM_MESH.PARTITION,
+    alt: "Aluminium mesh used as an interior partition",
+    caption: "Interior Mesh Partition",
   },
   {
-    src: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-    alt: "Interior architectural master bedroom with large floor to ceiling French windows secured with nearly invisible vertical wire grilles",
-    caption: "French Windows",
+    src: ASSETS.PHOTOS.ALUMINUM_MESH.SHOPFRONT,
+    alt: "Aluminium security mesh on first-floor windows",
+    caption: "Window Security Mesh",
   },
   {
-    src: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-    alt: "Contemporary multi-level luxury villa duplex interior showing a dramatic three-story stairwell void secured with invisible tension cable screens",
-    caption: "Stairwell Voids & Atriums",
+    src: ASSETS.PHOTOS.HONEYCOMB.HERO,
+    alt: "Wide honeycomb partition dividing an interior space",
+    caption: "Wide-Span Honeycomb Partition",
   },
   {
-    src: ASSETS.TYPOLOGIES.TERRACE_OPENINGS,
-    alt: "Rooftop terrace lounge of an upscale urban condominium with invisible wire grilles securing open parapet ledges",
-    caption: "Terrace Openings",
+    src: ASSETS.PHOTOS.HONEYCOMB.WOOD_FINISH,
+    alt: "Wood-finish honeycomb partition in a home",
+    caption: "Wood-Finish Divider",
+  },
+  {
+    src: ASSETS.PHOTOS.HONEYCOMB.DUET_CORRIDOR,
+    alt: "Duet honeycomb system along a glazed corridor",
+    caption: "Duet System Corridor",
+  },
+  {
+    src: ASSETS.PHOTOS.WEATHER_SCREEN.HERO,
+    alt: "Motorized zip weather screen lowered around a terrace lounge",
+    caption: "Terrace Weather Screen",
+  },
+  {
+    src: ASSETS.PHOTOS.WEATHER_SCREEN.PERGOLA,
+    alt: "Zip weather screen lowered under a louvred pergola",
+    caption: "Screen Under a Pergola",
+  },
+  {
+    src: ASSETS.PHOTOS.PERGOLA.LOUVRED_TERRACE,
+    alt: "Rooftop terrace covered by a louvred aluminium pergola",
+    caption: "Louvred Roof Pergola",
+  },
+  {
+    src: ASSETS.PHOTOS.PERGOLA.TERRACE_KITCHEN,
+    alt: "Louvred pergola over a rooftop terrace kitchen",
+    caption: "Pergola Over a Terrace Kitchen",
+  },
+  {
+    src: ASSETS.PHOTOS.CLOTH_HANGER.HERO,
+    alt: "Ceiling cloth hanger loaded with drying clothes",
+    caption: "Ceiling Cloth Hanger",
+  },
+  {
+    src: ASSETS.PHOTOS.CLOTH_HANGER.BALCONY,
+    alt: "Ceiling cloth hanger fitted on an apartment balcony",
+    caption: "Balcony Cloth Hanger",
+  },
+  {
+    src: ASSETS.GALLERY.EXHIBITION_STALL,
+    alt: "Visitors at the Solution Sahab stall at a Pragati Maidan trade exhibition",
+    caption: "Our Stall at Pragati Maidan",
   },
 ];
 

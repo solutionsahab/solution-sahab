@@ -1,6 +1,7 @@
 // File: src/components/common/RelatedLinks.tsx
 import React from "react";
 import Link from "next/link";
+import { Carousel } from "@/components/common/Carousel";
 
 export interface RelatedLink {
   label: string;
@@ -47,7 +48,7 @@ export function RelatedLinks({
         </div>
 
         {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, desktop shows 4 */}
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Carousel label={title} className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -64,7 +65,7 @@ export function RelatedLinks({
               )}
             </Link>
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );

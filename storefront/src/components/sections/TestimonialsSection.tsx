@@ -2,22 +2,44 @@
 import React from "react";
 import { VideoEmbed } from "@/components/common/VideoEmbed";
 import Link from "next/link";
+import { Carousel } from "@/components/common/Carousel";
 
+// Customer-feedback Shorts from youtube.com/@solutionsahab, newest first
 const VIDEOS = [
+  {
+    videoId: "jtYFAhO8tXQ",
+    customer: "Verified Homeowner",
+    product: "Aluminium Security Mesh",
+  },
+  {
+    videoId: "IzNgLc9QUvY",
+    customer: "Verified Homeowner",
+    product: "Pleated Mesh",
+  },
+  {
+    videoId: "NaSQX5QXsys",
+    customer: "Verified Homeowner",
+    product: "Pleated Mesh & Invisible Grills",
+  },
   {
     videoId: "ra8Bwmo1SE0",
     customer: "Mr. Kamal Thakur, Ashiyana Town, Bhiwadi",
     product: "Balcony Pleated Mesh",
   },
   {
-    videoId: "7F6Z-WV5ylA",
-    customer: "Verified Homeowner, Delhi NCR",
-    product: "Pleated Mesh Door",
+    videoId: "KIDcbgJ6AqQ",
+    customer: "Verified Homeowner",
+    product: "Pleated Mesh",
   },
   {
-    videoId: "3rd_YCsZWAY",
-    customer: "Verified Homeowner, Delhi NCR",
-    product: "Pleated Mesh Door",
+    videoId: "7F6Z-WV5ylA",
+    customer: "Verified Homeowner",
+    product: "Pleated Mesh",
+  },
+  {
+    videoId: "5f01oHET4SI",
+    customer: "Dr. Geetesh, Rohtak",
+    product: "Pleated Mesh",
   },
 ];
 
@@ -53,7 +75,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* One-row swipe carousel (CSS scroll-snap): phones peek the next video, desktop shows 4 per row */}
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Carousel label="Customer feedback videos" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {VIDEOS.map((video) => (
             <div
               key={video.videoId}
@@ -78,7 +100,7 @@ export function TestimonialsSection() {
               </div>
             </div>
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );

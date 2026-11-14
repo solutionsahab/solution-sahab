@@ -1,6 +1,7 @@
 // File: src/components/common/ImageGrid.tsx
 import React from "react";
 import Image from "next/image";
+import { Carousel } from "@/components/common/Carousel";
 
 export interface GridImage {
   src: string;
@@ -31,15 +32,7 @@ export function ImageGrid({
   sizes,
   carousel = false,
 }: ImageGridProps) {
-  return (
-    <div
-      className={
-        carousel
-          ? "flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          : `grid gap-3 sm:gap-4 ${COLUMN_CLASS[columns]}`
-      }
-    >
-      {images.map((image) => (
+  const items = images.map((image) => (
         <figure
           key={`${image.src}-${image.alt}`}
           className={`m-0 ${
@@ -73,7 +66,16 @@ export function ImageGrid({
             </figcaption>
           )}
         </figure>
-      ))}
-    </div>
+  ));
+
+  return carousel ? (
+    <Carousel
+      label="Photos"
+      className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    >
+      {items}
+    </Carousel>
+  ) : (
+    <div className={`grid gap-3 sm:gap-4 ${COLUMN_CLASS[columns]}`}>{items}</div>
   );
 }

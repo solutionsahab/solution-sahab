@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ASSETS } from "@/lib/constants";
+import { Carousel } from "@/components/common/Carousel";
 
 interface ProductItem {
   title: string;
@@ -19,7 +20,7 @@ const PRODUCTS: ProductItem[] = [
     summary:
       "316 stainless steel cables with nylon coating for child and pet fall safety without blocking the view.",
     href: "/invisible-grills",
-    imageUrl: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
+    imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.HERO,
   },
   {
     title: "Pleated Mosquito Mesh",
@@ -27,7 +28,7 @@ const PRODUCTS: ProductItem[] = [
     summary:
       "Retractable accordion insect screen on a flat 3mm bottom track with Powder-Coated Aluminium frame.",
     href: "/pleated-mesh",
-    imageUrl: ASSETS.HERO_IMAGE_HOME_PLEATED_MESH,
+    imageUrl: ASSETS.PHOTOS.PLEATED_MESH.HERO,
   },
   {
     title: "Aluminum Security Mesh",
@@ -35,7 +36,7 @@ const PRODUCTS: ProductItem[] = [
     summary:
       "Heavy-gauge alloy security mesh door with multi-point locks that replaces traditional iron grills.",
     href: "/aluminum-mesh-partition",
-    imageUrl: ASSETS.HERO_IMAGE_HOME_ALUMINUM_MESH,
+    imageUrl: ASSETS.PHOTOS.ALUMINUM_MESH.HERO,
   },
   {
     title: "Honeycomb Partitions",
@@ -43,7 +44,7 @@ const PRODUCTS: ProductItem[] = [
     summary:
       "Folding room divider with internal air cells that insulate AC cooling and reduce room echo.",
     href: "/honeycomb-partition",
-    imageUrl: ASSETS.HERO_IMAGE_HOME_HONEYCOMB,
+    imageUrl: ASSETS.PHOTOS.HONEYCOMB.HERO,
   },
   {
     title: "Motorized Weather Screens",
@@ -51,7 +52,7 @@ const PRODUCTS: ProductItem[] = [
     summary:
       "Remote-controlled zip-track outdoor blinds that block rain, dust storms, and harsh sunlight.",
     href: "/automatic-weather-screen",
-    imageUrl: ASSETS.HERO_IMAGE_HOME_WEATHER_SCREEN,
+    imageUrl: ASSETS.PHOTOS.WEATHER_SCREEN.HERO,
   },
   {
     title: "Skylights & Ceiling Hangers",
@@ -59,7 +60,7 @@ const PRODUCTS: ProductItem[] = [
     summary:
       "Laminated safety glass skylights and ceiling-mounted pulley cloth hangers to free up balcony floor space.",
     href: "/skylight",
-    imageUrl: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
+    imageUrl: ASSETS.PHOTOS.CLOTH_HANGER.HERO,
   },
 ];
 
@@ -79,7 +80,7 @@ export function ProductCatalogSection() {
         </h2>
 
         {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, wide screens show 3-4 */}
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Carousel label="Our products" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {PRODUCTS.map((product) => (
             <article
               key={product.title}
@@ -92,8 +93,7 @@ export function ProductCatalogSection() {
                   fill
                   sizes="(max-width: 640px) 80vw, (max-width: 1023px) 50vw, 25vw"
                   loading="lazy"
-                  // Photos carry a printed info panel on the right; small cards show the photo side
-                  className="object-cover object-left"
+                  className="object-cover"
                 />
               </Link>
 
@@ -128,7 +128,7 @@ export function ProductCatalogSection() {
               </div>
             </article>
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );
