@@ -3,21 +3,42 @@ import React from "react";
 import { VideoEmbed } from "@/components/common/VideoEmbed";
 import Link from "next/link";
 
+// Customer-feedback Shorts from youtube.com/@solutionsahab, newest first
 const VIDEOS = [
+  {
+    videoId: "jtYFAhO8tXQ",
+    customer: "Verified Homeowner",
+    product: "Aluminium Security Mesh",
+  },
+  {
+    videoId: "IzNgLc9QUvY",
+    customer: "Verified Homeowner",
+    product: "Pleated Mesh",
+  },
+  {
+    videoId: "NaSQX5QXsys",
+    customer: "Verified Homeowner",
+    product: "Pleated Mesh & Invisible Grills",
+  },
   {
     videoId: "ra8Bwmo1SE0",
     customer: "Mr. Kamal Thakur, Ashiyana Town, Bhiwadi",
     product: "Balcony Pleated Mesh",
   },
   {
-    videoId: "7F6Z-WV5ylA",
-    customer: "Verified Homeowner, Delhi NCR",
-    product: "Pleated Mesh Door",
+    videoId: "KIDcbgJ6AqQ",
+    customer: "Verified Homeowner",
+    product: "Pleated Mesh",
   },
   {
-    videoId: "3rd_YCsZWAY",
-    customer: "Verified Homeowner, Delhi NCR",
-    product: "Pleated Mesh Door",
+    videoId: "7F6Z-WV5ylA",
+    customer: "Verified Homeowner",
+    product: "Pleated Mesh",
+  },
+  {
+    videoId: "5f01oHET4SI",
+    customer: "Dr. Geetesh, Rohtak",
+    product: "Pleated Mesh",
   },
 ];
 
