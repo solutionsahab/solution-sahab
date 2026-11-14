@@ -131,7 +131,7 @@ export const BLOG_POSTS: BlogPost[] = [
     dateLabel: "27 October 2026",
     image: {
       src: ASSETS.PRODUCTS.WEATHER_SCREENS,
-      alt: "Motorised zip weather screen on a Gurugram high-rise balcony",
+      alt: "Motorised zip weather screen lowered around a terrace lounge",
     },
     relatedProductSlug: "automatic-weather-screen",
     sections: [
@@ -296,7 +296,7 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-10-21T06:30:00.000Z",
     dateLabel: "21 October 2026",
     image: {
-      src: ASSETS.PRODUCTS.ALUMINUM_SECURITY_MESH,
+      src: ASSETS.PHOTOS.ALUMINUM_MESH.DOOR,
       alt: "Aluminium security pleated mesh on a Delhi home's main door",
     },
     relatedProductSlug: "aluminum-mesh-partition",
@@ -458,7 +458,7 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-10-15T06:30:00.000Z",
     dateLabel: "15 October 2026",
     image: {
-      src: ASSETS.TYPOLOGIES.HIGH_RISE,
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.CURVED_BALCONY,
       alt: "Invisible grill on a high-rise balcony in Ghaziabad",
     },
     relatedProductSlug: "invisible-grills",
@@ -548,8 +548,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-10-12T06:30:00.000Z",
     dateLabel: "12 October 2026",
     image: {
-      src: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
-      alt: "Honeycomb partition dividing a living room in a Noida apartment",
+      src: ASSETS.PHOTOS.HONEYCOMB.DIVIDER,
+      alt: "Honeycomb partition used as a room divider",
     },
     relatedProductSlug: "honeycomb-partition",
     sections: [
@@ -915,8 +915,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-04-07T06:30:00.000Z",
     dateLabel: "7 April 2026",
     image: {
-      src: ASSETS.TYPOLOGIES.TERRACE_OPENINGS,
-      alt: "Terrace grill cables against the evening sky",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.ROOFTOP,
+      alt: "Rooftop terrace parapet fitted with invisible grill cables",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -974,8 +974,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-05-11T06:30:00.000Z",
     dateLabel: "11 May 2026",
     image: {
-      src: ASSETS.TYPOLOGIES.HIGH_RISE,
-      alt: "High-rise balcony grill on Dwarka Expressway",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.BALCONY_SUNSET,
+      alt: "High-rise balcony fitted with invisible grill cables",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -1429,8 +1429,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-03-08T06:30:00.000Z",
     dateLabel: "8 March 2025",
     image: {
-      src: ASSETS.GALLERY.FACTORY_QC,
-      alt: "Close-up of stainless grill cables after rain",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.CABLE_CLOSEUP,
+      alt: "Close-up of stainless steel invisible grill cables and fixing bar",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -1494,8 +1494,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-03-16T06:30:00.000Z",
     dateLabel: "16 March 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-      alt: "Pleated mesh on an open French window",
+      src: ASSETS.PHOTOS.PLEATED_MESH.CASEMENT,
+      alt: "Pleated mesh on an open casement window",
     },
     relatedProductSlug: "pleated-mesh",
     sections: [
@@ -1555,8 +1555,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-02-28T06:30:00.000Z",
     dateLabel: "28 February 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-      alt: "Stairwell opening fitted with a cable grill",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.FACADE,
+      alt: "High-rise apartment balconies fitted with invisible grills",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -1760,8 +1760,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-01-23T06:30:00.000Z",
     dateLabel: "23 January 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-      alt: "Pleated screen folds stacked at a door edge",
+      src: ASSETS.PHOTOS.PLEATED_MESH.DOOR,
+      alt: "Pleated mesh screen fitted on an entrance door",
     },
     relatedProductSlug: "pleated-mesh",
     sections: [
@@ -1813,8 +1813,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-09-01T06:30:00.000Z",
     dateLabel: "1 September 2025",
     image: {
-      src: ASSETS.PRODUCTS.WEATHER_SCREENS,
-      alt: "Retractable screen across a patio opening",
+      src: ASSETS.PHOTOS.PLEATED_MESH.TERRACE,
+      alt: "Pleated mesh screen across a terrace opening",
     },
     relatedProductSlug: "pleated-mesh",
     sections: [
@@ -1943,8 +1943,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-01-23T06:30:00.000Z",
     dateLabel: "23 January 2025",
     image: {
-      src: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
-      alt: "Honeycomb partition folded beside a glass door",
+      src: ASSETS.PHOTOS.HONEYCOMB.DUET_CORRIDOR,
+      alt: "Duet honeycomb system along a glazed corridor",
     },
     relatedProductSlug: "honeycomb-partition",
     sections: [
@@ -1988,8 +1988,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-04-15T06:30:00.000Z",
     dateLabel: "15 April 2026",
     image: {
-      src: ASSETS.HERO_IMAGE_PRODUCT_INVISIBLE_GRILLS,
-      alt: "Family flat balcony fitted with a cable grill",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.FULL_HEIGHT,
+      alt: "Full-height balcony opening fitted with invisible grill cables",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -2066,8 +2066,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-10-12T06:30:00.000Z",
     dateLabel: "12 October 2025",
     image: {
-      src: ASSETS.PRODUCTS.HONEYCOMB_PARTITIONS,
-      alt: "Honeycomb screen darkening a media room",
+      src: ASSETS.PHOTOS.HONEYCOMB.WOOD_FINISH,
+      alt: "Wood-finish honeycomb partition in a home",
     },
     relatedProductSlug: "honeycomb-partition",
     sections: [
@@ -2105,8 +2105,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-11-29T06:30:00.000Z",
     dateLabel: "29 November 2025",
     image: {
-      src: ASSETS.PRODUCTS.ALUMINUM_SECURITY_MESH,
-      alt: "Aluminium security mesh door, close view",
+      src: ASSETS.PHOTOS.ALUMINUM_MESH.SLIDING,
+      alt: "Aluminium security mesh on sliding doors",
     },
     relatedProductSlug: "aluminum-mesh-partition",
     sections: [
@@ -2143,8 +2143,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-07-08T06:30:00.000Z",
     dateLabel: "8 July 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-      alt: "Honeycomb mesh across a bedroom window",
+      src: ASSETS.PHOTOS.HONEYCOMB.HERO,
+      alt: "Honeycomb partition across a wide opening",
     },
     relatedProductSlug: "honeycomb-partition",
     sections: [
@@ -2181,8 +2181,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-06-30T06:30:00.000Z",
     dateLabel: "30 June 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.HIGH_RISE,
-      alt: "Honeycomb screens dividing an office floor",
+      src: ASSETS.PHOTOS.HONEYCOMB.COMMERCIAL,
+      alt: "Honeycomb partition in a commercial space",
     },
     relatedProductSlug: "honeycomb-partition",
     sections: [
@@ -2219,8 +2219,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-09-04T06:30:00.000Z",
     dateLabel: "4 September 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.TERRACE_OPENINGS,
-      alt: "Terrace parapet fitted with safety cables",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.ROOFTOP_MONKEYS,
+      alt: "Rooftop invisible grill with monkeys kept outside on the parapet",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -2302,8 +2302,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-06-10T06:30:00.000Z",
     dateLabel: "10 June 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-      alt: "Cable grill spacing checked during fitting",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.CABLE_CLOSEUP,
+      alt: "Invisible grill cables and fixing bar, close up",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -2365,8 +2365,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-09-22T06:30:00.000Z",
     dateLabel: "22 September 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.HIGH_RISE,
-      alt: "Tower balcony grill under a wide sky",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.GREEN_VIEW,
+      alt: "Balcony invisible grill overlooking open green space",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -2393,8 +2393,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2025-09-16T06:30:00.000Z",
     dateLabel: "16 September 2025",
     image: {
-      src: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-      alt: "Mayur Vihar balcony and window grills",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.WINDOW,
+      alt: "Window-height opening secured with invisible grill cables",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -2456,8 +2456,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-07-31T18:27:32.000Z",
     dateLabel: "31 July 2026",
     image: {
-      src: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-      alt: "Gurugram tower balcony, grill fitted",
+      src: ASSETS.PHOTOS.INVISIBLE_GRILLS.EVENING_BALCONY,
+      alt: "Apartment balcony fitted with invisible grill cables at dusk",
     },
     relatedProductSlug: "invisible-grills",
     sections: [
@@ -2554,8 +2554,8 @@ export const BLOG_POSTS: BlogPost[] = [
     datePublished: "2026-07-31T18:27:32.000Z",
     dateLabel: "31 July 2026",
     image: {
-      src: ASSETS.PRODUCTS.WEATHER_SCREENS,
-      alt: "Retractable mesh across a Gurugram patio",
+      src: ASSETS.PHOTOS.PLEATED_MESH.BALCONY,
+      alt: "Pleated mesh enclosing a balcony",
     },
     relatedProductSlug: "pleated-mesh",
     sections: [

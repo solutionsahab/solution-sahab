@@ -33,8 +33,8 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
     faqDescription: USE_CASE_FAQ_DESCRIPTION,
     card: {
       desc: "Fall protection for classroom windows, corridors, staircases and terraces, without making the campus look like a cage.",
-      imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-      alt: "Invisible grills along a school staircase",
+      imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.SCHOOL_CORRIDOR,
+      alt: "Open school corridor protected by invisible grills",
     },
     metadata: {
       title: "Invisible Grills for Schools in Delhi NCR – Solution Sahab",
@@ -48,13 +48,13 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "child safety grills for schools",
       ],
       canonical: "https://solutionsahab.com/invisible-grills-for-schools",
-      ogImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
+      ogImage: ASSETS.PHOTOS.INVISIBLE_GRILLS.SCHOOL_CORRIDOR,
     },
     structuredData: {
       productName: "Invisible Grills for Schools",
       description:
         "Fall-protection invisible grills for school classrooms, corridors, staircases and terraces, using tensioned 316-grade stainless steel cables that keep spaces bright and ventilated across Delhi NCR.",
-      image: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
+      image: ASSETS.PHOTOS.INVISIBLE_GRILLS.SCHOOL_CORRIDOR,
       material: "AISI 316 Marine Grade Stainless Steel Wire",
     },
     hero: {
@@ -68,7 +68,7 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "Emergency Cut-Out",
         "5-Year Rust Warranty",
       ],
-      heroImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
+      heroImage: ASSETS.PHOTOS.INVISIBLE_GRILLS.SCHOOL_CORRIDOR,
       heroImageAlt: "Invisible grills protecting an open school corridor",
       breadcrumbName: "Schools",
       parentCrumb: USE_CASE_PARENT,
@@ -105,8 +105,8 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
       title: "Benefits for Schools",
       subtitle:
         "Safety that parents can see and students barely notice, with almost no upkeep for your facilities team.",
-      image: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-      imageAlt: "Staircase void secured with invisible grills",
+      image: ASSETS.PHOTOS.INVISIBLE_GRILLS.FACADE,
+      imageAlt: "Upper-floor balconies fitted with invisible grills",
       benefits: [
         {
           title: "Fall Protection on Every Floor",
@@ -145,26 +145,26 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         {
           title: "Classroom Windows",
           desc: "Keep windows open for fresh air during lessons while stopping students from leaning out or climbing onto sills.",
-          imageUrl: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-          alt: "Classroom windows secured with invisible grills",
+          imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.WINDOW,
+          alt: "Window-height opening secured with invisible grill cables",
         },
         {
           title: "Corridors & Balconies",
           desc: "Protect open corridors and walkways on upper floors where students crowd between periods.",
-          imageUrl: ASSETS.TYPOLOGIES.HIGH_RISE,
-          alt: "Upper-floor school corridor with invisible grills",
+          imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.CURVED_BALCONY,
+          alt: "Upper-floor open walkway protected by invisible grills",
         },
         {
           title: "Staircases & Atriums",
           desc: "Close the gaps beside staircase railings and around open atriums where children could slip through.",
-          imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-          alt: "School staircase void secured with invisible grills",
+          imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.COURTYARD_VOID,
+          alt: "Open void secured with invisible grill cables",
         },
         {
           title: "Terraces & Play Areas",
           desc: "Make rooftop terraces and elevated play zones safe for activities, assemblies and sports.",
-          imageUrl: ASSETS.TYPOLOGIES.TERRACE_OPENINGS,
-          alt: "School rooftop terrace with invisible grills",
+          imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.ROOFTOP,
+          alt: "Rooftop terrace parapet with invisible grill cables",
         },
       ],
     },
@@ -220,8 +220,8 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
     faqDescription: USE_CASE_FAQ_DESCRIPTION,
     card: {
       desc: "Discreet fall prevention for patient-room windows, wards, stairwells and atriums that keeps healing spaces bright and calm.",
-      imageUrl: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-      alt: "Invisible grills on hospital patient-room windows",
+      imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.FULL_HEIGHT,
+      alt: "Floor-to-ceiling opening secured with invisible grills",
     },
     metadata: {
       title: "Invisible Grills for Hospitals in Delhi NCR – Solution Sahab",
@@ -235,13 +235,13 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "invisible grills for healthcare buildings",
       ],
       canonical: "https://solutionsahab.com/invisible-grills-for-hospitals",
-      ogImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
+      ogImage: ASSETS.PHOTOS.INVISIBLE_GRILLS.FACADE,
     },
     structuredData: {
       productName: "Invisible Grills for Hospitals",
       description:
         "Fall-prevention invisible grills for hospital patient rooms, wards, stairwells and atriums, using tensioned 316-grade stainless steel cables that keep spaces bright and ventilated across Delhi NCR.",
-      image: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
+      image: ASSETS.PHOTOS.INVISIBLE_GRILLS.FACADE,
       material: "AISI 316 Marine Grade Stainless Steel Wire",
     },
     hero: {
@@ -255,8 +255,8 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "Emergency Cut-Out",
         "5-Year Rust Warranty",
       ],
-      heroImage: ASSETS.HERO_IMAGE_HOME_INVISIBLE_GRILLS,
-      heroImageAlt: "Invisible grills on a hospital building opening",
+      heroImage: ASSETS.PHOTOS.INVISIBLE_GRILLS.FACADE,
+      heroImageAlt: "Multi-storey building balconies fitted with invisible grills",
       breadcrumbName: "Hospitals",
       parentCrumb: USE_CASE_PARENT,
       bookingTargetId: "#booking-form",
@@ -292,8 +292,8 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
       title: "Benefits for Hospitals",
       subtitle:
         "Patient safety that supports recovery instead of working against it, with almost no upkeep.",
-      image: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-      imageAlt: "Patient-room window secured with invisible grills",
+      image: ASSETS.PHOTOS.INVISIBLE_GRILLS.FULL_HEIGHT,
+      imageAlt: "Floor-to-ceiling opening secured with invisible grills",
       benefits: [
         {
           title: "Fall Prevention for Vulnerable Patients",
@@ -332,26 +332,26 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         {
           title: "Patient-Room Windows",
           desc: "Let patients open windows for fresh air without the risk of leaning out or climbing through.",
-          imageUrl: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-          alt: "Hospital patient-room window with invisible grills",
+          imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.WINDOW,
+          alt: "Window-height opening secured with invisible grill cables",
         },
         {
           title: "Wards & Balconies",
           desc: "Protect ward balconies and open corridors on upper floors used by patients and visitors.",
-          imageUrl: ASSETS.TYPOLOGIES.HIGH_RISE,
-          alt: "Hospital ward balcony with invisible grills",
+          imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.BALCONY_SUNSET,
+          alt: "Upper-floor balcony protected by invisible grills",
         },
         {
           title: "Stairwells & Atriums",
           desc: "Close gaps beside stair railings and around open atriums and lobbies in multi-storey buildings.",
-          imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-          alt: "Hospital stairwell void secured with invisible grills",
+          imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.COURTYARD_VOID,
+          alt: "Open void secured with invisible grill cables",
         },
         {
           title: "Rooftop Gardens & Terraces",
           desc: "Make rooftop gardens and recovery terraces safe for patients, families and staff.",
-          imageUrl: ASSETS.TYPOLOGIES.TERRACE_OPENINGS,
-          alt: "Hospital rooftop terrace with invisible grills",
+          imageUrl: ASSETS.PHOTOS.INVISIBLE_GRILLS.ROOFTOP,
+          alt: "Rooftop terrace parapet with invisible grill cables",
         },
       ],
     },

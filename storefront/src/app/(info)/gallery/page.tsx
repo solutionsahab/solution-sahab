@@ -10,7 +10,7 @@ import { GALLERY_IMAGES, INSTAGRAM_URL } from "@/lib/info-pages";
 import { PRODUCT_LINKS } from "@/lib/site-links";
 
 const DESCRIPTION =
-  "Installation photos from Solution Sahab: Gurgaon high-rise balconies, Noida villa screens, exhibitions and factory quality control.";
+  "Real installation photos from Solution Sahab: invisible grills, pleated and aluminium mesh, honeycomb partitions, weather screens, pergolas and cloth hangers.";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/gallery",

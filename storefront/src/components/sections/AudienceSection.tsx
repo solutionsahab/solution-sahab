@@ -34,7 +34,7 @@ const AUDIENCES: AudienceRow[] = [
     description:
       "Motorized outdoor weather screens for open-air terraces and acoustic honeycomb dividers for offices and dining rooms.",
     imageUrl: ASSETS.PRODUCTS.WEATHER_SCREENS,
-    imageAlt: "Commercial terrace enclosed with motorized weather screens",
+    imageAlt: "Terrace lounge enclosed with a motorized weather screen",
     ctaText: "Request Commercial Quote",
     ctaHref: "#quick-booking",
   },
