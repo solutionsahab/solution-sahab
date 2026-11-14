@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { StructuredData } from "@/components/common/StructuredData";
 import { ASSETS } from "@/lib/constants";
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://solutionsahab.com"),
   title: "Invisible Grills & Pleated Mesh, Delhi NCR | Solution Sahab",
   description:
-    "Invisible grills, pleated mosquito mesh, honeycomb partitions and security mesh across Delhi NCR. AISI 316 cables with a 5-year rust guarantee.",
+    "Invisible grills, pleated mosquito mesh, honeycomb partitions and security mesh across Delhi NCR. AISI 316 cables with a 5-year rust warranty.",
   keywords: [
     "Invisible Grills Delhi NCR",
     "Invisible Grills Gurgaon",
@@ -134,6 +135,25 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-surface text-on-surface min-h-screen flex flex-col font-sans selection:bg-primary selection:text-on-primary">
+        {/* Same tracking IDs the old Hostinger site used: GTM, Google Ads, Meta Pixel. */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PC26GD94"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        <Script id="gtm">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PC26GD94');`}
+        </Script>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11411388281" />
+        <Script id="google-ads">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11411388281');`}
+        </Script>
+        <Script id="meta-pixel">
+          {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','972961448192406');fbq('track','PageView');`}
+        </Script>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-primary focus:px-4 focus:py-3 focus:font-semibold focus:ring-2 focus:ring-primary"
