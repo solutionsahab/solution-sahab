@@ -17,6 +17,7 @@ export const PRODUCT_OPTIONS = [
   "Aluminum Mesh & Partition",
   "Automatic Weather Screen",
   "Skylight",
+  "Retractable Roof",
   "Ceiling Cloth Hanger",
   "Other",
 ] as const;

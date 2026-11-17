@@ -183,7 +183,19 @@ export function Header({ serviceArea = "Delhi NCR" }: { serviceArea?: string }) 
                   }}
                 >
                   <div className="font-label-md text-label-md text-on-surface font-semibold">
-                    Glass Skylights
+                    Skylight
+                  </div>
+                </Link>
+                <Link
+                  className="p-2.5 rounded-lg hover:bg-surface-container-low transition-colors block"
+                  href="/retractable-roof"
+                  onClick={() => {
+                    closeMobileMenu();
+                    closeDropdown();
+                  }}
+                >
+                  <div className="font-label-md text-label-md text-on-surface font-semibold">
+                    Retractable Roof
                   </div>
                 </Link>
                 <Link
@@ -405,7 +417,14 @@ export function Header({ serviceArea = "Delhi NCR" }: { serviceArea?: string }) 
                     className="font-body-md text-slate-700 hover:text-primary py-1"
                     onClick={closeMobileMenu}
                   >
-                    Glass Skylights
+                    Skylight
+                  </Link>
+                  <Link
+                    href="/retractable-roof"
+                    className="font-body-md text-slate-700 hover:text-primary py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Retractable Roof
                   </Link>
                   <Link
                     href="/ceiling-cloth-hanger"
