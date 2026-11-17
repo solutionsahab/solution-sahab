@@ -14,8 +14,8 @@ export default function SkylightProductPage() {
       {/* AI-generated mood scene (no product shown), paired with this page's own claims */}
       <FeatureSection
         id="daylight"
-        title={<>Daylight where <strong className="font-extrabold">walls can&apos;t reach</strong></>}
-        text="Laminated 13.52 mm glass with a Low-E coating brings daylight into stairwells and duplex cores, reflects up to 75% of solar heat, and is sealed leak-proof with EPDM gaskets."
+        title={<>Soft daylight, <strong className="font-extrabold">on your terms</strong></>}
+        text="Skylight blinds turn a hot, glaring skylight into soft, controllable light: motorized, manual or cordless, with fabrics from light-filtering to full blackout and honeycomb insulation that blocks heat and UV."
         image={{ src: "/images/props/prop-stair-daylight.webp", alt: "Warm daylight falling on a wooden staircase landing beside a potted plant" }}
       />
     </ProductPageView>

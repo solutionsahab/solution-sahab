@@ -496,7 +496,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Heavy-duty architectural security mesh and partitions for main entrance doors, sliding balconies, and interior dividers. Enjoy knife-shear intruder security, complete pest defense, and fresh airflow in one elegant system.",
       badges: [
         "Jindal T6 Structural Alloy",
-        "Keeps Mosquitoes Out",
+        "Stops Monkeys & Pigeons",
         "Child & Pet Safe",
         "5-Year Warranty",
       ],
@@ -1050,197 +1050,175 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
 
   "skylight": {
     slug: "skylight",
-    leadSource: "Glass Skylight Product Page",
+    leadSource: "Skylight Product Page",
     formProduct: "Skylight",
-    faqDescription: "Clear answers on glass skylight thermal insulation, leak-proof waterproofing, safety glass strength, and maintenance.",
+    faqDescription: "Clear answers on skylight blind heat control, motorized and manual operation, fabric choices, and fitting on angled skylights.",
     metadata: {
-      title: "Glass Skylight Installation in Delhi NCR – Solution Sahab",
+      title: "Skylight Blinds in Delhi NCR – Solution Sahab",
       description:
-        "Laminated glass roof skylights and stairwell domes in Delhi, Gurgaon and Noida. Leak-proof EPDM seals, Low-E heat control, 5-year warranty.",
+        "Motorized, manual and honeycomb skylight blinds in Delhi, Gurgaon and Noida. Cut heat and glare from your skylight with custom-fit blinds.",
       keywords: [
-        "glass skylight installation delhi",
-        "roof skylight gurgaon",
-        "staircase skylight noida",
-        "laminated safety glass roof",
-        "leak proof skylight delhi ncr",
-        "Solution Sahab skylights",
+        "skylight blinds delhi",
+        "motorized skylight blinds gurgaon",
+        "honeycomb skylight blinds noida",
+        "remote control skylight blinds",
+        "skylight shades delhi ncr",
+        "Solution Sahab skylight",
       ],
       canonical: "https://solutionsahab.com/skylight",
       ogImage: "/og/skylight.jpg",
     },
     structuredData: {
-      productName: "Glass Skylights & Terrace Roof Glazing",
+      productName: "Skylight Blinds – Motorized, Manual & Honeycomb",
       description:
-        "Custom laminated safety glass roof skylights, stairwell glass domes, and terrace roof glazing systems across Delhi NCR.",
+        "Custom-made motorized, manual, cordless and honeycomb skylight blinds for flat, pitched and angled skylights across Delhi NCR.",
       image: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
-      material: "13.52mm Laminated Toughened Safety Glass & Jindal T6 Aluminum",
+      material: "Honeycomb, Blackout & Solar Polyester Fabrics with Aluminium Side Channels",
     },
     hero: {
-      productName: "Glass Skylights",
+      productName: "Skylight",
       brandTag: "Solution Sahab | Delhi NCR",
       tagline:
-        "Custom engineered laminated safety glass roof skylights and stairwell glazing. Flood internal duplex cores, staircases, and living areas with natural daylight with 100% monsoon leak-proof reliability and Low-E solar heat control.",
+        "Custom skylight blinds that turn a hot, glaring skylight into soft, controllable daylight. Choose motorized remote control, manual or cordless operation, and fabrics from light-filtering to full blackout.",
       badges: [
-        "13.52mm Laminated Glass",
-        "Low-E Heat Control",
-        "100% Leak-Proof EPDM",
-        "5-Year Warranty",
+        "Motorized Remote Control",
+        "Honeycomb Insulation",
+        "Blocks Heat & UV",
+        "Custom-Made to Size",
       ],
       heroImage: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
-      heroImageAlt: "Glass Skylight Installation by Solution Sahab",
-      breadcrumbName: "Glass Skylights",
+      heroImageAlt: "Motorized honeycomb skylight blind half-closed under a living room skylight",
+      breadcrumbName: "Skylight",
       bookingTargetId: "#booking-form",
     },
     overview: {
-      title: "What Is a Glass Skylight?",
+      title: "What Are Skylight Blinds?",
       leadParagraph:
-        "A Glass Skylight is an engineered roof glazing system designed to flood dark residential interiors, stairwells, and central courtyards with rich, natural daylight. It turns gloomy indoor corridors into bright, uplifting living spaces without sacrificing structural thermal insulation.",
+        "Skylight blinds are fabric shades fitted directly under a skylight. A skylight lets in beautiful daylight, but in a Delhi summer it also lets in harsh glare and heat. A skylight blind lets you decide how much of that light comes in, from soft filtered daylight to a fully dark room.",
       secondaryParagraph:
-        "Unlike cheap DIY acrylic domes that turn yellow and crack under Delhi’s blistering summer sun, Solution Sahab skylights utilize Low-E laminated toughened safety glass anchored inside heavy-gauge Jindal T6 aluminum or galvanized steel subframes with multi-lip EPDM drainage gaskets for 100% leak-proof reliability.",
+        "Because a skylight sits overhead, often at an angle and out of reach, an ordinary window blind will sag or slide. Solution Sahab skylight blinds run in side channels that hold the fabric taut on flat, pitched and angled skylights, and can be motorized so you operate them from a remote instead of a ladder.",
       bullets: [
         {
-          label: "Abundant Natural Daylight & Energy Savings",
-          text: "Illuminates deep internal staircases, central atriums, and living areas with pure sunlight, drastically cutting electricity bills.",
+          label: "Light & Glare Control",
+          text: "Open fully for daylight, partly close to soften glare on screens and furniture, or shut completely for rest.",
         },
         {
-          label: "100% Monsoon Waterproof Flashing & Drainage",
-          text: "Engineered slope channels and Dow Corning structural weather-seals prevent water accumulation, ceiling dampness, and leaks.",
+          label: "Cooler Rooms in Summer",
+          text: "Honeycomb cells trap a layer of air under the skylight, cutting the heat that pours down on sunny days.",
         },
         {
-          label: "Shatter-Resistant PVB Laminated Safety Glass",
-          text: "Dual toughened glass panes bonded with a 1.52mm PVB safety interlayer withstand severe rooftop hailstorms and debris impact.",
+          label: "Easy to Operate Overhead",
+          text: "Remote, wall switch, pull cord, wand or cordless operation, so a high skylight is never hard to reach.",
         },
       ],
       media: {
         type: "image",
         src: ASSETS.TYPOLOGIES.TERRACE_OPENINGS,
-        alt: "Glass skylight terrace opening installation by Solution Sahab",
-        caption: "Precision installation: Engineered slope glazing with structural silicone sealing and aluminum capping.",
+        alt: "Skylight opening fitted with a blind by Solution Sahab",
+        caption: "Made to measure: every skylight blind is cut to the exact size and angle of your skylight.",
       },
     },
     benefits: {
-      title: "Why Choose Solution Sahab Skylights?",
+      title: "Types of Skylight Blinds",
       subtitle:
-        "Corrugated sheets leak, plastic domes yellow, and uninsulated glass overheats interiors. Our architectural skylights combine safety glass with engineered monsoon drainage and thermal reflection.",
+        "Pick the operation and fabric that suit the room. Every type is made to measure for your skylight.",
       image: ASSETS.GALLERY.GURGAON_HIGHRISE,
-      imageAlt: "Luxury home with installed glass skylight",
+      imageAlt: "Bright living room under a skylight with blinds",
       benefits: [
         {
-          title: "Low-E Solar Heat & UV Radiation Rejection",
+          title: "Honeycomb (Cellular) Skylight Blinds",
           description:
-            "Spectrally selective microscopic coating reflects up to 75% of solar infrared heat back outdoors, keeping rooms naturally cool and preventing furniture fading.",
+            "Air-trapping honeycomb cells insulate against summer heat and winter chill, reduce outside noise, and come in light-filtering or blackout fabrics.",
         },
         {
-          title: "Calibrated 100% Leak-Proof Drainage Pitch",
+          title: "Motorized Remote Skylight Blinds",
           description:
-            "Calculated 5° to 15° water-shedding gradient paired with multi-lip EPDM gaskets and Dow Corning structural silicone stops roof leaks during torrential monsoons.",
+            "A quiet motor opens and closes the blind from a remote or wall switch, with optional smart-home control through Alexa or Google Home.",
         },
         {
-          title: "Dual Toughened Shatter-Proof Security",
+          title: "Manual Skylight Blinds",
           description:
-            "13.52mm laminated glass (6mm toughened + 1.52mm PVB + 6mm toughened) safely holds together even upon high-impact shock, eliminating falling glass hazards.",
+            "Simple, power-free operation using a pull cord, telescopic wand or chain drive for larger skylights.",
         },
         {
-          title: "Self-Cleaning Rain Wash Engineering",
+          title: "Cordless Skylight Blinds",
           description:
-            "Smooth architectural glass slope channels rainwater naturally to sweep away loose Delhi atmospheric dust without manual rooftop climbing.",
+            "No hanging cords or chains, giving a clean look and a safer option for homes with children and pets.",
         },
       ],
     },
-    // specs: {
-    //   title: "Technical Specification",
-    //   subtitle:
-    //     "Precision fabricated using heavy structural Jindal frames, laminated architectural safety glass, and certified waterproof EPDM drainage systems.",
-    //   callout: {
-    //     title: "Laminated Safety Glass vs Cheap Plastic Acrylic Domes",
-    //     text: "Plastic polycarbonate and single-pane acrylic sheets turn brittle, scratch, and leak within months under intense Indian sun. Solution Sahab uses genuine 13.52mm laminated toughened safety glass with Low-E coatings that remain optically clear, shatter-proof, and cool for decades.",
-    //   },
-    //   specs: [
-    //     { label: "Glass Metallurgy", val: "13.52 mm Laminated Toughened Safety Glass (6mm + 1.52 PVB + 6mm) or 24mm DGU" },
-    //     { label: "Solar Heat Control", val: "Low-E Heat Reflective Coating (SHGC < 0.35, blocks > 99% UV rays)" },
-    //     { label: "Structural Subframe", val: "Jindal T6 6063 Heavy Architectural Aluminum / Hot-Dip Galvanized Structural Steel" },
-    //     { label: "Weather Sealing System", val: "Multi-Lip EPDM Gaskets with Dow Corning 795 Structural Silicone" },
-    //     { label: "Slope Gradient", val: "Calibrated 5° to 15° Water Shedding Pitch for Self-Cleaning Drainage" },
-    //     { label: "Waterproof Flashing", val: "Continuous 1.5 mm Aluminum Base Apron with Masonry Counter-Flashing" },
-    //     { label: "Safety Standard", val: "Certified to IS 2553 (Part 1) and EN 12600 Class 1(B)1 Impact Resistance" },
-    //     { label: "Ventilation Option", val: "Fixed Glazing or Motorized Linear Actuator Opening Sash (Optional)" },
-    //     { label: "Surface Finish", val: "AkzoNobel Pure Polyester Powder Coat (Anthracite, Charcoal, Black, White)" },
-    //     { label: "Written Warranty", val: "5-Year Direct Manufacturer Leak-Proof Warranty" },
-    //   ],
-    // },
-    // trustPillars: {
-    //   title: "Why Choose Solution Sahab for Glass Skylights?",
-    //   subtitle:
-    //     "Structural engineering expertise, certified safety laminates, and complete leak-proof warranties across Delhi NCR.",
-    //   pillars: COMMON_TRUST_PILLARS,
-    //   showCertificates: true,
-    // },
     applications: {
-      title: "Where Can You Install Glass Skylights?",
+      title: "Where Can You Use Skylight Blinds?",
       subtitle:
-        "Custom engineered for flat concrete roofs, pitched RCC slabs, stairwell cutouts, and steel pergolas across Delhi NCR.",
+        "Made for any room with a skylight, in homes and offices across Delhi NCR.",
       areas: [
         {
-          title: "Staircase Voids & Duplex Cores",
-          desc: "Channels vertical cascades of natural daylight straight down multi-story villas and duplexes, eliminating gloomy dark corridors.",
-          imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
-          alt: "Glass skylight installed above staircase void",
-        },
-        {
-          title: "Rooftop Terraces & Penthouses",
-          desc: "Encloses rooftop sunrooms and private pavilions with clean, walk-on structural glass that delivers panoramic sky views without leaks.",
-          imageUrl: ASSETS.TYPOLOGIES.TERRACE_OPENINGS,
-          alt: "Rooftop glass skylight enclosure on luxury penthouse",
-        },
-        {
-          title: "Double-Height Living Rooms & Atriums",
-          desc: "Placed above central courtyards, dining halls, and living room atriums to brighten expansive indoor volumes with abundant daytime sunshine.",
+          title: "Living Rooms & Bedrooms",
+          desc: "Soften midday glare on the TV and block early-morning light in bedrooms so you can sleep in.",
           imageUrl: ASSETS.TYPOLOGIES.HIGH_RISE,
-          alt: "Central atrium glass roof skylight in residential villa",
+          alt: "Living room with a skylight and blinds",
         },
         {
-          title: "Master En-Suites & Private Spa Areas",
-          desc: "Brings serene, sky-lit natural illumination into luxury bathrooms and walk-in dressing areas with translucent or tinted Low-E safety glass.",
+          title: "Staircases & Double-Height Spaces",
+          desc: "Control the heat and brightness from high skylights over stairwells and atriums without climbing a ladder.",
+          imageUrl: ASSETS.TYPOLOGIES.STAIRWELL_VOIDS,
+          alt: "Staircase under a skylight",
+        },
+        {
+          title: "Kitchens & Bathrooms",
+          desc: "Moisture-resistant fabrics give privacy and shade in bathrooms and keep cooking areas from overheating.",
           imageUrl: ASSETS.TYPOLOGIES.FRENCH_WINDOWS,
-          alt: "Privacy glass skylight installed in master bathroom ceiling",
+          alt: "Bright interior room lit by natural daylight",
+        },
+        {
+          title: "Home Offices, Sunrooms & Attics",
+          desc: "Cut screen glare where you work and keep sunrooms and attic rooms comfortable through the day.",
+          imageUrl: ASSETS.TYPOLOGIES.TERRACE_OPENINGS,
+          alt: "Sunroom with an overhead skylight",
         },
       ],
     },
     faqs: [
       {
         id: 1,
-        question: "Will a glass skylight make the rooms below excessively hot in summer?",
+        question: "Will a skylight blind actually keep the room cooler in summer?",
         answer:
-          "No. We exclusively specify spectrally selective Low-E (Low-Emissivity) laminated safety glass. The microscopic coating reflects up to 75% of solar infrared heat back outdoors while allowing pure natural light through, preventing greenhouse heat build-up.",
+          "Yes. A closed blind stops direct sun from reaching the room, and honeycomb blinds go further by trapping a layer of air under the skylight that slows heat coming in. Rooms under a skylight feel noticeably cooler with the blind drawn.",
       },
       {
         id: 2,
-        question: "How do you ensure the skylight will never leak during heavy monsoons?",
+        question: "Can blinds be fitted on angled or sloped skylights?",
         answer:
-          "Every unit is installed with a minimum 5° to 15° water-shedding slope gradient. We engineer continuous aluminum base flashings that counter-flash into the concrete curb, coupled with multi-lip EPDM gaskets and Dow Corning 795 structural silicone, backed by our 5-year written leak-proof warranty.",
+          "Yes. Our skylight blinds run in side channels that hold the fabric tight, so they work on flat, pitched and angled skylights without sagging.",
       },
       {
         id: 3,
-        question: "Is the glass strong enough to handle hailstorms or maintenance foot traffic?",
+        question: "My skylight is very high. How will I open and close the blind?",
         answer:
-          "Yes. Our standard specification is 13.52mm dual-toughened laminated safety glass (6mm toughened + 1.52mm PVB interlayer + 6mm toughened). It easily withstands heavy hailstorms, animal impacts, and certified maintenance point loads without shattering.",
+          "For high skylights we recommend motorized blinds you control from a remote or wall switch, with optional Alexa or Google Home control. Manual options include a telescopic wand or a chain drive.",
       },
       {
         id: 4,
-        question: "How is a rooftop skylight cleaned and maintained?",
+        question: "Can I make the room completely dark?",
         answer:
-          "Thanks to the calibrated slope and smooth architectural glass surface, rainwater naturally washes away loose dust. For deeper periodic cleaning, a standard water spray and microfiber squeegee easily clean the surface without dislodging seals.",
+          "Yes. Choose a blackout fabric for bedrooms and media rooms, or a light-filtering fabric if you only want to soften glare while keeping the room bright.",
       },
       {
         id: 5,
-        question: "What is the site measurement and installation timeline?",
+        question: "How are skylight blinds cleaned and maintained?",
         answer:
-          "Our structural engineer visits your roof or duplex slab cutout, inspects drainage gradients, and takes precise digital laser measurements. Custom CNC frame fabrication and glass tempering take 7 to 10 business days, with on-site installation completed in 1 to 2 days.",
+          "Dust them occasionally with a soft brush or vacuum attachment, and wipe marks with a damp cloth. The fabrics are fade-resistant and need no other upkeep.",
+      },
+      {
+        id: 6,
+        question: "How does measurement and installation work?",
+        answer:
+          "A Solution Sahab specialist visits with fabric samples, measures your skylight's size and angle, and gives you a quote. The blind is made to measure and installed cleanly in a single visit.",
       },
     ],
-    bookingTitle: "Schedule Laser Site Measurement",
+    bookingTitle: "Book a Free Skylight Measurement",
     bookingDescription:
-      "Book an engineer visit with glass specification samples and curb profile details. Prompt consultation across Delhi NCR.",
+      "Book a specialist visit with fabric samples and motor options for your skylight. Prompt service across Delhi NCR.",
   },
 
   "ceiling-cloth-hanger": {
@@ -1435,5 +1413,178 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
     bookingTitle: "Schedule Laser Site Measurement",
     bookingDescription:
       "Book a technician visit with SS-304 pipe samples and pulley demonstrations for your balcony or utility ceiling. Prompt installation across Delhi NCR.",
+  },
+
+  "retractable-roof": {
+    slug: "retractable-roof",
+    leadSource: "Retractable Roof Product Page",
+    formProduct: "Retractable Roof",
+    faqDescription: "Clear answers on retractable roof rain protection, louvered and fabric roof types, motorized operation, and installation.",
+    metadata: {
+      title: "Retractable Roof & Motorized Pergola in Delhi NCR – Solution Sahab",
+      description:
+        "Motorized louvered aluminium roofs, retractable fabric roofs and sliding roofs for terraces in Delhi, Gurgaon and Noida. Open to the sky or close against rain at the touch of a button.",
+      keywords: [
+        "retractable roof delhi",
+        "motorized pergola gurgaon",
+        "louvered roof noida",
+        "retractable terrace roof",
+        "aluminium louver roof delhi ncr",
+        "Solution Sahab retractable roof",
+      ],
+      canonical: "https://solutionsahab.com/retractable-roof",
+      ogImage: ASSETS.PHOTOS.PERGOLA.LOUVRED_TERRACE,
+    },
+    structuredData: {
+      productName: "Retractable Roofs – Motorized Louvered, Fabric & Sliding Roof Systems",
+      description:
+        "Motorized louvered aluminium pergola roofs, retractable fabric roofs and sliding roof systems for terraces, penthouses and outdoor areas across Delhi NCR.",
+      image: ASSETS.PHOTOS.PERGOLA.LOUVRED_TERRACE,
+      material: "Powder-Coated Extruded Aluminium Louvers & Frames, Tensile Fabric",
+    },
+    hero: {
+      productName: "Retractable Roof",
+      brandTag: "Solution Sahab | Delhi NCR",
+      tagline:
+        "Motorized retractable roofs and louvered pergolas for terraces and outdoor living. Open the roof to the sky on a pleasant evening, angle the louvers for shade at noon, and close it tight when the monsoon arrives, all from a remote.",
+      badges: [
+        "Motorized Remote Control",
+        "Rain & Sun Protection",
+        "Adjustable Louvers",
+        "Custom-Made to Size",
+      ],
+      heroImage: ASSETS.PHOTOS.PERGOLA.LOUVRED_TERRACE,
+      heroImageAlt: "Motorized louvered aluminium roof over a rooftop terrace by Solution Sahab",
+      breadcrumbName: "Retractable Roof",
+      bookingTargetId: "#booking-form",
+    },
+    overview: {
+      title: "What Is a Retractable Roof?",
+      leadParagraph:
+        "A retractable roof is a covering for your terrace, courtyard or outdoor area that opens and closes when you want it to. Instead of choosing between an open terrace that is unusable in harsh sun and rain, and a fixed shed that blocks the sky for good, you get both.",
+      secondaryParagraph:
+        "Solution Sahab builds retractable roofs as motorized louvered aluminium pergolas, retractable fabric roofs and sliding roof systems. Each one is fabricated to the size of your space, fixed to your walls or on its own posts, and fitted with built-in gutters that carry rainwater away when the roof is closed.",
+      bullets: [
+        {
+          label: "Open Sky or Full Cover",
+          text: "Open the roof for fresh air and starlight, or close it completely to keep the area dry in heavy rain.",
+        },
+        {
+          label: "Control Sun & Heat",
+          text: "Angle the aluminium louvers to let in soft light while blocking direct sun, keeping the terrace cooler through a Delhi summer.",
+        },
+        {
+          label: "Use Your Terrace All Year",
+          text: "Turn an open terrace into a lounge, dining or work area you can enjoy in every season.",
+        },
+      ],
+      media: {
+        type: "image",
+        src: ASSETS.PHOTOS.PERGOLA.TERRACE_KITCHEN,
+        alt: "Louvered aluminium roof with LED strip lighting over a terrace kitchen and lounge",
+        caption: "Louvers partly open to let daylight into a rooftop kitchen and lounge, with built-in LED lighting for the evenings.",
+      },
+    },
+    benefits: {
+      title: "Types of Retractable Roofs",
+      subtitle:
+        "Choose the system that suits your terrace, the look you want and how you plan to use the space.",
+      image: ASSETS.PHOTOS.WEATHER_SCREEN.PERGOLA,
+      imageAlt: "Louvered pergola roof combined with side weather screens on a terrace",
+      benefits: [
+        {
+          title: "Motorized Louvered Aluminium Roof",
+          description:
+            "Rows of aluminium louvers rotate to any angle, from fully open to sky to fully closed and rain-tight, with gutters built into the frame. Optional LED strip lighting.",
+        },
+        {
+          title: "Retractable Fabric Roof",
+          description:
+            "A tensile fabric canopy on an aluminium frame that folds back on its tracks to open the roof, and stretches out to give shade and shelter from light rain.",
+        },
+        {
+          title: "Sliding Roof System",
+          description:
+            "Rigid roof panels that slide open along side rails, for courtyards and terraces that need a solid roof with the option to open up.",
+        },
+        {
+          title: "Motorized Pergola for Villas & Pools",
+          description:
+            "Free-standing pergolas with flat, curved or tunnel-shaped roofs for pool decks, gardens and villa lawns, with no wall support needed.",
+        },
+      ],
+    },
+    applications: {
+      title: "Where Can You Install a Retractable Roof?",
+      subtitle:
+        "For homes, cafés and restaurants across Delhi NCR: rooftop terraces, penthouses, courtyards, pool decks and garden sit-outs.",
+      areas: [
+        {
+          title: "Rooftop Terraces & Penthouses",
+          desc: "Turn a sun-baked rooftop into a covered lounge with open views that you can use morning to night.",
+          imageUrl: ASSETS.PHOTOS.PERGOLA.LOUVRED_TERRACE,
+          alt: "Louvered aluminium roof over a rooftop terrace with city views",
+        },
+        {
+          title: "Outdoor Kitchens & Entertainment Areas",
+          desc: "Host dinners, parties and movie nights outdoors without worrying about sudden rain or late-afternoon sun.",
+          imageUrl: ASSETS.PHOTOS.PERGOLA.TERRACE_KITCHEN,
+          alt: "Rooftop kitchen and entertainment area under a louvered roof",
+        },
+        {
+          title: "Terrace Lounges & Sit-Outs",
+          desc: "Give a sit-out or lounge a solid overhead cover so cushions and furniture stay dry and out of the sun.",
+          imageUrl: ASSETS.PHOTOS.WEATHER_SCREEN.RAISED,
+          alt: "Covered terrace lounge with seating and city views",
+        },
+        {
+          title: "Full Enclosures with Side Screens",
+          desc: "Pair the roof with our motorized weather screens on the sides to block wind, dust and slanting rain, creating a complete outdoor room.",
+          imageUrl: ASSETS.PHOTOS.WEATHER_SCREEN.PERGOLA,
+          alt: "Louvered roof with lowered side weather screens enclosing a terrace",
+        },
+      ],
+    },
+    faqs: [
+      {
+        id: 1,
+        question: "Does a retractable roof keep out rain when it is closed?",
+        answer:
+          "Yes. When the louvers or panels close, they seal against each other and rainwater runs into gutters built into the frame, then down through the posts or a downpipe to your drain.",
+      },
+      {
+        id: 2,
+        question: "What is the difference between a louvered roof and a fabric roof?",
+        answer:
+          "A louvered roof uses rotating aluminium blades, so you can fine-tune light and airflow at any angle and it gives the strongest weather protection. A fabric roof folds back completely to open the full sky and is lighter and more affordable. We help you choose based on your space and budget.",
+      },
+      {
+        id: 3,
+        question: "How is the roof operated?",
+        answer:
+          "Our retractable roofs are motorized and work from a remote control or wall switch. Smart-home control through a phone app, Alexa or Google Home can be added.",
+      },
+      {
+        id: 4,
+        question: "Can it be installed on an existing terrace without major construction?",
+        answer:
+          "In most cases, yes. The frame is fixed to existing walls or stands on its own posts anchored to the terrace floor. We check the structure and drainage during the site visit before we recommend a design.",
+      },
+      {
+        id: 5,
+        question: "Can I add lights and side screens?",
+        answer:
+          "Yes. LED strip lighting can be built into the frame, and our motorized weather screens can be fitted on the sides to block wind, dust and slanting rain.",
+      },
+      {
+        id: 6,
+        question: "How does measurement and installation work?",
+        answer:
+          "A Solution Sahab specialist visits your terrace, measures the area, checks fixing points and drainage, and gives you a design and quote. The roof is then fabricated to size and installed by our own team.",
+      },
+    ],
+    bookingTitle: "Book a Free Terrace Site Visit",
+    bookingDescription:
+      "Book a specialist visit to measure your terrace and see louver and fabric options for your retractable roof. Prompt service across Delhi NCR.",
   },
 };

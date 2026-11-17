@@ -16,6 +16,7 @@ export const ASSETS = {
   HERO_IMAGE_HOME_ALUMINUM_MESH: "/images/hero/hero-aluminum-security-mesh-v3.webp",
   HERO_IMAGE_HOME_WEATHER_SCREEN: "/images/hero/hero-weather-screen-v3.webp",
   HERO_IMAGE_HOME_SKYLIGHT: "/images/hero/hero-skylight-v3.webp",
+  HERO_IMAGE_HOME_RETRACTABLE_ROOF: "/images/hero/hero-retractable-roof-v3.webp",
 
   // Product Catalog Images
   PRODUCTS: {

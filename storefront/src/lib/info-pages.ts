@@ -402,24 +402,24 @@ export const CONTACT_DATA = {
   partners: [
     {
       city: "PATNA (BIHAR)",
-      name: "Hari Narayan Trader",
+      name: "Solution Sahab Patna",
       address: "Ground floor, Sudama Palace, Kankarbagh Main Road 800020",
     },
     {
       city: "GHAZIABAD (UP)",
-      name: "The UVW",
+      name: "Solution Sahab Ghaziabad",
       address:
         "562 / First Floor, Niti Khand 3, Indirapuram, Ghaziabad UP - 201014",
     },
     {
       city: "NOIDA (UP)",
-      name: "Byebugs",
+      name: "Solution Sahab Noida",
       address:
         "FF16, Rise Shoplex Atul Marg, Greater Noida W Rd, Sector 1, Bisrakh Jalalpur, Uttar Pradesh 201318",
     },
     {
       city: "GURUGRAM (HARYANA)",
-      name: "D'decor Store (The Design Studio)",
+      name: "Solution Sahab Gurugram",
       address: "Shop no 5&6, ML Market, Gurugram, Haryana 122001",
     },
   ],

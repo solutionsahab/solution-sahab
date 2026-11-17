@@ -45,6 +45,12 @@ const SLIDES = [
     image: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
     alt: "Motorized Skylight Blinds & Honeycomb Blinds under a large skylight: motorized remote control, insulation for a cooler space, blocks heat & harmful UV, reduces outside noise, sleek modern aesthetic",
   },
+  {
+    name: "Retractable Roof",
+    crop: "object-[100%_50%]",
+    image: ASSETS.HERO_IMAGE_HOME_RETRACTABLE_ROOF,
+    alt: "Retractable Roof with louvers over a rooftop terrace, a flexible open & covered space for every season: open or close as per need, all-weather protection (rain, sun & dust), keeps the space cool & ventilated, motorized with remote control, custom fit for your space",
+  },
 ];
 
 export function HeroSection() {

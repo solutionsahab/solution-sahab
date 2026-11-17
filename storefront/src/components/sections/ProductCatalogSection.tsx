@@ -58,7 +58,7 @@ const PRODUCTS: ProductItem[] = [
     title: "Skylights & Ceiling Hangers",
     category: "Stairwells & Utility Balconies",
     summary:
-      "Laminated safety glass skylights and ceiling-mounted pulley cloth hangers to free up balcony floor space.",
+      "Motorized and honeycomb skylight blinds and ceiling-mounted pulley cloth hangers to free up balcony floor space.",
     href: "/skylight",
     imageUrl: ASSETS.PHOTOS.CLOTH_HANGER.HERO,
   },
