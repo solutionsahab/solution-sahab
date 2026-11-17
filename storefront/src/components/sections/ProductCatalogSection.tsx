@@ -67,64 +67,60 @@ const PRODUCTS: ProductItem[] = [
 export function ProductCatalogSection() {
   return (
     <section
-      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+      className="w-full bg-[#F3F6FB] py-12 sm:py-14 lg:py-16 scroll-mt-28"
       id="products-showcase"
       aria-labelledby="products-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <h2
-          id="products-heading"
-          className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 mb-6"
-        >
-          Our Products
-        </h2>
+        <div className="reveal flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
+          <h2
+            id="products-heading"
+            className="font-gilroy font-light text-3xl sm:text-4xl lg:text-5xl text-neutral-950 tracking-tight leading-[1.05] m-0"
+          >
+            Our <strong className="font-extrabold">Products</strong>
+          </h2>
+          <p className="m-0 max-w-md text-neutral-600 leading-relaxed">
+            Six systems, each made to measure and fitted by our own team across Delhi NCR.
+          </p>
+        </div>
 
-        {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, wide screens show 3-4 */}
-        <Carousel label="Our products" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {/* One-row swipe carousel (CSS scroll-snap); py room lets card shadows show inside the scroller */}
+        <Carousel label="Our products" className="flex gap-5 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 py-4 -my-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {PRODUCTS.map((product) => (
             <article
               key={product.title}
-              className="flex flex-col shrink-0 snap-start w-[80%] sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-2rem)/3)] xl:w-[calc((100%-3rem)/4)] border border-neutral-300 bg-white"
+              className="group relative flex flex-col shrink-0 snap-start w-[80%] sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)] xl:w-[calc((100%-3.75rem)/4)] rounded-[1.75rem] bg-white p-3 shadow-[0_10px_30px_-18px_rgb(15_27_51/0.35)] transition-[transform,box-shadow] duration-300 motion-safe:hover:-translate-y-1 hover:shadow-[0_24px_50px_-20px_rgb(27_77_142/0.45)]"
             >
-              <Link href={product.href} className="block relative h-44 w-full overflow-hidden bg-neutral-200">
+              <div className="relative h-52 w-full overflow-hidden rounded-[1.25rem] bg-neutral-200">
                 <Image
-                  alt={product.title}
+                  alt=""
                   src={product.imageUrl}
                   fill
                   sizes="(max-width: 640px) 80vw, (max-width: 1023px) 50vw, 25vw"
                   loading="lazy"
-                  className="object-cover"
+                  className="object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out group-hover:scale-105"
                 />
-              </Link>
-
-              <div className="flex flex-col flex-1 p-4">
-                <span className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] mb-1">
+                <span className="absolute left-3 top-3 rounded-full bg-white/90 backdrop-blur px-3 py-1 text-xs font-semibold text-[#1B4D8E]">
                   {product.category}
                 </span>
-                <h3 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-1.5">
-                  <Link href={product.href} className="hover:underline underline-offset-4">
+              </div>
+
+              <div className="flex flex-col flex-1 px-2 pt-4 pb-2">
+                <h3 className="text-xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-2">
+                  {/* Stretched link: the whole card is one click target and one tab stop */}
+                  <Link href={product.href} className="after:absolute after:inset-0 after:rounded-[1.75rem] focus:outline-none focus-visible:after:ring-2 focus-visible:after:ring-[#1B4D8E]">
                     {product.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed m-0 mb-4">
+                <p className="text-sm text-neutral-600 leading-relaxed m-0 mb-5">
                   {product.summary}
                 </p>
-
-                {/* mt-auto lines the links up across cards of different text length */}
-                <div className="mt-auto flex items-center justify-between text-xs">
-                  <Link
-                    href={product.href}
-                    className="text-neutral-950 hover:opacity-70 inline-flex items-center gap-1 uppercase tracking-wider font-gilroy font-extrabold"
-                  >
-                    View Product
-                  </Link>
-                  <Link
-                    href="#quick-booking"
-                    className="py-1 -my-1 font-semibold text-neutral-600 hover:text-neutral-950 underline underline-offset-4"
-                  >
-                    Book Visit
-                  </Link>
-                </div>
+                <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#1B4D8E]" aria-hidden="true">
+                  View product
+                  <span className="material-symbols-outlined flex! h-8 w-8 items-center justify-center rounded-full bg-[#1B4D8E]/10 text-[18px]! transition-colors group-hover:bg-[#1B4D8E] group-hover:text-white">
+                    chevron_right
+                  </span>
+                </span>
               </div>
             </article>
           ))}

@@ -48,7 +48,7 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "child safety grills for schools",
       ],
       canonical: "https://solutionsahab.com/invisible-grills-for-schools",
-      ogImage: ASSETS.PHOTOS.INVISIBLE_GRILLS.SCHOOL_CORRIDOR,
+      ogImage: "/og/invisible-grills-for-schools.jpg",
     },
     structuredData: {
       productName: "Invisible Grills for Schools",
@@ -235,7 +235,7 @@ export const USE_CASE_PAGES: Record<string, UseCasePageConfig> = {
         "invisible grills for healthcare buildings",
       ],
       canonical: "https://solutionsahab.com/invisible-grills-for-hospitals",
-      ogImage: ASSETS.PHOTOS.INVISIBLE_GRILLS.FACADE,
+      ogImage: "/og/invisible-grills-for-hospitals.jpg",
     },
     structuredData: {
       productName: "Invisible Grills for Hospitals",

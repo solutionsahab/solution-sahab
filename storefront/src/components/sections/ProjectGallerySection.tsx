@@ -59,50 +59,51 @@ const PROJECTS: ProjectItem[] = [
 export function ProjectGallerySection() {
   return (
     <section
-      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+      className="w-full bg-[#F3F6FB] py-12 sm:py-14 lg:py-16 scroll-mt-28"
       id="projects"
       aria-labelledby="gallery-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="flex items-end justify-between gap-4 mb-6">
+        <div className="reveal flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
           <h2
             id="gallery-heading"
-            className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
+            className="font-gilroy font-light text-3xl sm:text-4xl lg:text-5xl text-neutral-950 tracking-tight leading-[1.05] m-0 max-w-2xl"
           >
-            Our Recent Completed Sites in Delhi NCR
+            Recently completed <strong className="font-extrabold">sites in Delhi NCR</strong>
           </h2>
           <Link
             href="/gallery"
-            className="shrink-0 text-xs font-gilroy font-extrabold uppercase tracking-wider text-neutral-950 underline underline-offset-4 hover:opacity-70"
+            className="shrink-0 inline-flex items-center gap-1 text-sm font-semibold text-[#1B4D8E] hover:underline underline-offset-4"
           >
-            View Full Gallery
+            View full gallery
+            <span className="material-symbols-outlined text-[18px]!" aria-hidden="true">chevron_right</span>
           </Link>
         </div>
 
         {/* One-row swipe carousel (CSS scroll-snap): phones peek the next photo, desktop shows 4 */}
-        <Carousel label="Recent completed sites" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Carousel label="Recent completed sites" className="flex gap-5 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {PROJECTS.map((item) => (
-            <div
+            <figure
               key={item.title}
-              className="shrink-0 snap-start w-[80%] sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-3rem)/4)]"
+              className="group relative m-0 shrink-0 snap-start w-[80%] sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)] h-64 sm:h-72 rounded-[1.5rem] overflow-hidden bg-neutral-200 isolate"
             >
-              <div className="relative h-52 w-full overflow-hidden bg-neutral-200">
-                <Image
-                  alt={item.alt}
-                  src={item.src}
-                  fill
-                  sizes="(max-width: 640px) 80vw, (max-width: 1023px) 50vw, 25vw"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-base font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mt-3">
-                {item.title}
-              </h3>
-              <p className="text-xs text-neutral-500 m-0 mt-1">
-                {item.location ? `${item.system}, ${item.location}` : item.system}
-              </p>
-            </div>
+              <Image
+                alt={item.alt}
+                src={item.src}
+                fill
+                sizes="(max-width: 640px) 80vw, (max-width: 1023px) 50vw, 25vw"
+                loading="lazy"
+                className="-z-10 object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out group-hover:scale-105"
+              />
+              <figcaption className="absolute inset-x-3 bottom-3 rounded-2xl bg-white/95 backdrop-blur px-4 py-3">
+                <h3 className="text-base font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-neutral-600 m-0 mt-0.5">
+                  {item.location ? `${item.system}, ${item.location}` : item.system}
+                </p>
+              </figcaption>
+            </figure>
           ))}
         </Carousel>
       </div>

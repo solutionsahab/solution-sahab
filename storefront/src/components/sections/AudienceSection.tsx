@@ -23,13 +23,26 @@ const AUDIENCES: AudienceRow[] = [
     title: "Homeowners & High-Rise Residents",
     description:
       "Balcony fall protection for children and pets plus smooth pleated insect screens, approved by RWAs across Gurgaon, Noida, and Delhi.",
-    imageUrl: ASSETS.PRODUCTS.INVISIBLE_GRILLS,
-    imageAlt: "High-rise residential balcony fitted with invisible safety grills",
+    // AI-generated mood scene (no product shown): the risk an open balcony poses to children
+    imageUrl: "/images/props/prop-toys-balcony.webp",
+    imageAlt: "Toy blocks and a teddy bear on a sunlit high-rise balcony with an open railing",
     ctaText: "Book Home Measurement",
     ctaHref: "#quick-booking",
   },
   {
     index: "02",
+    tag: "Cats, Dogs & Birds",
+    title: "Pet Parents in High-Rises",
+    description:
+      "Cats love ledges. Close cable spacing and aluminium security mesh keep pets inside while the balcony stays open to light and air.",
+    // AI-generated mood scene (no product shown)
+    imageUrl: "/images/props/prop-cat-ledge.webp",
+    imageAlt: "A tabby cat sitting on an open balcony ledge high above the city at sunset",
+    ctaText: "Book Home Measurement",
+    ctaHref: "#quick-booking",
+  },
+  {
+    index: "03",
     tag: "Cafes, Offices & Retail",
     title: "Commercial & Hospitality Spaces",
     description:
@@ -40,7 +53,7 @@ const AUDIENCES: AudienceRow[] = [
     ctaHref: "#quick-booking",
   },
   {
-    index: "03",
+    index: "04",
     tag: "Trade & B2B Partners",
     title: "Architects & Interior Designers",
     description:
@@ -57,56 +70,51 @@ const AUDIENCES: AudienceRow[] = [
 export function AudienceSection() {
   return (
     <section
-      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+      className="w-full bg-white py-12 sm:py-14 lg:py-16 scroll-mt-28"
       id="audience-solutions"
       aria-labelledby="audience-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <h2
           id="audience-heading"
-          className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 mb-6"
+          className="reveal font-gilroy font-light text-3xl sm:text-4xl lg:text-5xl text-neutral-950 tracking-tight leading-[1.05] m-0 mb-6 sm:mb-8 max-w-3xl"
         >
-          Built for Homes, Commercial Spaces &amp; Architects
+          Built for <strong className="font-extrabold">homes, commercial spaces &amp; architects</strong>
         </h2>
 
-        {/* One-row swipe carousel of cards (CSS scroll-snap): phones peek the next card, tablets show 2, desktop fits 3 */}
-        <Carousel label="Who we serve" className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {/* Photo-led cards: text sits on a dark fade at the bottom of each real install photo */}
+        <Carousel label="Who we serve" className="flex gap-5 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {AUDIENCES.map((item) => (
             <div
               key={item.index}
-              className="flex flex-col shrink-0 snap-start w-[85%] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] border border-neutral-300 bg-white"
+              className="group relative flex flex-col justify-end shrink-0 snap-start w-[85%] sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)] min-h-[360px] sm:min-h-[340px] sm:min-h-[400px] rounded-[1.75rem] overflow-hidden bg-neutral-900 isolate"
             >
-              <div className="relative h-40 w-full overflow-hidden bg-neutral-200">
-                <Image
-                  src={item.imageUrl}
-                  alt={item.imageAlt}
-                  fill
-                  sizes="(max-width: 640px) 85vw, (max-width: 1023px) 50vw, 33vw"
-                  loading="lazy"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <Image
+                src={item.imageUrl}
+                alt={item.imageAlt}
+                fill
+                sizes="(max-width: 640px) 85vw, (max-width: 1023px) 50vw, 33vw"
+                loading="lazy"
+                className="-z-10 object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out group-hover:scale-105"
+              />
+              <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0F1B33] via-[#0F1B33]/45 to-transparent" />
 
-              <div className="flex flex-col flex-1 p-4">
-                <div className="flex items-center gap-2 text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] mb-1">
-                  <span>{item.tag}</span>
-                </div>
-
-                <h3 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-1.5">
+              <div className="flex flex-col p-6 text-white">
+                <span className="self-start rounded-full bg-white/15 backdrop-blur px-3 py-1 text-xs font-semibold mb-3">
+                  {item.tag}
+                </span>
+                <h3 className="text-2xl font-extrabold font-gilroy tracking-tight m-0 mb-2">
                   {item.title}
                 </h3>
-
-                <p className="text-sm text-neutral-600 leading-relaxed m-0 mb-4">
+                <p className="text-sm text-white/80 leading-relaxed m-0 mb-5">
                   {item.description}
                 </p>
-
-                {/* mt-auto lines the buttons up across cards of different text length */}
                 <Button
                   href={item.ctaHref}
-                  variant="outline"
+                  variant="white"
                   size="sm"
                   icon={item.isExternalPhone ? "call" : undefined}
-                  className="w-full mt-auto"
+                  className="self-start"
                 >
                   {item.ctaText}
                 </Button>

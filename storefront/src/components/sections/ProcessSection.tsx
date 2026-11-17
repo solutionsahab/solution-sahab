@@ -24,36 +24,35 @@ const STEPS = [
 export function ProcessSection() {
   return (
     <section
-      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+      className="w-full bg-[#F3F6FB] py-12 sm:py-14 lg:py-16 scroll-mt-28"
       id="how-it-works"
       aria-labelledby="process-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <h2
           id="process-heading"
-          className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 mb-6"
+          className="reveal font-gilroy font-light text-3xl sm:text-4xl lg:text-5xl text-neutral-950 tracking-tight leading-[1.05] m-0 mb-6 sm:mb-8"
         >
-          How It Works
+          How it <strong className="font-extrabold">works</strong>
         </h2>
 
-        {/* 3 compact numbered steps: a row on desktop, stacked on phones */}
-        <ol className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 list-none m-0 p-0">
+        {/* 3 numbered steps joined by a dashed path on desktop, stacked on phones */}
+        <ol className="relative grid grid-cols-1 md:grid-cols-3 gap-5 list-none m-0 p-0">
+          <span aria-hidden="true" className="hidden md:block absolute left-[16%] right-[16%] top-[3.25rem] border-t-2 border-dashed border-[#1B4D8E]/25" />
           {STEPS.map((step, index) => (
-            <li key={step.number} className="flex gap-3">
+            <li key={step.number} className="reveal relative rounded-[1.75rem] bg-white p-7 shadow-[0_10px_30px_-18px_rgb(15_27_51/0.35)]">
               <span
-                className="shrink-0 w-8 h-8 rounded-full bg-[#1B4D8E] text-white text-sm font-gilroy font-extrabold flex items-center justify-center"
+                className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#1B4D8E] text-white text-lg font-gilroy font-extrabold ring-8 ring-[#1B4D8E]/10"
                 aria-hidden="true"
               >
                 {index + 1}
               </span>
-              <div>
-                <h3 className="text-base sm:text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mb-1 leading-8">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed m-0">
-                  {step.description}
-                </p>
-              </div>
+              <h3 className="text-xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 mt-6 mb-2">
+                {step.title}
+              </h3>
+              <p className="text-sm text-neutral-600 leading-relaxed m-0">
+                {step.description}
+              </p>
             </li>
           ))}
         </ol>

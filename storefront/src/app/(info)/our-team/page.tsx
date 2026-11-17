@@ -13,7 +13,7 @@ const DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/our-team",
-  title: "Our Team | Solution Sahab",
+  title: "Our Team: Installers & Engineers | Solution Sahab",
   description: DESCRIPTION,
   keywords: [
     "Solution Sahab team",
@@ -34,11 +34,11 @@ export default function OurTeamPage() {
       />
 
       <section
-        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+        className="w-full bg-white py-10 sm:py-12 lg:py-14 scroll-mt-28"
         aria-label="Solution Sahab team photos"
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-          <ImageGrid images={TEAM_IMAGES} ratio="square" carousel />
+          <ImageGrid images={TEAM_IMAGES} ratio="square" columns={4} />
         </div>
       </section>
 

@@ -32,14 +32,6 @@ export async function generateMetadata({
     type: "article",
     publishedTime: post.datePublished,
     modifiedTime: post.datePublished,
-    image: post.image
-      ? {
-          url: post.image.src,
-          alt: post.image.alt,
-          width: 1440,
-          height: 756,
-        }
-      : undefined,
   });
 }
 

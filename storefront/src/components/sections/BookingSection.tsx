@@ -36,24 +36,32 @@ export function BookingSection({
 
   return (
     <section
-      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+      className="w-full bg-[#F3F6FB] py-12 sm:py-14 lg:py-16 scroll-mt-28"
       id={id}
       aria-labelledby="booking-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 border border-neutral-300 bg-white">
+        <div className="grid grid-cols-1 lg:grid-cols-12 rounded-[2rem] overflow-hidden bg-white shadow-[0_30px_70px_-30px_rgb(15_27_51/0.45)]">
           {/* Left 5 Columns: Direct Info & Instant Channels */}
-         <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between gap-8">
+         <div className="lg:col-span-5 p-7 sm:p-10 flex flex-col justify-between gap-8 bg-[#1B4D8E] text-white">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0 mb-3">
+              <h2 id="booking-heading" className="text-3xl sm:text-4xl font-gilroy font-extrabold text-white tracking-tight leading-[1.1] m-0 mb-4">
                 {title}
               </h2>
-              <p className="text-sm text-neutral-600 leading-relaxed font-body m-0 mb-6">
+              <p className="text-white/80 leading-relaxed font-body m-0 mb-6">
                 {description}
               </p>
+              <div className="flex flex-wrap gap-3">
+                <Button href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`} variant="white" size="md" icon="call">
+                  Call now
+                </Button>
+                <Button href={CONTACT_INFO.WHATSAPP_URL} variant="whatsapp" size="md" icon="chat">
+                  WhatsApp
+                </Button>
+              </div>
             </div>
 
-            <div className="pt-4 border-t border-neutral-200 text-xs text-neutral-500 font-sans">
+            <div className="pt-5 border-t border-white/20 text-sm text-white/75 font-sans">
               Serving Gurgaon, Noida, Greater Noida, Delhi, Faridabad and Ghaziabad
             </div>
           </div>
@@ -118,7 +126,7 @@ export function BookingSection({
                   <div>
                     <label
                       htmlFor="full-name"
-                      className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
+                      className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-2"
                     >
                       Name <span className="text-red-600">*</span>
                     </label>
@@ -130,7 +138,7 @@ export function BookingSection({
                       placeholder="Your full name"
                       value={formData.fullName}
                       onChange={(e) => updateField("fullName", e.target.value)}
-                      className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.fullName
+                      className={`w-full h-12 px-4 rounded-xl bg-[#F3F6FB] border ${errors.fullName
                         ? "border-red-500 bg-red-50/20"
                         : "border-neutral-300 focus:border-neutral-950"
                         } text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors`}
@@ -145,7 +153,7 @@ export function BookingSection({
                   <div>
                     <label
                       htmlFor="phone-number"
-                      className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
+                      className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-2"
                     >
                       Phone number <span className="text-red-600">*</span>
                     </label>
@@ -158,7 +166,7 @@ export function BookingSection({
                       placeholder="10-digit mobile number"
                       value={formData.phone}
                       onChange={(e) => updateField("phone", e.target.value)}
-                      className={`w-full h-12 px-4 bg-[#F7F6F2] border ${errors.phone
+                      className={`w-full h-12 px-4 rounded-xl bg-[#F3F6FB] border ${errors.phone
                         ? "border-red-500 bg-red-50/20"
                         : "border-neutral-300 focus:border-neutral-950"
                         } text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors`}
@@ -174,7 +182,7 @@ export function BookingSection({
                 <div>
                   <label
                     htmlFor="booking-product"
-                    className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
+                    className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-2"
                   >
                     Product
                   </label>
@@ -183,7 +191,7 @@ export function BookingSection({
                     name="product"
                     value={formData.product}
                     onChange={(e) => updateField("product", e.target.value)}
-                    className="w-full h-12 px-4 bg-[#F7F6F2] border border-neutral-300 focus:border-neutral-950 text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
+                    className="w-full h-12 px-4 rounded-xl bg-[#F3F6FB] border border-neutral-300 focus:border-neutral-950 text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
                   >
                     <option value="">Select a product (optional)</option>
                     {PRODUCT_OPTIONS.map((p) => (
@@ -195,7 +203,7 @@ export function BookingSection({
                 <div>
                   <label
                     htmlFor="booking-address"
-                    className="block text-xs font-mono uppercase tracking-wider text-neutral-700 mb-2"
+                    className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-2"
                   >
                     Address <span className="text-red-600">*</span>
                   </label>
@@ -207,7 +215,7 @@ export function BookingSection({
                     placeholder="House / flat no., building or society name, street, area, city"
                     value={formData.address}
                     onChange={(e) => updateField("address", e.target.value)}
-                    className={`w-full p-4 bg-[#F7F6F2] border ${errors.address
+                    className={`w-full p-4 rounded-xl bg-[#F3F6FB] border ${errors.address
                       ? "border-red-500 bg-red-50/20"
                       : "border-neutral-300 focus:border-neutral-950"
                       } text-neutral-950 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-y`}

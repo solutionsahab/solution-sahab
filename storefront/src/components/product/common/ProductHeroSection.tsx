@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { CONTACT_INFO } from "@/lib/constants";
 
 export interface ProductHeroSectionProps {
   productName: string;
@@ -31,11 +32,10 @@ export function ProductHeroSection({
   bookingTargetId = "#booking-form",
 }: ProductHeroSectionProps) {
   return (
-    <section className="w-full bg-white pt-5 sm:pt-6 pb-10 sm:pb-12 border-b border-neutral-200">
+    <section className="relative w-full bg-[#F3F6FB] pt-6 pb-8 sm:pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        {/* Simple Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="mb-4 flex items-center gap-2 text-xs text-neutral-500 font-sans">
-          <Link href="/" className="hover:text-blue-600 transition-colors">
+        <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-xs text-neutral-500 font-sans">
+          <Link href="/" className="hover:text-[#1B4D8E] transition-colors">
             Home
           </Link>
           <span aria-hidden="true">/</span>
@@ -43,7 +43,7 @@ export function ProductHeroSection({
           <span aria-hidden="true">/</span>
           {parentCrumb && (
             <>
-              <Link href={parentCrumb.href} className="hover:text-blue-600 transition-colors">
+              <Link href={parentCrumb.href} className="hover:text-[#1B4D8E] transition-colors">
                 {parentCrumb.label}
               </Link>
               <span aria-hidden="true">/</span>
@@ -52,59 +52,70 @@ export function ProductHeroSection({
           <span className="text-neutral-900 font-medium">{breadcrumbName || productName}</span>
         </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-          {/* Left: Brand Name, Product Name & Core Info (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col items-start">
-            <span className="text-xs font-semibold tracking-wider uppercase text-blue-600 mb-2">
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          <div className="lg:col-span-6 flex flex-col items-start">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-[#1B4D8E] shadow-sm">
+              <span className="material-symbols-outlined text-[16px]!" aria-hidden="true">location_on</span>
               {brandTag}
             </span>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-gilroy font-extrabold text-neutral-950 tracking-tight leading-[1.08] m-0 mb-3">
+            <h1 className="mt-5 text-[2rem] sm:text-5xl lg:text-6xl font-gilroy font-extrabold text-neutral-950 tracking-tight leading-[1.02] m-0">
               {productName}
             </h1>
 
-            <p className="text-base text-neutral-700 leading-relaxed max-w-2xl font-body m-0 mb-5">
+            <p className="mt-5 mb-0 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl font-body">
               {tagline}
             </p>
 
-            {/* Clean Key Badges */}
-            <div className="flex flex-wrap gap-2 mb-6">
+            <ul className="mt-6 flex flex-wrap gap-2 list-none m-0 p-0">
               {badges.map((badge) => (
-                <span
+                <li
                   key={badge}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 text-neutral-800 text-xs font-medium border border-neutral-200"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-sm font-medium text-neutral-800 shadow-sm"
                 >
+                  <span className="material-symbols-outlined text-[16px]! text-[#1B4D8E]" aria-hidden="true">done</span>
                   {badge}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            {/* Quick Action Buttons */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1">
-              <Button
-                href={bookingTargetId}
-                variant="primary"
-                size="md"
-                icon="calendar_month"
-              >
-                Book Site Visit
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Button href={bookingTargetId} variant="primary" size="lg" icon="calendar_month">
+                Book a site visit
+              </Button>
+              <Button href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`} variant="outline" size="lg" icon="call">
+                {CONTACT_INFO.PHONE_PRIMARY}
               </Button>
             </div>
           </div>
 
-          {/* Right: High-Res Installation Image (5 cols) */}
-          <div className="lg:col-span-5">
-            <div className="relative border border-neutral-200 bg-neutral-100 overflow-hidden aspect-[4/3] w-full shadow-sm">
-              <Image
-                alt={heroImageAlt}
-                // hero-* images have their info panel on the right: show that side in this tall box
-                className={`w-full h-full object-cover ${heroImage.startsWith("/images/hero/") ? "object-right" : ""}`}
-                src={heroImage}
-                width={800}
-                height={1000}
-                priority
-                sizes="(max-width: 1024px) 100vw, 42vw"
-              />
+          {/* Real install photo on an indigo block, with a call card floating over it */}
+          <div className="lg:col-span-6">
+            <div className="relative mx-auto lg:ml-auto lg:mr-0 w-full max-w-[580px] pb-6 pr-4 sm:pr-6">
+              <div aria-hidden="true" className="absolute right-0 top-10 bottom-0 w-[72%] rounded-[2rem] bg-[#1B4D8E]" />
+              <div className="relative aspect-[4/3.3] w-full overflow-hidden rounded-[2rem] shadow-2xl bg-neutral-200">
+                <Image
+                  alt={heroImageAlt}
+                  // hero-* images have their info panel on the right: show that side
+                  className={`w-full h-full object-cover ${heroImage.startsWith("/images/hero/") ? "object-right" : ""}`}
+                  src={heroImage}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 46vw"
+                />
+              </div>
+              <a
+                href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
+                className="absolute -left-2 sm:-left-6 bottom-0 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-[0_18px_40px_-12px_rgb(15_27_51/0.35)] hover:-translate-y-0.5 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
+              >
+                <span className="material-symbols-outlined flex! h-11 w-11 items-center justify-center rounded-full bg-[#1B4D8E] text-white" aria-hidden="true">
+                  call
+                </span>
+                <span className="leading-tight">
+                  <span className="block text-xs text-neutral-500">Talk to an expert</span>
+                  <span className="block font-gilroy font-extrabold text-neutral-950 tabular-nums">{CONTACT_INFO.PHONE_PRIMARY}</span>
+                </span>
+              </a>
             </div>
           </div>
         </div>

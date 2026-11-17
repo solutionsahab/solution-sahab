@@ -134,7 +134,7 @@ export function Carousel({ label, className, controlsClassName = "", children }:
 
   // `current` already holds the pending target while a click-scroll is in flight, so rapid clicks build on it
   const arrow =
-    "flex h-10 w-10 items-center justify-center border border-[#1B4D8E] text-[#1B4D8E] bg-white transition-colors hover:bg-[#1B4D8E] hover:text-white disabled:opacity-30 disabled:pointer-events-none touch-manipulation focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B4D8E]";
+    "flex h-11 w-11 items-center justify-center rounded-full border border-[#1B4D8E]/25 text-[#1B4D8E] bg-white shadow-sm transition-colors hover:bg-[#1B4D8E] hover:text-white disabled:opacity-30 disabled:pointer-events-none touch-manipulation focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B4D8E]";
 
   return (
     <div role="region" aria-roledescription="carousel" aria-label={label} className="flex flex-col">
@@ -167,7 +167,7 @@ export function Carousel({ label, className, controlsClassName = "", children }:
               aria-label="Previous cards"
               className={arrow}
             >
-              <span className="material-symbols-outlined text-[22px]" aria-hidden="true">
+              <span className="material-symbols-outlined text-[22px]!" aria-hidden="true">
                 chevron_left
               </span>
             </button>
@@ -178,7 +178,7 @@ export function Carousel({ label, className, controlsClassName = "", children }:
               aria-label="Next cards"
               className={arrow}
             >
-              <span className="material-symbols-outlined text-[22px]" aria-hidden="true">
+              <span className="material-symbols-outlined text-[22px]!" aria-hidden="true">
                 chevron_right
               </span>
             </button>

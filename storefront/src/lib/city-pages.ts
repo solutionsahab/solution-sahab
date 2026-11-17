@@ -574,11 +574,11 @@ function buildCityPage(productKey: string, cityKey: CityKey): ProductPageConfig 
     areaServed: [c],
     faqDescription: `Answers on ${lower} price, installation and care in ${c}.`,
     metadata: {
-      title: `${tpl.name} in ${c} – Price & Installation | Solution Sahab`,
+      title: `${tpl.name} in ${c} – Price & Installation`,
       description: `${tpl.name} in ${c}: ${tpl.metaLine}. Site visit, written quote, 5-year warranty.`,
       keywords: tpl.keywords(c),
       canonical: `https://solutionsahab.com/${slug}`,
-      ogImage: base.metadata.ogImage,
+      ogImage: `/og/${productKey}-${cityKey}.jpg`,
     },
     structuredData: {
       ...base.structuredData,

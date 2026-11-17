@@ -1475,7 +1475,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Why invisible grills beat iron grills",
         paragraphs: [
-          "Iron grills rust, look bulky and need sanding, priming and repainting every few years. Invisible grills keep clear, open views without obstructing sunlight or air circulation, remain rust-free with minimal upkeep, and can withstand up to 250 kg of force, making them highly secure for homes with kids and pets.",
+          "Iron grills rust, look bulky and need sanding, priming and repainting every few years. Invisible grills keep clear, open views without obstructing sunlight or air circulation, remain rust-free with minimal upkeep, and can withstand up to 400 kg of force, making them highly secure for homes with kids and pets.",
         ],
       },
       {

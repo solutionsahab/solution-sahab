@@ -24,6 +24,10 @@ export default function WhoWeArePage() {
         title={WHO_WE_ARE.title}
         description={WHO_WE_ARE.description}
         breadcrumbs={[{ label: "Who We Are" }]}
+        image={{
+          src: "/images/gallery/exhibition-stall.webp",
+          alt: "Solution Sahab stall at a building-products exhibition, visitors looking at mesh and grill samples",
+        }}
       />
       <ProseSections sections={WHO_WE_ARE.sections} />
       <RelatedLinks

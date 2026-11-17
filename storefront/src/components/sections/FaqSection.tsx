@@ -65,7 +65,7 @@ export function FaqSection({
 
   return (
     <section
-      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+      className="w-full bg-white py-12 sm:py-14 lg:py-16 scroll-mt-28"
       id={id}
       aria-labelledby={`${id}-heading`}
     >
@@ -89,38 +89,38 @@ export function FaqSection({
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
           {/* Left 4 Columns: Title + Direct Call */}
-          <div className="lg:col-span-4 lg:sticky lg:top-28">
+          <div className="reveal lg:col-span-4 lg:sticky lg:top-28">
             <h2
               id={`${id}-heading`}
-              className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
+              className="text-3xl sm:text-4xl lg:text-5xl font-gilroy font-extrabold text-neutral-950 tracking-tight leading-[1.05] m-0"
             >
               {title}
             </h2>
-            <p className="text-sm text-neutral-600 mt-3 mb-6 leading-relaxed">
+            <p className="text-neutral-600 mt-4 mb-6 leading-relaxed">
               {description}
             </p>
 
-            <div className="pt-5 border-t border-neutral-300">
-              <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 m-0 mb-2">
+            <div className="rounded-[1.5rem] bg-[#1B4D8E] text-white p-6">
+              <p className="text-sm font-semibold text-white/75 m-0 mb-3">
                 Need a custom quote?
               </p>
               <div className="flex flex-col"><Link
                 href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-                className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
+                className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-base font-semibold tabular-nums text-white hover:underline underline-offset-4"
               >
                 <span>Call {CONTACT_INFO.PHONE_PRIMARY}</span>
 
               </Link>
                 <Link
                   href={`tel:${CONTACT_INFO.PHONE_ALT_1_RAW}`}
-                  className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
+                  className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-base font-semibold tabular-nums text-white hover:underline underline-offset-4"
                 >
                   <span>Call {CONTACT_INFO.PHONE_ALT_1}</span>
 
                 </Link>
                 <Link
                   href={`tel:${CONTACT_INFO.PHONE_ALT_2_RAW}`}
-                  className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-sm font-mono font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
+                  className="py-0.5 -my-0.5 inline-flex items-center gap-2 text-base font-semibold tabular-nums text-white hover:underline underline-offset-4"
                 >
                   <span>Call {CONTACT_INFO.PHONE_ALT_2}</span>
 
@@ -133,46 +133,49 @@ export function FaqSection({
 
           {/* Right 8 Columns: Flush Hairline Accordion List */}
           <div
-            className="lg:col-span-8 border-t border-b border-neutral-300 divide-y divide-neutral-300"
+            className="lg:col-span-8 flex flex-col gap-3"
             id="faq-container"
           >
             {activeItems.map((item, idx) => {
               const itemOpen = isOpen(item.id);
               return (
-                <div key={item.id} className="bg-transparent">
-                  <button
-                    type="button"
-                    onClick={() => toggleItem(item.id)}
-                    aria-expanded={itemOpen}
-                    aria-controls={`faq-answer-${item.id}`}
-                    className="w-full text-left py-5 sm:py-6 flex items-start justify-between gap-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary group"
-                  >
-                    <div className="flex items-baseline gap-4">
-                      <span className="text-xs font-gilroy font-extrabold text-[#1B4D8E] shrink-0">
-                        {idx < 9 ? `0${idx + 1}` : `${idx + 1}`}
+                <div key={item.id} className={`rounded-[1.25rem] px-5 sm:px-7 transition-colors ${itemOpen ? "bg-[#1B4D8E]/[0.06] ring-1 ring-[#1B4D8E]/20" : "bg-[#F3F6FB] hover:bg-[#E8EEF7]"}`}>
+                  {/* Heading wraps the button (a heading inside a button is invalid and hidden from screen-reader heading lists) */}
+                  <h3 className="m-0">
+                    <button
+                      type="button"
+                      onClick={() => toggleItem(item.id)}
+                      aria-expanded={itemOpen}
+                      aria-controls={`faq-answer-${item.id}`}
+                      className="w-full text-left py-5 sm:py-6 flex items-start justify-between gap-6 rounded-[1.25rem] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary group"
+                    >
+                      <span className="flex items-baseline gap-4">
+                        <span className="text-xs font-gilroy font-extrabold text-[#1B4D8E] shrink-0" aria-hidden="true">
+                          {idx < 9 ? `0${idx + 1}` : `${idx + 1}`}
+                        </span>
+                        <span className="text-base sm:text-lg font-bold font-gilroy text-neutral-950 group-hover:text-[#1B4D8E] transition-colors leading-snug">
+                          {item.question}
+                        </span>
                       </span>
-                      <h3 className="text-base sm:text-lg font-bold font-gilroy text-neutral-950 group-hover:opacity-75 transition-opacity m-0 leading-snug">
-                        {item.question}
-                      </h3>
-                    </div>
 
-                    <span
-                      className="text-xl font-mono text-neutral-500 leading-none shrink-0 mt-0.5 select-none"
-                      aria-hidden="true"
-                    >
-                      {itemOpen ? "−" : "+"}
-                    </span>
-                  </button>
+                      <span
+                        className={`text-xl text-neutral-500 leading-none shrink-0 mt-0.5 select-none motion-safe:transition-transform duration-300 ${itemOpen ? "rotate-45" : ""}`}
+                        aria-hidden="true"
+                      >
+                        +
+                      </span>
+                    </button>
+                  </h3>
 
-                  {itemOpen && (
-                    <div
-                      id={`faq-answer-${item.id}`}
-                      role="region"
-                      className="pb-6 pl-8 sm:pl-9 pr-6 text-sm sm:text-base text-neutral-600 leading-relaxed"
-                    >
-                      <p className="m-0">{item.answer}</p>
-                    </div>
-                  )}
+                  {/* Always in the HTML (hidden when closed) so search engines read every answer */}
+                  <div
+                    id={`faq-answer-${item.id}`}
+                    role="region"
+                    hidden={!itemOpen}
+                    className="pb-6 pl-8 sm:pl-9 pr-6 text-sm sm:text-base text-neutral-700 leading-relaxed"
+                  >
+                    <p className="m-0">{item.answer}</p>
+                  </div>
                 </div>
               );
             })}

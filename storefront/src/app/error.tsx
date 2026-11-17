@@ -19,9 +19,9 @@ export default function Error({
   return (
     <main
       id="main-content"
-      className="flex-1 flex flex-col items-center justify-center text-center gap-4 px-5 py-16 sm:py-20 bg-white"
+      className="flex-1 flex flex-col items-center justify-center text-center gap-5 px-5 py-14 sm:py-20 bg-[#F3F6FB]"
     >
-      <h1 className="text-3xl sm:text-4xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0">
         Something went wrong
       </h1>
       <p className="text-base text-neutral-700 leading-relaxed max-w-md m-0">

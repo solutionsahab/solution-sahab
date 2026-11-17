@@ -16,7 +16,7 @@ const DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/contact-us",
-  title: "Contact Us | Solution Sahab",
+  title: "Contact Solution Sahab | Site Visit Across Delhi NCR",
   description: DESCRIPTION,
   keywords: [
     "Contact Solution Sahab",
@@ -35,17 +35,22 @@ export default function ContactUsPage() {
         title="Contact Us"
         description={DESCRIPTION}
         breadcrumbs={[{ label: "Contact Us" }]}
+        image={{
+          src: "/images/props/prop-chai-balcony.webp",
+          alt: "A glass of masala chai on a small wooden table among potted plants on a sunny balcony",
+        }}
       />
 
       <section
-        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+        className="w-full bg-[#F3F6FB] pb-10 sm:pb-14 scroll-mt-28"
         aria-label="Contact details and enquiry form"
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
-            <div className="lg:col-span-6 flex flex-col gap-4">
-              <div className="border border-neutral-300 bg-white p-5">
-                <h2 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
+            <div className="lg:col-span-6 flex flex-col gap-5">
+              <div className="rounded-[1.75rem] bg-white p-6 sm:p-7 shadow-[0_10px_30px_-18px_rgb(15_27_51/0.35)]">
+                <h2 className="flex items-center gap-3 text-xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
+                  <span className="material-symbols-outlined flex! h-10 w-10 items-center justify-center rounded-full bg-[#1B4D8E] text-white text-[20px]!" aria-hidden="true">call</span>
                   Phone
                 </h2>
                 <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 list-none p-0 m-0">
@@ -53,7 +58,7 @@ export default function ContactUsPage() {
                     <li key={phone.raw}>
                       <Link
                         href={`tel:${phone.raw}`}
-                        className="text-sm font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70 inline-flex items-center gap-2"
+                        className="text-base font-semibold text-neutral-950 tabular-nums hover:text-[#1B4D8E] inline-flex items-center gap-2"
                       >
                         {phone.label}
                         {phone.landline && (
@@ -66,21 +71,22 @@ export default function ContactUsPage() {
                   ))}
                 </ul>
 
-                <div className="mt-4 pt-4 border-t border-neutral-300">
-                  <h3 className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E] m-0">
+                <div className="mt-5 pt-5 border-t border-neutral-200">
+                  <h3 className="text-sm font-semibold text-neutral-500 m-0">
                     Email
                   </h3>
                   <Link
                     href={`mailto:${CONTACT_DATA.email}`}
-                    className="mt-1.5 inline-block text-sm font-semibold text-neutral-950 underline underline-offset-4 hover:opacity-70"
+                    className="mt-1.5 inline-block text-base font-semibold text-neutral-950 hover:text-[#1B4D8E]"
                   >
                     {CONTACT_DATA.email}
                   </Link>
                 </div>
               </div>
 
-              <div className="border border-neutral-300 bg-white p-5">
-                <h2 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
+              <div className="rounded-[1.75rem] bg-white p-6 sm:p-7 shadow-[0_10px_30px_-18px_rgb(15_27_51/0.35)]">
+                <h2 className="flex items-center gap-3 text-xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
+                  <span className="material-symbols-outlined flex! h-10 w-10 items-center justify-center rounded-full bg-[#1B4D8E] text-white text-[20px]!" aria-hidden="true">location_on</span>
                   Visit Us
                 </h2>
                 <ul className="mt-3 flex flex-col gap-3 list-none p-0 m-0">
@@ -99,16 +105,24 @@ export default function ContactUsPage() {
                   href={CONTACT_INFO.GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center min-h-11 text-sm font-semibold text-[#1B4D8E] underline underline-offset-4 hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
+                  className="mt-2 inline-flex items-center min-h-11 text-sm font-semibold text-[#1B4D8E] hover:underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
                 >
                   View on Google Maps &amp; reviews
                 </a>
+                {/* Map loads only when scrolled to; points at the head-office coordinates used in our schema */}
+                <iframe
+                  title="Solution Sahab head office on Google Maps"
+                  src="https://www.google.com/maps?q=28.6692,77.0654&z=15&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="mt-4 w-full h-56 rounded-2xl border-0 bg-neutral-100"
+                />
               </div>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="border border-neutral-300 bg-white p-5 sm:p-6">
-                <h2 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
+              <div className="rounded-[1.75rem] bg-white p-6 sm:p-7 shadow-[0_10px_30px_-18px_rgb(15_27_51/0.35)] lg:p-9">
+                <h2 className="text-2xl sm:text-3xl font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
                   Send Us Your Enquiry
                 </h2>
                 <p className="text-sm text-neutral-600 leading-relaxed mt-1 mb-4">
@@ -123,14 +137,14 @@ export default function ContactUsPage() {
       </section>
 
       <section
-        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+        className="w-full bg-white py-10 sm:py-12 scroll-mt-28"
         aria-labelledby="partners-heading"
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="max-w-3xl mb-6">
             <h2
               id="partners-heading"
-              className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
+              className="font-gilroy font-extrabold text-3xl sm:text-4xl text-neutral-950 tracking-tight leading-[1.1] m-0"
             >
               Our Partners
             </h2>
@@ -141,13 +155,13 @@ export default function ContactUsPage() {
           </div>
 
           {/* One-row swipe carousel (CSS scroll-snap): phones peek the next card, desktop shows all 4 */}
-          <Carousel label="Our partners" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <Carousel label="Our partners" className="flex gap-5 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {CONTACT_DATA.partners.map((partner) => (
               <div
                 key={partner.city}
-                className="shrink-0 snap-start w-[80%] sm:w-[calc((100%-1rem)/2)] lg:w-[calc((100%-3rem)/4)] border border-neutral-300 bg-white p-4 flex flex-col gap-1.5"
+                className="shrink-0 snap-start w-[80%] sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-3.75rem)/4)] rounded-[1.5rem] bg-[#F3F6FB] p-6 flex flex-col gap-1.5"
               >
-                <span className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E]">
+                <span className="self-start rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#1B4D8E] mb-1">
                   {partner.city}
                 </span>
                 <span className="text-base font-extrabold font-gilroy text-neutral-950 tracking-tight">

@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import { StructuredData } from "@/components/common/StructuredData";
-import { ASSETS } from "@/lib/constants";
 
 const gilroy = localFont({
   src: [
@@ -76,7 +75,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: ASSETS.HERO_IMAGE_HOME,
+        url: "/og/home.jpg",
         width: 1200,
         height: 630,
         alt: "Solution Sahab Invisible Grill Balcony Installation",
@@ -88,7 +87,7 @@ export const metadata: Metadata = {
     title: "Solution Sahab | Modern Safety. Unobstructed Views.",
     description:
       "Custom-engineered invisible grills, pleated mosquito mesh, and architectural partitions across Delhi NCR.",
-    images: [ASSETS.HERO_IMAGE_HOME],
+    images: ["/og/home.jpg"],
   },
   robots: {
     index: true,

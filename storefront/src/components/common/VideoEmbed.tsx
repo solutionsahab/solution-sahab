@@ -56,7 +56,7 @@ export function VideoEmbed({
             aria-hidden="true"
           >
             <span className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-primary text-on-primary shadow-xl group-hover:scale-110 transition-transform">
-              <span className="material-symbols-outlined text-[28px] sm:text-[34px] translate-x-[2px]">
+              <span className="material-symbols-outlined text-[28px]! sm:text-[34px]! translate-x-[2px]">
                 play_arrow
               </span>
             </span>

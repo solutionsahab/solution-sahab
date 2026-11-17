@@ -40,30 +40,31 @@ export function ProductTrustPillars({
   showCertificates = true,
 }: ProductTrustPillarsProps) {
   return (
-    <section className="w-full bg-neutral-50/70 py-10 sm:py-12 border-b border-neutral-200">
+    <section className="w-full bg-white py-12 sm:py-14 lg:py-16">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        {/* Section Header */}
-        <div className="max-w-3xl mb-6">
-          <h2 className="text-2xl sm:text-3xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0 mb-2">
+        <div className="reveal max-w-3xl mb-6 sm:mb-8">
+          <h2 className="font-gilroy font-extrabold text-3xl sm:text-4xl lg:text-5xl text-neutral-950 tracking-tight leading-[1.08] m-0 mb-4">
             {title}
           </h2>
-          <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-body m-0">
+          <p className="text-base sm:text-lg text-neutral-600 leading-relaxed font-body m-0">
             {subtitle}
           </p>
         </div>
 
-        {/* 6 Feature Cards */}
         {pillars && pillars.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
             {pillars.map((p) => (
               <div
                 key={p.title}
-                className="bg-white border border-neutral-200 p-4 sm:p-5 flex flex-col justify-start"
+                className="reveal rounded-[1.5rem] bg-[#F3F6FB] p-6 flex flex-col justify-start transition-colors hover:bg-[#E8EEF7]"
               >
-                <h3 className="text-base font-gilroy font-bold text-neutral-950 mb-1">
+                <span className="material-symbols-outlined flex! h-10 w-10 items-center justify-center rounded-full bg-white text-[#1B4D8E] text-[20px]! mb-4 shadow-sm" aria-hidden="true">
+                  verified
+                </span>
+                <h3 className="text-lg font-gilroy font-extrabold text-neutral-950 m-0 mb-1.5">
                   {p.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-body m-0">
+                <p className="text-sm text-neutral-600 leading-relaxed font-body m-0">
                   {p.desc}
                 </p>
               </div>
@@ -71,20 +72,19 @@ export function ProductTrustPillars({
           </div>
         )}
 
-        {/* Real Certification Proof Cards */}
+        {/* Proof wall: the real certificates pinned on an indigo board */}
         {showCertificates && (
-          <div className="border border-neutral-200 bg-white p-4 sm:p-6">
-            <div className="mb-4">
-              <h3 className="text-base sm:text-lg font-gilroy font-bold text-neutral-950 m-0">
-                Verified Laboratory Testing &amp; ISO-9001:2015 Approved
-              </h3>
-            </div>
+          <div className="rounded-[2rem] bg-[#0F1B33] p-6 sm:p-10 text-white">
+            <h3 className="text-2xl sm:text-3xl font-gilroy font-extrabold m-0 mb-2">
+              Verified laboratory testing &amp; ISO-9001:2015 approved
+            </h3>
+            <p className="m-0 mb-8 text-white/70">The actual certificates and test reports behind our cables and frames.</p>
 
             {/* Phones swipe through the certificates; wider screens show all 3 */}
-            <Carousel label="Test certificates" className="flex gap-4 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-3 sm:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <Carousel label="Test certificates" className="flex gap-5 overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-3 sm:gap-8 sm:overflow-visible py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {DEFAULT_CERTIFICATES.map((cert) => (
-                <div key={cert.title} className="shrink-0 snap-start w-[60%] sm:w-auto border border-neutral-200 bg-neutral-50 p-3">
-                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200 border border-neutral-200 mb-2">
+                <figure key={cert.title} className={`m-0 shrink-0 snap-start w-[64%] sm:w-auto rounded-2xl bg-white p-3 text-neutral-900 shadow-xl transition-transform duration-300 motion-safe:hover:-translate-y-1`}>
+                  <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-neutral-100 mb-3">
                     <Image
                       alt={cert.alt}
                       className="w-full h-full object-contain"
@@ -94,10 +94,10 @@ export function ProductTrustPillars({
                       loading="lazy"
                     />
                   </div>
-                  <span className="text-xs font-gilroy font-bold text-neutral-900 block text-center">
+                  <figcaption className="text-sm font-semibold text-center pb-1">
                     {cert.title}
-                  </span>
-                </div>
+                  </figcaption>
+                </figure>
               ))}
             </Carousel>
           </div>

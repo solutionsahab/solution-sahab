@@ -135,24 +135,28 @@ export default async function BlogListPage({ params }: BlogListProps) {
         title="Notes from the field"
         description={DESCRIPTION}
         breadcrumbs={[{ label: "Blog" }]}
+        image={{
+          src: "/images/props/prop-delhi-skyline.webp",
+          alt: "Delhi NCR high-rise skyline in the golden-hour haze, seen through a tall window",
+        }}
         compact
       />
 
       <section
-        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+        className="w-full bg-white py-8 sm:py-12 scroll-mt-28"
         aria-label="Blog posts"
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="flex flex-wrap gap-2 mb-6" role="navigation" aria-label="Categories">
+          <div className="flex flex-wrap gap-2 mb-8" role="navigation" aria-label="Categories">
             {["All", ...getCategories()].map((cat) => (
               <Link
                 key={cat}
                 href={pageHref(1, cat)}
                 aria-current={activeCat === cat ? "page" : undefined}
-                className={`px-3 py-1.5 text-sm font-semibold transition-colors ${
+                className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                   activeCat === cat
-                    ? "bg-neutral-950 text-white"
-                    : "bg-neutral-100 text-neutral-950 hover:bg-neutral-200"
+                    ? "bg-[#1B4D8E] text-white shadow-[0_8px_20px_-8px_rgb(27_77_142/0.6)]"
+                    : "bg-[#F3F6FB] text-neutral-800 hover:bg-[#E8EEF7]"
                 }`}
               >
                 {cat}
@@ -163,38 +167,38 @@ export default async function BlogListPage({ params }: BlogListProps) {
           {showFeatured && featured && (
             <Link
               href={`/${featured.slug}`}
-              className="group grid grid-cols-1 lg:grid-cols-2 mb-5 overflow-hidden border border-neutral-200 bg-white transition-colors hover:border-neutral-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
+              className="group grid grid-cols-1 lg:grid-cols-2 gap-3 mb-8 rounded-[2rem] bg-[#0F1B33] p-3 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
             >
-              <div className="p-5 sm:p-8 flex flex-col justify-center gap-3">
-                <span className="text-xs font-gilroy font-extrabold uppercase tracking-widest text-[#1B4D8E]">Latest</span>
-                <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 leading-tight group-hover:text-[#1B4D8E] transition-colors">
+              <div className="p-5 sm:p-9 flex flex-col justify-center gap-4 order-2 lg:order-1">
+                <span className="self-start rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">Latest</span>
+                <h2 className="text-3xl sm:text-4xl font-gilroy font-extrabold tracking-tight m-0 leading-[1.1] group-hover:text-[#A8C4F5] transition-colors">
                   {featured.title}
                 </h2>
-                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0 line-clamp-3">
+                <p className="text-base text-white/75 leading-relaxed m-0 line-clamp-3">
                   {featured.description}
                 </p>
                 <time
                   dateTime={featured.datePublished}
-                  className="text-xs font-semibold text-neutral-700"
+                  className="text-sm font-semibold text-white/60"
                 >
                   {featured.dateLabel}
                 </time>
               </div>
-              <div className="relative w-full h-56 sm:h-64 lg:h-auto lg:min-h-64 overflow-hidden bg-neutral-200">
+              <div className="relative w-full h-56 sm:h-72 lg:h-auto lg:min-h-80 overflow-hidden rounded-[1.5rem] bg-neutral-700 order-1 lg:order-2">
                 {featured.image && (
                   <Image
                     src={featured.image.src}
                     alt={featured.image.alt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-cover motion-safe:transition-transform motion-safe:duration-700 group-hover:scale-105"
                   />
                 )}
               </div>
             </Link>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {gridPosts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}
@@ -202,13 +206,13 @@ export default async function BlogListPage({ params }: BlogListProps) {
 
           {pageCount > 1 && (
             <nav
-              className="mt-8 flex items-center justify-center gap-3"
+              className="mt-12 flex items-center justify-center gap-3"
               aria-label="Blog pages"
             >
               {page > 1 && (
                 <Link
                   href={pageHref(page - 1, activeCat)}
-                  className="px-4 py-2 border border-neutral-300 text-sm font-semibold text-neutral-950 hover:bg-neutral-100 transition-colors"
+                  className="rounded-full px-5 py-2.5 border border-[#1B4D8E]/25 text-sm font-semibold text-[#1B4D8E] hover:bg-[#1B4D8E] hover:text-white transition-colors"
                 >
                   Newer
                 </Link>
@@ -219,7 +223,7 @@ export default async function BlogListPage({ params }: BlogListProps) {
               {page < pageCount && (
                 <Link
                   href={pageHref(page + 1, activeCat)}
-                  className="px-4 py-2 border border-neutral-300 text-sm font-semibold text-neutral-950 hover:bg-neutral-100 transition-colors"
+                  className="rounded-full px-5 py-2.5 border border-[#1B4D8E]/25 text-sm font-semibold text-[#1B4D8E] hover:bg-[#1B4D8E] hover:text-white transition-colors"
                 >
                   Older
                 </Link>

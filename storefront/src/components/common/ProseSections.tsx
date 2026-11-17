@@ -26,7 +26,7 @@ function SectionShell({
     <section
       id={id}
       aria-label={label || id}
-      className={`w-full scroll-mt-28 py-6 sm:py-8 ${sectionTone(index)}`}
+      className={`w-full scroll-mt-28 py-7 sm:py-9 ${sectionTone(index)}`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">{children}</div>
     </section>
@@ -36,7 +36,7 @@ function SectionShell({
 function Heading({ title }: { title?: string }) {
   if (!title) return null;
   return (
-    <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0 mb-4">
+    <h2 className="reveal font-gilroy font-extrabold text-3xl sm:text-4xl text-neutral-950 tracking-tight leading-[1.1] m-0 mb-5">
       {title}
     </h2>
   );
@@ -44,7 +44,7 @@ function Heading({ title }: { title?: string }) {
 
 function Paragraph({ text }: { text: string }) {
   return (
-    <p className="text-sm sm:text-base text-neutral-600 leading-relaxed m-0">
+    <p className="text-base sm:text-lg text-neutral-600 leading-relaxed m-0">
       {text}
     </p>
   );
@@ -82,12 +82,13 @@ export function ProseSections({ sections }: ProseSectionsProps) {
                 </p>
               )}
               {/* Plain text items with a thin blue rule instead of tick icons */}
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 list-none m-0 p-0">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 list-none m-0 p-0">
                 {section.items.map((item) => (
                   <li
                     key={item}
-                    className="border-l-2 border-[#1B4D8E] pl-3 text-sm sm:text-base text-neutral-800 leading-snug"
+                    className="flex items-start gap-3 rounded-2xl bg-[#F3F6FB] px-4 py-3.5 text-sm sm:text-base text-neutral-800 leading-snug"
                   >
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#1B4D8E]" aria-hidden="true" />
                     {item}
                   </li>
                 ))}
@@ -115,11 +116,11 @@ export function ProseSections({ sections }: ProseSectionsProps) {
                 {section.items.map((item) => (
                   <div
                     key={item.title}
-                    className="border-l-2 border-[#1B4D8E] bg-neutral-50 px-4 py-3"
+                    className="reveal rounded-[1.5rem] bg-[#F3F6FB] p-6 border-t-4 border-[#1B4D8E]"
                   >
                     {/* Icons left out on purpose: the "verified" glyph reads as a tick mark */}
                     <div>
-                      <p className="text-sm sm:text-base font-semibold text-neutral-950 leading-snug m-0">
+                      <p className="text-lg font-gilroy font-extrabold text-neutral-950 leading-snug m-0">
                         {item.title}
                       </p>
                       {item.text && (

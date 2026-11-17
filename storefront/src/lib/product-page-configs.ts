@@ -66,7 +66,7 @@ export const COMMON_TRUST_PILLARS = [
     desc: "Direct manufacturer warranty card issued upon handover. Full coverage against material failure, structural defects, and operational slackening.",
   },
   {
-    title: "10,000+ Happy Homes Across Delhi NCR",
+    title: "150+ Happy Homes Across Delhi NCR",
     desc: "Trusted across Gurgaon, Noida, Greater Noida, and Delhi with proven 5-star customer ratings and prompt, reliable installation.",
   },
 ];
@@ -90,7 +90,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab invisible grills",
       ],
       canonical: "https://solutionsahab.com/invisible-grills",
-      ogImage: ASSETS.PHOTOS.INVISIBLE_GRILLS.HERO,
+      ogImage: "/og/invisible-grills.jpg",
     },
     structuredData: {
       productName: "Architectural Grade Invisible Grills for Modern Balconies",
@@ -285,7 +285,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab pleated mesh",
       ],
       canonical: "https://solutionsahab.com/pleated-mesh",
-      ogImage: ASSETS.PHOTOS.PLEATED_MESH.HERO,
+      ogImage: "/og/pleated-mesh.jpg",
     },
     structuredData: {
       productName: "Retractable Pleated Mosquito Mesh for Doors & Windows",
@@ -480,7 +480,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab aluminum mesh",
       ],
       canonical: "https://solutionsahab.com/aluminum-mesh-partition",
-      ogImage: ASSETS.PHOTOS.ALUMINUM_MESH.HERO,
+      ogImage: "/og/aluminum-mesh-partition.jpg",
     },
     structuredData: {
       productName: "Heavy-Duty Aluminum Security Mesh and Modular Partitions",
@@ -676,7 +676,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab honeycomb partition",
       ],
       canonical: "https://solutionsahab.com/honeycomb-partition",
-      ogImage: ASSETS.PHOTOS.HONEYCOMB.HERO,
+      ogImage: "/og/honeycomb-partition.jpg",
     },
     structuredData: {
       productName: "Honeycomb Cellular Partitions and Retractable Thermal Blinds",
@@ -871,7 +871,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab weather screen",
       ],
       canonical: "https://solutionsahab.com/automatic-weather-screen",
-      ogImage: ASSETS.PHOTOS.WEATHER_SCREEN.HERO,
+      ogImage: "/og/automatic-weather-screen.jpg",
     },
     structuredData: {
       productName: "Motorized Automatic Weather Screens & Outdoor Zip Blinds",
@@ -1066,7 +1066,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab skylights",
       ],
       canonical: "https://solutionsahab.com/skylight",
-      ogImage: ASSETS.HERO_IMAGE_HOME_SKYLIGHT,
+      ogImage: "/og/skylight.jpg",
     },
     structuredData: {
       productName: "Glass Skylights & Terrace Roof Glazing",
@@ -1261,7 +1261,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Solution Sahab cloth hanger",
       ],
       canonical: "https://solutionsahab.com/ceiling-cloth-hanger",
-      ogImage: ASSETS.PHOTOS.CLOTH_HANGER.HERO,
+      ogImage: "/og/ceiling-cloth-hanger.jpg",
     },
     structuredData: {
       productName: "Stainless Steel 304 Ceiling Cloth Drying Hangers & Pulley Racks",

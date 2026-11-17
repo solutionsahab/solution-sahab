@@ -38,68 +38,68 @@ export function ProductOverviewSection({
   media,
 }: ProductOverviewSectionProps) {
   return (
-    <section className="w-full bg-white py-10 sm:py-12 border-b border-neutral-200">
+    <section className="w-full bg-white py-12 sm:py-14 lg:py-16">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-          {/* Left: Natural Explanation (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col items-start">
-            <h2 className="text-2xl sm:text-3xl font-gilroy font-extrabold text-neutral-950 tracking-tight m-0 mb-3">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="reveal lg:col-span-7 flex flex-col items-start">
+            <h2 className="font-gilroy font-extrabold text-3xl sm:text-4xl lg:text-5xl text-neutral-950 tracking-tight leading-[1.08] m-0 mb-5">
               {title}
             </h2>
 
-            <p className="text-base text-neutral-700 leading-relaxed font-body m-0 mb-3">
+            <p className="text-base sm:text-lg text-neutral-700 leading-relaxed font-body m-0 mb-4">
               {leadParagraph}
             </p>
 
             {secondaryParagraph && (
-              <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-body m-0 mb-5">
+              <p className="text-base text-neutral-600 leading-relaxed font-body m-0 mb-6">
                 {secondaryParagraph}
               </p>
             )}
 
-            <div className="space-y-2 text-sm text-neutral-800 font-body">
+            <ul className="grid gap-3 w-full list-none m-0 p-0 font-body">
               {bullets.map((b) => (
-                <div key={b.label}>
-                  <span>
-                    <strong>{b.label}:</strong> {b.text}
+                <li key={b.label} className="flex gap-3 rounded-2xl bg-[#F3F6FB] p-4">
+                  <span className="material-symbols-outlined flex! h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1B4D8E] text-white text-[18px]!" aria-hidden="true">
+                    done
                   </span>
-                </div>
+                  <span className="text-sm sm:text-base text-neutral-700 leading-relaxed">
+                    <strong className="text-neutral-950">{b.label}:</strong> {b.text}
+                  </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Right: Video Embed or Showcase Image (5 cols) */}
-          <div className="lg:col-span-5">
+          <div className="reveal lg:col-span-5">
             {media.type === "video" ? (
               <>
-                <div className="border border-neutral-300 bg-neutral-950 overflow-hidden shadow-sm">
+                <div className="rounded-[1.75rem] overflow-hidden bg-neutral-950 shadow-2xl">
                   <VideoEmbed
                     title={media.title}
                     videoId={media.videoId}
-                    className="w-full aspect-video object-cover"
+                    className="!border-0 !shadow-none"
                   />
                 </div>
                 {media.caption && (
-                  <p className="text-xs text-neutral-500 mt-2 text-center font-sans">
+                  <p className="text-sm text-neutral-500 mt-3 text-center font-sans">
                     {media.caption}
                   </p>
                 )}
               </>
             ) : (
               <>
-                <div className="relative border border-neutral-200 bg-neutral-100 overflow-hidden aspect-[4/3] w-full shadow-sm">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.75rem] shadow-2xl bg-neutral-100">
                   <Image
                     alt={media.alt}
-                    className="w-full h-full object-cover"
+                    className="object-cover"
                     src={media.src}
-                    width={700}
-                    height={850}
+                    fill
                     loading="lazy"
                     sizes="(max-width: 1024px) 100vw, 42vw"
                   />
                 </div>
                 {media.caption && (
-                  <p className="text-xs text-neutral-500 mt-2 text-center font-sans">
+                  <p className="text-sm text-neutral-500 mt-3 text-center font-sans">
                     {media.caption}
                   </p>
                 )}

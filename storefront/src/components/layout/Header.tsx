@@ -38,7 +38,7 @@ export function Header({ serviceArea = "Delhi NCR" }: { serviceArea?: string }) 
     <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
       {/* Top Notification Bar */}
       <div className="bg-inverse-surface text-inverse-on-surface py-1 sm:py-1.5 px-3 sm:px-4 text-center border-b border-inverse-surface/10 shadow-[0_1px_4px_rgba(0,0,0,0.05)]">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 font-caption-caps text-[10px] sm:text-caption-caps tracking-wider uppercase">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 text-[11px] leading-[14px] sm:text-xs sm:leading-4 font-semibold tracking-wider uppercase">
           <span>Site visit across {serviceArea}</span>
           <span className="opacity-40" aria-hidden="true">
             |
@@ -46,7 +46,7 @@ export function Header({ serviceArea = "Delhi NCR" }: { serviceArea?: string }) 
           <Link
             className="py-1.5 -my-1.5 text-primary-fixed hover:underline flex items-center gap-1 font-bold whitespace-nowrap"
             href={`tel:${CONTACT_INFO.PHONE_PRIMARY_RAW}`}
-            aria-label="Call Solution Sahab"
+            aria-label={`Call ${CONTACT_INFO.PHONE_PRIMARY}`}
           >
            
             {CONTACT_INFO.PHONE_PRIMARY}
@@ -88,14 +88,14 @@ export function Header({ serviceArea = "Delhi NCR" }: { serviceArea?: string }) 
               >
                 Products
                 <span
-                  className="material-symbols-outlined text-[18px] text-secondary transition-transform group-hover:rotate-180"
+                  className="material-symbols-outlined text-[18px]! text-secondary transition-transform group-hover:rotate-180"
                   aria-hidden="true"
                 >
                   expand_more
                 </span>
               </button>
               <div
-                className={`absolute top-full left-0 w-80 max-h-[70vh] overflow-y-auto bg-surface-container-lowest shadow-2xl rounded-xl p-3 ${
+                className={`absolute top-full left-0 w-80 max-h-[70vh] overflow-y-auto bg-surface-container-lowest shadow-2xl rounded-2xl ring-1 ring-black/5 p-3 ${
                   openDropdown === "products"
                     ? "visible opacity-100 translate-y-0 pointer-events-auto"
                     : "invisible opacity-0 translate-y-2 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
@@ -211,14 +211,14 @@ export function Header({ serviceArea = "Delhi NCR" }: { serviceArea?: string }) 
               >
                 About Us
                 <span
-                  className="material-symbols-outlined text-[18px] text-secondary transition-transform group-hover:rotate-180"
+                  className="material-symbols-outlined text-[18px]! text-secondary transition-transform group-hover:rotate-180"
                   aria-hidden="true"
                 >
                   expand_more
                 </span>
               </button>
               <div
-                className={`absolute top-full left-0 w-56 bg-surface-container-lowest shadow-2xl rounded-xl p-3 ${
+                className={`absolute top-full left-0 w-56 bg-surface-container-lowest shadow-2xl rounded-2xl ring-1 ring-black/5 p-3 ${
                   openDropdown === "about"
                     ? "visible opacity-100 translate-y-0 pointer-events-auto"
                     : "invisible opacity-0 translate-y-2 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
@@ -319,7 +319,7 @@ export function Header({ serviceArea = "Delhi NCR" }: { serviceArea?: string }) 
               aria-label="Toggle Navigation Menu"
             >
               <span
-                className="material-symbols-outlined text-[26px]"
+                className="material-symbols-outlined text-[26px]!"
                 aria-hidden="true"
               >
                 {isMobileMenuOpen ? "close" : "menu"}

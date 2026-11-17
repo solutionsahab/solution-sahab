@@ -1,6 +1,7 @@
 // File: src/lib/seo.ts
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import type { Metadata } from "next";
-import { ASSETS } from "@/lib/constants";
 
 export const SITE = "https://solutionsahab.com";
 
@@ -24,11 +25,17 @@ export interface PageMetaInput {
 }
 
 const DEFAULT_IMAGE: PageImage = {
-  url: ASSETS.HERO_IMAGE_HOME,
+  url: "/og/home.jpg",
   alt: "Solution Sahab invisible grill and pleated mesh installation",
   width: 1200,
   height: 630,
 };
+
+/** Branded card from scripts/make-og.py, named after the first path segment ("/" -> home). */
+function ogCard(path: string, title: string): PageImage | undefined {
+  const url = `/og/${path.split("/")[1] || "home"}.jpg`;
+  return existsSync(join(process.cwd(), "public", url)) ? { url, alt: title } : undefined;
+}
 
 export function buildPageMetadata({
   path,
@@ -41,7 +48,7 @@ export function buildPageMetadata({
   modifiedTime,
 }: PageMetaInput): Metadata {
   const url = `${SITE}${path}`;
-  const ogImage = image ?? DEFAULT_IMAGE;
+  const ogImage = image ?? ogCard(path, title) ?? DEFAULT_IMAGE;
 
   return {
     title,

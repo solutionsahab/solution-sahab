@@ -14,7 +14,7 @@ const DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/gallery",
-  title: "Gallery | Solution Sahab",
+  title: "Installation Gallery: Delhi NCR Projects | Solution Sahab",
   description: DESCRIPTION,
   keywords: [
     "Solution Sahab gallery",
@@ -36,36 +36,36 @@ export default function GalleryPage() {
       />
 
       <section
-        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+        className="w-full bg-white py-10 sm:py-12 lg:py-14 scroll-mt-28"
         aria-label="Solution Sahab project photos"
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-          <ImageGrid images={GALLERY_IMAGES} ratio="landscape" columns={4} />
+          <ImageGrid images={GALLERY_IMAGES} masonry />
         </div>
       </section>
 
       <section
-        className="w-full bg-white py-10 sm:py-12 border-b border-neutral-300"
+        className="w-full bg-white pb-8 sm:pb-12"
         aria-labelledby="follow-heading"
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="border border-neutral-300 bg-white p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="rounded-[2rem] bg-[#1B4D8E] text-white p-7 sm:p-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div className="max-w-2xl">
               <h2
                 id="follow-heading"
-                className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
+                className="font-gilroy font-extrabold text-3xl sm:text-4xl tracking-tight m-0"
               >
                 Follow us
               </h2>
-              <p className="text-sm text-neutral-600 leading-relaxed mt-2 mb-0">
+              <p className="text-white/80 leading-relaxed mt-3 mb-0">
                 More installation photos and project updates are shared on our
                 Instagram profile.
               </p>
             </div>
             <Button
               href={INSTAGRAM_URL}
-              variant="primary"
-              size="md"
+              variant="white"
+              size="lg"
               icon="photo_camera"
               className="shrink-0"
             >

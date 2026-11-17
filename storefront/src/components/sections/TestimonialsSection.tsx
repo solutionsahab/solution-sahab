@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Carousel } from "@/components/common/Carousel";
 
 // Customer-feedback Shorts from youtube.com/@solutionsahab, newest first
-const VIDEOS = [
+export const CUSTOMER_VIDEOS = [
   {
     videoId: "jtYFAhO8tXQ",
     customer: "Verified Homeowner",
@@ -46,20 +46,20 @@ const VIDEOS = [
 export function TestimonialsSection() {
   return (
     <section
-      className="w-full py-10 sm:py-12 border-b border-neutral-300 scroll-mt-28"
+      className="w-full bg-white py-12 sm:py-14 lg:py-16 scroll-mt-28"
       id="customer-videos"
       aria-labelledby="customer-videos-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="flex items-end justify-between gap-4 mb-6">
+        <div className="reveal flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
           <div>
             <h2
               id="customer-videos-heading"
-              className="text-2xl sm:text-3xl font-semibold text-neutral-950 tracking-tight m-0"
+              className="font-gilroy font-light text-3xl sm:text-4xl lg:text-5xl text-neutral-950 tracking-tight leading-[1.05] m-0"
             >
-              Customer Feedback
+              Customer <strong className="font-extrabold">feedback</strong>
             </h2>
-            <p className="text-sm text-neutral-600 mt-1 mb-0">
+            <p className="text-neutral-600 mt-3 mb-0">
               Filmed on-site after installation across Delhi NCR.
             </p>
           </div>
@@ -68,33 +68,34 @@ export function TestimonialsSection() {
             href="https://www.youtube.com/@solutionsahab"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 text-xs font-gilroy font-extrabold uppercase tracking-wider text-neutral-950 underline underline-offset-4 hover:opacity-70"
+            className="shrink-0 inline-flex items-center gap-1 text-sm font-semibold text-[#1B4D8E] hover:underline underline-offset-4"
           >
-            All Videos on YouTube
+            All videos on YouTube
+            <span className="material-symbols-outlined text-[18px]!" aria-hidden="true">chevron_right</span>
           </Link>
         </div>
 
         {/* One-row swipe carousel (CSS scroll-snap): phones peek the next video, desktop shows 4 per row */}
-        <Carousel label="Customer feedback videos" className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {VIDEOS.map((video) => (
+        <Carousel label="Customer feedback videos" className="flex gap-5 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scroll-px-5 sm:mx-0 sm:px-0 sm:scroll-px-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {CUSTOMER_VIDEOS.map((video) => (
             <div
               key={video.videoId}
-              className="flex flex-col shrink-0 snap-start w-[80%] sm:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)]"
+              className="flex flex-col shrink-0 snap-start w-[80%] sm:w-[calc((100%-2.5rem)/3)] lg:w-[calc((100%-3.75rem)/4)]"
             >
-              <div className="w-full bg-neutral-950 overflow-hidden">
+              <div className="w-full rounded-[1.5rem] overflow-hidden bg-neutral-950 shadow-[0_14px_34px_-18px_rgb(15_27_51/0.5)]">
                 <VideoEmbed
                   orientation="vertical"
                   title={`${video.product} - ${video.customer}`}
                   videoId={video.videoId}
-                  className="rounded-none"
+                  className="!border-0 !shadow-none"
                 />
               </div>
 
-              <div className="pt-3 flex items-baseline justify-between gap-2">
-                <span className="text-sm font-semibold text-neutral-950">
+              <div className="pt-3 px-1">
+                <span className="block text-sm font-semibold text-neutral-950">
                   {video.product}
                 </span>
-                <span className="text-xs text-neutral-500">
+                <span className="block text-xs text-neutral-500 mt-0.5">
                   {video.customer}
                 </span>
               </div>

@@ -25,7 +25,7 @@ export function ProductTechnicalSpecs({
   specs,
 }: ProductTechnicalSpecsProps) {
   return (
-    <section className="w-full bg-white py-14 sm:py-20 border-b border-neutral-200">
+    <section className="w-full bg-white py-10 sm:py-12 lg:py-14 border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
           {/* Left Column: Heading & Context (5 cols) */}
@@ -38,8 +38,8 @@ export function ProductTechnicalSpecs({
             </p>
 
             {callout && (
-              <div className="border border-blue-200 bg-blue-50/60 p-5 w-full">
-                <span className="text-xs font-bold text-blue-900 block mb-1">
+              <div className="border border-[#1B4D8E]/20 bg-[#1B4D8E]/5 p-5 w-full">
+                <span className="text-xs font-bold text-[#0E2B50] block mb-1">
                   {callout.title}
                 </span>
                 <p className="text-xs text-neutral-700 font-body leading-relaxed m-0">

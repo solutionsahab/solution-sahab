@@ -9,7 +9,7 @@ import { CONTACT_INFO } from "@/lib/constants";
 import { PRODUCT_OPTIONS } from "@/lib/leads";
 
 const INPUT_CLASS =
-  "w-full px-3 py-2.5 min-h-11 bg-white text-neutral-950 text-base border border-neutral-300 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#1B4D8E]";
+  "w-full px-4 py-3 min-h-12 rounded-xl bg-[#F3F6FB] text-neutral-950 text-base border border-neutral-300 focus:bg-white placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#1B4D8E]";
 
 export function ContactForm() {
   const { formData, status, errors, updateField, handleSubmit, resetForm } =
@@ -17,7 +17,7 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="p-5 bg-neutral-50 flex flex-col items-center text-center gap-3 border border-neutral-300">
+      <div className="p-6 rounded-2xl bg-[#F3F6FB] flex flex-col items-center text-center gap-3">
         <ThankYouMark className="mb-1" />
         <h3 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0">
           Thank you for choosing us

@@ -12,20 +12,20 @@ export function BlogCard({ post }: BlogCardProps) {
     <article className="h-full">
       <Link
         href={`/${post.slug}`}
-        className="group flex h-full flex-col overflow-hidden border border-neutral-200 bg-white transition-colors hover:border-neutral-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
+        className="group flex h-full flex-col rounded-[1.75rem] bg-white p-3 shadow-[0_10px_30px_-18px_rgb(15_27_51/0.35)] transition-[transform,box-shadow] duration-300 motion-safe:hover:-translate-y-1 hover:shadow-[0_24px_50px_-20px_rgb(27_77_142/0.45)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B4D8E]"
       >
-        <div className="relative w-full h-44 overflow-hidden bg-neutral-200">
+        <div className="relative w-full h-48 overflow-hidden rounded-[1.25rem] bg-neutral-200">
           {post.image ? (
             <Image
               src={post.image.src}
               alt={post.image.alt}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover"
+              className="object-cover motion-safe:transition-transform motion-safe:duration-700 group-hover:scale-105"
             />
           ) : (
             <span
-              className="material-symbols-outlined text-[40px] text-[#1B4D8E] absolute inset-0 m-auto opacity-60"
+              className="material-symbols-outlined text-[40px]! text-[#1B4D8E] absolute inset-0 m-auto opacity-60"
               aria-hidden="true"
             >
               article
@@ -33,8 +33,8 @@ export function BlogCard({ post }: BlogCardProps) {
           )}
         </div>
 
-        <div className="flex flex-1 flex-col gap-2 p-4">
-          <h3 className="text-base font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 leading-snug group-hover:text-[#1B4D8E] transition-colors">
+        <div className="flex flex-1 flex-col gap-2 px-2 pt-4 pb-2">
+          <h3 className="text-lg font-extrabold font-gilroy text-neutral-950 tracking-tight m-0 leading-snug group-hover:text-[#1B4D8E] transition-colors">
             {post.title}
           </h3>
           <p className="text-sm text-neutral-600 leading-relaxed m-0 line-clamp-2">
