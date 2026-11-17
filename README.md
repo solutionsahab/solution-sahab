@@ -26,7 +26,7 @@ See [`storefront/.env.example`](storefront/.env.example). Secrets go only in `.e
 |---|---|---|
 | `CRATIO_API_KEY` | In production | Cratio CRM key. Without it, leads are only logged in dev and rejected in production. |
 | `CRATIO_LEAD_CREATED_BY` | With the key | CRM "Created By" user |
-| `CRATIO_ASSIGNED_TO` | With the key | CRM user new leads are assigned to |
+| `CRATIO_ASSIGNED_TO` | With the key | Cratio "Lead Owner" for new leads: the user's display name exactly as in Cratio (e.g. `Shivani`) |
 | `CRATIO_LEAD_SOURCE` | No | Overrides the per-form lead source for every lead |
 
 ## Folder map (`storefront/src`)

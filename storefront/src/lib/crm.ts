@@ -33,7 +33,8 @@ export async function insertLead(lead: CrmLead): Promise<CrmResult> {
     "Lead Source": envLeadSource || lead.leadSource || "Website",
     "Lead Stage": "New",
     "Created By": createdBy,
-    "Assigned To": assignedTo,
+    // Cratio matches fields by this account's labels: the owner field is "Lead Owner", and the value is the user's display name.
+    "Lead Owner": assignedTo,
     ...(lead.product ? { Product: lead.product } : {}),
     // Sent empty so Cratio doesn't fill its default ("Invisible Grill"); spelled as in Cratio.
     Catagory: "",
