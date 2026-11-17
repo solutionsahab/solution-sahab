@@ -496,7 +496,7 @@ export const PRODUCT_CONFIGS: Record<string, ProductPageConfig> = {
         "Heavy-duty architectural security mesh and partitions for main entrance doors, sliding balconies, and interior dividers. Enjoy knife-shear intruder security, complete pest defense, and fresh airflow in one elegant system.",
       badges: [
         "Jindal T6 Structural Alloy",
-        "Keeps Mosquitoes Out",
+        "Stops Monkeys & Pigeons",
         "Child & Pet Safe",
         "5-Year Warranty",
       ],
