@@ -49,7 +49,7 @@ const SLIDES = [
     name: "Retractable Roof",
     crop: "object-[100%_50%]",
     image: ASSETS.HERO_IMAGE_HOME_RETRACTABLE_ROOF,
-    alt: "Retractable Roof with louvers over a rooftop terrace, a flexible open & covered space for every season: open or close as per need, all-weather protection (rain, sun & dust), keeps the space cool & ventilated, motorized with remote control, custom fit for your space",
+    alt: "Retractable Roof with louvers over a rooftop terrace: open & close as needed, all-weather protection, keeps space cool & ventilated, motorized with remote control, sleek modern look",
   },
 ];
 
