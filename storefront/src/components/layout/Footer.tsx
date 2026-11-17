@@ -88,7 +88,12 @@ export function Footer() {
               </li>
               <li>
                 <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/skylight">
-                  Glass Skylights
+                  Skylight
+                </Link>
+              </li>
+              <li>
+                <Link className="py-[3px] -my-[3px] hover:underline underline-offset-4" href="/retractable-roof">
+                  Retractable Roof
                 </Link>
               </li>
               <li>

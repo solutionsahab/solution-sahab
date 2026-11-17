@@ -40,7 +40,13 @@ export const PRODUCT_LINKS: RelatedLink[] = [
     label: "Skylight",
     href: "/skylight",
     description:
-      "Precision glass skylights for stairwells and luxury residential volumes.",
+      "Motorized, manual and honeycomb skylight blinds that control heat and glare.",
+  },
+  {
+    label: "Retractable Roof",
+    href: "/retractable-roof",
+    description:
+      "Motorized louvered and fabric roofs that open to the sky or close against rain.",
   },
   {
     label: "Ceiling Cloth Hanger",
